@@ -214,6 +214,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Tela_cad";
             this.Text = "Kos Manager";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.Picture_box)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

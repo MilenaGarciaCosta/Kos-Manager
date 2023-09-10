@@ -169,6 +169,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Tela_login";
             this.Text = "Kos Manager";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.Picture_box2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
