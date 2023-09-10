@@ -68,6 +68,9 @@
             this.Txt_nome_cad.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Txt_nome_cad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.Txt_nome_cad.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_nome_cad.IconRight = ((System.Drawing.Image)(resources.GetObject("Txt_nome_cad.IconRight")));
+            this.Txt_nome_cad.IconRightOffset = new System.Drawing.Point(10, -10);
+            this.Txt_nome_cad.IconRightSize = new System.Drawing.Size(10, 10);
             this.Txt_nome_cad.Location = new System.Drawing.Point(464, 258);
             this.Txt_nome_cad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_nome_cad.MinimumSize = new System.Drawing.Size(503, 43);
@@ -95,6 +98,9 @@
             this.Txt_email_cad.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Txt_email_cad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.Txt_email_cad.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_email_cad.IconRight = ((System.Drawing.Image)(resources.GetObject("Txt_email_cad.IconRight")));
+            this.Txt_email_cad.IconRightOffset = new System.Drawing.Point(10, -10);
+            this.Txt_email_cad.IconRightSize = new System.Drawing.Size(10, 10);
             this.Txt_email_cad.Location = new System.Drawing.Point(464, 337);
             this.Txt_email_cad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_email_cad.MinimumSize = new System.Drawing.Size(503, 43);
@@ -122,6 +128,9 @@
             this.Txt_senha_cad.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Txt_senha_cad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.Txt_senha_cad.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_senha_cad.IconRight = ((System.Drawing.Image)(resources.GetObject("Txt_senha_cad.IconRight")));
+            this.Txt_senha_cad.IconRightOffset = new System.Drawing.Point(10, -10);
+            this.Txt_senha_cad.IconRightSize = new System.Drawing.Size(10, 10);
             this.Txt_senha_cad.Location = new System.Drawing.Point(464, 414);
             this.Txt_senha_cad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_senha_cad.MinimumSize = new System.Drawing.Size(503, 43);

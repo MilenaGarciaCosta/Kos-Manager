@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Picture_box.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Picture_box2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAOQAAACgCAYAAAAcnsD3AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAHXJJREFUeF7tXQuUJFV5XlRAHgKyCKIRMIKiUbMKKgcVMML6CIdXIqIYXcA9KhBR
+        EAAACxABrSO9dQAAHXJJREFUeF7tXQuUJFV5XlRAHgKyCKIRMIKiUbMKKgcVMML6CIdXIqIYXcA9KhBR
         cAkkuExQEnzxiB58ELNqcImjIFlwccNq73RXVVdV10x3PfZBxnXUFVhgdQwICCw7+b/uW7O379x69Gz3
         TM/U/53znZnpuvevWzX/d///Pqp6AYPBYDAYDAaDwWAwGAwGg8GYCUws2M301xzshMaxdlh+/eiovZ84
         wmAwZgoDAwPPcevW8XajckUtMu90Q7NeC6yg5psDzkZnoSjGYDB6ifpY/YBqZC5xQvOnTmBsdQPzT8Qd
@@ -250,30 +250,20 @@
         AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="Txt_nome_cad.IconRight" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Txt_senha_login.IconRight" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAAANhJREFUKFOFUdEVgjAMZARH4AuSfjmCIzCCI3QD2cAV3MARHMER+unTgoyAuZLW
+        EQAACxEBf2RfkQAAANhJREFUKFOFUdEVgjAMZARH4AuSfjmCIzCCI3QD2cAV3MARHMER+unTgoyAuZLW
         wkO59/LaXO7aNC3W0DE3PbNDKLUNT3QQw/jX9CAqe6KTpqumoGE+ayrtEF2iCMVhEoxv5jvqntn2xgzg
         cOBkYo6mECK+6urkwFvGu66qmmACcPrSnMRyi5iPKp3DleUuazXFU6apki8gxiBi32uBNtN7ACHxJ6GI
         x6OVuJc1DQHh69pGk0XfUmyRL0eevxd7cAF58utzZ+0tkZkGpbbxMmYvxhahVIai+AAlAbm7hmBTywAA
         AABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Txt_email_cad.IconRight" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Txt_email_login.IconRight" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAAANhJREFUKFOFUdEVgjAMZARH4AuSfjmCIzCCI3QD2cAV3MARHMER+unTgoyAuZLW
-        wkO59/LaXO7aNC3W0DE3PbNDKLUNT3QQw/jX9CAqe6KTpqumoGE+ayrtEF2iCMVhEoxv5jvqntn2xgzg
-        cOBkYo6mECK+6urkwFvGu66qmmACcPrSnMRyi5iPKp3DleUuazXFU6apki8gxiBi32uBNtN7ACHxJ6GI
-        x6OVuJc1DQHh69pGk0XfUmyRL0eevxd7cAF58utzZ+0tkZkGpbbxMmYvxhahVIai+AAlAbm7hmBTywAA
-        AABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="Txt_senha_cad.IconRight" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAAANhJREFUKFOFUdEVgjAMZARH4AuSfjmCIzCCI3QD2cAV3MARHMER+unTgoyAuZLW
+        EQAACxEBf2RfkQAAANhJREFUKFOFUdEVgjAMZARH4AuSfjmCIzCCI3QD2cAV3MARHMER+unTgoyAuZLW
         wkO59/LaXO7aNC3W0DE3PbNDKLUNT3QQw/jX9CAqe6KTpqumoGE+ayrtEF2iCMVhEoxv5jvqntn2xgzg
         cOBkYo6mECK+6urkwFvGu66qmmACcPrSnMRyi5iPKp3DleUuazXFU6apki8gxiBi32uBNtN7ACHxJ6GI
         x6OVuJc1DQHh69pGk0XfUmyRL0eevxd7cAF58utzZ+0tkZkGpbbxMmYvxhahVIai+AAlAbm7hmBTywAA

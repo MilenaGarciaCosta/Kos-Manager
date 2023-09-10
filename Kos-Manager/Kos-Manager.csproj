@@ -112,6 +112,12 @@
     <Compile Include="Tela_cad.Designer.cs">
       <DependentUpon>Tela_cad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tela_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_login.Designer.cs">
+      <DependentUpon>Tela_login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tela_splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </Compile>
     <EmbeddedResource Include="Tela_cad.resx">
       <DependentUpon>Tela_cad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_login.resx">
+      <DependentUpon>Tela_login.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
