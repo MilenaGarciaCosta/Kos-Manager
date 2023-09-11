@@ -16,5 +16,19 @@ namespace Kos_Manager
         {
             InitializeComponent();
         }
+
+        private void Link_nao_tem_cad_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Tela_cad tcad = new Tela_cad();
+            tcad.Show();
+            this.Hide();
+        }
+
+        private void Btn_logar_Click(object sender, EventArgs e)
+        {
+            Tela_inicial tinc = new Tela_inicial();
+            tinc.Show();
+            this.Hide();
+        }
     }
 }

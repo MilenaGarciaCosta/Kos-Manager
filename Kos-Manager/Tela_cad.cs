@@ -26,5 +26,19 @@ namespace Kos_Manager
         {
 
         }
+
+        private void Link_ja_tem_cad_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Tela_login tlgn = new Tela_login();
+            tlgn.Show();
+            this.Hide();
+        }
+
+        private void Btn_cadastrar_Click(object sender, EventArgs e)
+        {
+            Tela_inicial tinc = new Tela_inicial();
+            tinc.Show();
+            this.Hide();
+        }
     }
 }

@@ -16,5 +16,17 @@ namespace Kos_Manager
         {
             InitializeComponent();
         }
+
+        private void Progress_timer_Tick(object sender, EventArgs e)
+        {
+            Progress_color_splash.Width += 3;
+            if(Progress_color_splash.Width >= 616)
+            {
+                Progress_timer.Stop();
+                Tela_login tlgn = new Tela_login();
+                tlgn.Show();
+                this.Hide();
+            }
+        }
     }
 }

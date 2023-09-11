@@ -46,7 +46,7 @@
             this.Lbl_caracteres_min.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_caracteres_min.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_caracteres_min.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Lbl_caracteres_min.Location = new System.Drawing.Point(464, 364);
+            this.Lbl_caracteres_min.Location = new System.Drawing.Point(435, 423);
             this.Lbl_caracteres_min.Name = "Lbl_caracteres_min";
             this.Lbl_caracteres_min.Size = new System.Drawing.Size(121, 17);
             this.Lbl_caracteres_min.TabIndex = 4;
@@ -58,7 +58,7 @@
             this.Lbl_caracteres_especiais.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_caracteres_especiais.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_caracteres_especiais.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Lbl_caracteres_especiais.Location = new System.Drawing.Point(464, 385);
+            this.Lbl_caracteres_especiais.Location = new System.Drawing.Point(435, 444);
             this.Lbl_caracteres_especiais.Name = "Lbl_caracteres_especiais";
             this.Lbl_caracteres_especiais.Size = new System.Drawing.Size(161, 17);
             this.Lbl_caracteres_especiais.TabIndex = 5;
@@ -75,25 +75,28 @@
             this.Btn_cadastrar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
             this.Btn_cadastrar.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.Btn_cadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.Btn_cadastrar.Location = new System.Drawing.Point(646, 537);
+            this.Btn_cadastrar.Location = new System.Drawing.Point(598, 606);
             this.Btn_cadastrar.MinimumSize = new System.Drawing.Size(180, 45);
             this.Btn_cadastrar.Name = "Btn_cadastrar";
             this.Btn_cadastrar.Size = new System.Drawing.Size(180, 45);
             this.Btn_cadastrar.TabIndex = 6;
             this.Btn_cadastrar.Text = "Cadastrar";
+            this.Btn_cadastrar.Click += new System.EventHandler(this.Btn_cadastrar_Click);
             // 
             // Link_ja_tem_cad
             // 
+            this.Link_ja_tem_cad.ActiveLinkColor = System.Drawing.SystemColors.ButtonFace;
             this.Link_ja_tem_cad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Link_ja_tem_cad.AutoSize = true;
             this.Link_ja_tem_cad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Link_ja_tem_cad.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
-            this.Link_ja_tem_cad.Location = new System.Drawing.Point(615, 594);
+            this.Link_ja_tem_cad.Location = new System.Drawing.Point(563, 663);
             this.Link_ja_tem_cad.Name = "Link_ja_tem_cad";
             this.Link_ja_tem_cad.Size = new System.Drawing.Size(246, 17);
             this.Link_ja_tem_cad.TabIndex = 7;
             this.Link_ja_tem_cad.TabStop = true;
             this.Link_ja_tem_cad.Text = "Já é cadastrado? Clique aqui para logar!";
+            this.Link_ja_tem_cad.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Link_ja_tem_cad_LinkClicked);
             // 
             // Picture_box
             // 
@@ -102,7 +105,7 @@
             this.Picture_box.ImageRotate = 0F;
             this.Picture_box.Location = new System.Drawing.Point(0, 0);
             this.Picture_box.Name = "Picture_box";
-            this.Picture_box.Size = new System.Drawing.Size(1370, 245);
+            this.Picture_box.Size = new System.Drawing.Size(1370, 249);
             this.Picture_box.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.Picture_box.TabIndex = 0;
             this.Picture_box.TabStop = false;
@@ -126,7 +129,7 @@
             this.Txt_rep_senha_cad.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_rep_senha_cad.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_rep_senha_cad.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_rep_senha_cad.Location = new System.Drawing.Point(464, 430);
+            this.Txt_rep_senha_cad.Location = new System.Drawing.Point(435, 489);
             this.Txt_rep_senha_cad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_rep_senha_cad.MinimumSize = new System.Drawing.Size(503, 43);
             this.Txt_rep_senha_cad.Name = "Txt_rep_senha_cad";
@@ -156,7 +159,7 @@
             this.Txt_senha_cad.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_senha_cad.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_senha_cad.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_senha_cad.Location = new System.Drawing.Point(464, 315);
+            this.Txt_senha_cad.Location = new System.Drawing.Point(435, 374);
             this.Txt_senha_cad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_senha_cad.MinimumSize = new System.Drawing.Size(503, 43);
             this.Txt_senha_cad.Name = "Txt_senha_cad";
@@ -186,7 +189,7 @@
             this.Txt_email_cad.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_email_cad.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_email_cad.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_email_cad.Location = new System.Drawing.Point(464, 236);
+            this.Txt_email_cad.Location = new System.Drawing.Point(435, 295);
             this.Txt_email_cad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_email_cad.MinimumSize = new System.Drawing.Size(503, 43);
             this.Txt_email_cad.Name = "Txt_email_cad";

@@ -45,7 +45,7 @@
             this.Picture_box2.ImageRotate = 0F;
             this.Picture_box2.Location = new System.Drawing.Point(0, 0);
             this.Picture_box2.Name = "Picture_box2";
-            this.Picture_box2.Size = new System.Drawing.Size(1430, 245);
+            this.Picture_box2.Size = new System.Drawing.Size(1370, 249);
             this.Picture_box2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.Picture_box2.TabIndex = 1;
             this.Picture_box2.TabStop = false;
@@ -69,7 +69,7 @@
             this.Txt_senha_login.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_senha_login.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_senha_login.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_senha_login.Location = new System.Drawing.Point(459, 333);
+            this.Txt_senha_login.Location = new System.Drawing.Point(436, 385);
             this.Txt_senha_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_senha_login.MinimumSize = new System.Drawing.Size(503, 43);
             this.Txt_senha_login.Name = "Txt_senha_login";
@@ -99,7 +99,7 @@
             this.Txt_email_login.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_email_login.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_email_login.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_email_login.Location = new System.Drawing.Point(459, 256);
+            this.Txt_email_login.Location = new System.Drawing.Point(436, 308);
             this.Txt_email_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_email_login.MinimumSize = new System.Drawing.Size(503, 43);
             this.Txt_email_login.Name = "Txt_email_login";
@@ -112,16 +112,18 @@
             // 
             // Link_nao_tem_cad
             // 
+            this.Link_nao_tem_cad.ActiveLinkColor = System.Drawing.SystemColors.ButtonFace;
             this.Link_nao_tem_cad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Link_nao_tem_cad.AutoSize = true;
             this.Link_nao_tem_cad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Link_nao_tem_cad.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
-            this.Link_nao_tem_cad.Location = new System.Drawing.Point(580, 530);
+            this.Link_nao_tem_cad.Location = new System.Drawing.Point(557, 582);
             this.Link_nao_tem_cad.Name = "Link_nao_tem_cad";
             this.Link_nao_tem_cad.Size = new System.Drawing.Size(262, 17);
             this.Link_nao_tem_cad.TabIndex = 9;
             this.Link_nao_tem_cad.TabStop = true;
             this.Link_nao_tem_cad.Text = "Primeiro acesso? Clique aqui e se cadastre!";
+            this.Link_nao_tem_cad.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Link_nao_tem_cad_LinkClicked);
             // 
             // Btn_logar
             // 
@@ -134,20 +136,22 @@
             this.Btn_logar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
             this.Btn_logar.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.Btn_logar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.Btn_logar.Location = new System.Drawing.Point(621, 473);
+            this.Btn_logar.Location = new System.Drawing.Point(598, 525);
             this.Btn_logar.MinimumSize = new System.Drawing.Size(180, 45);
             this.Btn_logar.Name = "Btn_logar";
             this.Btn_logar.Size = new System.Drawing.Size(180, 45);
             this.Btn_logar.TabIndex = 8;
             this.Btn_logar.Text = "Logar";
+            this.Btn_logar.Click += new System.EventHandler(this.Btn_logar_Click);
             // 
             // Link_esqueceu_senha
             // 
+            this.Link_esqueceu_senha.ActiveLinkColor = System.Drawing.SystemColors.ButtonFace;
             this.Link_esqueceu_senha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.Link_esqueceu_senha.AutoSize = true;
             this.Link_esqueceu_senha.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Link_esqueceu_senha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
-            this.Link_esqueceu_senha.Location = new System.Drawing.Point(567, 388);
+            this.Link_esqueceu_senha.Location = new System.Drawing.Point(544, 440);
             this.Link_esqueceu_senha.Name = "Link_esqueceu_senha";
             this.Link_esqueceu_senha.Size = new System.Drawing.Size(288, 17);
             this.Link_esqueceu_senha.TabIndex = 10;
@@ -159,7 +163,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1430, 792);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.Link_esqueceu_senha);
             this.Controls.Add(this.Link_nao_tem_cad);
             this.Controls.Add(this.Btn_logar);
