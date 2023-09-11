@@ -40,5 +40,10 @@ namespace Kos_Manager
             tinc.Show();
             this.Hide();
         }
+
+        private void Txt_rep_senha_cad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
