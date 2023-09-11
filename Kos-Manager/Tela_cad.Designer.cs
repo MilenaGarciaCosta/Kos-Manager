@@ -138,7 +138,7 @@
             this.Txt_senha_cad.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Txt_senha_cad.MinimumSize = new System.Drawing.Size(671, 53);
             this.Txt_senha_cad.Name = "Txt_senha_cad";
-            this.Txt_senha_cad.PasswordChar = '\0';
+            this.Txt_senha_cad.PasswordChar = '*';
             this.Txt_senha_cad.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.Txt_senha_cad.PlaceholderText = "Crie uma senha";
             this.Txt_senha_cad.SelectedText = "";
@@ -187,7 +187,7 @@
             this.Check_ver_senha.CheckMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
             this.Check_ver_senha.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Check_ver_senha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Check_ver_senha.Location = new System.Drawing.Point(1259, 514);
+            this.Check_ver_senha.Location = new System.Drawing.Point(1279, 515);
             this.Check_ver_senha.Name = "Check_ver_senha";
             this.Check_ver_senha.Size = new System.Drawing.Size(142, 27);
             this.Check_ver_senha.TabIndex = 8;
@@ -197,6 +197,7 @@
             this.Check_ver_senha.UncheckedState.BorderThickness = 0;
             this.Check_ver_senha.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.Check_ver_senha.UseVisualStyleBackColor = false;
+            this.Check_ver_senha.CheckedChanged += new System.EventHandler(this.Check_ver_senha_CheckedChanged);
             // 
             // Tela_cad
             // 
