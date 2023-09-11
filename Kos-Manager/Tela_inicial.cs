@@ -12,9 +12,128 @@ namespace Kos_Manager
 {
     public partial class Tela_inicial : Form
     {
+        bool Expandir_menu;
+        bool Estoque_fechado;
+        bool Solicitacao_fechado;
+        bool Funcionario_fechado;
         public Tela_inicial()
         {
             InitializeComponent();
+        }
+
+        private void Tela_inicial_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Menu_timer_Tick(object sender, EventArgs e)
+        {
+            // definir o maior e menor tamanho do menu lateral
+            if(Expandir_menu)
+            {
+                //se o menu lateral estiver expandido, minimiza
+                Lateral_menu.Width -= 10;
+                if(Lateral_menu.Width == Lateral_menu.MinimumSize.Width)
+                {
+                    Expandir_menu = false;
+                    Menu_timer.Stop();
+                }
+            }
+            else
+            {
+                Lateral_menu.Width += 10;
+                if (Lateral_menu.Width == Lateral_menu.MaximumSize.Width)
+                {
+                    Expandir_menu = true;
+                    Menu_timer.Stop();
+                }
+            }
+        }
+
+        private void Menu_burguer_Click(object sender, EventArgs e)
+        {
+            Menu_timer.Start();
+        }
+
+        private void Estoque_timer_Tick(object sender, EventArgs e)
+        {
+            if(Estoque_fechado)
+            {
+                Estoque_container.Height += 10;
+                if(Estoque_container.Height == Estoque_container.MaximumSize.Height)
+                {
+                    Estoque_fechado = false;
+                    Estoque_timer.Stop();
+                }
+            }
+            else
+            {
+                Estoque_container.Height -= 10;
+                if(Estoque_container.Height == Estoque_container.MinimumSize.Height)
+                {
+                    Estoque_fechado = true;
+                    Estoque_timer.Stop();
+                }
+            }
+        }
+
+        private void Btn_estoque_menu_Click(object sender, EventArgs e)
+        {
+            Estoque_timer.Start();
+        }
+
+        private void Solicitacao_timer_Tick(object sender, EventArgs e)
+        {
+            if (Solicitacao_fechado)
+            {
+                Solicitacao_container.Height += 10;
+                if (Solicitacao_container.Height == Solicitacao_container.MaximumSize.Height)
+                {
+                    Solicitacao_fechado = false;
+                    Solicitacao_timer.Stop();
+                }
+            }
+            else
+            {
+                Solicitacao_container.Height -= 10;
+                if (Solicitacao_container.Height == Solicitacao_container.MinimumSize.Height)
+                {
+                    Solicitacao_fechado = true;
+                    Solicitacao_timer.Stop();
+                }
+            }
+        }
+
+        private void Btn_solicitacao_menu_Click(object sender, EventArgs e)
+        {
+            Solicitacao_timer.Start();
+        }
+
+        private void Funcionario_timer_Tick(object sender, EventArgs e)
+        {
+            if (Funcionario_fechado)
+            {
+                Funcionario_container.Height += 10;
+                if (Funcionario_container.Height == Funcionario_container.MaximumSize.Height)
+                {
+                    Funcionario_fechado = false;
+                    Funcionario_timer.Stop();
+                }
+            }
+            else
+            {
+                Funcionario_container.Height -= 10;
+                if (Funcionario_container.Height == Funcionario_container.MinimumSize.Height)
+                {
+                    Funcionario_fechado = true;
+                    Funcionario_timer.Stop();
+                }
+            }
+        }
+
+        private void Btn_funcionarios_Click(object sender, EventArgs e)
+        {
+            Funcionario_timer.Start();
         }
     }
 }

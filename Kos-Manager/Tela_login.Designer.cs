@@ -41,7 +41,7 @@
             // Picture_box2
             // 
             this.Picture_box2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Picture_box2.Image = ((System.Drawing.Image)(resources.GetObject("Picture_box2.Image")));
+            this.Picture_box2.Image = global::Kos_Manager.Properties.Resources.logo_branca;
             this.Picture_box2.ImageRotate = 0F;
             this.Picture_box2.Location = new System.Drawing.Point(0, 0);
             this.Picture_box2.Name = "Picture_box2";
@@ -66,7 +66,7 @@
             this.Txt_senha_login.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Txt_senha_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.Txt_senha_login.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_senha_login.IconRight = ((System.Drawing.Image)(resources.GetObject("Txt_senha_login.IconRight")));
+            this.Txt_senha_login.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_senha_login.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_senha_login.IconRightSize = new System.Drawing.Size(10, 10);
             this.Txt_senha_login.Location = new System.Drawing.Point(459, 333);
@@ -96,7 +96,7 @@
             this.Txt_email_login.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Txt_email_login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.Txt_email_login.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_email_login.IconRight = ((System.Drawing.Image)(resources.GetObject("Txt_email_login.IconRight")));
+            this.Txt_email_login.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_email_login.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_email_login.IconRightSize = new System.Drawing.Size(10, 10);
             this.Txt_email_login.Location = new System.Drawing.Point(459, 256);

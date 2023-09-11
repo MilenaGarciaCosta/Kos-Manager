@@ -140,6 +140,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Tela_cad.resx">
       <DependentUpon>Tela_cad.cs</DependentUpon>
@@ -163,6 +164,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asterisco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_horizontal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_splash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_branca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\autoria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dashboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fornecedor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funcionario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notafiscal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\solicitacao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vendas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_burguer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

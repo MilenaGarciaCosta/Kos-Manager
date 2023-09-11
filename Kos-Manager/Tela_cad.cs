@@ -16,5 +16,15 @@ namespace Kos_Manager
         {
             InitializeComponent();
         }
+
+        private void Tela_cad_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Txt_nome_cad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
