@@ -52,7 +52,7 @@
             // 
             // Txt_senha_login
             // 
-            this.Txt_senha_login.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Txt_senha_login.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Txt_senha_login.BorderRadius = 6;
             this.Txt_senha_login.BorderThickness = 0;
             this.Txt_senha_login.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -71,7 +71,6 @@
             this.Txt_senha_login.IconRightSize = new System.Drawing.Size(10, 10);
             this.Txt_senha_login.Location = new System.Drawing.Point(436, 385);
             this.Txt_senha_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Txt_senha_login.MinimumSize = new System.Drawing.Size(503, 43);
             this.Txt_senha_login.Name = "Txt_senha_login";
             this.Txt_senha_login.PasswordChar = '\0';
             this.Txt_senha_login.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
@@ -82,7 +81,7 @@
             // 
             // Txt_email_login
             // 
-            this.Txt_email_login.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Txt_email_login.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Txt_email_login.BorderRadius = 6;
             this.Txt_email_login.BorderThickness = 0;
             this.Txt_email_login.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -101,7 +100,6 @@
             this.Txt_email_login.IconRightSize = new System.Drawing.Size(10, 10);
             this.Txt_email_login.Location = new System.Drawing.Point(436, 308);
             this.Txt_email_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Txt_email_login.MinimumSize = new System.Drawing.Size(503, 43);
             this.Txt_email_login.Name = "Txt_email_login";
             this.Txt_email_login.PasswordChar = '\0';
             this.Txt_email_login.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
@@ -113,7 +111,7 @@
             // Link_nao_tem_cad
             // 
             this.Link_nao_tem_cad.ActiveLinkColor = System.Drawing.SystemColors.ButtonFace;
-            this.Link_nao_tem_cad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Link_nao_tem_cad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Link_nao_tem_cad.AutoSize = true;
             this.Link_nao_tem_cad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Link_nao_tem_cad.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
@@ -127,7 +125,7 @@
             // 
             // Btn_logar
             // 
-            this.Btn_logar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Btn_logar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Btn_logar.BorderRadius = 6;
             this.Btn_logar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.Btn_logar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -147,7 +145,7 @@
             // Link_esqueceu_senha
             // 
             this.Link_esqueceu_senha.ActiveLinkColor = System.Drawing.SystemColors.ButtonFace;
-            this.Link_esqueceu_senha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Link_esqueceu_senha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Link_esqueceu_senha.AutoSize = true;
             this.Link_esqueceu_senha.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Link_esqueceu_senha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));

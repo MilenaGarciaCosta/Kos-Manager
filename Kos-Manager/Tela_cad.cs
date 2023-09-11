@@ -106,5 +106,10 @@ namespace Kos_Manager
                 Txt_senha_cad.PasswordChar = '*';
             }
         }
+
+        private void Lbl_caracteres_min_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
