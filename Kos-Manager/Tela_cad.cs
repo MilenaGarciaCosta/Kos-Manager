@@ -17,8 +17,6 @@ namespace Kos_Manager
     {
 
         string conexao = ConfigurationManager.ConnectionStrings["BD_KOSMANAGER"].ConnectionString;
-        private string erro;
-
 
         public Tela_cad()
         {
@@ -78,14 +76,13 @@ namespace Kos_Manager
                 executacmdMysql_insert.ExecuteNonQuery();
 
                 con.Close();
-                //_ = MessageBox.Show("TA CADASTRADO VADIA");
 
             }
 
             catch (Exception erro)
             {
 
-                MessageBox.Show("BURRO EM PAULO, ERRADO: " + erro);
+                MessageBox.Show("Erro de conexão: " + erro);
             }
 
         }
