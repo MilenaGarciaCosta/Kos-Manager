@@ -23,7 +23,8 @@ namespace Kos_Manager
 
         private void Tela_inicial_Load(object sender, EventArgs e)
         {
-
+            Lbl_date.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            Lbl_hora.Text = DateTime.Now.ToString("HH:mm");
         }
 
         private void Menu_timer_Tick(object sender, EventArgs e)
@@ -37,6 +38,24 @@ namespace Kos_Manager
                 {
                     Expandir_menu = false;
                     Menu_timer.Stop();
+                }
+                Solicitacao_container.Height -= 10;
+                if (Solicitacao_container.Height == Solicitacao_container.MinimumSize.Height)
+                {
+                    Solicitacao_fechado = true;
+                    Solicitacao_timer.Stop();
+                }
+                Funcionario_container.Height -= 10;
+                if (Funcionario_container.Height == Funcionario_container.MinimumSize.Height)
+                {
+                    Funcionario_fechado = true;
+                    Funcionario_timer.Stop();
+                }
+                Estoque_container.Height -= 10;
+                if (Estoque_container.Height == Estoque_container.MinimumSize.Height)
+                {
+                    Estoque_fechado = true;
+                    Estoque_timer.Stop();
                 }
             }
             else
@@ -65,6 +84,18 @@ namespace Kos_Manager
                     Estoque_fechado = false;
                     Estoque_timer.Stop();
                 }
+                Solicitacao_container.Height -= 10;
+                if (Solicitacao_container.Height == Solicitacao_container.MinimumSize.Height)
+                {
+                    Solicitacao_fechado = true;
+                    Solicitacao_timer.Stop();
+                }
+                Funcionario_container.Height -= 10;
+                if (Funcionario_container.Height == Funcionario_container.MinimumSize.Height)
+                {
+                    Funcionario_fechado = true;
+                    Funcionario_timer.Stop();
+                }
             }
             else
             {
@@ -91,6 +122,18 @@ namespace Kos_Manager
                 {
                     Solicitacao_fechado = false;
                     Solicitacao_timer.Stop();
+                }
+                Estoque_container.Height -= 10;
+                if (Estoque_container.Height == Estoque_container.MinimumSize.Height)
+                {
+                    Estoque_fechado = true;
+                    Estoque_timer.Stop();
+                }
+                Funcionario_container.Height -= 10;
+                if (Funcionario_container.Height == Funcionario_container.MinimumSize.Height)
+                {
+                    Funcionario_fechado = true;
+                    Funcionario_timer.Stop();
                 }
             }
             else
@@ -119,6 +162,18 @@ namespace Kos_Manager
                     Funcionario_fechado = false;
                     Funcionario_timer.Stop();
                 }
+                Solicitacao_container.Height -= 10;
+                if (Solicitacao_container.Height == Solicitacao_container.MinimumSize.Height)
+                {
+                    Solicitacao_fechado = true;
+                    Solicitacao_timer.Stop();
+                }
+                Estoque_container.Height -= 10;
+                if (Estoque_container.Height == Estoque_container.MinimumSize.Height)
+                {
+                    Estoque_fechado = true;
+                    Estoque_timer.Stop();
+                }
             }
             else
             {
@@ -134,6 +189,16 @@ namespace Kos_Manager
         private void Btn_funcionarios_Click(object sender, EventArgs e)
         {
             Funcionario_timer.Start();
+        }
+
+        private void Lbl_date_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Lbl_hora_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

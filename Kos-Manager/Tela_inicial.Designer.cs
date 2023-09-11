@@ -71,6 +71,8 @@
             this.Estoque_timer = new System.Windows.Forms.Timer(this.components);
             this.Solicitacao_timer = new System.Windows.Forms.Timer(this.components);
             this.Funcionario_timer = new System.Windows.Forms.Timer(this.components);
+            this.Lbl_date = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Lbl_hora = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Img_header_menu)).BeginInit();
             this.Lateral_menu.SuspendLayout();
             this.Estoque_container.SuspendLayout();
@@ -99,6 +101,7 @@
             // 
             this.Img_header_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.Img_header_menu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Img_header_menu.FillColor = System.Drawing.Color.Transparent;
             this.Img_header_menu.Image = global::Kos_Manager.Properties.Resources.logo_horizontal;
             this.Img_header_menu.ImageRotate = 0F;
             this.Img_header_menu.Location = new System.Drawing.Point(0, 0);
@@ -122,10 +125,10 @@
             this.Lateral_menu.Controls.Add(this.Panel_9);
             this.Lateral_menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.Lateral_menu.Location = new System.Drawing.Point(0, 88);
-            this.Lateral_menu.MaximumSize = new System.Drawing.Size(245, 704);
-            this.Lateral_menu.MinimumSize = new System.Drawing.Size(73, 704);
+            this.Lateral_menu.MaximumSize = new System.Drawing.Size(245, 0);
+            this.Lateral_menu.MinimumSize = new System.Drawing.Size(73, 0);
             this.Lateral_menu.Name = "Lateral_menu";
-            this.Lateral_menu.Size = new System.Drawing.Size(73, 704);
+            this.Lateral_menu.Size = new System.Drawing.Size(73, 661);
             this.Lateral_menu.TabIndex = 1;
             // 
             // Estoque_container
@@ -338,7 +341,7 @@
             this.Btn_vendas.Image = global::Kos_Manager.Properties.Resources.vendas;
             this.Btn_vendas.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_vendas.ImageSize = new System.Drawing.Size(40, 40);
-            this.Btn_vendas.Location = new System.Drawing.Point(0, 3);
+            this.Btn_vendas.Location = new System.Drawing.Point(1, 3);
             this.Btn_vendas.Name = "Btn_vendas";
             this.Btn_vendas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.Btn_vendas.Size = new System.Drawing.Size(242, 54);
@@ -573,7 +576,7 @@
             this.Btn_config.Image = global::Kos_Manager.Properties.Resources.config;
             this.Btn_config.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_config.ImageSize = new System.Drawing.Size(40, 40);
-            this.Btn_config.Location = new System.Drawing.Point(0, 3);
+            this.Btn_config.Location = new System.Drawing.Point(1, 3);
             this.Btn_config.Name = "Btn_config";
             this.Btn_config.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.Btn_config.Size = new System.Drawing.Size(242, 54);
@@ -623,6 +626,30 @@
             this.Funcionario_timer.Interval = 10;
             this.Funcionario_timer.Tick += new System.EventHandler(this.Funcionario_timer_Tick);
             // 
+            // Lbl_date
+            // 
+            this.Lbl_date.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.Lbl_date.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_date.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Lbl_date.Location = new System.Drawing.Point(1265, 20);
+            this.Lbl_date.Name = "Lbl_date";
+            this.Lbl_date.Size = new System.Drawing.Size(79, 22);
+            this.Lbl_date.TabIndex = 4;
+            this.Lbl_date.Text = "00/00/0000";
+            this.Lbl_date.Click += new System.EventHandler(this.Lbl_date_Click);
+            // 
+            // Lbl_hora
+            // 
+            this.Lbl_hora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.Lbl_hora.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_hora.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.Lbl_hora.Location = new System.Drawing.Point(1306, 45);
+            this.Lbl_hora.Name = "Lbl_hora";
+            this.Lbl_hora.Size = new System.Drawing.Size(38, 22);
+            this.Lbl_hora.TabIndex = 5;
+            this.Lbl_hora.Text = "00:00";
+            this.Lbl_hora.Click += new System.EventHandler(this.Lbl_hora_Click);
+            // 
             // Tela_inicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -631,6 +658,8 @@
             this.BackgroundImage = global::Kos_Manager.Properties.Resources.img_bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.Lbl_hora);
+            this.Controls.Add(this.Lbl_date);
             this.Controls.Add(this.Panel_0);
             this.Controls.Add(this.Lateral_menu);
             this.Controls.Add(this.Img_header_menu);
@@ -663,6 +692,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Menu_burguer)).EndInit();
             this.Panel_0.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -709,5 +739,7 @@
         private Guna.UI2.WinForms.Guna2Button Btn_gerenciar_funcionarios;
         private System.Windows.Forms.Timer Solicitacao_timer;
         private System.Windows.Forms.Timer Funcionario_timer;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Lbl_date;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Lbl_hora;
     }
 }
