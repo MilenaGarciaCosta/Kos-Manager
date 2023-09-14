@@ -156,6 +156,7 @@
             this.Link_esqueceu_senha.TabIndex = 10;
             this.Link_esqueceu_senha.TabStop = true;
             this.Link_esqueceu_senha.Text = "Esqueceu sua senha? Clique aqui para redefinir!";
+            this.Link_esqueceu_senha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Link_esqueceu_senha_LinkClicked);
             // 
             // Check_ver_senha
             // 
