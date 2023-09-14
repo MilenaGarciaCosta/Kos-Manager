@@ -48,9 +48,9 @@
             this.Lbl_caracteres_min.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Lbl_caracteres_min.Location = new System.Drawing.Point(264, 459);
             this.Lbl_caracteres_min.Name = "Lbl_caracteres_min";
-            this.Lbl_caracteres_min.Size = new System.Drawing.Size(121, 17);
+            this.Lbl_caracteres_min.Size = new System.Drawing.Size(136, 17);
             this.Lbl_caracteres_min.TabIndex = 4;
-            this.Lbl_caracteres_min.Text = "8 caracteres (máximo)\r\n";
+            this.Lbl_caracteres_min.Text = "8 caracteres (obrigatório)\r\n";
             this.Lbl_caracteres_min.Click += new System.EventHandler(this.Lbl_caracteres_min_Click);
             // 
             // Lbl_caracteres_especiais
@@ -140,6 +140,7 @@
             this.Txt_senha_cad.SelectedText = "";
             this.Txt_senha_cad.Size = new System.Drawing.Size(503, 43);
             this.Txt_senha_cad.TabIndex = 2;
+            this.Txt_senha_cad.TextChanged += new System.EventHandler(this.Txt_senha_cad_TextChanged);
             // 
             // Txt_email_cad
             // 
@@ -186,7 +187,7 @@
             this.Check_ver_senha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Check_ver_senha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Check_ver_senha.Location = new System.Drawing.Point(264, 433);
-            this.Check_ver_senha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Check_ver_senha.Margin = new System.Windows.Forms.Padding(2);
             this.Check_ver_senha.Name = "Check_ver_senha";
             this.Check_ver_senha.Size = new System.Drawing.Size(118, 21);
             this.Check_ver_senha.TabIndex = 8;

@@ -108,5 +108,10 @@ namespace Kos_Manager
         {
 
         }
+
+        private void Txt_senha_cad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

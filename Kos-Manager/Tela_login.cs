@@ -30,5 +30,17 @@ namespace Kos_Manager
             tinc.Show();
             this.Hide();
         }
+
+        private void Check_ver_senha_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Check_ver_senha.Checked)
+            {
+                Txt_senha_login.PasswordChar = '\0';
+            }
+            else
+            {
+                Txt_senha_login.PasswordChar = '*';
+            }
+        }
     }
 }

@@ -35,6 +35,7 @@
             this.Link_nao_tem_cad = new System.Windows.Forms.LinkLabel();
             this.Btn_logar = new Guna.UI2.WinForms.Guna2Button();
             this.Link_esqueceu_senha = new System.Windows.Forms.LinkLabel();
+            this.Check_ver_senha = new Guna.UI2.WinForms.Guna2CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.Picture_box2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +73,7 @@
             this.Txt_senha_login.Location = new System.Drawing.Point(436, 385);
             this.Txt_senha_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_senha_login.Name = "Txt_senha_login";
-            this.Txt_senha_login.PasswordChar = '\0';
+            this.Txt_senha_login.PasswordChar = '*';
             this.Txt_senha_login.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.Txt_senha_login.PlaceholderText = "Digite sua senha";
             this.Txt_senha_login.SelectedText = "";
@@ -149,12 +150,38 @@
             this.Link_esqueceu_senha.AutoSize = true;
             this.Link_esqueceu_senha.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Link_esqueceu_senha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
-            this.Link_esqueceu_senha.Location = new System.Drawing.Point(544, 440);
+            this.Link_esqueceu_senha.Location = new System.Drawing.Point(544, 456);
             this.Link_esqueceu_senha.Name = "Link_esqueceu_senha";
             this.Link_esqueceu_senha.Size = new System.Drawing.Size(288, 17);
             this.Link_esqueceu_senha.TabIndex = 10;
             this.Link_esqueceu_senha.TabStop = true;
             this.Link_esqueceu_senha.Text = "Esqueceu sua senha? Clique aqui para redefinir!";
+            // 
+            // Check_ver_senha
+            // 
+            this.Check_ver_senha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Check_ver_senha.AutoSize = true;
+            this.Check_ver_senha.BackColor = System.Drawing.Color.Transparent;
+            this.Check_ver_senha.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.Check_ver_senha.CheckedState.BorderRadius = 0;
+            this.Check_ver_senha.CheckedState.BorderThickness = 0;
+            this.Check_ver_senha.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.Check_ver_senha.CheckMarkColor = System.Drawing.SystemColors.ButtonFace;
+            this.Check_ver_senha.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Check_ver_senha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Check_ver_senha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Check_ver_senha.Location = new System.Drawing.Point(436, 435);
+            this.Check_ver_senha.Margin = new System.Windows.Forms.Padding(2);
+            this.Check_ver_senha.Name = "Check_ver_senha";
+            this.Check_ver_senha.Size = new System.Drawing.Size(118, 21);
+            this.Check_ver_senha.TabIndex = 11;
+            this.Check_ver_senha.Text = "SENHA VISÍVEL";
+            this.Check_ver_senha.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.Check_ver_senha.UncheckedState.BorderRadius = 0;
+            this.Check_ver_senha.UncheckedState.BorderThickness = 0;
+            this.Check_ver_senha.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.Check_ver_senha.UseVisualStyleBackColor = false;
+            this.Check_ver_senha.CheckedChanged += new System.EventHandler(this.Check_ver_senha_CheckedChanged);
             // 
             // Tela_login
             // 
@@ -162,6 +189,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.Check_ver_senha);
             this.Controls.Add(this.Link_esqueceu_senha);
             this.Controls.Add(this.Link_nao_tem_cad);
             this.Controls.Add(this.Btn_logar);
@@ -186,5 +214,6 @@
         private System.Windows.Forms.LinkLabel Link_nao_tem_cad;
         private Guna.UI2.WinForms.Guna2Button Btn_logar;
         private System.Windows.Forms.LinkLabel Link_esqueceu_senha;
+        private Guna.UI2.WinForms.Guna2CheckBox Check_ver_senha;
     }
 }
