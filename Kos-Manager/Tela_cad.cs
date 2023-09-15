@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Configuration;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using System.Linq;
 
 namespace Kos_Manager
 {
@@ -42,41 +43,39 @@ namespace Kos_Manager
 
         private void Btn_cadastrar_Click(object sender, EventArgs e)
         {
-            Tela_inicial tinc = new Tela_inicial();
-            tinc.Show();
-            this.Hide();
 
             try
             {
                 MySqlConnection con = new MySqlConnection(conexao);
 
-                string email;
-                string senha;
+                string email = Txt_email_cad.Text;
+                string senha = Txt_senha_cad.Text;
 
-                email = Txt_email_cad.Text;
-                senha = Txt_senha_cad.Text;
+                // Verifica se a senha contém pelo menos um caractere especial
+                if (SenhaContemCaracterEspecial(senha) && EmailArroba(email) && senha.Length >= 8 && senha.Length == 8)
+                {
+                    string sql_insert = @"insert into TB_OPERADOR_PRINCIPAL
+                                  (TB_OPERADOR_PRINCIPAL_EMAIL, TB_OPERADOR_PRINCIPAL_SENHA)
+                                  values 
+                                  (@OPERADOR_PRINCIPAL_EMAIL, @OPERADOR_PRINCIPAL_SENHA)";
 
+                    MySqlCommand executacmdMysql_insert = new MySqlCommand(sql_insert, con);
 
+                    executacmdMysql_insert.Parameters.AddWithValue("@OPERADOR_PRINCIPAL_EMAIL", email);
+                    executacmdMysql_insert.Parameters.AddWithValue("@OPERADOR_PRINCIPAL_SENHA", senha);
 
-                string sql_insert = @"insert into TB_OPERADOR_PRINCIPAL
-                                                        (
-                                                      TB_OPERADOR_PRINCIPAL_EMAIL, TB_OPERADOR_PRINCIPAL_SENHA
-                                                         )
+                    con.Open();
+                    executacmdMysql_insert.ExecuteNonQuery();
+                    con.Close();
 
-                                                      values 
-                                                        (
-                                                       @OPERADOR_PRINCIPAL_EMAIL, @OPERADOR_PRINCIPAL_SENHA
-                                                        )";
-
-                MySqlCommand executacmdMysql_insert = new MySqlCommand(sql_insert, con);
-
-                executacmdMysql_insert.Parameters.AddWithValue("@OPERADOR_PRINCIPAL_EMAIL", email);
-                executacmdMysql_insert.Parameters.AddWithValue("@OPERADOR_PRINCIPAL_SENHA", senha);
-                con.Open();
-                executacmdMysql_insert.ExecuteNonQuery();
-
-                con.Close();
-
+                    Tela_inicial tinc = new Tela_inicial();
+                    tinc.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("A senha precisa ter 8 caracteries e um deles precisa ser especial, ex: -/:;.,?!$&@“‘#");
+                }
             }
 
             catch (Exception erro)
@@ -85,6 +84,24 @@ namespace Kos_Manager
                 MessageBox.Show("Erro de conexão: " + erro);
             }
 
+        }
+
+        static bool SenhaContemCaracterEspecial(string senha)
+        {
+            // Lista de caracteres especiais permitidos
+            string caracteresEspeciais = "-/:;.,?!$&@“‘#";
+
+            // Verifica se pelo menos um dos caracteres especiais está presente na senha
+            return senha.Any(c => caracteresEspeciais.Contains(c));
+        }
+
+        static bool EmailArroba(string email)
+        {
+            // Lista de domínios permitidos
+            string[] dominiosPermitidos = { "@gmail.com", "@hotmail.com", "@outlook.com" };
+
+            // Verifica se o email termina com um dos domínios permitidos
+            return dominiosPermitidos.Any(dominio => email.EndsWith(dominio));
         }
 
         private void Txt_rep_senha_cad_TextChanged(object sender, EventArgs e)
