@@ -106,7 +106,7 @@
             this.Img_header_menu.ImageRotate = 0F;
             this.Img_header_menu.Location = new System.Drawing.Point(0, 0);
             this.Img_header_menu.Name = "Img_header_menu";
-            this.Img_header_menu.Size = new System.Drawing.Size(1370, 88);
+            this.Img_header_menu.Size = new System.Drawing.Size(1364, 88);
             this.Img_header_menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.Img_header_menu.TabIndex = 0;
             this.Img_header_menu.TabStop = false;
@@ -632,7 +632,7 @@
             this.Lbl_date.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.Lbl_date.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_date.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Lbl_date.Location = new System.Drawing.Point(1265, 20);
+            this.Lbl_date.Location = new System.Drawing.Point(1259, 20);
             this.Lbl_date.Name = "Lbl_date";
             this.Lbl_date.Size = new System.Drawing.Size(79, 22);
             this.Lbl_date.TabIndex = 4;
@@ -645,7 +645,7 @@
             this.Lbl_hora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.Lbl_hora.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_hora.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Lbl_hora.Location = new System.Drawing.Point(1306, 45);
+            this.Lbl_hora.Location = new System.Drawing.Point(1300, 45);
             this.Lbl_hora.Name = "Lbl_hora";
             this.Lbl_hora.Size = new System.Drawing.Size(38, 22);
             this.Lbl_hora.TabIndex = 5;
@@ -659,7 +659,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.BackgroundImage = global::Kos_Manager.Properties.Resources.img_bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1364, 749);
             this.Controls.Add(this.Lbl_hora);
             this.Controls.Add(this.Lbl_date);
             this.Controls.Add(this.Panel_0);

@@ -126,6 +126,12 @@
     <Compile Include="Tela_cad.Designer.cs">
       <DependentUpon>Tela_cad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tela_funcionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_funcionarios.Designer.cs">
+      <DependentUpon>Tela_funcionarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tela_inicial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </Compile>
     <EmbeddedResource Include="Tela_cad.resx">
       <DependentUpon>Tela_cad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_funcionarios.resx">
+      <DependentUpon>Tela_funcionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tela_inicial.resx">
       <DependentUpon>Tela_inicial.cs</DependentUpon>
