@@ -216,16 +216,6 @@ namespace Kos_Manager
             ChildForm.Show();
         }
 
-        private void Btn_materia_prima_Click(object sender, EventArgs e)
-        {
-            abrirChildForm(new Tela_mat_prima());
-        }
-
-        private void Btn_produto_manu_Click(object sender, EventArgs e)
-        {
-            abrirChildForm(new Tela_manu());
-        }
-
         private void Btn_gerenciar_funcionarios_Click(object sender, EventArgs e)
         {
             abrirChildForm(new Tela_funcionarios());
@@ -234,6 +224,16 @@ namespace Kos_Manager
         private void Btn_fornecedores_Click(object sender, EventArgs e)
         {
             abrirChildForm(new Tela_fornecedor());
+        }
+
+        private void Btn_materia_prima_Click_1(object sender, EventArgs e)
+        {
+            abrirChildForm(new Tela_mat_prima());
+        }
+
+        private void Btn_produto_manu_Click(object sender, EventArgs e)
+        {
+            abrirChildForm(new Tela_manu());
         }
     }
 }
