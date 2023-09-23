@@ -200,5 +200,30 @@ namespace Kos_Manager
         {
             
         }
+
+        private Form FormAtivo = null;
+        private void abrirChildForm(Form ChildForm)
+        {
+            if (FormAtivo != null)
+                FormAtivo.Close();
+            FormAtivo = ChildForm;
+            ChildForm.TopLevel = false;
+            ChildForm.FormBorderStyle = FormBorderStyle.None;
+            ChildForm.Dock = DockStyle.Fill;
+            Child_panel.Controls.Add(ChildForm);
+            Child_panel.Tag = ChildForm;
+            ChildForm.BringToFront();
+            ChildForm.Show();
+        }
+
+        private void Btn_materia_prima_Click(object sender, EventArgs e)
+        {
+            abrirChildForm(new Tela_mat_prima());
+        }
+
+        private void Btn_produto_manu_Click(object sender, EventArgs e)
+        {
+            abrirChildForm(new Tela_manu());
+        }
     }
 }

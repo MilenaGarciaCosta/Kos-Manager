@@ -144,6 +144,18 @@
     <Compile Include="Tela_login.Designer.cs">
       <DependentUpon>Tela_login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tela_manu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_manu.Designer.cs">
+      <DependentUpon>Tela_manu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tela_mat_prima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_mat_prima.Designer.cs">
+      <DependentUpon>Tela_mat_prima.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tela_splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +185,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tela_login.resx">
       <DependentUpon>Tela_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_manu.resx">
+      <DependentUpon>Tela_manu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_mat_prima.resx">
+      <DependentUpon>Tela_mat_prima.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tela_splash.resx">
       <DependentUpon>Tela_splash.cs</DependentUpon>

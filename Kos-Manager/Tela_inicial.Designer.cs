@@ -73,6 +73,7 @@
             this.Funcionario_timer = new System.Windows.Forms.Timer(this.components);
             this.Lbl_date = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Lbl_hora = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Child_panel = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.Img_header_menu)).BeginInit();
             this.Lateral_menu.SuspendLayout();
             this.Estoque_container.SuspendLayout();
@@ -128,7 +129,7 @@
             this.Lateral_menu.MaximumSize = new System.Drawing.Size(245, 0);
             this.Lateral_menu.MinimumSize = new System.Drawing.Size(73, 0);
             this.Lateral_menu.Name = "Lateral_menu";
-            this.Lateral_menu.Size = new System.Drawing.Size(73, 661);
+            this.Lateral_menu.Size = new System.Drawing.Size(245, 661);
             this.Lateral_menu.TabIndex = 1;
             // 
             // Estoque_container
@@ -235,7 +236,7 @@
             this.Solicitacao_container.MaximumSize = new System.Drawing.Size(242, 152);
             this.Solicitacao_container.MinimumSize = new System.Drawing.Size(242, 53);
             this.Solicitacao_container.Name = "Solicitacao_container";
-            this.Solicitacao_container.Size = new System.Drawing.Size(242, 53);
+            this.Solicitacao_container.Size = new System.Drawing.Size(242, 152);
             this.Solicitacao_container.TabIndex = 11;
             // 
             // guna2Panel3
@@ -243,7 +244,7 @@
             this.guna2Panel3.Controls.Add(this.Btn_requisicao);
             this.guna2Panel3.Location = new System.Drawing.Point(1, 105);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(215, 46);
+            this.guna2Panel3.Size = new System.Drawing.Size(241, 46);
             this.guna2Panel3.TabIndex = 5;
             // 
             // Btn_requisicao
@@ -260,7 +261,7 @@
             this.Btn_requisicao.Location = new System.Drawing.Point(0, 0);
             this.Btn_requisicao.Name = "Btn_requisicao";
             this.Btn_requisicao.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.Btn_requisicao.Size = new System.Drawing.Size(215, 43);
+            this.Btn_requisicao.Size = new System.Drawing.Size(241, 43);
             this.Btn_requisicao.TabIndex = 3;
             this.Btn_requisicao.Text = "REQUISIÇÃO";
             this.Btn_requisicao.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -270,7 +271,7 @@
             this.guna2Panel2.Controls.Add(this.Btn_solicitacao);
             this.guna2Panel2.Location = new System.Drawing.Point(3, 57);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(215, 46);
+            this.guna2Panel2.Size = new System.Drawing.Size(239, 46);
             this.guna2Panel2.TabIndex = 4;
             // 
             // Btn_solicitacao
@@ -284,10 +285,10 @@
             this.Btn_solicitacao.ForeColor = System.Drawing.Color.White;
             this.Btn_solicitacao.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_solicitacao.ImageSize = new System.Drawing.Size(40, 40);
-            this.Btn_solicitacao.Location = new System.Drawing.Point(0, 3);
+            this.Btn_solicitacao.Location = new System.Drawing.Point(0, 1);
             this.Btn_solicitacao.Name = "Btn_solicitacao";
             this.Btn_solicitacao.Padding = new System.Windows.Forms.Padding(60, 0, 0, 0);
-            this.Btn_solicitacao.Size = new System.Drawing.Size(212, 43);
+            this.Btn_solicitacao.Size = new System.Drawing.Size(239, 43);
             this.Btn_solicitacao.TabIndex = 3;
             this.Btn_solicitacao.Text = "SOLICITAÇÃO";
             this.Btn_solicitacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -324,7 +325,7 @@
             // Panel_3
             // 
             this.Panel_3.Controls.Add(this.Btn_vendas);
-            this.Panel_3.Location = new System.Drawing.Point(3, 121);
+            this.Panel_3.Location = new System.Drawing.Point(3, 220);
             this.Panel_3.Name = "Panel_3";
             this.Panel_3.Size = new System.Drawing.Size(242, 60);
             this.Panel_3.TabIndex = 4;
@@ -352,7 +353,7 @@
             // Panel_4
             // 
             this.Panel_4.Controls.Add(this.Btn_fornecedores);
-            this.Panel_4.Location = new System.Drawing.Point(3, 187);
+            this.Panel_4.Location = new System.Drawing.Point(3, 286);
             this.Panel_4.Name = "Panel_4";
             this.Panel_4.Size = new System.Drawing.Size(242, 60);
             this.Panel_4.TabIndex = 5;
@@ -380,7 +381,7 @@
             // Panel_5
             // 
             this.Panel_5.Controls.Add(this.Btn_nota_fiscal);
-            this.Panel_5.Location = new System.Drawing.Point(3, 253);
+            this.Panel_5.Location = new System.Drawing.Point(3, 352);
             this.Panel_5.Name = "Panel_5";
             this.Panel_5.Size = new System.Drawing.Size(242, 60);
             this.Panel_5.TabIndex = 6;
@@ -410,7 +411,7 @@
             this.Funcionario_container.Controls.Add(this.guna2Panel4);
             this.Funcionario_container.Controls.Add(this.Panel_gerenciar_funcionario);
             this.Funcionario_container.Controls.Add(this.Panel_6);
-            this.Funcionario_container.Location = new System.Drawing.Point(3, 319);
+            this.Funcionario_container.Location = new System.Drawing.Point(3, 418);
             this.Funcionario_container.MaximumSize = new System.Drawing.Size(240, 160);
             this.Funcionario_container.MinimumSize = new System.Drawing.Size(240, 63);
             this.Funcionario_container.Name = "Funcionario_container";
@@ -503,7 +504,7 @@
             // Panel_7
             // 
             this.Panel_7.Controls.Add(this.Btn_dashboard);
-            this.Panel_7.Location = new System.Drawing.Point(3, 388);
+            this.Panel_7.Location = new System.Drawing.Point(3, 487);
             this.Panel_7.Name = "Panel_7";
             this.Panel_7.Size = new System.Drawing.Size(242, 60);
             this.Panel_7.TabIndex = 8;
@@ -531,7 +532,7 @@
             // Panel_8
             // 
             this.Panel_8.Controls.Add(this.Btn_reg_autoria);
-            this.Panel_8.Location = new System.Drawing.Point(3, 454);
+            this.Panel_8.Location = new System.Drawing.Point(3, 553);
             this.Panel_8.Name = "Panel_8";
             this.Panel_8.Size = new System.Drawing.Size(242, 60);
             this.Panel_8.TabIndex = 9;
@@ -559,7 +560,7 @@
             // Panel_9
             // 
             this.Panel_9.Controls.Add(this.Btn_config);
-            this.Panel_9.Location = new System.Drawing.Point(3, 520);
+            this.Panel_9.Location = new System.Drawing.Point(3, 619);
             this.Panel_9.Name = "Panel_9";
             this.Panel_9.Size = new System.Drawing.Size(248, 60);
             this.Panel_9.TabIndex = 10;
@@ -652,14 +653,24 @@
             this.Lbl_hora.Text = "00:00";
             this.Lbl_hora.Click += new System.EventHandler(this.Lbl_hora_Click);
             // 
+            // Child_panel
+            // 
+            this.Child_panel.BackgroundImage = global::Kos_Manager.Properties.Resources.img_bg;
+            this.Child_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Child_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Child_panel.Location = new System.Drawing.Point(245, 88);
+            this.Child_panel.Name = "Child_panel";
+            this.Child_panel.Size = new System.Drawing.Size(1119, 661);
+            this.Child_panel.TabIndex = 6;
+            // 
             // Tela_inicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.BackgroundImage = global::Kos_Manager.Properties.Resources.img_bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1364, 749);
+            this.Controls.Add(this.Child_panel);
             this.Controls.Add(this.Lbl_hora);
             this.Controls.Add(this.Lbl_date);
             this.Controls.Add(this.Panel_0);
@@ -743,5 +754,6 @@
         private System.Windows.Forms.Timer Funcionario_timer;
         private Guna.UI2.WinForms.Guna2HtmlLabel Lbl_date;
         private Guna.UI2.WinForms.Guna2HtmlLabel Lbl_hora;
+        private Guna.UI2.WinForms.Guna2Panel Child_panel;
     }
 }

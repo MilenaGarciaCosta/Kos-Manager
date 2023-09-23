@@ -46,5 +46,10 @@ namespace Kos_Manager
         {
 
         }
+
+        private void txt_buscar_func_id_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
