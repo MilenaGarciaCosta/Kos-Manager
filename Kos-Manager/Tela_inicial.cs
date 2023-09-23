@@ -225,5 +225,15 @@ namespace Kos_Manager
         {
             abrirChildForm(new Tela_manu());
         }
+
+        private void Btn_gerenciar_funcionarios_Click(object sender, EventArgs e)
+        {
+            abrirChildForm(new Tela_funcionarios());
+        }
+
+        private void Btn_fornecedores_Click(object sender, EventArgs e)
+        {
+            abrirChildForm(new Tela_fornecedor());
+        }
     }
 }

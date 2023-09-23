@@ -236,7 +236,7 @@
             this.Solicitacao_container.MaximumSize = new System.Drawing.Size(242, 152);
             this.Solicitacao_container.MinimumSize = new System.Drawing.Size(242, 53);
             this.Solicitacao_container.Name = "Solicitacao_container";
-            this.Solicitacao_container.Size = new System.Drawing.Size(242, 152);
+            this.Solicitacao_container.Size = new System.Drawing.Size(242, 53);
             this.Solicitacao_container.TabIndex = 11;
             // 
             // guna2Panel3
@@ -325,7 +325,7 @@
             // Panel_3
             // 
             this.Panel_3.Controls.Add(this.Btn_vendas);
-            this.Panel_3.Location = new System.Drawing.Point(3, 220);
+            this.Panel_3.Location = new System.Drawing.Point(3, 121);
             this.Panel_3.Name = "Panel_3";
             this.Panel_3.Size = new System.Drawing.Size(242, 60);
             this.Panel_3.TabIndex = 4;
@@ -353,7 +353,7 @@
             // Panel_4
             // 
             this.Panel_4.Controls.Add(this.Btn_fornecedores);
-            this.Panel_4.Location = new System.Drawing.Point(3, 286);
+            this.Panel_4.Location = new System.Drawing.Point(3, 187);
             this.Panel_4.Name = "Panel_4";
             this.Panel_4.Size = new System.Drawing.Size(242, 60);
             this.Panel_4.TabIndex = 5;
@@ -377,11 +377,12 @@
             this.Btn_fornecedores.TabIndex = 3;
             this.Btn_fornecedores.Text = "FORNECEDORES";
             this.Btn_fornecedores.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_fornecedores.Click += new System.EventHandler(this.Btn_fornecedores_Click);
             // 
             // Panel_5
             // 
             this.Panel_5.Controls.Add(this.Btn_nota_fiscal);
-            this.Panel_5.Location = new System.Drawing.Point(3, 352);
+            this.Panel_5.Location = new System.Drawing.Point(3, 253);
             this.Panel_5.Name = "Panel_5";
             this.Panel_5.Size = new System.Drawing.Size(242, 60);
             this.Panel_5.TabIndex = 6;
@@ -411,7 +412,7 @@
             this.Funcionario_container.Controls.Add(this.guna2Panel4);
             this.Funcionario_container.Controls.Add(this.Panel_gerenciar_funcionario);
             this.Funcionario_container.Controls.Add(this.Panel_6);
-            this.Funcionario_container.Location = new System.Drawing.Point(3, 418);
+            this.Funcionario_container.Location = new System.Drawing.Point(3, 319);
             this.Funcionario_container.MaximumSize = new System.Drawing.Size(240, 160);
             this.Funcionario_container.MinimumSize = new System.Drawing.Size(240, 63);
             this.Funcionario_container.Name = "Funcionario_container";
@@ -471,6 +472,7 @@
             this.Btn_gerenciar_funcionarios.TabIndex = 3;
             this.Btn_gerenciar_funcionarios.Text = "FUNCIONÁRIOS";
             this.Btn_gerenciar_funcionarios.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_gerenciar_funcionarios.Click += new System.EventHandler(this.Btn_gerenciar_funcionarios_Click);
             // 
             // Panel_6
             // 
@@ -504,7 +506,7 @@
             // Panel_7
             // 
             this.Panel_7.Controls.Add(this.Btn_dashboard);
-            this.Panel_7.Location = new System.Drawing.Point(3, 487);
+            this.Panel_7.Location = new System.Drawing.Point(3, 388);
             this.Panel_7.Name = "Panel_7";
             this.Panel_7.Size = new System.Drawing.Size(242, 60);
             this.Panel_7.TabIndex = 8;
@@ -532,7 +534,7 @@
             // Panel_8
             // 
             this.Panel_8.Controls.Add(this.Btn_reg_autoria);
-            this.Panel_8.Location = new System.Drawing.Point(3, 553);
+            this.Panel_8.Location = new System.Drawing.Point(3, 454);
             this.Panel_8.Name = "Panel_8";
             this.Panel_8.Size = new System.Drawing.Size(242, 60);
             this.Panel_8.TabIndex = 9;
@@ -560,7 +562,7 @@
             // Panel_9
             // 
             this.Panel_9.Controls.Add(this.Btn_config);
-            this.Panel_9.Location = new System.Drawing.Point(3, 619);
+            this.Panel_9.Location = new System.Drawing.Point(3, 520);
             this.Panel_9.Name = "Panel_9";
             this.Panel_9.Size = new System.Drawing.Size(248, 60);
             this.Panel_9.TabIndex = 10;
