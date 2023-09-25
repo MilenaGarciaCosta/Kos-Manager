@@ -126,6 +126,18 @@
     <Compile Include="Tela_cad.Designer.cs">
       <DependentUpon>Tela_cad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tela_configuracao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_configuracao.Designer.cs">
+      <DependentUpon>Tela_configuracao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tela_dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_dashboard.Designer.cs">
+      <DependentUpon>Tela_dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tela_fornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +174,36 @@
     <Compile Include="Tela_mat_prima.Designer.cs">
       <DependentUpon>Tela_mat_prima.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tela_nivel_acesso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_nivel_acesso.Designer.cs">
+      <DependentUpon>Tela_nivel_acesso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tela_nota_fiscal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_nota_fiscal.Designer.cs">
+      <DependentUpon>Tela_nota_fiscal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tela_reg_autoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_reg_autoria.Designer.cs">
+      <DependentUpon>Tela_reg_autoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tela_requisicao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_requisicao.Designer.cs">
+      <DependentUpon>Tela_requisicao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tela_solicitacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_solicitacao.Designer.cs">
+      <DependentUpon>Tela_solicitacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tela_splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +212,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tela_vendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_vendas.Designer.cs">
+      <DependentUpon>Tela_vendas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -182,6 +230,12 @@
     </Compile>
     <EmbeddedResource Include="Tela_cad.resx">
       <DependentUpon>Tela_cad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_configuracao.resx">
+      <DependentUpon>Tela_configuracao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_dashboard.resx">
+      <DependentUpon>Tela_dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tela_fornecedor.resx">
       <DependentUpon>Tela_fornecedor.cs</DependentUpon>
@@ -201,8 +255,26 @@
     <EmbeddedResource Include="Tela_mat_prima.resx">
       <DependentUpon>Tela_mat_prima.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tela_nivel_acesso.resx">
+      <DependentUpon>Tela_nivel_acesso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_nota_fiscal.resx">
+      <DependentUpon>Tela_nota_fiscal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_reg_autoria.resx">
+      <DependentUpon>Tela_reg_autoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_requisicao.resx">
+      <DependentUpon>Tela_requisicao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_solicitacao.resx">
+      <DependentUpon>Tela_solicitacao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tela_splash.resx">
       <DependentUpon>Tela_splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_vendas.resx">
+      <DependentUpon>Tela_vendas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

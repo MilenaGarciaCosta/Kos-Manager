@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_inicial));
-            this.Img_header_menu = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Lateral_menu = new System.Windows.Forms.FlowLayoutPanel();
             this.Estoque_container = new Guna.UI2.WinForms.Guna2Panel();
             this.Panel_produto_manu = new Guna.UI2.WinForms.Guna2Panel();
@@ -38,34 +37,24 @@
             this.Panel_mp = new Guna.UI2.WinForms.Guna2Panel();
             this.Btn_materia_prima = new Guna.UI2.WinForms.Guna2Button();
             this.Panel_1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.Btn_estoque_menu = new Guna.UI2.WinForms.Guna2Button();
             this.Solicitacao_container = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.Btn_requisicao = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.Btn_solicitacao = new Guna.UI2.WinForms.Guna2Button();
             this.Panel_2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.Btn_solicitacao_menu = new Guna.UI2.WinForms.Guna2Button();
             this.Panel_3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.Btn_vendas = new Guna.UI2.WinForms.Guna2Button();
             this.Panel_4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.Btn_fornecedores = new Guna.UI2.WinForms.Guna2Button();
             this.Panel_5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.Btn_nota_fiscal = new Guna.UI2.WinForms.Guna2Button();
             this.Funcionario_container = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.Panel_gerenciar_funcionario = new Guna.UI2.WinForms.Guna2Panel();
             this.Btn_gerenciar_funcionarios = new Guna.UI2.WinForms.Guna2Button();
             this.Panel_6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.Btn_funcionarios = new Guna.UI2.WinForms.Guna2Button();
             this.Panel_7 = new Guna.UI2.WinForms.Guna2Panel();
-            this.Btn_dashboard = new Guna.UI2.WinForms.Guna2Button();
             this.Panel_8 = new Guna.UI2.WinForms.Guna2Panel();
-            this.Btn_reg_autoria = new Guna.UI2.WinForms.Guna2Button();
             this.Panel_9 = new Guna.UI2.WinForms.Guna2Panel();
-            this.Btn_config = new Guna.UI2.WinForms.Guna2Button();
-            this.Menu_burguer = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Panel_0 = new Guna.UI2.WinForms.Guna2Panel();
             this.Menu_timer = new System.Windows.Forms.Timer(this.components);
             this.Estoque_timer = new System.Windows.Forms.Timer(this.components);
@@ -74,7 +63,17 @@
             this.Lbl_date = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Lbl_hora = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Child_panel = new Guna.UI2.WinForms.Guna2Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.Img_header_menu)).BeginInit();
+            this.Menu_burguer = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Btn_estoque_menu = new Guna.UI2.WinForms.Guna2Button();
+            this.Btn_solicitacao_menu = new Guna.UI2.WinForms.Guna2Button();
+            this.Btn_vendas = new Guna.UI2.WinForms.Guna2Button();
+            this.Btn_fornecedores = new Guna.UI2.WinForms.Guna2Button();
+            this.Btn_nota_fiscal = new Guna.UI2.WinForms.Guna2Button();
+            this.Btn_funcionarios = new Guna.UI2.WinForms.Guna2Button();
+            this.Btn_dashboard = new Guna.UI2.WinForms.Guna2Button();
+            this.Btn_reg_autoria = new Guna.UI2.WinForms.Guna2Button();
+            this.Btn_config = new Guna.UI2.WinForms.Guna2Button();
+            this.Img_header_menu = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Lateral_menu.SuspendLayout();
             this.Estoque_container.SuspendLayout();
             this.Panel_produto_manu.SuspendLayout();
@@ -94,26 +93,14 @@
             this.Panel_7.SuspendLayout();
             this.Panel_8.SuspendLayout();
             this.Panel_9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Menu_burguer)).BeginInit();
             this.Panel_0.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Menu_burguer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_header_menu)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Img_header_menu
-            // 
-            this.Img_header_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.Img_header_menu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Img_header_menu.FillColor = System.Drawing.Color.Transparent;
-            this.Img_header_menu.Image = global::Kos_Manager.Properties.Resources.logo_horizontal;
-            this.Img_header_menu.ImageRotate = 0F;
-            this.Img_header_menu.Location = new System.Drawing.Point(0, 0);
-            this.Img_header_menu.Name = "Img_header_menu";
-            this.Img_header_menu.Size = new System.Drawing.Size(1364, 88);
-            this.Img_header_menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.Img_header_menu.TabIndex = 0;
-            this.Img_header_menu.TabStop = false;
             // 
             // Lateral_menu
             // 
+            this.Lateral_menu.AutoScrollMargin = new System.Drawing.Size(1, 0);
             this.Lateral_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(79)))), ((int)(((byte)(82)))));
             this.Lateral_menu.Controls.Add(this.Estoque_container);
             this.Lateral_menu.Controls.Add(this.Solicitacao_container);
@@ -129,7 +116,7 @@
             this.Lateral_menu.MaximumSize = new System.Drawing.Size(245, 0);
             this.Lateral_menu.MinimumSize = new System.Drawing.Size(73, 0);
             this.Lateral_menu.Name = "Lateral_menu";
-            this.Lateral_menu.Size = new System.Drawing.Size(245, 661);
+            this.Lateral_menu.Size = new System.Drawing.Size(73, 661);
             this.Lateral_menu.TabIndex = 1;
             // 
             // Estoque_container
@@ -141,7 +128,7 @@
             this.Estoque_container.MaximumSize = new System.Drawing.Size(242, 152);
             this.Estoque_container.MinimumSize = new System.Drawing.Size(242, 53);
             this.Estoque_container.Name = "Estoque_container";
-            this.Estoque_container.Size = new System.Drawing.Size(242, 152);
+            this.Estoque_container.Size = new System.Drawing.Size(242, 53);
             this.Estoque_container.TabIndex = 3;
             // 
             // Panel_produto_manu
@@ -208,33 +195,12 @@
             this.Panel_1.Size = new System.Drawing.Size(237, 53);
             this.Panel_1.TabIndex = 2;
             // 
-            // Btn_estoque_menu
-            // 
-            this.Btn_estoque_menu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_estoque_menu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_estoque_menu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_estoque_menu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_estoque_menu.FillColor = System.Drawing.Color.Transparent;
-            this.Btn_estoque_menu.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_estoque_menu.ForeColor = System.Drawing.Color.White;
-            this.Btn_estoque_menu.Image = global::Kos_Manager.Properties.Resources.Box;
-            this.Btn_estoque_menu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_estoque_menu.ImageSize = new System.Drawing.Size(40, 40);
-            this.Btn_estoque_menu.Location = new System.Drawing.Point(0, -1);
-            this.Btn_estoque_menu.Name = "Btn_estoque_menu";
-            this.Btn_estoque_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Btn_estoque_menu.Size = new System.Drawing.Size(237, 54);
-            this.Btn_estoque_menu.TabIndex = 3;
-            this.Btn_estoque_menu.Text = "ESTOQUE";
-            this.Btn_estoque_menu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_estoque_menu.Click += new System.EventHandler(this.Btn_estoque_menu_Click);
-            // 
             // Solicitacao_container
             // 
             this.Solicitacao_container.Controls.Add(this.guna2Panel3);
             this.Solicitacao_container.Controls.Add(this.guna2Panel2);
             this.Solicitacao_container.Controls.Add(this.Panel_2);
-            this.Solicitacao_container.Location = new System.Drawing.Point(3, 161);
+            this.Solicitacao_container.Location = new System.Drawing.Point(3, 62);
             this.Solicitacao_container.MaximumSize = new System.Drawing.Size(242, 152);
             this.Solicitacao_container.MinimumSize = new System.Drawing.Size(242, 53);
             this.Solicitacao_container.Name = "Solicitacao_container";
@@ -267,6 +233,7 @@
             this.Btn_requisicao.TabIndex = 3;
             this.Btn_requisicao.Text = "REQUISIÇÃO";
             this.Btn_requisicao.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_requisicao.Click += new System.EventHandler(this.Btn_requisicao_Click);
             // 
             // guna2Panel2
             // 
@@ -294,6 +261,7 @@
             this.Btn_solicitacao.TabIndex = 3;
             this.Btn_solicitacao.Text = "SOLICITAÇÃO";
             this.Btn_solicitacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_solicitacao.Click += new System.EventHandler(this.Btn_solicitacao_Click);
             // 
             // Panel_2
             // 
@@ -303,118 +271,36 @@
             this.Panel_2.Size = new System.Drawing.Size(239, 60);
             this.Panel_2.TabIndex = 3;
             // 
-            // Btn_solicitacao_menu
-            // 
-            this.Btn_solicitacao_menu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_solicitacao_menu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_solicitacao_menu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_solicitacao_menu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_solicitacao_menu.FillColor = System.Drawing.Color.Transparent;
-            this.Btn_solicitacao_menu.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_solicitacao_menu.ForeColor = System.Drawing.Color.White;
-            this.Btn_solicitacao_menu.Image = global::Kos_Manager.Properties.Resources.solicitacao;
-            this.Btn_solicitacao_menu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_solicitacao_menu.ImageSize = new System.Drawing.Size(40, 40);
-            this.Btn_solicitacao_menu.Location = new System.Drawing.Point(-1, 0);
-            this.Btn_solicitacao_menu.Name = "Btn_solicitacao_menu";
-            this.Btn_solicitacao_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Btn_solicitacao_menu.Size = new System.Drawing.Size(240, 53);
-            this.Btn_solicitacao_menu.TabIndex = 3;
-            this.Btn_solicitacao_menu.Text = "SOLICITAÇÃO";
-            this.Btn_solicitacao_menu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_solicitacao_menu.Click += new System.EventHandler(this.Btn_solicitacao_menu_Click);
-            // 
             // Panel_3
             // 
             this.Panel_3.Controls.Add(this.Btn_vendas);
-            this.Panel_3.Location = new System.Drawing.Point(3, 220);
+            this.Panel_3.Location = new System.Drawing.Point(3, 121);
             this.Panel_3.Name = "Panel_3";
             this.Panel_3.Size = new System.Drawing.Size(242, 60);
             this.Panel_3.TabIndex = 4;
             // 
-            // Btn_vendas
-            // 
-            this.Btn_vendas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_vendas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_vendas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_vendas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_vendas.FillColor = System.Drawing.Color.Transparent;
-            this.Btn_vendas.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_vendas.ForeColor = System.Drawing.Color.White;
-            this.Btn_vendas.Image = global::Kos_Manager.Properties.Resources.vendas;
-            this.Btn_vendas.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_vendas.ImageSize = new System.Drawing.Size(40, 40);
-            this.Btn_vendas.Location = new System.Drawing.Point(1, 3);
-            this.Btn_vendas.Name = "Btn_vendas";
-            this.Btn_vendas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Btn_vendas.Size = new System.Drawing.Size(242, 54);
-            this.Btn_vendas.TabIndex = 3;
-            this.Btn_vendas.Text = "VENDAS";
-            this.Btn_vendas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // Panel_4
             // 
             this.Panel_4.Controls.Add(this.Btn_fornecedores);
-            this.Panel_4.Location = new System.Drawing.Point(3, 286);
+            this.Panel_4.Location = new System.Drawing.Point(3, 187);
             this.Panel_4.Name = "Panel_4";
             this.Panel_4.Size = new System.Drawing.Size(242, 60);
             this.Panel_4.TabIndex = 5;
             // 
-            // Btn_fornecedores
-            // 
-            this.Btn_fornecedores.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_fornecedores.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_fornecedores.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_fornecedores.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_fornecedores.FillColor = System.Drawing.Color.Transparent;
-            this.Btn_fornecedores.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_fornecedores.ForeColor = System.Drawing.Color.White;
-            this.Btn_fornecedores.Image = global::Kos_Manager.Properties.Resources.fornecedor;
-            this.Btn_fornecedores.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_fornecedores.ImageSize = new System.Drawing.Size(40, 40);
-            this.Btn_fornecedores.Location = new System.Drawing.Point(0, 3);
-            this.Btn_fornecedores.Name = "Btn_fornecedores";
-            this.Btn_fornecedores.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Btn_fornecedores.Size = new System.Drawing.Size(242, 54);
-            this.Btn_fornecedores.TabIndex = 3;
-            this.Btn_fornecedores.Text = "FORNECEDORES";
-            this.Btn_fornecedores.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_fornecedores.Click += new System.EventHandler(this.Btn_fornecedores_Click);
-            // 
             // Panel_5
             // 
             this.Panel_5.Controls.Add(this.Btn_nota_fiscal);
-            this.Panel_5.Location = new System.Drawing.Point(3, 352);
+            this.Panel_5.Location = new System.Drawing.Point(3, 253);
             this.Panel_5.Name = "Panel_5";
             this.Panel_5.Size = new System.Drawing.Size(242, 60);
             this.Panel_5.TabIndex = 6;
-            // 
-            // Btn_nota_fiscal
-            // 
-            this.Btn_nota_fiscal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_nota_fiscal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_nota_fiscal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_nota_fiscal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_nota_fiscal.FillColor = System.Drawing.Color.Transparent;
-            this.Btn_nota_fiscal.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_nota_fiscal.ForeColor = System.Drawing.Color.White;
-            this.Btn_nota_fiscal.Image = global::Kos_Manager.Properties.Resources.notafiscal;
-            this.Btn_nota_fiscal.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_nota_fiscal.ImageSize = new System.Drawing.Size(40, 40);
-            this.Btn_nota_fiscal.Location = new System.Drawing.Point(0, 3);
-            this.Btn_nota_fiscal.Name = "Btn_nota_fiscal";
-            this.Btn_nota_fiscal.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Btn_nota_fiscal.Size = new System.Drawing.Size(242, 54);
-            this.Btn_nota_fiscal.TabIndex = 3;
-            this.Btn_nota_fiscal.Text = "NOTA FISCAL";
-            this.Btn_nota_fiscal.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // Funcionario_container
             // 
             this.Funcionario_container.Controls.Add(this.guna2Panel4);
             this.Funcionario_container.Controls.Add(this.Panel_gerenciar_funcionario);
             this.Funcionario_container.Controls.Add(this.Panel_6);
-            this.Funcionario_container.Location = new System.Drawing.Point(3, 418);
+            this.Funcionario_container.Location = new System.Drawing.Point(3, 319);
             this.Funcionario_container.MaximumSize = new System.Drawing.Size(240, 160);
             this.Funcionario_container.MinimumSize = new System.Drawing.Size(240, 63);
             this.Funcionario_container.Name = "Funcionario_container";
@@ -447,6 +333,7 @@
             this.guna2Button1.TabIndex = 3;
             this.guna2Button1.Text = "NÍVEIS DE ACESSO";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // Panel_gerenciar_funcionario
             // 
@@ -484,123 +371,29 @@
             this.Panel_6.Size = new System.Drawing.Size(239, 60);
             this.Panel_6.TabIndex = 7;
             // 
-            // Btn_funcionarios
-            // 
-            this.Btn_funcionarios.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_funcionarios.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_funcionarios.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_funcionarios.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_funcionarios.FillColor = System.Drawing.Color.Transparent;
-            this.Btn_funcionarios.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_funcionarios.ForeColor = System.Drawing.Color.White;
-            this.Btn_funcionarios.Image = global::Kos_Manager.Properties.Resources.funcionario;
-            this.Btn_funcionarios.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_funcionarios.ImageSize = new System.Drawing.Size(40, 40);
-            this.Btn_funcionarios.Location = new System.Drawing.Point(2, 2);
-            this.Btn_funcionarios.Name = "Btn_funcionarios";
-            this.Btn_funcionarios.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Btn_funcionarios.Size = new System.Drawing.Size(237, 54);
-            this.Btn_funcionarios.TabIndex = 3;
-            this.Btn_funcionarios.Text = "FUNCIONÁRIOS";
-            this.Btn_funcionarios.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_funcionarios.Click += new System.EventHandler(this.Btn_funcionarios_Click);
-            // 
             // Panel_7
             // 
             this.Panel_7.Controls.Add(this.Btn_dashboard);
-            this.Panel_7.Location = new System.Drawing.Point(3, 487);
+            this.Panel_7.Location = new System.Drawing.Point(3, 388);
             this.Panel_7.Name = "Panel_7";
             this.Panel_7.Size = new System.Drawing.Size(242, 60);
             this.Panel_7.TabIndex = 8;
             // 
-            // Btn_dashboard
-            // 
-            this.Btn_dashboard.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_dashboard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_dashboard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_dashboard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_dashboard.FillColor = System.Drawing.Color.Transparent;
-            this.Btn_dashboard.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_dashboard.ForeColor = System.Drawing.Color.White;
-            this.Btn_dashboard.Image = global::Kos_Manager.Properties.Resources.dashboard;
-            this.Btn_dashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_dashboard.ImageSize = new System.Drawing.Size(40, 40);
-            this.Btn_dashboard.Location = new System.Drawing.Point(0, 3);
-            this.Btn_dashboard.Name = "Btn_dashboard";
-            this.Btn_dashboard.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Btn_dashboard.Size = new System.Drawing.Size(242, 54);
-            this.Btn_dashboard.TabIndex = 3;
-            this.Btn_dashboard.Text = "DASHBOARD";
-            this.Btn_dashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // Panel_8
             // 
             this.Panel_8.Controls.Add(this.Btn_reg_autoria);
-            this.Panel_8.Location = new System.Drawing.Point(3, 553);
+            this.Panel_8.Location = new System.Drawing.Point(3, 454);
             this.Panel_8.Name = "Panel_8";
             this.Panel_8.Size = new System.Drawing.Size(242, 60);
             this.Panel_8.TabIndex = 9;
             // 
-            // Btn_reg_autoria
-            // 
-            this.Btn_reg_autoria.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_reg_autoria.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_reg_autoria.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_reg_autoria.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_reg_autoria.FillColor = System.Drawing.Color.Transparent;
-            this.Btn_reg_autoria.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_reg_autoria.ForeColor = System.Drawing.Color.White;
-            this.Btn_reg_autoria.Image = global::Kos_Manager.Properties.Resources.autoria;
-            this.Btn_reg_autoria.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_reg_autoria.ImageSize = new System.Drawing.Size(40, 40);
-            this.Btn_reg_autoria.Location = new System.Drawing.Point(0, 3);
-            this.Btn_reg_autoria.Name = "Btn_reg_autoria";
-            this.Btn_reg_autoria.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Btn_reg_autoria.Size = new System.Drawing.Size(242, 54);
-            this.Btn_reg_autoria.TabIndex = 3;
-            this.Btn_reg_autoria.Text = "REG. DE AUTORIA";
-            this.Btn_reg_autoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // Panel_9
             // 
             this.Panel_9.Controls.Add(this.Btn_config);
-            this.Panel_9.Location = new System.Drawing.Point(3, 619);
+            this.Panel_9.Location = new System.Drawing.Point(3, 520);
             this.Panel_9.Name = "Panel_9";
             this.Panel_9.Size = new System.Drawing.Size(248, 60);
             this.Panel_9.TabIndex = 10;
-            // 
-            // Btn_config
-            // 
-            this.Btn_config.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_config.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_config.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_config.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_config.FillColor = System.Drawing.Color.Transparent;
-            this.Btn_config.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_config.ForeColor = System.Drawing.Color.White;
-            this.Btn_config.Image = global::Kos_Manager.Properties.Resources.config;
-            this.Btn_config.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_config.ImageSize = new System.Drawing.Size(40, 40);
-            this.Btn_config.Location = new System.Drawing.Point(1, 3);
-            this.Btn_config.Name = "Btn_config";
-            this.Btn_config.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.Btn_config.Size = new System.Drawing.Size(242, 54);
-            this.Btn_config.TabIndex = 3;
-            this.Btn_config.Text = "CONFIGURAÇÕES";
-            this.Btn_config.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // Menu_burguer
-            // 
-            this.Menu_burguer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Menu_burguer.Image = global::Kos_Manager.Properties.Resources.menu_burguer;
-            this.Menu_burguer.ImageRotate = 0F;
-            this.Menu_burguer.Location = new System.Drawing.Point(17, 23);
-            this.Menu_burguer.Name = "Menu_burguer";
-            this.Menu_burguer.Size = new System.Drawing.Size(40, 40);
-            this.Menu_burguer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Menu_burguer.TabIndex = 2;
-            this.Menu_burguer.TabStop = false;
-            this.Menu_burguer.Click += new System.EventHandler(this.Menu_burguer_Click);
             // 
             // Panel_0
             // 
@@ -662,10 +455,226 @@
             this.Child_panel.BackgroundImage = global::Kos_Manager.Properties.Resources.img_bg;
             this.Child_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Child_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Child_panel.Location = new System.Drawing.Point(245, 88);
+            this.Child_panel.Location = new System.Drawing.Point(73, 88);
             this.Child_panel.Name = "Child_panel";
-            this.Child_panel.Size = new System.Drawing.Size(1119, 661);
+            this.Child_panel.Size = new System.Drawing.Size(1291, 661);
             this.Child_panel.TabIndex = 6;
+            // 
+            // Menu_burguer
+            // 
+            this.Menu_burguer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Menu_burguer.Image = global::Kos_Manager.Properties.Resources.menu_burguer;
+            this.Menu_burguer.ImageRotate = 0F;
+            this.Menu_burguer.Location = new System.Drawing.Point(17, 23);
+            this.Menu_burguer.Name = "Menu_burguer";
+            this.Menu_burguer.Size = new System.Drawing.Size(40, 40);
+            this.Menu_burguer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Menu_burguer.TabIndex = 2;
+            this.Menu_burguer.TabStop = false;
+            this.Menu_burguer.Click += new System.EventHandler(this.Menu_burguer_Click);
+            // 
+            // Btn_estoque_menu
+            // 
+            this.Btn_estoque_menu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_estoque_menu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_estoque_menu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_estoque_menu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_estoque_menu.FillColor = System.Drawing.Color.Transparent;
+            this.Btn_estoque_menu.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Btn_estoque_menu.ForeColor = System.Drawing.Color.White;
+            this.Btn_estoque_menu.Image = global::Kos_Manager.Properties.Resources.Box;
+            this.Btn_estoque_menu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_estoque_menu.ImageSize = new System.Drawing.Size(40, 40);
+            this.Btn_estoque_menu.Location = new System.Drawing.Point(0, -1);
+            this.Btn_estoque_menu.Name = "Btn_estoque_menu";
+            this.Btn_estoque_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.Btn_estoque_menu.Size = new System.Drawing.Size(237, 54);
+            this.Btn_estoque_menu.TabIndex = 3;
+            this.Btn_estoque_menu.Text = "ESTOQUE";
+            this.Btn_estoque_menu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_estoque_menu.Click += new System.EventHandler(this.Btn_estoque_menu_Click);
+            // 
+            // Btn_solicitacao_menu
+            // 
+            this.Btn_solicitacao_menu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_solicitacao_menu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_solicitacao_menu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_solicitacao_menu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_solicitacao_menu.FillColor = System.Drawing.Color.Transparent;
+            this.Btn_solicitacao_menu.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Btn_solicitacao_menu.ForeColor = System.Drawing.Color.White;
+            this.Btn_solicitacao_menu.Image = global::Kos_Manager.Properties.Resources.solicitacao;
+            this.Btn_solicitacao_menu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_solicitacao_menu.ImageSize = new System.Drawing.Size(40, 40);
+            this.Btn_solicitacao_menu.Location = new System.Drawing.Point(-1, 0);
+            this.Btn_solicitacao_menu.Name = "Btn_solicitacao_menu";
+            this.Btn_solicitacao_menu.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.Btn_solicitacao_menu.Size = new System.Drawing.Size(240, 53);
+            this.Btn_solicitacao_menu.TabIndex = 3;
+            this.Btn_solicitacao_menu.Text = "SOLICITAÇÃO";
+            this.Btn_solicitacao_menu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_solicitacao_menu.Click += new System.EventHandler(this.Btn_solicitacao_menu_Click);
+            // 
+            // Btn_vendas
+            // 
+            this.Btn_vendas.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_vendas.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_vendas.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_vendas.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_vendas.FillColor = System.Drawing.Color.Transparent;
+            this.Btn_vendas.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Btn_vendas.ForeColor = System.Drawing.Color.White;
+            this.Btn_vendas.Image = global::Kos_Manager.Properties.Resources.vendas;
+            this.Btn_vendas.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_vendas.ImageSize = new System.Drawing.Size(40, 40);
+            this.Btn_vendas.Location = new System.Drawing.Point(1, 3);
+            this.Btn_vendas.Name = "Btn_vendas";
+            this.Btn_vendas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.Btn_vendas.Size = new System.Drawing.Size(242, 54);
+            this.Btn_vendas.TabIndex = 3;
+            this.Btn_vendas.Text = "VENDAS";
+            this.Btn_vendas.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_vendas.Click += new System.EventHandler(this.Btn_vendas_Click);
+            // 
+            // Btn_fornecedores
+            // 
+            this.Btn_fornecedores.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_fornecedores.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_fornecedores.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_fornecedores.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_fornecedores.FillColor = System.Drawing.Color.Transparent;
+            this.Btn_fornecedores.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Btn_fornecedores.ForeColor = System.Drawing.Color.White;
+            this.Btn_fornecedores.Image = global::Kos_Manager.Properties.Resources.fornecedor;
+            this.Btn_fornecedores.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_fornecedores.ImageSize = new System.Drawing.Size(40, 40);
+            this.Btn_fornecedores.Location = new System.Drawing.Point(0, 3);
+            this.Btn_fornecedores.Name = "Btn_fornecedores";
+            this.Btn_fornecedores.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.Btn_fornecedores.Size = new System.Drawing.Size(242, 54);
+            this.Btn_fornecedores.TabIndex = 3;
+            this.Btn_fornecedores.Text = "FORNECEDORES";
+            this.Btn_fornecedores.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_fornecedores.Click += new System.EventHandler(this.Btn_fornecedores_Click);
+            // 
+            // Btn_nota_fiscal
+            // 
+            this.Btn_nota_fiscal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_nota_fiscal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_nota_fiscal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_nota_fiscal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_nota_fiscal.FillColor = System.Drawing.Color.Transparent;
+            this.Btn_nota_fiscal.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Btn_nota_fiscal.ForeColor = System.Drawing.Color.White;
+            this.Btn_nota_fiscal.Image = global::Kos_Manager.Properties.Resources.notafiscal;
+            this.Btn_nota_fiscal.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_nota_fiscal.ImageSize = new System.Drawing.Size(40, 40);
+            this.Btn_nota_fiscal.Location = new System.Drawing.Point(0, 3);
+            this.Btn_nota_fiscal.Name = "Btn_nota_fiscal";
+            this.Btn_nota_fiscal.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.Btn_nota_fiscal.Size = new System.Drawing.Size(242, 54);
+            this.Btn_nota_fiscal.TabIndex = 3;
+            this.Btn_nota_fiscal.Text = "NOTA FISCAL";
+            this.Btn_nota_fiscal.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_nota_fiscal.Click += new System.EventHandler(this.Btn_nota_fiscal_Click);
+            // 
+            // Btn_funcionarios
+            // 
+            this.Btn_funcionarios.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_funcionarios.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_funcionarios.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_funcionarios.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_funcionarios.FillColor = System.Drawing.Color.Transparent;
+            this.Btn_funcionarios.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Btn_funcionarios.ForeColor = System.Drawing.Color.White;
+            this.Btn_funcionarios.Image = global::Kos_Manager.Properties.Resources.funcionario;
+            this.Btn_funcionarios.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_funcionarios.ImageSize = new System.Drawing.Size(40, 40);
+            this.Btn_funcionarios.Location = new System.Drawing.Point(0, 1);
+            this.Btn_funcionarios.Name = "Btn_funcionarios";
+            this.Btn_funcionarios.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.Btn_funcionarios.Size = new System.Drawing.Size(237, 54);
+            this.Btn_funcionarios.TabIndex = 3;
+            this.Btn_funcionarios.Text = "FUNCIONÁRIOS";
+            this.Btn_funcionarios.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_funcionarios.Click += new System.EventHandler(this.Btn_funcionarios_Click);
+            // 
+            // Btn_dashboard
+            // 
+            this.Btn_dashboard.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_dashboard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_dashboard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_dashboard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_dashboard.FillColor = System.Drawing.Color.Transparent;
+            this.Btn_dashboard.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Btn_dashboard.ForeColor = System.Drawing.Color.White;
+            this.Btn_dashboard.Image = global::Kos_Manager.Properties.Resources.dashboard;
+            this.Btn_dashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_dashboard.ImageSize = new System.Drawing.Size(40, 40);
+            this.Btn_dashboard.Location = new System.Drawing.Point(0, 3);
+            this.Btn_dashboard.Name = "Btn_dashboard";
+            this.Btn_dashboard.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.Btn_dashboard.Size = new System.Drawing.Size(242, 54);
+            this.Btn_dashboard.TabIndex = 3;
+            this.Btn_dashboard.Text = "DASHBOARD";
+            this.Btn_dashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_dashboard.Click += new System.EventHandler(this.Btn_dashboard_Click);
+            // 
+            // Btn_reg_autoria
+            // 
+            this.Btn_reg_autoria.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_reg_autoria.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_reg_autoria.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_reg_autoria.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_reg_autoria.FillColor = System.Drawing.Color.Transparent;
+            this.Btn_reg_autoria.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Btn_reg_autoria.ForeColor = System.Drawing.Color.White;
+            this.Btn_reg_autoria.Image = global::Kos_Manager.Properties.Resources.autoria;
+            this.Btn_reg_autoria.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_reg_autoria.ImageSize = new System.Drawing.Size(40, 40);
+            this.Btn_reg_autoria.Location = new System.Drawing.Point(0, 3);
+            this.Btn_reg_autoria.Name = "Btn_reg_autoria";
+            this.Btn_reg_autoria.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.Btn_reg_autoria.Size = new System.Drawing.Size(242, 54);
+            this.Btn_reg_autoria.TabIndex = 3;
+            this.Btn_reg_autoria.Text = "REG. DE AUTORIA";
+            this.Btn_reg_autoria.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_reg_autoria.Click += new System.EventHandler(this.Btn_reg_autoria_Click);
+            // 
+            // Btn_config
+            // 
+            this.Btn_config.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_config.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_config.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_config.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_config.FillColor = System.Drawing.Color.Transparent;
+            this.Btn_config.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Btn_config.ForeColor = System.Drawing.Color.White;
+            this.Btn_config.Image = global::Kos_Manager.Properties.Resources.config;
+            this.Btn_config.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_config.ImageSize = new System.Drawing.Size(40, 40);
+            this.Btn_config.Location = new System.Drawing.Point(1, 3);
+            this.Btn_config.Name = "Btn_config";
+            this.Btn_config.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.Btn_config.Size = new System.Drawing.Size(242, 54);
+            this.Btn_config.TabIndex = 3;
+            this.Btn_config.Text = "CONFIGURAÇÕES";
+            this.Btn_config.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_config.Click += new System.EventHandler(this.Btn_config_Click);
+            // 
+            // Img_header_menu
+            // 
+            this.Img_header_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.Img_header_menu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Img_header_menu.FillColor = System.Drawing.Color.Transparent;
+            this.Img_header_menu.Image = global::Kos_Manager.Properties.Resources.logo_horizontal;
+            this.Img_header_menu.ImageRotate = 0F;
+            this.Img_header_menu.Location = new System.Drawing.Point(0, 0);
+            this.Img_header_menu.Name = "Img_header_menu";
+            this.Img_header_menu.Size = new System.Drawing.Size(1364, 88);
+            this.Img_header_menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Img_header_menu.TabIndex = 0;
+            this.Img_header_menu.TabStop = false;
             // 
             // Tela_inicial
             // 
@@ -686,7 +695,6 @@
             this.Text = "Kos Manager";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Tela_inicial_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Img_header_menu)).EndInit();
             this.Lateral_menu.ResumeLayout(false);
             this.Estoque_container.ResumeLayout(false);
             this.Panel_produto_manu.ResumeLayout(false);
@@ -706,8 +714,9 @@
             this.Panel_7.ResumeLayout(false);
             this.Panel_8.ResumeLayout(false);
             this.Panel_9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Menu_burguer)).EndInit();
             this.Panel_0.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Menu_burguer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Img_header_menu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

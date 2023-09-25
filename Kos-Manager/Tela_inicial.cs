@@ -235,5 +235,45 @@ namespace Kos_Manager
         {
             abrirChildForm(new Tela_manu());
         }
+
+        private void Btn_solicitacao_Click(object sender, EventArgs e)
+        {
+            abrirChildForm(new Tela_solicitacao());
+        }
+
+        private void Btn_requisicao_Click(object sender, EventArgs e)
+        {
+            abrirChildForm(new Tela_requisicao());
+        }
+
+        private void Btn_vendas_Click(object sender, EventArgs e)
+        {
+            abrirChildForm(new Tela_vendas());
+        }
+
+        private void Btn_nota_fiscal_Click(object sender, EventArgs e)
+        {
+            abrirChildForm(new Tela_nota_fiscal());
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            abrirChildForm(new Tela_nivel_acesso());
+        }
+
+        private void Btn_dashboard_Click(object sender, EventArgs e)
+        {
+            abrirChildForm(new Tela_dashboard());
+        }
+
+        private void Btn_reg_autoria_Click(object sender, EventArgs e)
+        {
+            abrirChildForm(new Tela_reg_autoria());
+        }
+
+        private void Btn_config_Click(object sender, EventArgs e)
+        {
+            abrirChildForm(new Tela_configuracao());
+        }
     }
 }
