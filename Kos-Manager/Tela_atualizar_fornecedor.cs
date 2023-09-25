@@ -21,5 +21,10 @@ namespace Kos_Manager
         {
             this.Close();
         }
+
+        private void Btn_atualizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -121,7 +121,7 @@
   <data name="Btn_voltar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAA3ZJREFUaEPtmEtoE0EYgKv1jQ8ExVZE8EEFpUdFEQ+ioIIH0VPpUSp4ErQWPSjF
+        DQAACw0B7QfALAAAA3ZJREFUaEPtmEtoE0EYgKv1jQ8ExVZE8EEFpUdFEQ+ioIIH0VPpUSp4ErQWPSjF
         ClZvCuKjBz0JRrDgsRVWszOzO7PTdGd2m6qlWBVUfFDEFq2Hxn/SSd009ZBkY5O6H/wsyUzmn2/nsbOp
         ioiIiIiYSWg/raOCNDCPNKsgAh13+9g2XVx5OBIdohJ3UokGVTCJu2yBj+niyoNKcoQKZINIKh0C91OX
         HNDFlcfsFJJIzLIRIq8ioXIlEip3IqFyJxIqdyKhcicSKnf+B6Hekglxfmd+zI8t0B9LguWio1lCkvSU
@@ -164,6 +164,25 @@
         ZNzBIIhYij3th6QkauAq/S6aOSSni034+Yx8svvukJZEHPSPBThqP256JHUl8sHusgX20Fegn9MLz2NS
         ML1RHcfK4a1u3kMuGnK53OVeWT3Pg1eswrThv0hgnN5DLpmyLBXB6V8RCO69KDGaVo36HTyD/r5Azwl8
         zuDcGL5/SJsismHzi7jAMDLyP2j9AWkbIraXAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="Btn_deletar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAxZJREFUaEPtms+vC1EUxxsWSCxEiLWEP4AEC0sSJPwT+CPwD3jPAkvPnkVZsLE0
+        vN57+6av2plpQ/IsRCKRWDwhb4NHnctRt2dOO2d+tmn6Tb6b9n7PvTPzmds7d1pbaKEK5Yfaa0V6MM5+
+        pD+3g9VT2Lww2Zq2NtfnP9uxYfNktUIdcEVc+6F62+97ezGSW7aWrcn1NWIYG0aS1Q7NcT9S39lCjqHN
+        CkZyC+rdp/UZb693zUmMyNSK1BJTKO6gcQkjmeUH5jxcjV9sfdehuokRuTY2nu2CcD9WjBiY/tSMmocw
+        llqdzupBGOBHrrZrONA33jtvN8bSyd58UGSbFqWGg3mKkdSC7GOupms4iJ/rPXMaI9kkRWyt17iCEbFg
+        gFe5WjFnQYpKjpjaanaaRzGWqLXg5WGYgb5ytVznQopKjFiodL1e34mxsRoMBjug7QuuhutCkKISz2JR
+        4zpGxgpQucFniYtAikqKGPhHq6dPYCymVqCPwZn+xuRGXChSVFLE4Ey+NsbswdhQ9mTAvRSxGcelIEUF
+        HS3TjjnDgO9gZCj47C7XNm61hJHyJJ7F7C912LiAMTgB5uyfz5i2rktFikqMWKQ+mL7Z3+16+2DV+p5v
+        89+VIEUFHUsRe2jNfcd4GctXpxSzmMiVIkUlR2yyp4IUFQxEhNhkVzBLJSkvYlNFiiorYjOBFBUMLANi
+        M4AUFTwg3eIHO9HVT7eTNBdoFXGzcwvMypURKerpIjYXP4hlLFGmgpgcKfVgZheNc7GMT/NgZbdCMWZ3
+        +M/YgXJtXVeGmBQpaHcbI0PZx1+uLeNyERMjNcubD2Kk7OuIgraDSkEMigsfbfU1jIyV3cTjsnEXvKiU
+        IgVnUc3slmkKpLZe9c0RjCXq7ya2+sLVcl0YYlBM+pxxGSNi2VcRTB3GORETIxXpJxhJLbiSj7iarnMh
+        Jkcq36u3dts7AIiJXr1lQgzCslmqpy9iJLP8QJ+DgSa/DE2LWIpZ6h5GcgsQW+H6cJ0asbn5w0DSXzjA
+        m/aqYfPChCRskr5GHern2HyhhcpXrfYbt8QBxRk/UlsAAAAASUVORK5CYII=
 </value>
   </data>
 </root>

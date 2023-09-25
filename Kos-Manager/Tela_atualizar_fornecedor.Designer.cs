@@ -45,6 +45,7 @@
             this.Txt_produto_fornecido = new Guna.UI2.WinForms.Guna2TextBox();
             this.Txt_nome_fornecedor = new Guna.UI2.WinForms.Guna2TextBox();
             this.Btn_atualizar = new Guna.UI2.WinForms.Guna2Button();
+            this.Btn_deletar = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // guna2Panel2
@@ -231,7 +232,7 @@
             this.Btn_voltar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_voltar.Image")));
             this.Btn_voltar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_voltar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_voltar.Location = new System.Drawing.Point(554, 624);
+            this.Btn_voltar.Location = new System.Drawing.Point(640, 627);
             this.Btn_voltar.Name = "Btn_voltar";
             this.Btn_voltar.ShadowDecoration.Depth = 5;
             this.Btn_voltar.ShadowDecoration.Enabled = true;
@@ -341,7 +342,7 @@
             this.Btn_atualizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_atualizar.Image")));
             this.Btn_atualizar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_atualizar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_atualizar.Location = new System.Drawing.Point(358, 624);
+            this.Btn_atualizar.Location = new System.Drawing.Point(283, 627);
             this.Btn_atualizar.Name = "Btn_atualizar";
             this.Btn_atualizar.ShadowDecoration.Depth = 5;
             this.Btn_atualizar.ShadowDecoration.Enabled = true;
@@ -349,6 +350,29 @@
             this.Btn_atualizar.TabIndex = 49;
             this.Btn_atualizar.Text = "Atualizar";
             this.Btn_atualizar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_atualizar.Click += new System.EventHandler(this.Btn_atualizar_Click);
+            // 
+            // Btn_deletar
+            // 
+            this.Btn_deletar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Btn_deletar.Animated = true;
+            this.Btn_deletar.BorderRadius = 10;
+            this.Btn_deletar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_deletar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_deletar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_deletar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_deletar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Btn_deletar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.Btn_deletar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.Btn_deletar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_deletar.Image")));
+            this.Btn_deletar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Btn_deletar.ImageSize = new System.Drawing.Size(17, 17);
+            this.Btn_deletar.Location = new System.Drawing.Point(465, 627);
+            this.Btn_deletar.Name = "Btn_deletar";
+            this.Btn_deletar.Size = new System.Drawing.Size(144, 39);
+            this.Btn_deletar.TabIndex = 51;
+            this.Btn_deletar.Text = "Deletar";
+            this.Btn_deletar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // Tela_atualizar_fornecedor
             // 
@@ -357,6 +381,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1103, 749);
+            this.Controls.Add(this.Btn_deletar);
             this.Controls.Add(this.Btn_atualizar);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
@@ -398,5 +423,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel Lbl_add_forn;
         private Guna.UI2.WinForms.Guna2HtmlLabel Lbl_fornecedor;
         private Guna.UI2.WinForms.Guna2Button Btn_atualizar;
+        private Guna.UI2.WinForms.Guna2Button Btn_deletar;
     }
 }

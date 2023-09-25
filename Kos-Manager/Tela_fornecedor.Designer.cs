@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_fornecedor));
             this.Child_panel = new Guna.UI2.WinForms.Guna2Panel();
-            this.Btn_deletar = new Guna.UI2.WinForms.Guna2Button();
-            this.Btn_atualizar = new Guna.UI2.WinForms.Guna2Button();
             this.Btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
             this.Txt_buscar_fornecedor = new Guna.UI2.WinForms.Guna2TextBox();
             this.Lbl_fornecedor = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -42,8 +40,6 @@
             // 
             this.Child_panel.BackColor = System.Drawing.Color.Transparent;
             this.Child_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Child_panel.Controls.Add(this.Btn_deletar);
-            this.Child_panel.Controls.Add(this.Btn_atualizar);
             this.Child_panel.Controls.Add(this.Btn_adicionar);
             this.Child_panel.Controls.Add(this.Txt_buscar_fornecedor);
             this.Child_panel.Controls.Add(this.Lbl_fornecedor);
@@ -53,54 +49,6 @@
             this.Child_panel.Size = new System.Drawing.Size(1103, 622);
             this.Child_panel.TabIndex = 16;
             this.Child_panel.UseTransparentBackground = true;
-            // 
-            // Btn_deletar
-            // 
-            this.Btn_deletar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Btn_deletar.Animated = true;
-            this.Btn_deletar.BorderRadius = 10;
-            this.Btn_deletar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_deletar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_deletar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_deletar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_deletar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.Btn_deletar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.Btn_deletar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Btn_deletar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_deletar.Image")));
-            this.Btn_deletar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Btn_deletar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_deletar.Location = new System.Drawing.Point(709, 255);
-            this.Btn_deletar.Name = "Btn_deletar";
-            this.Btn_deletar.Size = new System.Drawing.Size(144, 39);
-            this.Btn_deletar.TabIndex = 20;
-            this.Btn_deletar.Text = "Deletar";
-            this.Btn_deletar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // Btn_atualizar
-            // 
-            this.Btn_atualizar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Btn_atualizar.Animated = true;
-            this.Btn_atualizar.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_atualizar.BorderRadius = 10;
-            this.Btn_atualizar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_atualizar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_atualizar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_atualizar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_atualizar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(96)))), ((int)(((byte)(132)))));
-            this.Btn_atualizar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.Btn_atualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Btn_atualizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_atualizar.Image")));
-            this.Btn_atualizar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Btn_atualizar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_atualizar.Location = new System.Drawing.Point(480, 255);
-            this.Btn_atualizar.Name = "Btn_atualizar";
-            this.Btn_atualizar.ShadowDecoration.Depth = 5;
-            this.Btn_atualizar.ShadowDecoration.Enabled = true;
-            this.Btn_atualizar.Size = new System.Drawing.Size(144, 39);
-            this.Btn_atualizar.TabIndex = 19;
-            this.Btn_atualizar.Text = "Atualizar";
-            this.Btn_atualizar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_atualizar.Click += new System.EventHandler(this.Btn_atualizar_Click);
             // 
             // Btn_adicionar
             // 
@@ -118,7 +66,7 @@
             this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
             this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(249, 255);
+            this.Btn_adicionar.Location = new System.Drawing.Point(657, 162);
             this.Btn_adicionar.Name = "Btn_adicionar";
             this.Btn_adicionar.ShadowDecoration.Depth = 5;
             this.Btn_adicionar.ShadowDecoration.Enabled = true;
@@ -143,14 +91,14 @@
             this.Txt_buscar_fornecedor.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Txt_buscar_fornecedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.Txt_buscar_fornecedor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_buscar_fornecedor.Location = new System.Drawing.Point(258, 166);
+            this.Txt_buscar_fornecedor.Location = new System.Drawing.Point(321, 162);
             this.Txt_buscar_fornecedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_buscar_fornecedor.Name = "Txt_buscar_fornecedor";
             this.Txt_buscar_fornecedor.PasswordChar = '\0';
             this.Txt_buscar_fornecedor.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.Txt_buscar_fornecedor.PlaceholderText = "Buscar por nome ou produto";
             this.Txt_buscar_fornecedor.SelectedText = "";
-            this.Txt_buscar_fornecedor.Size = new System.Drawing.Size(285, 36);
+            this.Txt_buscar_fornecedor.Size = new System.Drawing.Size(285, 39);
             this.Txt_buscar_fornecedor.TabIndex = 17;
             // 
             // Lbl_fornecedor
@@ -185,8 +133,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel Child_panel;
-        private Guna.UI2.WinForms.Guna2Button Btn_deletar;
-        private Guna.UI2.WinForms.Guna2Button Btn_atualizar;
         private Guna.UI2.WinForms.Guna2Button Btn_adicionar;
         private Guna.UI2.WinForms.Guna2TextBox Txt_buscar_fornecedor;
         private Guna.UI2.WinForms.Guna2HtmlLabel Lbl_fornecedor;
