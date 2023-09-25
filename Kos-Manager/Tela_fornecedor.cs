@@ -46,5 +46,10 @@ namespace Kos_Manager
         {
             abrirChildForm(new Tela_add_fornecedor());
         }
+
+        private void Btn_atualizar_Click(object sender, EventArgs e)
+        {
+            abrirChildForm(new Tela_atualizar_fornecedor());
+        }
     }
 }

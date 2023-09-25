@@ -126,6 +126,12 @@
     <Compile Include="Tela_add_fornecedor.Designer.cs">
       <DependentUpon>Tela_add_fornecedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tela_atualizar_fornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_atualizar_fornecedor.Designer.cs">
+      <DependentUpon>Tela_atualizar_fornecedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tela_cad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     </Compile>
     <EmbeddedResource Include="Tela_add_fornecedor.resx">
       <DependentUpon>Tela_add_fornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_atualizar_fornecedor.resx">
+      <DependentUpon>Tela_atualizar_fornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tela_cad.resx">
       <DependentUpon>Tela_cad.cs</DependentUpon>

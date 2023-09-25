@@ -53,7 +53,7 @@
             this.Lbl_fornecedor.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_fornecedor.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.Lbl_fornecedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Lbl_fornecedor.Location = new System.Drawing.Point(455, 60);
+            this.Lbl_fornecedor.Location = new System.Drawing.Point(439, 60);
             this.Lbl_fornecedor.Name = "Lbl_fornecedor";
             this.Lbl_fornecedor.Padding = new System.Windows.Forms.Padding(0, 0, 0, 60);
             this.Lbl_fornecedor.Size = new System.Drawing.Size(164, 92);
@@ -67,7 +67,7 @@
             this.Lbl_add_forn.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_add_forn.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.Lbl_add_forn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Lbl_add_forn.Location = new System.Drawing.Point(456, 94);
+            this.Lbl_add_forn.Location = new System.Drawing.Point(440, 94);
             this.Lbl_add_forn.Name = "Lbl_add_forn";
             this.Lbl_add_forn.Size = new System.Drawing.Size(163, 25);
             this.Lbl_add_forn.TabIndex = 18;
@@ -93,7 +93,7 @@
             this.Txt_nome_fornecedor.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_nome_fornecedor.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_nome_fornecedor.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_nome_fornecedor.Location = new System.Drawing.Point(292, 231);
+            this.Txt_nome_fornecedor.Location = new System.Drawing.Point(272, 197);
             this.Txt_nome_fornecedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_nome_fornecedor.Name = "Txt_nome_fornecedor";
             this.Txt_nome_fornecedor.PasswordChar = '\0';
@@ -109,7 +109,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(292, 199);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(272, 165);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(164, 25);
             this.guna2HtmlLabel1.TabIndex = 20;
@@ -122,7 +122,7 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(292, 286);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(272, 252);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(143, 25);
             this.guna2HtmlLabel2.TabIndex = 22;
@@ -148,7 +148,7 @@
             this.Txt_produto_fornecido.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_produto_fornecido.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_produto_fornecido.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_produto_fornecido.Location = new System.Drawing.Point(292, 318);
+            this.Txt_produto_fornecido.Location = new System.Drawing.Point(272, 284);
             this.Txt_produto_fornecido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_produto_fornecido.Name = "Txt_produto_fornecido";
             this.Txt_produto_fornecido.PasswordChar = '\0';
@@ -164,7 +164,7 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(292, 376);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(272, 342);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(69, 25);
             this.guna2HtmlLabel3.TabIndex = 24;
@@ -190,7 +190,7 @@
             this.Txt_tel_fornecedor.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_tel_fornecedor.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_tel_fornecedor.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_tel_fornecedor.Location = new System.Drawing.Point(292, 408);
+            this.Txt_tel_fornecedor.Location = new System.Drawing.Point(272, 374);
             this.Txt_tel_fornecedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_tel_fornecedor.Name = "Txt_tel_fornecedor";
             this.Txt_tel_fornecedor.PasswordChar = '\0';
@@ -206,7 +206,7 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(292, 466);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(272, 432);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(51, 25);
             this.guna2HtmlLabel4.TabIndex = 26;
@@ -231,7 +231,7 @@
             this.Txt_email_fornecedor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Txt_email_fornecedor.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_email_fornecedor.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_email_fornecedor.Location = new System.Drawing.Point(292, 498);
+            this.Txt_email_fornecedor.Location = new System.Drawing.Point(272, 464);
             this.Txt_email_fornecedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_email_fornecedor.Name = "Txt_email_fornecedor";
             this.Txt_email_fornecedor.PasswordChar = '\0';
@@ -247,7 +247,7 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(292, 559);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(272, 525);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(74, 25);
             this.guna2HtmlLabel5.TabIndex = 28;
@@ -272,7 +272,7 @@
             this.Txt_end_fornecedor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Txt_end_fornecedor.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_end_fornecedor.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_end_fornecedor.Location = new System.Drawing.Point(292, 591);
+            this.Txt_end_fornecedor.Location = new System.Drawing.Point(272, 557);
             this.Txt_end_fornecedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_end_fornecedor.Name = "Txt_end_fornecedor";
             this.Txt_end_fornecedor.PasswordChar = '\0';
@@ -298,7 +298,7 @@
             this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
             this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(370, 654);
+            this.Btn_adicionar.Location = new System.Drawing.Point(350, 616);
             this.Btn_adicionar.Name = "Btn_adicionar";
             this.Btn_adicionar.ShadowDecoration.Depth = 5;
             this.Btn_adicionar.ShadowDecoration.Enabled = true;
@@ -320,11 +320,11 @@
             this.Btn_voltar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Btn_voltar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
             this.Btn_voltar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.Btn_voltar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.Btn_voltar.ForeColor = System.Drawing.Color.White;
             this.Btn_voltar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_voltar.Image")));
             this.Btn_voltar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_voltar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_voltar.Location = new System.Drawing.Point(565, 654);
+            this.Btn_voltar.Location = new System.Drawing.Point(545, 616);
             this.Btn_voltar.Name = "Btn_voltar";
             this.Btn_voltar.ShadowDecoration.Depth = 5;
             this.Btn_voltar.ShadowDecoration.Enabled = true;
@@ -339,15 +339,15 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1086, 60);
+            this.guna2Panel1.Size = new System.Drawing.Size(1103, 60);
             this.guna2Panel1.TabIndex = 31;
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 693);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 689);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1086, 60);
+            this.guna2Panel2.Size = new System.Drawing.Size(1103, 60);
             this.guna2Panel2.TabIndex = 32;
             // 
             // Tela_add_fornecedor
