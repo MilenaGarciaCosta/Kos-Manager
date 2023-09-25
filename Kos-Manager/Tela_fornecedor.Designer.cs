@@ -29,12 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_fornecedor));
+            this.Child_panel = new Guna.UI2.WinForms.Guna2Panel();
             this.Btn_deletar = new Guna.UI2.WinForms.Guna2Button();
             this.Btn_atualizar = new Guna.UI2.WinForms.Guna2Button();
             this.Btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
             this.Txt_buscar_fornecedor = new Guna.UI2.WinForms.Guna2TextBox();
             this.Lbl_fornecedor = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Child_panel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // Child_panel
+            // 
+            this.Child_panel.BackColor = System.Drawing.Color.Transparent;
+            this.Child_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Child_panel.Controls.Add(this.Btn_deletar);
+            this.Child_panel.Controls.Add(this.Btn_atualizar);
+            this.Child_panel.Controls.Add(this.Btn_adicionar);
+            this.Child_panel.Controls.Add(this.Txt_buscar_fornecedor);
+            this.Child_panel.Controls.Add(this.Lbl_fornecedor);
+            this.Child_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Child_panel.Location = new System.Drawing.Point(0, 0);
+            this.Child_panel.Name = "Child_panel";
+            this.Child_panel.Size = new System.Drawing.Size(1103, 622);
+            this.Child_panel.TabIndex = 16;
+            this.Child_panel.UseTransparentBackground = true;
             // 
             // Btn_deletar
             // 
@@ -51,10 +69,10 @@
             this.Btn_deletar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_deletar.Image")));
             this.Btn_deletar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_deletar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_deletar.Location = new System.Drawing.Point(712, 238);
+            this.Btn_deletar.Location = new System.Drawing.Point(709, 255);
             this.Btn_deletar.Name = "Btn_deletar";
             this.Btn_deletar.Size = new System.Drawing.Size(144, 39);
-            this.Btn_deletar.TabIndex = 15;
+            this.Btn_deletar.TabIndex = 20;
             this.Btn_deletar.Text = "Deletar";
             this.Btn_deletar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -74,12 +92,12 @@
             this.Btn_atualizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_atualizar.Image")));
             this.Btn_atualizar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_atualizar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_atualizar.Location = new System.Drawing.Point(483, 238);
+            this.Btn_atualizar.Location = new System.Drawing.Point(480, 255);
             this.Btn_atualizar.Name = "Btn_atualizar";
             this.Btn_atualizar.ShadowDecoration.Depth = 5;
             this.Btn_atualizar.ShadowDecoration.Enabled = true;
             this.Btn_atualizar.Size = new System.Drawing.Size(144, 39);
-            this.Btn_atualizar.TabIndex = 14;
+            this.Btn_atualizar.TabIndex = 19;
             this.Btn_atualizar.Text = "Atualizar";
             this.Btn_atualizar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -99,14 +117,15 @@
             this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
             this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(252, 238);
+            this.Btn_adicionar.Location = new System.Drawing.Point(249, 255);
             this.Btn_adicionar.Name = "Btn_adicionar";
             this.Btn_adicionar.ShadowDecoration.Depth = 5;
             this.Btn_adicionar.ShadowDecoration.Enabled = true;
             this.Btn_adicionar.Size = new System.Drawing.Size(144, 39);
-            this.Btn_adicionar.TabIndex = 13;
+            this.Btn_adicionar.TabIndex = 18;
             this.Btn_adicionar.Text = "Adicionar";
             this.Btn_adicionar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_adicionar.Click += new System.EventHandler(this.Btn_adicionar_Click_1);
             // 
             // Txt_buscar_fornecedor
             // 
@@ -123,7 +142,7 @@
             this.Txt_buscar_fornecedor.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Txt_buscar_fornecedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.Txt_buscar_fornecedor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_buscar_fornecedor.Location = new System.Drawing.Point(261, 149);
+            this.Txt_buscar_fornecedor.Location = new System.Drawing.Point(258, 166);
             this.Txt_buscar_fornecedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_buscar_fornecedor.Name = "Txt_buscar_fornecedor";
             this.Txt_buscar_fornecedor.PasswordChar = '\0';
@@ -131,7 +150,7 @@
             this.Txt_buscar_fornecedor.PlaceholderText = "Buscar por nome ou produto";
             this.Txt_buscar_fornecedor.SelectedText = "";
             this.Txt_buscar_fornecedor.Size = new System.Drawing.Size(285, 36);
-            this.Txt_buscar_fornecedor.TabIndex = 10;
+            this.Txt_buscar_fornecedor.TabIndex = 17;
             // 
             // Lbl_fornecedor
             // 
@@ -139,10 +158,10 @@
             this.Lbl_fornecedor.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_fornecedor.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.Lbl_fornecedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Lbl_fornecedor.Location = new System.Drawing.Point(466, 42);
+            this.Lbl_fornecedor.Location = new System.Drawing.Point(463, 59);
             this.Lbl_fornecedor.Name = "Lbl_fornecedor";
             this.Lbl_fornecedor.Size = new System.Drawing.Size(164, 32);
-            this.Lbl_fornecedor.TabIndex = 8;
+            this.Lbl_fornecedor.TabIndex = 16;
             this.Lbl_fornecedor.Text = "FORNECEDORES\r\n";
             this.Lbl_fornecedor.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -152,20 +171,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1103, 622);
-            this.Controls.Add(this.Btn_deletar);
-            this.Controls.Add(this.Btn_atualizar);
-            this.Controls.Add(this.Btn_adicionar);
-            this.Controls.Add(this.Txt_buscar_fornecedor);
-            this.Controls.Add(this.Lbl_fornecedor);
+            this.Controls.Add(this.Child_panel);
             this.Name = "Tela_fornecedor";
             this.Text = "Kos Manager";
+            this.Load += new System.EventHandler(this.Tela_fornecedor_Load);
+            this.Child_panel.ResumeLayout(false);
+            this.Child_panel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
+        private Guna.UI2.WinForms.Guna2Panel Child_panel;
         private Guna.UI2.WinForms.Guna2Button Btn_deletar;
         private Guna.UI2.WinForms.Guna2Button Btn_atualizar;
         private Guna.UI2.WinForms.Guna2Button Btn_adicionar;

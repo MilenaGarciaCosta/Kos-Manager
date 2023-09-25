@@ -459,6 +459,7 @@
             this.Child_panel.Name = "Child_panel";
             this.Child_panel.Size = new System.Drawing.Size(1291, 661);
             this.Child_panel.TabIndex = 6;
+            this.Child_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Child_panel_Paint);
             // 
             // Menu_burguer
             // 
@@ -590,7 +591,7 @@
             this.Btn_funcionarios.Image = global::Kos_Manager.Properties.Resources.funcionario;
             this.Btn_funcionarios.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_funcionarios.ImageSize = new System.Drawing.Size(40, 40);
-            this.Btn_funcionarios.Location = new System.Drawing.Point(0, 1);
+            this.Btn_funcionarios.Location = new System.Drawing.Point(0, 0);
             this.Btn_funcionarios.Name = "Btn_funcionarios";
             this.Btn_funcionarios.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.Btn_funcionarios.Size = new System.Drawing.Size(237, 54);
@@ -691,6 +692,7 @@
             this.Controls.Add(this.Img_header_menu);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.Name = "Tela_inicial";
             this.Text = "Kos Manager";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

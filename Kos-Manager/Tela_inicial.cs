@@ -275,5 +275,10 @@ namespace Kos_Manager
         {
             abrirChildForm(new Tela_configuracao());
         }
+
+        private void Child_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
