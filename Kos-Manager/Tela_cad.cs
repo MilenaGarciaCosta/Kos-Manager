@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using System.Configuration;
 using MySql.Data;
 using MySql.Data.MySqlClient;
-using System.Linq;
 
 namespace Kos_Manager
 {
