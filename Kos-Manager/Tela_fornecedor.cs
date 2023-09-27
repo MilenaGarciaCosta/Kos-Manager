@@ -51,5 +51,10 @@ namespace Kos_Manager
         {
             abrirChildForm(new Tela_atualizar_fornecedor());
         }
+
+        private void Child_panel_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

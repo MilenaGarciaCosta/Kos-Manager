@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_fornecedor));
             this.Child_panel = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
             this.Txt_buscar_fornecedor = new Guna.UI2.WinForms.Guna2TextBox();
             this.Lbl_fornecedor = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Child_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +51,19 @@
             this.Child_panel.Size = new System.Drawing.Size(1103, 622);
             this.Child_panel.TabIndex = 16;
             this.Child_panel.UseTransparentBackground = true;
+            this.Child_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Child_panel_Paint_1);
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(321, 132);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(247, 23);
+            this.guna2HtmlLabel2.TabIndex = 19;
+            this.guna2HtmlLabel2.Text = "Nome do fornecedor ou produto\r\n";
             // 
             // Btn_adicionar
             // 
@@ -115,18 +128,6 @@
             this.Lbl_fornecedor.TabIndex = 16;
             this.Lbl_fornecedor.Text = "FORNECEDORES\r\n";
             this.Lbl_fornecedor.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(321, 132);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(247, 23);
-            this.guna2HtmlLabel2.TabIndex = 19;
-            this.guna2HtmlLabel2.Text = "Nome do fornecedor ou produto\r\n";
             // 
             // Tela_fornecedor
             // 
