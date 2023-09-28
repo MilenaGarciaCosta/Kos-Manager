@@ -12,6 +12,18 @@ namespace Kos_Manager
 {
     public partial class Tela_fornecedor : Form
     {
+
+
+
+
+        public class Fornecedor
+        {
+            public string Nome { get; set; }
+            public string Produto { get; set; }
+            public string Contato { get; set; }
+        }
+
+
         public Tela_fornecedor()
         {
             InitializeComponent();
@@ -56,5 +68,30 @@ namespace Kos_Manager
         {
 
         }
+
+
+
+
+        public void AdicionarFornecedorAoPanel(Fornecedor fornecedor)
+        {
+            // Crie controles (por exemplo, Label) para exibir as informações do fornecedor
+            Label lblNome = new Label();
+            lblNome.Text = "Nome: " + fornecedor.Nome;
+            lblNome.Location = new Point(10, 10);
+
+            Label lblProduto = new Label();
+            lblProduto.Text = "Produto: " + fornecedor.Produto;
+            lblProduto.Location = new Point(10, 30);
+
+            Label lblContato = new Label();
+            lblContato.Text = "Contato: " + fornecedor.Contato;
+            lblContato.Location = new Point(10, 50);
+
+            // Adicione os controles ao Panel (pnlFornecedores)
+            pnlFornecedores.Controls.Add(lblNome);
+            pnlFornecedores.Controls.Add(lblProduto);
+            pnlFornecedores.Controls.Add(lblContato);
+        }
+
     }
 }

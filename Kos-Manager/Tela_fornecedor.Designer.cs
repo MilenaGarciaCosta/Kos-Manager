@@ -34,6 +34,7 @@
             this.Btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
             this.Txt_buscar_fornecedor = new Guna.UI2.WinForms.Guna2TextBox();
             this.Lbl_fornecedor = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.pnlFornecedores = new Guna.UI2.WinForms.Guna2Panel();
             this.Child_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,6 +42,7 @@
             // 
             this.Child_panel.BackColor = System.Drawing.Color.Transparent;
             this.Child_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Child_panel.Controls.Add(this.pnlFornecedores);
             this.Child_panel.Controls.Add(this.guna2HtmlLabel2);
             this.Child_panel.Controls.Add(this.Btn_adicionar);
             this.Child_panel.Controls.Add(this.Txt_buscar_fornecedor);
@@ -129,6 +131,16 @@
             this.Lbl_fornecedor.Text = "FORNECEDORES\r\n";
             this.Lbl_fornecedor.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // pnlFornecedores
+            // 
+            this.pnlFornecedores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlFornecedores.AutoScroll = true;
+            this.pnlFornecedores.Location = new System.Drawing.Point(55, 261);
+            this.pnlFornecedores.Name = "pnlFornecedores";
+            this.pnlFornecedores.Size = new System.Drawing.Size(985, 336);
+            this.pnlFornecedores.TabIndex = 20;
+            // 
             // Tela_fornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,5 +164,6 @@
         private Guna.UI2.WinForms.Guna2TextBox Txt_buscar_fornecedor;
         private Guna.UI2.WinForms.Guna2HtmlLabel Lbl_fornecedor;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2Panel pnlFornecedores;
     }
 }

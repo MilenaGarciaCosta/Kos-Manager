@@ -208,9 +208,9 @@
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(272, 432);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(51, 25);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(137, 25);
             this.guna2HtmlLabel4.TabIndex = 26;
-            this.guna2HtmlLabel4.Text = "E-mail";
+            this.guna2HtmlLabel4.Text = "Meios de contato";
             this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Txt_email_fornecedor
@@ -236,7 +236,7 @@
             this.Txt_email_fornecedor.Name = "Txt_email_fornecedor";
             this.Txt_email_fornecedor.PasswordChar = '\0';
             this.Txt_email_fornecedor.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.Txt_email_fornecedor.PlaceholderText = "Digite aqui";
+            this.Txt_email_fornecedor.PlaceholderText = "E-mail, telefone, ";
             this.Txt_email_fornecedor.SelectedText = "";
             this.Txt_email_fornecedor.Size = new System.Drawing.Size(503, 43);
             this.Txt_email_fornecedor.TabIndex = 25;
@@ -284,7 +284,7 @@
             // 
             // Btn_adicionar
             // 
-            this.Btn_adicionar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Btn_adicionar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Btn_adicionar.Animated = true;
             this.Btn_adicionar.BackColor = System.Drawing.Color.Transparent;
             this.Btn_adicionar.BorderRadius = 10;
@@ -310,7 +310,7 @@
             // 
             // Btn_voltar
             // 
-            this.Btn_voltar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Btn_voltar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Btn_voltar.Animated = true;
             this.Btn_voltar.BackColor = System.Drawing.Color.Transparent;
             this.Btn_voltar.BorderRadius = 10;
