@@ -6,6 +6,16 @@ using System.Windows.Forms;
 
 namespace Kos_Manager
 {
+
+    public static class Fornecedor
+    {
+        public static string Nome { get; set; }
+        public static string Produto { get; set; }
+
+        public static string Contato { get; set; }
+
+    }
+
     internal static class Program
     {
         /// <summary>

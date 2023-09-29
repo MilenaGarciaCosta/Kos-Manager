@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_fornecedor));
             this.Child_panel = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlFornecedores = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
             this.Txt_buscar_fornecedor = new Guna.UI2.WinForms.Guna2TextBox();
             this.Lbl_fornecedor = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.pnlFornecedores = new Guna.UI2.WinForms.Guna2Panel();
             this.Child_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,27 +49,43 @@
             this.Child_panel.Controls.Add(this.Lbl_fornecedor);
             this.Child_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Child_panel.Location = new System.Drawing.Point(0, 0);
+            this.Child_panel.Margin = new System.Windows.Forms.Padding(4);
             this.Child_panel.Name = "Child_panel";
-            this.Child_panel.Size = new System.Drawing.Size(1103, 622);
+            this.Child_panel.Size = new System.Drawing.Size(1471, 766);
             this.Child_panel.TabIndex = 16;
             this.Child_panel.UseTransparentBackground = true;
             this.Child_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Child_panel_Paint_1);
             // 
+            // pnlFornecedores
+            // 
+            this.pnlFornecedores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlFornecedores.AutoScroll = true;
+            this.pnlFornecedores.Location = new System.Drawing.Point(73, 301);
+            this.pnlFornecedores.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlFornecedores.Name = "pnlFornecedores";
+            this.pnlFornecedores.Size = new System.Drawing.Size(1385, 434);
+            this.pnlFornecedores.TabIndex = 20;
+            // 
             // guna2HtmlLabel2
             // 
-            this.guna2HtmlLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2HtmlLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(321, 132);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(428, 162);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel2.MinimumSize = new System.Drawing.Size(305, 30);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(247, 23);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(305, 30);
             this.guna2HtmlLabel2.TabIndex = 19;
             this.guna2HtmlLabel2.Text = "Nome do fornecedor ou produto\r\n";
             // 
             // Btn_adicionar
             // 
-            this.Btn_adicionar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Btn_adicionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_adicionar.Animated = true;
             this.Btn_adicionar.BackColor = System.Drawing.Color.Transparent;
             this.Btn_adicionar.BorderRadius = 10;
@@ -83,11 +99,12 @@
             this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
             this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(657, 162);
+            this.Btn_adicionar.Location = new System.Drawing.Point(876, 199);
+            this.Btn_adicionar.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_adicionar.Name = "Btn_adicionar";
             this.Btn_adicionar.ShadowDecoration.Depth = 5;
             this.Btn_adicionar.ShadowDecoration.Enabled = true;
-            this.Btn_adicionar.Size = new System.Drawing.Size(144, 39);
+            this.Btn_adicionar.Size = new System.Drawing.Size(192, 48);
             this.Btn_adicionar.TabIndex = 18;
             this.Btn_adicionar.Text = "Adicionar";
             this.Btn_adicionar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -95,7 +112,8 @@
             // 
             // Txt_buscar_fornecedor
             // 
-            this.Txt_buscar_fornecedor.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Txt_buscar_fornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_buscar_fornecedor.BorderRadius = 10;
             this.Txt_buscar_fornecedor.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Txt_buscar_fornecedor.DefaultText = "";
@@ -108,46 +126,41 @@
             this.Txt_buscar_fornecedor.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Txt_buscar_fornecedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.Txt_buscar_fornecedor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_buscar_fornecedor.Location = new System.Drawing.Point(321, 162);
-            this.Txt_buscar_fornecedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_buscar_fornecedor.Location = new System.Drawing.Point(428, 199);
+            this.Txt_buscar_fornecedor.Margin = new System.Windows.Forms.Padding(5);
             this.Txt_buscar_fornecedor.Name = "Txt_buscar_fornecedor";
             this.Txt_buscar_fornecedor.PasswordChar = '\0';
             this.Txt_buscar_fornecedor.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.Txt_buscar_fornecedor.PlaceholderText = "Buscar por nome ou produto";
             this.Txt_buscar_fornecedor.SelectedText = "";
-            this.Txt_buscar_fornecedor.Size = new System.Drawing.Size(285, 39);
+            this.Txt_buscar_fornecedor.Size = new System.Drawing.Size(380, 48);
             this.Txt_buscar_fornecedor.TabIndex = 17;
             // 
             // Lbl_fornecedor
             // 
-            this.Lbl_fornecedor.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Lbl_fornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Lbl_fornecedor.AutoSize = false;
+            this.Lbl_fornecedor.AutoSizeHeightOnly = true;
             this.Lbl_fornecedor.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_fornecedor.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.Lbl_fornecedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Lbl_fornecedor.Location = new System.Drawing.Point(463, 59);
+            this.Lbl_fornecedor.Location = new System.Drawing.Point(617, 73);
+            this.Lbl_fornecedor.Margin = new System.Windows.Forms.Padding(4);
             this.Lbl_fornecedor.Name = "Lbl_fornecedor";
-            this.Lbl_fornecedor.Size = new System.Drawing.Size(164, 32);
+            this.Lbl_fornecedor.Size = new System.Drawing.Size(208, 21);
             this.Lbl_fornecedor.TabIndex = 16;
             this.Lbl_fornecedor.Text = "FORNECEDORES\r\n";
-            this.Lbl_fornecedor.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // pnlFornecedores
-            // 
-            this.pnlFornecedores.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlFornecedores.AutoScroll = true;
-            this.pnlFornecedores.Location = new System.Drawing.Point(55, 261);
-            this.pnlFornecedores.Name = "pnlFornecedores";
-            this.pnlFornecedores.Size = new System.Drawing.Size(985, 336);
-            this.pnlFornecedores.TabIndex = 20;
+            this.Lbl_fornecedor.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Tela_fornecedor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1103, 622);
+            this.ClientSize = new System.Drawing.Size(1471, 766);
             this.Controls.Add(this.Child_panel);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Tela_fornecedor";
             this.Text = "Kos Manager";
             this.Load += new System.EventHandler(this.Tela_fornecedor_Load);

@@ -17,17 +17,7 @@ namespace Kos_Manager
     public partial class Tela_add_fornecedor : Form
     {
 
-        public class Fornecedor
-        {
-            public string Nome { get; set; }
-            public string Produto { get; set; }
-            public string Contato { get; set; }
-        }
-
-
-
         string conexao = ConfigurationManager.ConnectionStrings["bd_kosmanager"].ConnectionString;
-
 
 
         public Tela_add_fornecedor()
@@ -59,40 +49,57 @@ namespace Kos_Manager
 
         private void Btn_adicionar_Click(object sender, EventArgs e)
         {
+            
 
-            try
-            {
-                // Seu código para adicionar um fornecedor ao banco de dados
-
-                // Crie um objeto Fornecedor
-                Fornecedor novoFornecedor = new Fornecedor
+                try
                 {
-                    Nome = Txt_nome_fornecedor.Text,
-                    Produto = Txt_produto_fornecido.Text,
-                    Contato = Txt_tel_fornecedor.Text
-                };
+                    MySqlConnection con = new MySqlConnection(conexao);
 
-                // Crie ou obtenha uma instância da Tela_fornecedor
-                Tela_fornecedor telaFornecedor = new Tela_fornecedor();
+                    string nome;
+                    string produto;
+                    string contato;
 
-                // Adicione o fornecedor ao Panel na Tela_fornecedor
-                telaFornecedor.AdicionarFornecedorAoPanel(novoFornecedor);
+                    nome = Txt_nome_fornecedor.Text;
+                    produto = Txt_produto_fornecido.Text;
+                    contato = Txt_tel_fornecedor.Text;
 
-                // Mostre a tela Tela_fornecedor (se necessário)
-                telaFornecedor.Show();
+                    string sql_insert = @"insert into tb_fornecedor
+                                    (
+                                         tb_fornecedor_nome, tb_fornecedor_produto, tb_fornecedor_contato
+                                    )
+                                    values 
+                                    (
+                                        @fornecedor_nome, @fornecedor_produto, @fornecedor_contato
+                                    )";
 
+                    MySqlCommand executacmdMySql_insert = new MySqlCommand(sql_insert, con);
+
+                    executacmdMySql_insert.Parameters.AddWithValue("@fornecedor_nome", nome);
+                    executacmdMySql_insert.Parameters.AddWithValue("@fornecedor_produto", produto);
+                    executacmdMySql_insert.Parameters.AddWithValue("@fornecedor_contato", contato);
+                    con.Open();
+                    executacmdMySql_insert.ExecuteNonQuery();
+
+                    con.Close();
+                    MessageBox.Show("cadastrado");
+
+
+                    // Agora, você pode criar uma instância da classe Fornecedor e definir os valores das propriedades
+                    
+                    Fornecedor.Nome = nome;
+                    Fornecedor.Produto = produto;
+                    Fornecedor.Contato = contato;
+
+
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show("erro " + erro);
+                }
                 // Limpe os campos de entrada após o cadastro
                 ClearTextBoxes(this.Controls);
 
-
-
-            }
-            catch (Exception erro)
-            {
-                MessageBox.Show("Erro " + erro);
-            }
         }
 
-      
     }
 }
