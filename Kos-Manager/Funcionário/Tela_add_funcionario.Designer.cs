@@ -64,7 +64,7 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(446, 104);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(444, 104);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(169, 25);
             this.guna2HtmlLabel2.TabIndex = 2;
@@ -280,18 +280,19 @@
             // 
             // cmb_nivel_funcionario
             // 
-            this.cmb_nivel_funcionario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_nivel_funcionario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmb_nivel_funcionario.BackColor = System.Drawing.Color.Transparent;
             this.cmb_nivel_funcionario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
             this.cmb_nivel_funcionario.BorderRadius = 10;
             this.cmb_nivel_funcionario.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmb_nivel_funcionario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_nivel_funcionario.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.cmb_nivel_funcionario.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmb_nivel_funcionario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmb_nivel_funcionario.FocusedColor = System.Drawing.Color.Transparent;
+            this.cmb_nivel_funcionario.FocusedState.BorderColor = System.Drawing.Color.Transparent;
             this.cmb_nivel_funcionario.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmb_nivel_funcionario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.cmb_nivel_funcionario.ItemHeight = 30;
+            this.cmb_nivel_funcionario.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cmb_nivel_funcionario.Location = new System.Drawing.Point(272, 322);
             this.cmb_nivel_funcionario.Name = "cmb_nivel_funcionario";
             this.cmb_nivel_funcionario.Size = new System.Drawing.Size(503, 36);

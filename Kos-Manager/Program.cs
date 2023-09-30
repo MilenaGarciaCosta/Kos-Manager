@@ -11,7 +11,6 @@ namespace Kos_Manager
     {
         public static string Nome { get; set; }
         public static string Produto { get; set; }
-
         public static string Contato { get; set; }
 
     }

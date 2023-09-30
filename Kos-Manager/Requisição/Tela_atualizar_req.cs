@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Kos_Manager
+namespace Kos_Manager.Requisição
 {
-    public partial class Tela_manu : Form
+    public partial class Tela_atualizar_req : Form
     {
-        public Tela_manu()
+        public Tela_atualizar_req()
         {
             InitializeComponent();
+        }
+
+        private void Btn_voltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

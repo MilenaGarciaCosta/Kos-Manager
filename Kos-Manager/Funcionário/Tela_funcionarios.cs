@@ -17,6 +17,21 @@ namespace Kos_Manager
             InitializeComponent();
         }
 
+        private Form FormAtivo = null;
+        private void abrirChildForm(Form ChildForm)
+        {
+            if (FormAtivo != null)
+                FormAtivo.Close();
+            FormAtivo = ChildForm;
+            ChildForm.TopLevel = false;
+            ChildForm.FormBorderStyle = FormBorderStyle.None;
+            ChildForm.Dock = DockStyle.Fill;
+            Child_panel.Controls.Add(ChildForm);
+            Child_panel.Tag = ChildForm;
+            ChildForm.BringToFront();
+            ChildForm.Show();
+        }
+
         private void guna2Button1_Click(object sender, EventArgs e)
         {
 
@@ -50,6 +65,11 @@ namespace Kos_Manager
         private void txt_buscar_func_id_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_adicionar_Click_1(object sender, EventArgs e)
+        {
+            abrirChildForm(new Tela_add_funcionario());
         }
     }
 }

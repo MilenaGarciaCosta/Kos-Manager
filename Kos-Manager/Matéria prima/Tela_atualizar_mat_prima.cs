@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Kos_Manager
+namespace Kos_Manager.Matéria_prima
 {
-    public partial class Tela_requisicao : Form
+    public partial class Tela_atualizar_mat_prima : Form
     {
-        public Tela_requisicao()
+        public Tela_atualizar_mat_prima()
         {
             InitializeComponent();
         }

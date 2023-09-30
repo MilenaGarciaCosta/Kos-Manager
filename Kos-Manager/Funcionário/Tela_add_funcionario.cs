@@ -16,6 +16,8 @@ namespace Kos_Manager
         {
             InitializeComponent();
         }
+
+
         public void ClearTextBoxes(Control.ControlCollection ctrlCollection)
         {
             foreach (Control ctrl in ctrlCollection)

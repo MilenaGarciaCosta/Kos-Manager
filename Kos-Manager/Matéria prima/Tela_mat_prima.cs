@@ -54,7 +54,12 @@ namespace Kos_Manager
 
         private void Btn_adicionar_Click(object sender, EventArgs e)
         {
+            
+        }
 
+        private void Btn_solicitar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

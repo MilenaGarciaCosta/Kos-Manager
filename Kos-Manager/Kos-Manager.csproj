@@ -120,29 +120,65 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Tela_add_fornecedor.cs">
+    <Compile Include="Manufaturado\Tela_atualizar_manu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_add_fornecedor.Designer.cs">
+    <Compile Include="Manufaturado\Tela_atualizar_manu.Designer.cs">
+      <DependentUpon>Tela_atualizar_manu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fornecedores\Tela_add_fornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fornecedores\Tela_add_fornecedor.Designer.cs">
       <DependentUpon>Tela_add_fornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tela_add_funcionario.cs">
+    <Compile Include="Funcionário\Tela_add_funcionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_add_funcionario.Designer.cs">
+    <Compile Include="Funcionário\Tela_add_funcionario.Designer.cs">
       <DependentUpon>Tela_add_funcionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tela_atualizar_fornecedor.cs">
+    <Compile Include="Manufaturado\Tela_add_manu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_atualizar_fornecedor.Designer.cs">
+    <Compile Include="Manufaturado\Tela_add_manu.Designer.cs">
+      <DependentUpon>Tela_add_manu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fornecedores\Tela_atualizar_fornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fornecedores\Tela_atualizar_fornecedor.Designer.cs">
       <DependentUpon>Tela_atualizar_fornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tela_atualizar_funcionario.cs">
+    <Compile Include="Funcionário\Tela_atualizar_funcionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_atualizar_funcionario.Designer.cs">
+    <Compile Include="Funcionário\Tela_atualizar_funcionario.Designer.cs">
       <DependentUpon>Tela_atualizar_funcionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Matéria prima\Tela_add_mat_prima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Matéria prima\Tela_add_mat_prima.Designer.cs">
+      <DependentUpon>Tela_add_mat_prima.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Matéria prima\Tela_atualizar_mat_prima.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Matéria prima\Tela_atualizar_mat_prima.Designer.cs">
+      <DependentUpon>Tela_atualizar_mat_prima.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Requisição\Tela_add_req.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Requisição\Tela_add_req.Designer.cs">
+      <DependentUpon>Tela_add_req.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Requisição\Tela_atualizar_req.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Requisição\Tela_atualizar_req.Designer.cs">
+      <DependentUpon>Tela_atualizar_req.cs</DependentUpon>
     </Compile>
     <Compile Include="Tela_cad.cs">
       <SubType>Form</SubType>
@@ -162,16 +198,16 @@
     <Compile Include="Tela_dashboard.Designer.cs">
       <DependentUpon>Tela_dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tela_fornecedor.cs">
+    <Compile Include="Fornecedores\Tela_fornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_fornecedor.Designer.cs">
+    <Compile Include="Fornecedores\Tela_fornecedor.Designer.cs">
       <DependentUpon>Tela_fornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tela_funcionarios.cs">
+    <Compile Include="Funcionário\Tela_funcionarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_funcionarios.Designer.cs">
+    <Compile Include="Funcionário\Tela_funcionarios.Designer.cs">
       <DependentUpon>Tela_funcionarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Tela_inicial.cs">
@@ -186,28 +222,28 @@
     <Compile Include="Tela_login.Designer.cs">
       <DependentUpon>Tela_login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tela_manu.cs">
+    <Compile Include="Manufaturado\Tela_manu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_manu.Designer.cs">
+    <Compile Include="Manufaturado\Tela_manu.Designer.cs">
       <DependentUpon>Tela_manu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tela_mat_prima.cs">
+    <Compile Include="Matéria prima\Tela_mat_prima.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_mat_prima.Designer.cs">
+    <Compile Include="Matéria prima\Tela_mat_prima.Designer.cs">
       <DependentUpon>Tela_mat_prima.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tela_nivel_acesso.cs">
+    <Compile Include="Nível de acesso\Tela_nivel_acesso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_nivel_acesso.Designer.cs">
+    <Compile Include="Nível de acesso\Tela_nivel_acesso.Designer.cs">
       <DependentUpon>Tela_nivel_acesso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tela_nota_fiscal.cs">
+    <Compile Include="Nota fiscal\Tela_nota_fiscal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_nota_fiscal.Designer.cs">
+    <Compile Include="Nota fiscal\Tela_nota_fiscal.Designer.cs">
       <DependentUpon>Tela_nota_fiscal.cs</DependentUpon>
     </Compile>
     <Compile Include="Tela_reg_autoria.cs">
@@ -216,16 +252,16 @@
     <Compile Include="Tela_reg_autoria.Designer.cs">
       <DependentUpon>Tela_reg_autoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tela_requisicao.cs">
+    <Compile Include="Requisição\Tela_requisicao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_requisicao.Designer.cs">
+    <Compile Include="Requisição\Tela_requisicao.Designer.cs">
       <DependentUpon>Tela_requisicao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tela_solicitacao.cs">
+    <Compile Include="Solicitação\Tela_solicitacao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_solicitacao.Designer.cs">
+    <Compile Include="Solicitação\Tela_solicitacao.Designer.cs">
       <DependentUpon>Tela_solicitacao.cs</DependentUpon>
     </Compile>
     <Compile Include="Tela_splash.cs">
@@ -236,12 +272,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tela_vendas.cs">
+    <Compile Include="Vendas\Tela_vendas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_vendas.Designer.cs">
+    <Compile Include="Vendas\Tela_vendas.Designer.cs">
       <DependentUpon>Tela_vendas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Manufaturado\Tela_atualizar_manu.resx">
+      <DependentUpon>Tela_atualizar_manu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Matéria prima\Tela_add_mat_prima.resx">
+      <DependentUpon>Tela_add_mat_prima.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Matéria prima\Tela_atualizar_mat_prima.resx">
+      <DependentUpon>Tela_atualizar_mat_prima.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -252,17 +297,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Tela_add_fornecedor.resx">
+    <EmbeddedResource Include="Fornecedores\Tela_add_fornecedor.resx">
       <DependentUpon>Tela_add_fornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tela_add_funcionario.resx">
+    <EmbeddedResource Include="Funcionário\Tela_add_funcionario.resx">
       <DependentUpon>Tela_add_funcionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tela_atualizar_fornecedor.resx">
+    <EmbeddedResource Include="Manufaturado\Tela_add_manu.resx">
+      <DependentUpon>Tela_add_manu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fornecedores\Tela_atualizar_fornecedor.resx">
       <DependentUpon>Tela_atualizar_fornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tela_atualizar_funcionario.resx">
+    <EmbeddedResource Include="Funcionário\Tela_atualizar_funcionario.resx">
       <DependentUpon>Tela_atualizar_funcionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Requisição\Tela_add_req.resx">
+      <DependentUpon>Tela_add_req.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Requisição\Tela_atualizar_req.resx">
+      <DependentUpon>Tela_atualizar_req.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tela_cad.resx">
       <DependentUpon>Tela_cad.cs</DependentUpon>
@@ -273,10 +327,10 @@
     <EmbeddedResource Include="Tela_dashboard.resx">
       <DependentUpon>Tela_dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tela_fornecedor.resx">
+    <EmbeddedResource Include="Fornecedores\Tela_fornecedor.resx">
       <DependentUpon>Tela_fornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tela_funcionarios.resx">
+    <EmbeddedResource Include="Funcionário\Tela_funcionarios.resx">
       <DependentUpon>Tela_funcionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tela_inicial.resx">
@@ -285,31 +339,31 @@
     <EmbeddedResource Include="Tela_login.resx">
       <DependentUpon>Tela_login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tela_manu.resx">
+    <EmbeddedResource Include="Manufaturado\Tela_manu.resx">
       <DependentUpon>Tela_manu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tela_mat_prima.resx">
+    <EmbeddedResource Include="Matéria prima\Tela_mat_prima.resx">
       <DependentUpon>Tela_mat_prima.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tela_nivel_acesso.resx">
+    <EmbeddedResource Include="Nível de acesso\Tela_nivel_acesso.resx">
       <DependentUpon>Tela_nivel_acesso.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tela_nota_fiscal.resx">
+    <EmbeddedResource Include="Nota fiscal\Tela_nota_fiscal.resx">
       <DependentUpon>Tela_nota_fiscal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tela_reg_autoria.resx">
       <DependentUpon>Tela_reg_autoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tela_requisicao.resx">
+    <EmbeddedResource Include="Requisição\Tela_requisicao.resx">
       <DependentUpon>Tela_requisicao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tela_solicitacao.resx">
+    <EmbeddedResource Include="Solicitação\Tela_solicitacao.resx">
       <DependentUpon>Tela_solicitacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tela_splash.resx">
       <DependentUpon>Tela_splash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tela_vendas.resx">
+    <EmbeddedResource Include="Vendas\Tela_vendas.resx">
       <DependentUpon>Tela_vendas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -371,5 +425,6 @@
   <ItemGroup>
     <None Include="Resources\menu_burguer.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

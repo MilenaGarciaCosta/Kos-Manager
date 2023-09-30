@@ -1,6 +1,6 @@
-﻿namespace Kos_Manager
+﻿namespace Kos_Manager.Matéria_prima
 {
-    partial class Tela_requisicao
+    partial class Tela_atualizar_mat_prima
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // Tela_requisicao
+            // Tela_atualizar_mat_prima
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1103, 622);
-            this.Name = "Tela_requisicao";
-            this.Text = "Tela_requisicao";
+            this.Name = "Tela_atualizar_mat_prima";
+            this.Text = "Tela_atualizar_mat_prima";
             this.ResumeLayout(false);
 
         }
