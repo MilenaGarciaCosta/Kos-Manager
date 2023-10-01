@@ -60,18 +60,15 @@ namespace Kos_Manager
             abrirChildForm(new Tela_add_fornecedor());
         }
 
-        private void Btn_atualizar_Click(object sender, EventArgs e)
-        {
-            abrirChildForm(new Tela_atualizar_fornecedor());
-        }
+       // private void Btn_atualizar_Click(object sender, EventArgs e)
+       // {
+      //      abrirChildForm(new Tela_atualizar_fornecedor());
+      //  }
 
         private void Child_panel_Paint_1(object sender, PaintEventArgs e)
         {
 
         }
-
-
-
 
         public void AdicionarFornecedorAoPanel()
         {
@@ -87,8 +84,6 @@ namespace Kos_Manager
             Label lblContato = new Label();
             lblContato.Text = "Contato: " + Fornecedor.Contato;
             lblContato.Location = new Point(10, 50);
-
-           
         }
 
         private void AtualizarTextBoxFornecedores()
@@ -131,8 +126,6 @@ namespace Kos_Manager
                     };
 
 
-
-
                     // Definir a posição vertical da TextBox
                     txtFornecedor.Top = top;
 
@@ -157,5 +150,9 @@ namespace Kos_Manager
 
         }
 
+        private void Txt_buscar_fornecedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
