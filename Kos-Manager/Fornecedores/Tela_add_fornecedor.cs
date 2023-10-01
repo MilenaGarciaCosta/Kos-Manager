@@ -101,5 +101,9 @@ namespace Kos_Manager
 
         }
 
+        private void Txt_nome_fornecedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -96,7 +96,7 @@ namespace Kos_Manager
             try
             {
                 MySqlConnection con = new MySqlConnection(conexao);
-                string sql_select = "SELECT tb_fornecedor_nome, tb_fornecedor_produto, tb_fornecedor_contato FROM tb_fornecedor";
+                string sql_select = "SELECT tb_fornecedor_id, tb_fornecedor_nome, tb_fornecedor_produto, tb_fornecedor_contato FROM tb_fornecedor";
                 MySqlCommand cmd = new MySqlCommand(sql_select, con);
                 con.Open();
                 MySqlDataReader reader = cmd.ExecuteReader();
@@ -109,6 +109,7 @@ namespace Kos_Manager
                 while (reader.Read())
                 {
                     // Ler as informações de cada fornecedor
+                    string id = reader["tb_fornecedor_id"].ToString();
                     string nome = reader["tb_fornecedor_nome"].ToString();
                     string produto = reader["tb_fornecedor_produto"].ToString();
                     string contato = reader["tb_fornecedor_contato"].ToString();
@@ -125,7 +126,7 @@ namespace Kos_Manager
                     txtFornecedor.Click += (sender, e) =>
                     {
                         //Tela_atualizar_fornecedor tela_atualizar = new Tela_atualizar_fornecedor(nome, produto, contato);
-                        abrirChildForm(new Tela_atualizar_fornecedor(nome, produto, contato));
+                        abrirChildForm(new Tela_atualizar_fornecedor(id, nome, produto, contato));
                         //tela_atualizar.ShowDialog();
                     };
 

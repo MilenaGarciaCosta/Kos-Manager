@@ -359,6 +359,7 @@
             this.Btn_deletar.TabIndex = 51;
             this.Btn_deletar.Text = "Deletar";
             this.Btn_deletar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_deletar.Click += new System.EventHandler(this.Btn_deletar_Click);
             // 
             // Lbl_fornecedor
             // 
