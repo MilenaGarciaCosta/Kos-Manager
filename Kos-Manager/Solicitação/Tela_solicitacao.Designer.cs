@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_solicitacao));
             this.Child_panel = new Guna.UI2.WinForms.Guna2Panel();
+            this.Pnl_mat_prima = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Lbl_estoque = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Pnl_mat_prima = new Guna.UI2.WinForms.Guna2Panel();
             this.Child_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,55 +55,16 @@
             this.Child_panel.UseTransparentBackground = true;
             this.Child_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Child_panel_Paint);
             // 
-            // guna2HtmlLabel2
+            // Pnl_mat_prima
             // 
-            this.guna2HtmlLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(506, 94);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(3, 2);
-            this.guna2HtmlLabel2.TabIndex = 19;
-            this.guna2HtmlLabel2.Click += new System.EventHandler(this.guna2HtmlLabel2_Click);
-            // 
-            // Lbl_estoque
-            // 
-            this.Lbl_estoque.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Lbl_estoque.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_estoque.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.Lbl_estoque.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Lbl_estoque.Location = new System.Drawing.Point(506, 56);
-            this.Lbl_estoque.Name = "Lbl_estoque";
-            this.Lbl_estoque.Size = new System.Drawing.Size(148, 32);
-            this.Lbl_estoque.TabIndex = 16;
-            this.Lbl_estoque.Text = "SOLICITAÇÕES";
-            this.Lbl_estoque.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // Btn_adicionar
-            // 
-            this.Btn_adicionar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Btn_adicionar.Animated = true;
-            this.Btn_adicionar.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_adicionar.BorderRadius = 10;
-            this.Btn_adicionar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_adicionar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_adicionar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_adicionar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_adicionar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(79)))), ((int)(((byte)(82)))));
-            this.Btn_adicionar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.Btn_adicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
-            this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(257, 143);
-            this.Btn_adicionar.Name = "Btn_adicionar";
-            this.Btn_adicionar.ShadowDecoration.Depth = 5;
-            this.Btn_adicionar.ShadowDecoration.Enabled = true;
-            this.Btn_adicionar.Size = new System.Drawing.Size(144, 39);
-            this.Btn_adicionar.TabIndex = 51;
-            this.Btn_adicionar.Text = "Adicionar";
-            this.Btn_adicionar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Pnl_mat_prima.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Pnl_mat_prima.AutoScroll = true;
+            this.Pnl_mat_prima.Location = new System.Drawing.Point(31, 245);
+            this.Pnl_mat_prima.Name = "Pnl_mat_prima";
+            this.Pnl_mat_prima.Size = new System.Drawing.Size(1039, 353);
+            this.Pnl_mat_prima.TabIndex = 53;
             // 
             // guna2TextBox2
             // 
@@ -124,7 +85,7 @@
             this.guna2TextBox2.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.guna2TextBox2.IconRightOffset = new System.Drawing.Point(10, -10);
             this.guna2TextBox2.IconRightSize = new System.Drawing.Size(10, 10);
-            this.guna2TextBox2.Location = new System.Drawing.Point(506, 139);
+            this.guna2TextBox2.Location = new System.Drawing.Point(187, 127);
             this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox2.Name = "guna2TextBox2";
             this.guna2TextBox2.PasswordChar = '\0';
@@ -134,16 +95,57 @@
             this.guna2TextBox2.Size = new System.Drawing.Size(503, 43);
             this.guna2TextBox2.TabIndex = 52;
             // 
-            // Pnl_mat_prima
+            // Btn_adicionar
             // 
-            this.Pnl_mat_prima.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Pnl_mat_prima.AutoScroll = true;
-            this.Pnl_mat_prima.Location = new System.Drawing.Point(31, 245);
-            this.Pnl_mat_prima.Name = "Pnl_mat_prima";
-            this.Pnl_mat_prima.Size = new System.Drawing.Size(1039, 259);
-            this.Pnl_mat_prima.TabIndex = 53;
+            this.Btn_adicionar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Btn_adicionar.Animated = true;
+            this.Btn_adicionar.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_adicionar.BorderRadius = 10;
+            this.Btn_adicionar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_adicionar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_adicionar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_adicionar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_adicionar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(79)))), ((int)(((byte)(82)))));
+            this.Btn_adicionar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.Btn_adicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
+            this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
+            this.Btn_adicionar.Location = new System.Drawing.Point(738, 127);
+            this.Btn_adicionar.Name = "Btn_adicionar";
+            this.Btn_adicionar.ShadowDecoration.Depth = 5;
+            this.Btn_adicionar.ShadowDecoration.Enabled = true;
+            this.Btn_adicionar.Size = new System.Drawing.Size(144, 43);
+            this.Btn_adicionar.TabIndex = 51;
+            this.Btn_adicionar.Text = "Adicionar";
+            this.Btn_adicionar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_adicionar.Click += new System.EventHandler(this.Btn_adicionar_Click);
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(506, 94);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(3, 2);
+            this.guna2HtmlLabel2.TabIndex = 19;
+            this.guna2HtmlLabel2.Text = null;
+            this.guna2HtmlLabel2.Click += new System.EventHandler(this.guna2HtmlLabel2_Click);
+            // 
+            // Lbl_estoque
+            // 
+            this.Lbl_estoque.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Lbl_estoque.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_estoque.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.Lbl_estoque.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.Lbl_estoque.Location = new System.Drawing.Point(506, 56);
+            this.Lbl_estoque.Name = "Lbl_estoque";
+            this.Lbl_estoque.Size = new System.Drawing.Size(148, 32);
+            this.Lbl_estoque.TabIndex = 16;
+            this.Lbl_estoque.Text = "SOLICITAÇÕES";
+            this.Lbl_estoque.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Tela_solicitacao
             // 
