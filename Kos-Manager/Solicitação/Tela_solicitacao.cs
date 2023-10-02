@@ -16,5 +16,46 @@ namespace Kos_Manager
         {
             InitializeComponent();
         }
+
+        private Form FormAtivo = null;
+        private void abrirChildForm(Form ChildForm)
+        {
+            if (FormAtivo != null)
+                FormAtivo.Close();
+            FormAtivo = ChildForm;
+            ChildForm.TopLevel = false;
+            ChildForm.FormBorderStyle = FormBorderStyle.None;
+            ChildForm.Dock = DockStyle.Fill;
+            Child_panel.Controls.Add(ChildForm);
+            Child_panel.Tag = ChildForm;
+            ChildForm.BringToFront();
+            ChildForm.Show();
+        }
+
+
+        private void Pnl_mat_prima_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Txt_buscar_fornecedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Lbl_titulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Child_panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

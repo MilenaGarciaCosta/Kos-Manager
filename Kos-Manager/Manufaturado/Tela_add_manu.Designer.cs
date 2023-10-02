@@ -119,6 +119,7 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1103, 60);
             this.guna2Panel1.TabIndex = 43;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // guna2TextBox1
             // 
@@ -328,6 +329,7 @@
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Name = "Tela_add_manu";
             this.Text = "Tela_add_manu";
+            this.Load += new System.EventHandler(this.Tela_add_manu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

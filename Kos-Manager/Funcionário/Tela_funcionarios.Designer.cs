@@ -55,6 +55,7 @@
             this.Child_panel.Size = new System.Drawing.Size(1103, 622);
             this.Child_panel.TabIndex = 17;
             this.Child_panel.UseTransparentBackground = true;
+            this.Child_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Child_panel_Paint);
             // 
             // btn_adicionar
             // 

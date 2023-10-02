@@ -41,5 +41,15 @@ namespace Kos_Manager
         {
             ClearTextBoxes(this.Controls);
         }
+
+        private void Tela_add_manu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

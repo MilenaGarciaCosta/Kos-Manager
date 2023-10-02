@@ -192,6 +192,18 @@
     <Compile Include="Requisição\Tela_atualizar_req.Designer.cs">
       <DependentUpon>Tela_atualizar_req.cs</DependentUpon>
     </Compile>
+    <Compile Include="Solicitação\Tela_add_solicitacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Solicitação\Tela_add_solicitacao.Designer.cs">
+      <DependentUpon>Tela_add_solicitacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Solicitação\Tela_atualizar_solicitacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Solicitação\Tela_atualizar_solicitacao.Designer.cs">
+      <DependentUpon>Tela_atualizar_solicitacao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tela_cad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -335,6 +347,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Requisição\Tela_atualizar_req.resx">
       <DependentUpon>Tela_atualizar_req.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solicitação\Tela_add_solicitacao.resx">
+      <DependentUpon>Tela_add_solicitacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Solicitação\Tela_atualizar_solicitacao.resx">
+      <DependentUpon>Tela_atualizar_solicitacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tela_cad.resx">
       <DependentUpon>Tela_cad.cs</DependentUpon>
