@@ -12,7 +12,7 @@ namespace Kos_Manager
         public static string Nome { get; set; }
         public static string Produto { get; set; }
         public static string Contato { get; set; }
-
+        public static string Outro { get; internal set; }
     }
 
     internal static class Program
@@ -25,7 +25,7 @@ namespace Kos_Manager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Tela_inicial());
+            Application.Run(new Tela_splash());
         }
     }
 }

@@ -30,22 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_atualizar_fornecedor));
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Txt_end_fornecedor = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Txt_email_fornecedor = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Txt_outro_contato_fornecedor = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Btn_voltar = new Guna.UI2.WinForms.Guna2Button();
             this.Txt_tel_fornecedor = new Guna.UI2.WinForms.Guna2TextBox();
             this.Txt_produto_fornecido = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Txt_nome_fornecedor = new Guna.UI2.WinForms.Guna2TextBox();
             this.Btn_atualizar = new Guna.UI2.WinForms.Guna2Button();
             this.Btn_deletar = new Guna.UI2.WinForms.Guna2Button();
             this.Lbl_fornecedor = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Btn_voltar = new Guna.UI2.WinForms.Guna2Button();
+            this.Txt_nome_fornecedor = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SuspendLayout();
             // 
             // guna2Panel2
@@ -58,59 +55,6 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1471, 74);
             this.guna2Panel2.TabIndex = 48;
             this.guna2Panel2.UseTransparentBackground = true;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1471, 74);
-            this.guna2Panel1.TabIndex = 47;
-            this.guna2Panel1.UseTransparentBackground = true;
-            // 
-            // guna2HtmlLabel5
-            // 
-            this.guna2HtmlLabel5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(375, 654);
-            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(92, 32);
-            this.guna2HtmlLabel5.TabIndex = 44;
-            this.guna2HtmlLabel5.Text = "Endereço";
-            this.guna2HtmlLabel5.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // Txt_end_fornecedor
-            // 
-            this.Txt_end_fornecedor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Txt_end_fornecedor.BorderRadius = 6;
-            this.Txt_end_fornecedor.BorderThickness = 0;
-            this.Txt_end_fornecedor.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Txt_end_fornecedor.DefaultText = "";
-            this.Txt_end_fornecedor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Txt_end_fornecedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Txt_end_fornecedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Txt_end_fornecedor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Txt_end_fornecedor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.Txt_end_fornecedor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_end_fornecedor.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Txt_end_fornecedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.Txt_end_fornecedor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_end_fornecedor.IconRightOffset = new System.Drawing.Point(10, -10);
-            this.Txt_end_fornecedor.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_end_fornecedor.Location = new System.Drawing.Point(375, 693);
-            this.Txt_end_fornecedor.Margin = new System.Windows.Forms.Padding(5);
-            this.Txt_end_fornecedor.Name = "Txt_end_fornecedor";
-            this.Txt_end_fornecedor.PasswordChar = '\0';
-            this.Txt_end_fornecedor.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.Txt_end_fornecedor.PlaceholderText = "Digite aqui";
-            this.Txt_end_fornecedor.SelectedText = "";
-            this.Txt_end_fornecedor.Size = new System.Drawing.Size(671, 53);
-            this.Txt_end_fornecedor.TabIndex = 43;
             // 
             // guna2HtmlLabel4
             // 
@@ -126,33 +70,33 @@
             this.guna2HtmlLabel4.Text = "E-mail";
             this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Txt_email_fornecedor
+            // Txt_outro_contato_fornecedor
             // 
-            this.Txt_email_fornecedor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Txt_email_fornecedor.BorderRadius = 6;
-            this.Txt_email_fornecedor.BorderThickness = 0;
-            this.Txt_email_fornecedor.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Txt_email_fornecedor.DefaultText = "";
-            this.Txt_email_fornecedor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Txt_email_fornecedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Txt_email_fornecedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Txt_email_fornecedor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Txt_email_fornecedor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.Txt_email_fornecedor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_email_fornecedor.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Txt_email_fornecedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.Txt_email_fornecedor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_email_fornecedor.IconRightOffset = new System.Drawing.Point(10, -10);
-            this.Txt_email_fornecedor.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_email_fornecedor.Location = new System.Drawing.Point(375, 578);
-            this.Txt_email_fornecedor.Margin = new System.Windows.Forms.Padding(5);
-            this.Txt_email_fornecedor.Name = "Txt_email_fornecedor";
-            this.Txt_email_fornecedor.PasswordChar = '\0';
-            this.Txt_email_fornecedor.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.Txt_email_fornecedor.PlaceholderText = "Digite aqui";
-            this.Txt_email_fornecedor.SelectedText = "";
-            this.Txt_email_fornecedor.Size = new System.Drawing.Size(671, 53);
-            this.Txt_email_fornecedor.TabIndex = 41;
+            this.Txt_outro_contato_fornecedor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_outro_contato_fornecedor.BorderRadius = 6;
+            this.Txt_outro_contato_fornecedor.BorderThickness = 0;
+            this.Txt_outro_contato_fornecedor.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Txt_outro_contato_fornecedor.DefaultText = "";
+            this.Txt_outro_contato_fornecedor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Txt_outro_contato_fornecedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Txt_outro_contato_fornecedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Txt_outro_contato_fornecedor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Txt_outro_contato_fornecedor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.Txt_outro_contato_fornecedor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_outro_contato_fornecedor.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Txt_outro_contato_fornecedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Txt_outro_contato_fornecedor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_outro_contato_fornecedor.IconRightOffset = new System.Drawing.Point(10, -10);
+            this.Txt_outro_contato_fornecedor.IconRightSize = new System.Drawing.Size(10, 10);
+            this.Txt_outro_contato_fornecedor.Location = new System.Drawing.Point(375, 578);
+            this.Txt_outro_contato_fornecedor.Margin = new System.Windows.Forms.Padding(5);
+            this.Txt_outro_contato_fornecedor.Name = "Txt_outro_contato_fornecedor";
+            this.Txt_outro_contato_fornecedor.PasswordChar = '\0';
+            this.Txt_outro_contato_fornecedor.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.Txt_outro_contato_fornecedor.PlaceholderText = "Digite aqui";
+            this.Txt_outro_contato_fornecedor.SelectedText = "";
+            this.Txt_outro_contato_fornecedor.Size = new System.Drawing.Size(671, 53);
+            this.Txt_outro_contato_fornecedor.TabIndex = 41;
             // 
             // guna2HtmlLabel3
             // 
@@ -181,47 +125,6 @@
             this.guna2HtmlLabel2.TabIndex = 38;
             this.guna2HtmlLabel2.Text = "Produto fornecido";
             this.guna2HtmlLabel2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(375, 210);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(206, 32);
-            this.guna2HtmlLabel1.TabIndex = 36;
-            this.guna2HtmlLabel1.Text = "Nome do fornecedor\r\n";
-            this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // Btn_voltar
-            // 
-            this.Btn_voltar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Btn_voltar.Animated = true;
-            this.Btn_voltar.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_voltar.BorderRadius = 10;
-            this.Btn_voltar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_voltar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_voltar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_voltar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_voltar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
-            this.Btn_voltar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.Btn_voltar.ForeColor = System.Drawing.Color.White;
-            this.Btn_voltar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_voltar.Image")));
-            this.Btn_voltar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Btn_voltar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_voltar.Location = new System.Drawing.Point(853, 772);
-            this.Btn_voltar.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_voltar.Name = "Btn_voltar";
-            this.Btn_voltar.ShadowDecoration.Depth = 5;
-            this.Btn_voltar.ShadowDecoration.Enabled = true;
-            this.Btn_voltar.Size = new System.Drawing.Size(192, 48);
-            this.Btn_voltar.TabIndex = 46;
-            this.Btn_voltar.Text = "Voltar";
-            this.Btn_voltar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_voltar.Click += new System.EventHandler(this.Btn_voltar_Click);
             // 
             // Txt_tel_fornecedor
             // 
@@ -280,35 +183,6 @@
             this.Txt_produto_fornecido.Size = new System.Drawing.Size(671, 53);
             this.Txt_produto_fornecido.TabIndex = 37;
             this.Txt_produto_fornecido.TextChanged += new System.EventHandler(this.Txt_produto_fornecido_TextChanged);
-            // 
-            // Txt_nome_fornecedor
-            // 
-            this.Txt_nome_fornecedor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Txt_nome_fornecedor.BorderRadius = 6;
-            this.Txt_nome_fornecedor.BorderThickness = 0;
-            this.Txt_nome_fornecedor.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Txt_nome_fornecedor.DefaultText = "";
-            this.Txt_nome_fornecedor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Txt_nome_fornecedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Txt_nome_fornecedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Txt_nome_fornecedor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Txt_nome_fornecedor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.Txt_nome_fornecedor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_nome_fornecedor.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Txt_nome_fornecedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.Txt_nome_fornecedor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_nome_fornecedor.IconRightOffset = new System.Drawing.Point(10, -10);
-            this.Txt_nome_fornecedor.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_nome_fornecedor.Location = new System.Drawing.Point(375, 250);
-            this.Txt_nome_fornecedor.Margin = new System.Windows.Forms.Padding(5);
-            this.Txt_nome_fornecedor.Name = "Txt_nome_fornecedor";
-            this.Txt_nome_fornecedor.PasswordChar = '\0';
-            this.Txt_nome_fornecedor.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.Txt_nome_fornecedor.PlaceholderText = "Digite aqui";
-            this.Txt_nome_fornecedor.SelectedText = "";
-            this.Txt_nome_fornecedor.Size = new System.Drawing.Size(671, 53);
-            this.Txt_nome_fornecedor.TabIndex = 35;
-            this.Txt_nome_fornecedor.TextChanged += new System.EventHandler(this.Txt_nome_fornecedor_TextChanged);
             // 
             // Btn_atualizar
             // 
@@ -397,6 +271,77 @@
             this.guna2HtmlLabel6.Text = "Atualizar fornecedor\r\n";
             this.guna2HtmlLabel6.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Btn_voltar
+            // 
+            this.Btn_voltar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Btn_voltar.Animated = true;
+            this.Btn_voltar.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_voltar.BorderRadius = 10;
+            this.Btn_voltar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_voltar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_voltar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_voltar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_voltar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.Btn_voltar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.Btn_voltar.ForeColor = System.Drawing.Color.White;
+            this.Btn_voltar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_voltar.Image")));
+            this.Btn_voltar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Btn_voltar.ImageSize = new System.Drawing.Size(19, 19);
+            this.Btn_voltar.Location = new System.Drawing.Point(848, 772);
+            this.Btn_voltar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_voltar.Name = "Btn_voltar";
+            this.Btn_voltar.ShadowDecoration.Depth = 5;
+            this.Btn_voltar.ShadowDecoration.Enabled = true;
+            this.Btn_voltar.Size = new System.Drawing.Size(192, 48);
+            this.Btn_voltar.TabIndex = 54;
+            this.Btn_voltar.Text = "Voltar";
+            this.Btn_voltar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_voltar.Click += new System.EventHandler(this.Btn_voltar_Click_1);
+            // 
+            // Txt_nome_fornecedor
+            // 
+            this.Txt_nome_fornecedor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_nome_fornecedor.BorderRadius = 6;
+            this.Txt_nome_fornecedor.BorderThickness = 0;
+            this.Txt_nome_fornecedor.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Txt_nome_fornecedor.DefaultText = "";
+            this.Txt_nome_fornecedor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Txt_nome_fornecedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Txt_nome_fornecedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Txt_nome_fornecedor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Txt_nome_fornecedor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.Txt_nome_fornecedor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_nome_fornecedor.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Txt_nome_fornecedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Txt_nome_fornecedor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_nome_fornecedor.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
+            this.Txt_nome_fornecedor.IconRightOffset = new System.Drawing.Point(10, -10);
+            this.Txt_nome_fornecedor.IconRightSize = new System.Drawing.Size(10, 10);
+            this.Txt_nome_fornecedor.Location = new System.Drawing.Point(377, 252);
+            this.Txt_nome_fornecedor.Margin = new System.Windows.Forms.Padding(5);
+            this.Txt_nome_fornecedor.Name = "Txt_nome_fornecedor";
+            this.Txt_nome_fornecedor.PasswordChar = '\0';
+            this.Txt_nome_fornecedor.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.Txt_nome_fornecedor.PlaceholderText = "Digite aqui";
+            this.Txt_nome_fornecedor.SelectedText = "";
+            this.Txt_nome_fornecedor.Size = new System.Drawing.Size(671, 53);
+            this.Txt_nome_fornecedor.TabIndex = 56;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(377, 213);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(332, 32);
+            this.guna2HtmlLabel1.TabIndex = 55;
+            this.guna2HtmlLabel1.Text = "Nome do produto (nomenclatura)";
+            this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Tela_atualizar_fornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -404,23 +349,20 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1471, 922);
+            this.Controls.Add(this.Txt_nome_fornecedor);
+            this.Controls.Add(this.guna2HtmlLabel1);
+            this.Controls.Add(this.Btn_voltar);
             this.Controls.Add(this.guna2HtmlLabel6);
             this.Controls.Add(this.Lbl_fornecedor);
             this.Controls.Add(this.Btn_deletar);
             this.Controls.Add(this.Btn_atualizar);
             this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.Btn_voltar);
-            this.Controls.Add(this.guna2HtmlLabel5);
-            this.Controls.Add(this.Txt_end_fornecedor);
             this.Controls.Add(this.guna2HtmlLabel4);
-            this.Controls.Add(this.Txt_email_fornecedor);
+            this.Controls.Add(this.Txt_outro_contato_fornecedor);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.Txt_tel_fornecedor);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.Txt_produto_fornecido);
-            this.Controls.Add(this.guna2HtmlLabel1);
-            this.Controls.Add(this.Txt_nome_fornecedor);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Tela_atualizar_fornecedor";
             this.Text = "Tela_atualizar_fornecedor";
@@ -432,21 +374,18 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button Btn_voltar;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-        private Guna.UI2.WinForms.Guna2TextBox Txt_end_fornecedor;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2TextBox Txt_email_fornecedor;
+        private Guna.UI2.WinForms.Guna2TextBox Txt_outro_contato_fornecedor;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2TextBox Txt_tel_fornecedor;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2TextBox Txt_produto_fornecido;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2TextBox Txt_nome_fornecedor;
         private Guna.UI2.WinForms.Guna2Button Btn_atualizar;
         private Guna.UI2.WinForms.Guna2Button Btn_deletar;
         private Guna.UI2.WinForms.Guna2HtmlLabel Lbl_fornecedor;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2Button Btn_voltar;
+        private Guna.UI2.WinForms.Guna2TextBox Txt_nome_fornecedor;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }

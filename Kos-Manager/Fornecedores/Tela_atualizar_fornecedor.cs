@@ -152,5 +152,10 @@ namespace Kos_Manager
                 MessageBox.Show("Digite o nome do fornecedor para excluí-lo.");
             }
         }
+
+        private void Btn_voltar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
