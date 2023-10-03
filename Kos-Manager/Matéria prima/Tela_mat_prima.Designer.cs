@@ -32,7 +32,7 @@
             this.Lbl_estoque = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Lbl_titulo = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Txt_buscar_fornecedor = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Txt_buscar_mat_prima = new Guna.UI2.WinForms.Guna2TextBox();
             this.Btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
             this.Btn_solicitar = new Guna.UI2.WinForms.Guna2Button();
             this.Pnl_mat_prima = new Guna.UI2.WinForms.Guna2Panel();
@@ -81,30 +81,30 @@
             this.Lbl_titulo.TabIndex = 22;
             this.Lbl_titulo.Text = "Nome do produto";
             // 
-            // Txt_buscar_fornecedor
+            // Txt_buscar_mat_prima
             // 
-            this.Txt_buscar_fornecedor.BorderRadius = 10;
-            this.Txt_buscar_fornecedor.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Txt_buscar_fornecedor.DefaultText = "";
-            this.Txt_buscar_fornecedor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Txt_buscar_fornecedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Txt_buscar_fornecedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Txt_buscar_fornecedor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Txt_buscar_fornecedor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.Txt_buscar_fornecedor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_buscar_fornecedor.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Txt_buscar_fornecedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.Txt_buscar_fornecedor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_buscar_fornecedor.Location = new System.Drawing.Point(251, 162);
-            this.Txt_buscar_fornecedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Txt_buscar_fornecedor.Name = "Txt_buscar_fornecedor";
-            this.Txt_buscar_fornecedor.PasswordChar = '\0';
-            this.Txt_buscar_fornecedor.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.Txt_buscar_fornecedor.PlaceholderText = "Buscar por algo aqui";
-            this.Txt_buscar_fornecedor.SelectedText = "";
-            this.Txt_buscar_fornecedor.Size = new System.Drawing.Size(285, 39);
-            this.Txt_buscar_fornecedor.TabIndex = 17;
-            this.Txt_buscar_fornecedor.TextChanged += new System.EventHandler(this.Txt_buscar_fornecedor_TextChanged);
+            this.Txt_buscar_mat_prima.BorderRadius = 10;
+            this.Txt_buscar_mat_prima.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Txt_buscar_mat_prima.DefaultText = "";
+            this.Txt_buscar_mat_prima.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Txt_buscar_mat_prima.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Txt_buscar_mat_prima.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Txt_buscar_mat_prima.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Txt_buscar_mat_prima.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.Txt_buscar_mat_prima.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_buscar_mat_prima.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Txt_buscar_mat_prima.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Txt_buscar_mat_prima.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_buscar_mat_prima.Location = new System.Drawing.Point(251, 162);
+            this.Txt_buscar_mat_prima.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_buscar_mat_prima.Name = "Txt_buscar_mat_prima";
+            this.Txt_buscar_mat_prima.PasswordChar = '\0';
+            this.Txt_buscar_mat_prima.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.Txt_buscar_mat_prima.PlaceholderText = "Buscar por algo aqui";
+            this.Txt_buscar_mat_prima.SelectedText = "";
+            this.Txt_buscar_mat_prima.Size = new System.Drawing.Size(285, 39);
+            this.Txt_buscar_mat_prima.TabIndex = 17;
+            this.Txt_buscar_mat_prima.TextChanged += new System.EventHandler(this.Txt_buscar_fornecedor_TextChanged);
             // 
             // Btn_adicionar
             // 
@@ -178,7 +178,7 @@
             this.Child_panel.Controls.Add(this.Btn_solicitar);
             this.Child_panel.Controls.Add(this.guna2HtmlLabel2);
             this.Child_panel.Controls.Add(this.Btn_adicionar);
-            this.Child_panel.Controls.Add(this.Txt_buscar_fornecedor);
+            this.Child_panel.Controls.Add(this.Txt_buscar_mat_prima);
             this.Child_panel.Controls.Add(this.Lbl_estoque);
             this.Child_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Child_panel.Location = new System.Drawing.Point(0, 0);
@@ -208,7 +208,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel Lbl_estoque;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel Lbl_titulo;
-        private Guna.UI2.WinForms.Guna2TextBox Txt_buscar_fornecedor;
+        private Guna.UI2.WinForms.Guna2TextBox Txt_buscar_mat_prima;
         private Guna.UI2.WinForms.Guna2Button Btn_adicionar;
         private Guna.UI2.WinForms.Guna2Button Btn_solicitar;
         private Guna.UI2.WinForms.Guna2Panel Pnl_mat_prima;

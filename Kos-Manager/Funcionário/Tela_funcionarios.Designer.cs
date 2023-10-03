@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_funcionarios));
             this.Child_panel = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
-            this.txt_buscar_func_id = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txt_buscar_func = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -44,8 +42,6 @@
             this.Child_panel.BackColor = System.Drawing.Color.Transparent;
             this.Child_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Child_panel.Controls.Add(this.btn_adicionar);
-            this.Child_panel.Controls.Add(this.txt_buscar_func_id);
-            this.Child_panel.Controls.Add(this.guna2HtmlLabel3);
             this.Child_panel.Controls.Add(this.txt_buscar_func);
             this.Child_panel.Controls.Add(this.guna2HtmlLabel2);
             this.Child_panel.Controls.Add(this.guna2HtmlLabel1);
@@ -73,7 +69,7 @@
             this.btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("btn_adicionar.Image")));
             this.btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.btn_adicionar.Location = new System.Drawing.Point(781, 152);
+            this.btn_adicionar.Location = new System.Drawing.Point(661, 156);
             this.btn_adicionar.Name = "btn_adicionar";
             this.btn_adicionar.ShadowDecoration.Depth = 5;
             this.btn_adicionar.ShadowDecoration.Enabled = true;
@@ -82,43 +78,6 @@
             this.btn_adicionar.Text = "Adicionar";
             this.btn_adicionar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btn_adicionar.Click += new System.EventHandler(this.btn_adicionar_Click_1);
-            // 
-            // txt_buscar_func_id
-            // 
-            this.txt_buscar_func_id.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_buscar_func_id.BorderRadius = 10;
-            this.txt_buscar_func_id.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_buscar_func_id.DefaultText = "";
-            this.txt_buscar_func_id.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_buscar_func_id.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_buscar_func_id.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_buscar_func_id.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_buscar_func_id.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.txt_buscar_func_id.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_buscar_func_id.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_buscar_func_id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.txt_buscar_func_id.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_buscar_func_id.Location = new System.Drawing.Point(556, 155);
-            this.txt_buscar_func_id.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt_buscar_func_id.Name = "txt_buscar_func_id";
-            this.txt_buscar_func_id.PasswordChar = '\0';
-            this.txt_buscar_func_id.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.txt_buscar_func_id.PlaceholderText = "Buscar por ID";
-            this.txt_buscar_func_id.SelectedText = "";
-            this.txt_buscar_func_id.Size = new System.Drawing.Size(135, 36);
-            this.txt_buscar_func_id.TabIndex = 16;
-            // 
-            // guna2HtmlLabel3
-            // 
-            this.guna2HtmlLabel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(556, 120);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(19, 23);
-            this.guna2HtmlLabel3.TabIndex = 15;
-            this.guna2HtmlLabel3.Text = "ID";
             // 
             // txt_buscar_func
             // 
@@ -135,7 +94,7 @@
             this.txt_buscar_func.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
             this.txt_buscar_func.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.txt_buscar_func.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_buscar_func.Location = new System.Drawing.Point(180, 155);
+            this.txt_buscar_func.Location = new System.Drawing.Point(294, 159);
             this.txt_buscar_func.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_buscar_func.Name = "txt_buscar_func";
             this.txt_buscar_func.PasswordChar = '\0';
@@ -151,7 +110,7 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(180, 120);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(294, 124);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(161, 23);
             this.guna2HtmlLabel2.TabIndex = 13;
@@ -191,8 +150,6 @@
 
         private Guna.UI2.WinForms.Guna2Panel Child_panel;
         private Guna.UI2.WinForms.Guna2Button btn_adicionar;
-        private Guna.UI2.WinForms.Guna2TextBox txt_buscar_func_id;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2TextBox txt_buscar_func;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;

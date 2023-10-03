@@ -87,7 +87,7 @@
             // 
             // Btn_atualizar
             // 
-            this.Btn_atualizar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Btn_atualizar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Btn_atualizar.Animated = true;
             this.Btn_atualizar.BackColor = System.Drawing.Color.Transparent;
             this.Btn_atualizar.BorderRadius = 10;
@@ -112,7 +112,7 @@
             // 
             // Btn_deletar
             // 
-            this.Btn_deletar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Btn_deletar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Btn_deletar.Animated = true;
             this.Btn_deletar.BorderRadius = 10;
             this.Btn_deletar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -134,7 +134,7 @@
             // 
             // Btn_voltar
             // 
-            this.Btn_voltar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Btn_voltar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Btn_voltar.Animated = true;
             this.Btn_voltar.BackColor = System.Drawing.Color.Transparent;
             this.Btn_voltar.BorderRadius = 10;
@@ -156,6 +156,7 @@
             this.Btn_voltar.TabIndex = 54;
             this.Btn_voltar.Text = "Voltar";
             this.Btn_voltar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_voltar.Click += new System.EventHandler(this.Btn_voltar_Click);
             // 
             // guna2HtmlLabel3
             // 

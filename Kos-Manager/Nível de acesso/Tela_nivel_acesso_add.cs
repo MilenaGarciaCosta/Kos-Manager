@@ -16,5 +16,10 @@ namespace Kos_Manager.Nível_de_acesso
         {
             InitializeComponent();
         }
+
+        private void Btn_voltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

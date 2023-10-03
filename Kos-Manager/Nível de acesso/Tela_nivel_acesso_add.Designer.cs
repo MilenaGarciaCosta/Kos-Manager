@@ -218,6 +218,7 @@
             this.Btn_voltar.TabIndex = 50;
             this.Btn_voltar.Text = "Voltar";
             this.Btn_voltar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_voltar.Click += new System.EventHandler(this.Btn_voltar_Click);
             // 
             // Tela_nivel_acesso_add
             // 

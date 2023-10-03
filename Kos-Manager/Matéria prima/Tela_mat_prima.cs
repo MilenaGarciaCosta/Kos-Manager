@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kos_Manager.Matéria_prima;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -54,12 +55,12 @@ namespace Kos_Manager
 
         private void Btn_adicionar_Click(object sender, EventArgs e)
         {
-            
+            abrirChildForm(new Tela_add_mat_prima());
         }
 
         private void Btn_solicitar_Click(object sender, EventArgs e)
         {
-            
+            abrirChildForm(new Tela_solicitacao());
         }
     }
 }

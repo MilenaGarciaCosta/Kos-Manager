@@ -32,6 +32,7 @@
             this.Child_panel = new Guna.UI2.WinForms.Guna2Panel();
             this.Lbl_estoque = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Btn_requisitar = new Guna.UI2.WinForms.Guna2Button();
+            this.Pnl_mat_prima = new Guna.UI2.WinForms.Guna2Panel();
             this.Child_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,6 +40,7 @@
             // 
             this.Child_panel.BackColor = System.Drawing.Color.Transparent;
             this.Child_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Child_panel.Controls.Add(this.Pnl_mat_prima);
             this.Child_panel.Controls.Add(this.Lbl_estoque);
             this.Child_panel.Controls.Add(this.Btn_requisitar);
             this.Child_panel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -54,7 +56,7 @@
             this.Lbl_estoque.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_estoque.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.Lbl_estoque.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Lbl_estoque.Location = new System.Drawing.Point(485, 38);
+            this.Lbl_estoque.Location = new System.Drawing.Point(479, 56);
             this.Lbl_estoque.Name = "Lbl_estoque";
             this.Lbl_estoque.Size = new System.Drawing.Size(137, 32);
             this.Lbl_estoque.TabIndex = 38;
@@ -77,7 +79,7 @@
             this.Btn_requisitar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_requisitar.Image")));
             this.Btn_requisitar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_requisitar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_requisitar.Location = new System.Drawing.Point(482, 126);
+            this.Btn_requisitar.Location = new System.Drawing.Point(477, 126);
             this.Btn_requisitar.Name = "Btn_requisitar";
             this.Btn_requisitar.ShadowDecoration.Depth = 5;
             this.Btn_requisitar.ShadowDecoration.Enabled = true;
@@ -86,6 +88,17 @@
             this.Btn_requisitar.Text = "Requisitar";
             this.Btn_requisitar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_requisitar.Click += new System.EventHandler(this.Btn_requisitar_Click);
+            // 
+            // Pnl_mat_prima
+            // 
+            this.Pnl_mat_prima.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Pnl_mat_prima.AutoScroll = true;
+            this.Pnl_mat_prima.Location = new System.Drawing.Point(41, 257);
+            this.Pnl_mat_prima.Name = "Pnl_mat_prima";
+            this.Pnl_mat_prima.Size = new System.Drawing.Size(1039, 353);
+            this.Pnl_mat_prima.TabIndex = 54;
             // 
             // Tela_requisicao
             // 
@@ -107,5 +120,6 @@
         private Guna.UI2.WinForms.Guna2Panel Child_panel;
         private Guna.UI2.WinForms.Guna2HtmlLabel Lbl_estoque;
         private Guna.UI2.WinForms.Guna2Button Btn_requisitar;
+        private Guna.UI2.WinForms.Guna2Panel Pnl_mat_prima;
     }
 }
