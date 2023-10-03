@@ -65,9 +65,9 @@
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(375, 539);
             this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(62, 32);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(225, 32);
             this.guna2HtmlLabel4.TabIndex = 42;
-            this.guna2HtmlLabel4.Text = "E-mail";
+            this.guna2HtmlLabel4.Text = "Outro meio de contato";
             this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Txt_outro_contato_fornecedor
@@ -97,6 +97,7 @@
             this.Txt_outro_contato_fornecedor.SelectedText = "";
             this.Txt_outro_contato_fornecedor.Size = new System.Drawing.Size(671, 53);
             this.Txt_outro_contato_fornecedor.TabIndex = 41;
+            this.Txt_outro_contato_fornecedor.TextChanged += new System.EventHandler(this.Txt_outro_contato_fornecedor_TextChanged);
             // 
             // guna2HtmlLabel3
             // 

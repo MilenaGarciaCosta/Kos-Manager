@@ -14,8 +14,6 @@ using MySql.Data.MySqlClient;
 namespace Kos_Manager
 {
 
-
-
     public partial class Tela_atualizar_fornecedor : Form
     {
 
@@ -28,15 +26,21 @@ namespace Kos_Manager
 
         string id;
 
-        public Tela_atualizar_fornecedor(string id, string nome, string produto, string contato)
+
+        public Tela_atualizar_fornecedor(string id,
+                                         string nome,
+                                         string produto,
+                                         string contato,
+                                         string outro)
         {
             InitializeComponent();
 
-            // Define os valores dos campos de texto com os dados do fornecedor7
+            // Define os valores dos campos de texto com os dados do fornecedor
             this.id = id;
             Txt_nome_fornecedor.Text = nome;
             Txt_produto_fornecido.Text = produto;
             Txt_tel_fornecedor.Text = contato;
+            Txt_outro_contato_fornecedor.Text = outro;
         }
 
 
@@ -56,6 +60,7 @@ namespace Kos_Manager
             string novoNome = Txt_nome_fornecedor.Text;
             string novoProduto = Txt_produto_fornecido.Text;
             string novoContato = Txt_tel_fornecedor.Text;
+            string novoOutro = Txt_outro_contato_fornecedor.Text;
 
             if (!string.IsNullOrWhiteSpace(this.id))
             {
@@ -68,6 +73,7 @@ namespace Kos_Manager
                         // Atualize os dados do fornecedor na tabela
                         string sql_update = "UPDATE TB_FORNECEDOR SET TB_FORNECEDOR_NOME = @novoNome, " +
                                             "TB_FORNECEDOR_PRODUTO = @novoProduto, " +
+                                            "TB_FORNECEDIR_OUTRO_CONTATO = @novoOutro" +
                                             "TB_FORNECEDOR_CONTATO = @novoContato " +
                                             "WHERE TB_FORNECEDOR_ID = @nomeFornecedor";
 
@@ -75,6 +81,7 @@ namespace Kos_Manager
                         cmd.Parameters.AddWithValue("@novoNome", novoNome);
                         cmd.Parameters.AddWithValue("@novoProduto", novoProduto);
                         cmd.Parameters.AddWithValue("@novoContato", novoContato);
+                        cmd.Parameters.AddWithValue("@novoOutro", novoOutro);
                         cmd.Parameters.AddWithValue("@nomeFornecedor", this.id);
                         cmd.ExecuteNonQuery();
                     }
@@ -156,6 +163,11 @@ namespace Kos_Manager
         private void Btn_voltar_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Txt_outro_contato_fornecedor_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
