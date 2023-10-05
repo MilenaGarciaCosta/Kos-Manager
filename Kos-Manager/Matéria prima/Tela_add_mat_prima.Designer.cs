@@ -43,6 +43,8 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.cmb_fornecedor = new Guna.UI2.WinForms.Guna2ComboBox();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel2
@@ -88,7 +90,7 @@
             this.Btn_voltar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_voltar.Image")));
             this.Btn_voltar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_voltar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_voltar.Location = new System.Drawing.Point(868, 282);
+            this.Btn_voltar.Location = new System.Drawing.Point(872, 342);
             this.Btn_voltar.Name = "Btn_voltar";
             this.Btn_voltar.ShadowDecoration.Depth = 5;
             this.Btn_voltar.ShadowDecoration.Enabled = true;
@@ -114,7 +116,7 @@
             this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
             this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(653, 282);
+            this.Btn_adicionar.Location = new System.Drawing.Point(657, 342);
             this.Btn_adicionar.Name = "Btn_adicionar";
             this.Btn_adicionar.ShadowDecoration.Depth = 5;
             this.Btn_adicionar.ShadowDecoration.Enabled = true;
@@ -122,6 +124,7 @@
             this.Btn_adicionar.TabIndex = 59;
             this.Btn_adicionar.Text = "Adicionar";
             this.Btn_adicionar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_adicionar.Click += new System.EventHandler(this.Btn_adicionar_Click);
             // 
             // Txt_lote
             // 
@@ -335,12 +338,47 @@
             this.guna2HtmlLabel6.Text = "Quantidade (no mínimo 1)";
             this.guna2HtmlLabel6.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // guna2HtmlLabel7
+            // 
+            this.guna2HtmlLabel7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(571, 247);
+            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(90, 25);
+            this.guna2HtmlLabel7.TabIndex = 67;
+            this.guna2HtmlLabel7.Text = "Fornecedor";
+            this.guna2HtmlLabel7.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // cmb_fornecedor
+            // 
+            this.cmb_fornecedor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmb_fornecedor.BackColor = System.Drawing.Color.Transparent;
+            this.cmb_fornecedor.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.cmb_fornecedor.BorderRadius = 10;
+            this.cmb_fornecedor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_fornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_fornecedor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.cmb_fornecedor.FocusedColor = System.Drawing.Color.Transparent;
+            this.cmb_fornecedor.FocusedState.BorderColor = System.Drawing.Color.Transparent;
+            this.cmb_fornecedor.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmb_fornecedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.cmb_fornecedor.ItemHeight = 30;
+            this.cmb_fornecedor.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cmb_fornecedor.Location = new System.Drawing.Point(571, 278);
+            this.cmb_fornecedor.Name = "cmb_fornecedor";
+            this.cmb_fornecedor.Size = new System.Drawing.Size(503, 36);
+            this.cmb_fornecedor.TabIndex = 66;
+            // 
             // Tela_add_mat_prima
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1103, 622);
+            this.Controls.Add(this.guna2HtmlLabel7);
+            this.Controls.Add(this.cmb_fornecedor);
             this.Controls.Add(this.guna2HtmlLabel6);
             this.Controls.Add(this.guna2HtmlLabel5);
             this.Controls.Add(this.Txt_dt_validade);
@@ -357,6 +395,7 @@
             this.Controls.Add(this.Lbl_estoque);
             this.Name = "Tela_add_mat_prima";
             this.Text = "Tela_add_mat_prima";
+            this.Load += new System.EventHandler(this.Tela_add_mat_prima_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -378,5 +417,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private Guna.UI2.WinForms.Guna2ComboBox cmb_fornecedor;
     }
 }

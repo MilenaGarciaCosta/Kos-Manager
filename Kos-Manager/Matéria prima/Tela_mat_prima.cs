@@ -62,5 +62,10 @@ namespace Kos_Manager
         {
             abrirChildForm(new Tela_solicitacao());
         }
+
+        private void Pnl_mat_prima_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

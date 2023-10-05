@@ -43,6 +43,8 @@
             this.Btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
             this.Btn_voltar = new Guna.UI2.WinForms.Guna2Button();
             this.cmb_nivel_funcionario = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmb_status_funcionario = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -77,7 +79,7 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(272, 186);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(273, 154);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(167, 25);
             this.guna2HtmlLabel3.TabIndex = 21;
@@ -103,7 +105,7 @@
             this.Txt_nome_funcionario.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_nome_funcionario.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_nome_funcionario.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_nome_funcionario.Location = new System.Drawing.Point(272, 218);
+            this.Txt_nome_funcionario.Location = new System.Drawing.Point(273, 186);
             this.Txt_nome_funcionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_nome_funcionario.Name = "Txt_nome_funcionario";
             this.Txt_nome_funcionario.PasswordChar = '\0';
@@ -119,7 +121,7 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(272, 290);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(273, 245);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(123, 25);
             this.guna2HtmlLabel4.TabIndex = 23;
@@ -132,7 +134,7 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(272, 383);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(273, 406);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(51, 25);
             this.guna2HtmlLabel5.TabIndex = 25;
@@ -158,7 +160,7 @@
             this.Txt_email_funcionario.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_email_funcionario.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_email_funcionario.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_email_funcionario.Location = new System.Drawing.Point(272, 415);
+            this.Txt_email_funcionario.Location = new System.Drawing.Point(273, 438);
             this.Txt_email_funcionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_email_funcionario.Name = "Txt_email_funcionario";
             this.Txt_email_funcionario.PasswordChar = '\0';
@@ -174,7 +176,7 @@
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(272, 479);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(273, 502);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(50, 25);
             this.guna2HtmlLabel6.TabIndex = 27;
@@ -200,7 +202,7 @@
             this.Txt_senha_funcionario.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_senha_funcionario.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_senha_funcionario.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_senha_funcionario.Location = new System.Drawing.Point(272, 511);
+            this.Txt_senha_funcionario.Location = new System.Drawing.Point(273, 534);
             this.Txt_senha_funcionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_senha_funcionario.Name = "Txt_senha_funcionario";
             this.Txt_senha_funcionario.PasswordChar = '\0';
@@ -293,10 +295,43 @@
             this.cmb_nivel_funcionario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.cmb_nivel_funcionario.ItemHeight = 30;
             this.cmb_nivel_funcionario.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmb_nivel_funcionario.Location = new System.Drawing.Point(272, 322);
+            this.cmb_nivel_funcionario.Location = new System.Drawing.Point(273, 277);
             this.cmb_nivel_funcionario.Name = "cmb_nivel_funcionario";
             this.cmb_nivel_funcionario.Size = new System.Drawing.Size(503, 36);
             this.cmb_nivel_funcionario.TabIndex = 37;
+            // 
+            // cmb_status_funcionario
+            // 
+            this.cmb_status_funcionario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmb_status_funcionario.BackColor = System.Drawing.Color.Transparent;
+            this.cmb_status_funcionario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.cmb_status_funcionario.BorderRadius = 10;
+            this.cmb_status_funcionario.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_status_funcionario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_status_funcionario.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.cmb_status_funcionario.FocusedColor = System.Drawing.Color.Transparent;
+            this.cmb_status_funcionario.FocusedState.BorderColor = System.Drawing.Color.Transparent;
+            this.cmb_status_funcionario.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmb_status_funcionario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.cmb_status_funcionario.ItemHeight = 30;
+            this.cmb_status_funcionario.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cmb_status_funcionario.Location = new System.Drawing.Point(273, 364);
+            this.cmb_status_funcionario.Name = "cmb_status_funcionario";
+            this.cmb_status_funcionario.Size = new System.Drawing.Size(503, 36);
+            this.cmb_status_funcionario.TabIndex = 38;
+            // 
+            // guna2HtmlLabel7
+            // 
+            this.guna2HtmlLabel7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(273, 333);
+            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(50, 25);
+            this.guna2HtmlLabel7.TabIndex = 39;
+            this.guna2HtmlLabel7.Text = "Status";
+            this.guna2HtmlLabel7.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Tela_add_funcionario
             // 
@@ -304,6 +339,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1103, 749);
+            this.Controls.Add(this.guna2HtmlLabel7);
+            this.Controls.Add(this.cmb_status_funcionario);
             this.Controls.Add(this.cmb_nivel_funcionario);
             this.Controls.Add(this.Btn_voltar);
             this.Controls.Add(this.Btn_adicionar);
@@ -341,5 +378,7 @@
         private Guna.UI2.WinForms.Guna2Button Btn_adicionar;
         private Guna.UI2.WinForms.Guna2Button Btn_voltar;
         private Guna.UI2.WinForms.Guna2ComboBox cmb_nivel_funcionario;
+        private Guna.UI2.WinForms.Guna2ComboBox cmb_status_funcionario;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
     }
 }

@@ -35,8 +35,8 @@
             this.Txt_buscar_mat_prima = new Guna.UI2.WinForms.Guna2TextBox();
             this.Btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
             this.Btn_solicitar = new Guna.UI2.WinForms.Guna2Button();
-            this.Pnl_mat_prima = new Guna.UI2.WinForms.Guna2Panel();
             this.Child_panel = new Guna.UI2.WinForms.Guna2Panel();
+            this.Pnl_mat_prima = new Guna.UI2.WinForms.Guna2Panel();
             this.Child_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,17 +158,6 @@
             this.Btn_solicitar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_solicitar.Click += new System.EventHandler(this.Btn_solicitar_Click);
             // 
-            // Pnl_mat_prima
-            // 
-            this.Pnl_mat_prima.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Pnl_mat_prima.AutoScroll = true;
-            this.Pnl_mat_prima.Location = new System.Drawing.Point(55, 245);
-            this.Pnl_mat_prima.Name = "Pnl_mat_prima";
-            this.Pnl_mat_prima.Size = new System.Drawing.Size(1039, 353);
-            this.Pnl_mat_prima.TabIndex = 23;
-            // 
             // Child_panel
             // 
             this.Child_panel.BackColor = System.Drawing.Color.Transparent;
@@ -187,6 +176,18 @@
             this.Child_panel.TabIndex = 17;
             this.Child_panel.UseTransparentBackground = true;
             this.Child_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Child_panel_Paint);
+            // 
+            // Pnl_mat_prima
+            // 
+            this.Pnl_mat_prima.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Pnl_mat_prima.AutoScroll = true;
+            this.Pnl_mat_prima.Location = new System.Drawing.Point(34, 242);
+            this.Pnl_mat_prima.Name = "Pnl_mat_prima";
+            this.Pnl_mat_prima.Size = new System.Drawing.Size(1039, 353);
+            this.Pnl_mat_prima.TabIndex = 23;
+            this.Pnl_mat_prima.Paint += new System.Windows.Forms.PaintEventHandler(this.Pnl_mat_prima_Paint);
             // 
             // Tela_mat_prima
             // 
@@ -211,7 +212,7 @@
         private Guna.UI2.WinForms.Guna2TextBox Txt_buscar_mat_prima;
         private Guna.UI2.WinForms.Guna2Button Btn_adicionar;
         private Guna.UI2.WinForms.Guna2Button Btn_solicitar;
-        private Guna.UI2.WinForms.Guna2Panel Pnl_mat_prima;
         private Guna.UI2.WinForms.Guna2Panel Child_panel;
+        private Guna.UI2.WinForms.Guna2Panel Pnl_mat_prima;
     }
 }
