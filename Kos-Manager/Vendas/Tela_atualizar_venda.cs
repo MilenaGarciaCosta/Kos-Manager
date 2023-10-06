@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Kos_Manager.Solicitação
+namespace Kos_Manager.Vendas
 {
-    public partial class Tela_add_solicitacao : Form
+    public partial class Tela_atualizar_venda : Form
     {
-        public Tela_add_solicitacao()
+        public Tela_atualizar_venda()
         {
             InitializeComponent();
         }
@@ -20,16 +20,6 @@ namespace Kos_Manager.Solicitação
         private void Btn_voltar_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void Tela_add_solicitacao_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmb_status_solicitacao_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

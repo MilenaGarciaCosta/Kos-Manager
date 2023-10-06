@@ -57,6 +57,7 @@ namespace Kos_Manager
         private void Btn_atualizar_Click(object sender, EventArgs e)
         {
             
+            
             string novoNome = Txt_nome_fornecedor.Text;
             string novoProduto = Txt_produto_fornecido.Text;
             string novoContato = Txt_tel_fornecedor.Text;
@@ -93,6 +94,7 @@ namespace Kos_Manager
                     this.Close();
 
                     MessageBox.Show("Fornecedor atualizado com sucesso!");
+
                 }
                 catch (Exception ex)
                 {
