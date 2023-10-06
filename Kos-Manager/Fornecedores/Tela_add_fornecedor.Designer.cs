@@ -51,10 +51,11 @@
             this.Lbl_fornecedor.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_fornecedor.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.Lbl_fornecedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Lbl_fornecedor.Location = new System.Drawing.Point(481, 60);
+            this.Lbl_fornecedor.Location = new System.Drawing.Point(641, 74);
+            this.Lbl_fornecedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Lbl_fornecedor.Name = "Lbl_fornecedor";
-            this.Lbl_fornecedor.Padding = new System.Windows.Forms.Padding(0, 0, 0, 60);
-            this.Lbl_fornecedor.Size = new System.Drawing.Size(164, 92);
+            this.Lbl_fornecedor.Padding = new System.Windows.Forms.Padding(0, 0, 0, 74);
+            this.Lbl_fornecedor.Size = new System.Drawing.Size(208, 113);
             this.Lbl_fornecedor.TabIndex = 17;
             this.Lbl_fornecedor.Text = "FORNECEDORES\r\n";
             this.Lbl_fornecedor.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -65,9 +66,10 @@
             this.Lbl_add_forn.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_add_forn.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.Lbl_add_forn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Lbl_add_forn.Location = new System.Drawing.Point(482, 94);
+            this.Lbl_add_forn.Location = new System.Drawing.Point(643, 116);
+            this.Lbl_add_forn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Lbl_add_forn.Name = "Lbl_add_forn";
-            this.Lbl_add_forn.Size = new System.Drawing.Size(163, 25);
+            this.Lbl_add_forn.Size = new System.Drawing.Size(208, 32);
             this.Lbl_add_forn.TabIndex = 18;
             this.Lbl_add_forn.Text = "Adicionar fornecedor\r\n";
             this.Lbl_add_forn.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -91,14 +93,14 @@
             this.Txt_nome_fornecedor.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_nome_fornecedor.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_nome_fornecedor.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_nome_fornecedor.Location = new System.Drawing.Point(314, 226);
-            this.Txt_nome_fornecedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_nome_fornecedor.Location = new System.Drawing.Point(419, 278);
+            this.Txt_nome_fornecedor.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Txt_nome_fornecedor.Name = "Txt_nome_fornecedor";
             this.Txt_nome_fornecedor.PasswordChar = '\0';
             this.Txt_nome_fornecedor.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.Txt_nome_fornecedor.PlaceholderText = "Digite aqui";
             this.Txt_nome_fornecedor.SelectedText = "";
-            this.Txt_nome_fornecedor.Size = new System.Drawing.Size(503, 43);
+            this.Txt_nome_fornecedor.Size = new System.Drawing.Size(671, 53);
             this.Txt_nome_fornecedor.TabIndex = 19;
             this.Txt_nome_fornecedor.TextChanged += new System.EventHandler(this.Txt_nome_fornecedor_TextChanged);
             // 
@@ -108,9 +110,10 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(314, 194);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(419, 239);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(164, 25);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(206, 32);
             this.guna2HtmlLabel1.TabIndex = 20;
             this.guna2HtmlLabel1.Text = "Nome do fornecedor\r\n";
             this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -121,9 +124,10 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(314, 281);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(419, 346);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(143, 25);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(180, 32);
             this.guna2HtmlLabel2.TabIndex = 22;
             this.guna2HtmlLabel2.Text = "Produto fornecido";
             this.guna2HtmlLabel2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -147,14 +151,14 @@
             this.Txt_produto_fornecido.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_produto_fornecido.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_produto_fornecido.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_produto_fornecido.Location = new System.Drawing.Point(314, 314);
-            this.Txt_produto_fornecido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_produto_fornecido.Location = new System.Drawing.Point(419, 386);
+            this.Txt_produto_fornecido.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Txt_produto_fornecido.Name = "Txt_produto_fornecido";
             this.Txt_produto_fornecido.PasswordChar = '\0';
             this.Txt_produto_fornecido.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.Txt_produto_fornecido.PlaceholderText = "Digite aqui";
             this.Txt_produto_fornecido.SelectedText = "";
-            this.Txt_produto_fornecido.Size = new System.Drawing.Size(503, 43);
+            this.Txt_produto_fornecido.Size = new System.Drawing.Size(671, 53);
             this.Txt_produto_fornecido.TabIndex = 21;
             // 
             // guna2HtmlLabel3
@@ -163,9 +167,10 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(314, 371);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(419, 457);
+            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(69, 25);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(85, 32);
             this.guna2HtmlLabel3.TabIndex = 24;
             this.guna2HtmlLabel3.Text = "Telefone\r\n";
             this.guna2HtmlLabel3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -189,14 +194,14 @@
             this.Txt_tel_fornecedor.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_tel_fornecedor.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_tel_fornecedor.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_tel_fornecedor.Location = new System.Drawing.Point(314, 403);
-            this.Txt_tel_fornecedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_tel_fornecedor.Location = new System.Drawing.Point(419, 496);
+            this.Txt_tel_fornecedor.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Txt_tel_fornecedor.Name = "Txt_tel_fornecedor";
             this.Txt_tel_fornecedor.PasswordChar = '\0';
             this.Txt_tel_fornecedor.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.Txt_tel_fornecedor.PlaceholderText = "Digite aqui";
             this.Txt_tel_fornecedor.SelectedText = "";
-            this.Txt_tel_fornecedor.Size = new System.Drawing.Size(503, 43);
+            this.Txt_tel_fornecedor.Size = new System.Drawing.Size(671, 53);
             this.Txt_tel_fornecedor.TabIndex = 23;
             // 
             // guna2HtmlLabel4
@@ -205,9 +210,10 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(314, 462);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(419, 569);
+            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(179, 25);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(225, 32);
             this.guna2HtmlLabel4.TabIndex = 26;
             this.guna2HtmlLabel4.Text = "Outro meio de contato";
             this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -230,14 +236,14 @@
             this.Txt_outro_contato_fornecedor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Txt_outro_contato_fornecedor.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_outro_contato_fornecedor.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_outro_contato_fornecedor.Location = new System.Drawing.Point(314, 493);
-            this.Txt_outro_contato_fornecedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_outro_contato_fornecedor.Location = new System.Drawing.Point(419, 607);
+            this.Txt_outro_contato_fornecedor.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Txt_outro_contato_fornecedor.Name = "Txt_outro_contato_fornecedor";
             this.Txt_outro_contato_fornecedor.PasswordChar = '\0';
             this.Txt_outro_contato_fornecedor.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.Txt_outro_contato_fornecedor.PlaceholderText = "E-mail, telefone etc.";
             this.Txt_outro_contato_fornecedor.SelectedText = "";
-            this.Txt_outro_contato_fornecedor.Size = new System.Drawing.Size(503, 43);
+            this.Txt_outro_contato_fornecedor.Size = new System.Drawing.Size(671, 53);
             this.Txt_outro_contato_fornecedor.TabIndex = 25;
             // 
             // Btn_adicionar
@@ -256,11 +262,12 @@
             this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
             this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(392, 616);
+            this.Btn_adicionar.Location = new System.Drawing.Point(523, 758);
+            this.Btn_adicionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_adicionar.Name = "Btn_adicionar";
             this.Btn_adicionar.ShadowDecoration.Depth = 5;
             this.Btn_adicionar.ShadowDecoration.Enabled = true;
-            this.Btn_adicionar.Size = new System.Drawing.Size(144, 39);
+            this.Btn_adicionar.Size = new System.Drawing.Size(192, 48);
             this.Btn_adicionar.TabIndex = 29;
             this.Btn_adicionar.Text = "Adicionar";
             this.Btn_adicionar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -282,11 +289,12 @@
             this.Btn_voltar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_voltar.Image")));
             this.Btn_voltar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_voltar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_voltar.Location = new System.Drawing.Point(587, 616);
+            this.Btn_voltar.Location = new System.Drawing.Point(783, 758);
+            this.Btn_voltar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_voltar.Name = "Btn_voltar";
             this.Btn_voltar.ShadowDecoration.Depth = 5;
             this.Btn_voltar.ShadowDecoration.Enabled = true;
-            this.Btn_voltar.Size = new System.Drawing.Size(144, 39);
+            this.Btn_voltar.Size = new System.Drawing.Size(192, 48);
             this.Btn_voltar.TabIndex = 30;
             this.Btn_voltar.Text = "Voltar";
             this.Btn_voltar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -296,25 +304,27 @@
             // 
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1187, 60);
+            this.guna2Panel1.Size = new System.Drawing.Size(1583, 74);
             this.guna2Panel1.TabIndex = 31;
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 656);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 807);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1187, 60);
+            this.guna2Panel2.Size = new System.Drawing.Size(1583, 74);
             this.guna2Panel2.TabIndex = 32;
             // 
             // Tela_add_fornecedor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1187, 716);
+            this.ClientSize = new System.Drawing.Size(1583, 881);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.Btn_voltar);
@@ -329,8 +339,10 @@
             this.Controls.Add(this.Txt_nome_fornecedor);
             this.Controls.Add(this.Lbl_add_forn);
             this.Controls.Add(this.Lbl_fornecedor);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Tela_add_fornecedor";
             this.Text = "Tela_add_fornecedor";
+            this.Load += new System.EventHandler(this.Tela_add_fornecedor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

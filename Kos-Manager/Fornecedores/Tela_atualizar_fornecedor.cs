@@ -56,8 +56,8 @@ namespace Kos_Manager
 
         private void Btn_atualizar_Click(object sender, EventArgs e)
         {
-            
-            
+
+
             string novoNome = Txt_nome_fornecedor.Text;
             string novoProduto = Txt_produto_fornecido.Text;
             string novoContato = Txt_tel_fornecedor.Text;
@@ -73,10 +73,11 @@ namespace Kos_Manager
 
                         // Atualize os dados do fornecedor na tabela
                         string sql_update = "UPDATE TB_FORNECEDOR SET TB_FORNECEDOR_NOME = @novoNome, " +
-                                            "TB_FORNECEDOR_PRODUTO = @novoProduto, " +
-                                            "TB_FORNECEDIR_OUTRO_CONTATO = @novoOutro" +
-                                            "TB_FORNECEDOR_CONTATO = @novoContato " +
-                                            "WHERE TB_FORNECEDOR_ID = @nomeFornecedor";
+                     "TB_FORNECEDOR_PRODUTO = @novoProduto, " +
+                     "TB_FORNECEDOR_OUTRO_CONTATO = @novoOutro, " + 
+                     "TB_FORNECEDOR_CONTATO = @novoContato " +
+                     "WHERE TB_FORNECEDOR_ID = @nomeFornecedor";
+
 
                         MySqlCommand cmd = new MySqlCommand(sql_update, con);
                         cmd.Parameters.AddWithValue("@novoNome", novoNome);
@@ -87,11 +88,11 @@ namespace Kos_Manager
                         cmd.ExecuteNonQuery();
                     }
 
+
                     // Após a atualização bem-sucedida
                     FornecedorAtualizado?.Invoke(this, EventArgs.Empty);
 
-                    // Feche o Form após a ação bem-sucedida
-                    this.Close();
+                    
 
                     MessageBox.Show("Fornecedor atualizado com sucesso!");
 
@@ -145,8 +146,7 @@ namespace Kos_Manager
                     FornecedorAtualizado?.Invoke(this, EventArgs.Empty);
 
                    
-                    // Feche o Form2 após a ação bem-sucedida
-                    this.Close();
+                    
 
                     MessageBox.Show("Fornecedor excluído com sucesso!");
 

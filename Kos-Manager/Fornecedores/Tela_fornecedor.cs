@@ -42,6 +42,7 @@ namespace Kos_Manager
             Child_panel.Controls.Add(ChildForm);
             Child_panel.Tag = ChildForm;
             ChildForm.BringToFront();
+      
             ChildForm.Show();
         }
 
@@ -53,7 +54,6 @@ namespace Kos_Manager
         private void Tela_fornecedor_Load(object sender, EventArgs e)
         {
             AtualizarTextBoxFornecedores();
-
         }
 
         private void Btn_adicionar_Click_1(object sender, EventArgs e)
@@ -192,6 +192,8 @@ namespace Kos_Manager
                         MySqlDataReader reader = cmd.ExecuteReader();
 
                         int top = 10; // Posição vertical inicial
+
+
 
                         while (reader.Read())
                         {

@@ -33,6 +33,8 @@ namespace Kos_Manager
         {
 
             this.Close();
+
+
         }
 
         public void ClearTextBoxes(Control.ControlCollection ctrlCollection)
@@ -103,12 +105,18 @@ namespace Kos_Manager
                 {
                     MessageBox.Show("erro " + erro);
                 }
+
                 // Limpe os campos de entrada após o cadastro
                 ClearTextBoxes(this.Controls);
 
         }
 
         private void Txt_nome_fornecedor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Tela_add_fornecedor_Load(object sender, EventArgs e)
         {
 
         }
