@@ -57,6 +57,7 @@
             this.Child_panel.Size = new System.Drawing.Size(1103, 622);
             this.Child_panel.TabIndex = 17;
             this.Child_panel.UseTransparentBackground = true;
+            this.Child_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Child_panel_Paint);
             // 
             // guna2HtmlLabel2
             // 
@@ -193,6 +194,7 @@
             this.Controls.Add(this.Child_panel);
             this.Name = "Tela_manu";
             this.Text = "Kos Manager";
+            this.Load += new System.EventHandler(this.Tela_manu_Load);
             this.Child_panel.ResumeLayout(false);
             this.Child_panel.PerformLayout();
             this.ResumeLayout(false);

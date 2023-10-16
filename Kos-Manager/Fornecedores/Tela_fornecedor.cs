@@ -122,9 +122,7 @@ namespace Kos_Manager
 
                     txtFornecedor.Click += (sender, e) =>
                     {
-                        //Tela_atualizar_fornecedor tela_atualizar = new Tela_atualizar_fornecedor(nome, produto, contato);
                         abrirChildForm(new Tela_atualizar_fornecedor(id, nome, produto, contato, outro));
-                        //tela_atualizar.ShowDialog();
                     };
 
 

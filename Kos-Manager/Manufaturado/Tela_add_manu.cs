@@ -85,6 +85,11 @@ namespace Kos_Manager
                 con.Close();
                 MessageBox.Show("cadastrado");
 
+                Manu.nome = nome;
+                Manu.datafab = datafab;
+                Manu.dataval = dataval;
+                Manu.lote = lote;
+                Manu.quantidade = quantidade;
 
 
             }

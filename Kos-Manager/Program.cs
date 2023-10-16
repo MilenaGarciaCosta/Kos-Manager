@@ -15,6 +15,16 @@ namespace Kos_Manager
         public static string Outro { get; internal set; }
     }
 
+    public static class Manu
+    {
+        public static string nome { get; set; }
+        public static string datafab { get; set; }
+        public static string dataval { get; set; }
+        public static string lote { get; set; }
+        public static string quantidade { get; internal set; }
+    }
+
+        
     internal static class Program
     {
         /// <summary>
