@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_solicitacao));
             this.Child_panel = new Guna.UI2.WinForms.Guna2Panel();
             this.Pnl_mat_prima = new Guna.UI2.WinForms.Guna2Panel();
-            this.Btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Lbl_estoque = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Btn_solicitar = new Guna.UI2.WinForms.Guna2Button();
             this.Child_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,8 +41,8 @@
             // 
             this.Child_panel.BackColor = System.Drawing.Color.Transparent;
             this.Child_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Child_panel.Controls.Add(this.Btn_solicitar);
             this.Child_panel.Controls.Add(this.Pnl_mat_prima);
-            this.Child_panel.Controls.Add(this.Btn_adicionar);
             this.Child_panel.Controls.Add(this.guna2HtmlLabel2);
             this.Child_panel.Controls.Add(this.Lbl_estoque);
             this.Child_panel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -55,40 +55,13 @@
             // 
             // Pnl_mat_prima
             // 
-            this.Pnl_mat_prima.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.Pnl_mat_prima.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Pnl_mat_prima.AutoScroll = true;
             this.Pnl_mat_prima.Location = new System.Drawing.Point(31, 245);
             this.Pnl_mat_prima.Name = "Pnl_mat_prima";
             this.Pnl_mat_prima.Size = new System.Drawing.Size(1039, 353);
             this.Pnl_mat_prima.TabIndex = 53;
-            // 
-            // Btn_adicionar
-            // 
-            this.Btn_adicionar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Btn_adicionar.Animated = true;
-            this.Btn_adicionar.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_adicionar.BorderRadius = 10;
-            this.Btn_adicionar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_adicionar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_adicionar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_adicionar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_adicionar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(79)))), ((int)(((byte)(82)))));
-            this.Btn_adicionar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.Btn_adicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
-            this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(482, 126);
-            this.Btn_adicionar.Name = "Btn_adicionar";
-            this.Btn_adicionar.ShadowDecoration.Depth = 5;
-            this.Btn_adicionar.ShadowDecoration.Enabled = true;
-            this.Btn_adicionar.Size = new System.Drawing.Size(144, 39);
-            this.Btn_adicionar.TabIndex = 51;
-            this.Btn_adicionar.Text = "Adicionar";
-            this.Btn_adicionar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_adicionar.Click += new System.EventHandler(this.Btn_adicionar_Click);
             // 
             // guna2HtmlLabel2
             // 
@@ -116,6 +89,32 @@
             this.Lbl_estoque.Text = "SOLICITAÇÕES";
             this.Lbl_estoque.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // Btn_solicitar
+            // 
+            this.Btn_solicitar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Btn_solicitar.Animated = true;
+            this.Btn_solicitar.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_solicitar.BorderRadius = 10;
+            this.Btn_solicitar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_solicitar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_solicitar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_solicitar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_solicitar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(82)))), ((int)(((byte)(53)))));
+            this.Btn_solicitar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.Btn_solicitar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.Btn_solicitar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_solicitar.Image")));
+            this.Btn_solicitar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Btn_solicitar.ImageSize = new System.Drawing.Size(19, 19);
+            this.Btn_solicitar.Location = new System.Drawing.Point(481, 113);
+            this.Btn_solicitar.Name = "Btn_solicitar";
+            this.Btn_solicitar.ShadowDecoration.Depth = 5;
+            this.Btn_solicitar.ShadowDecoration.Enabled = true;
+            this.Btn_solicitar.Size = new System.Drawing.Size(144, 39);
+            this.Btn_solicitar.TabIndex = 54;
+            this.Btn_solicitar.Text = "Solicitar";
+            this.Btn_solicitar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_solicitar.Click += new System.EventHandler(this.Btn_solicitar_Click);
+            // 
             // Tela_solicitacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -136,7 +135,7 @@
         private Guna.UI2.WinForms.Guna2Panel Child_panel;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel Lbl_estoque;
-        private Guna.UI2.WinForms.Guna2Button Btn_adicionar;
         private Guna.UI2.WinForms.Guna2Panel Pnl_mat_prima;
+        private Guna.UI2.WinForms.Guna2Button Btn_solicitar;
     }
 }
