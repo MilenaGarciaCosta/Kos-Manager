@@ -304,6 +304,7 @@
             this.Btn_deletar.TabIndex = 55;
             this.Btn_deletar.Text = "Deletar";
             this.Btn_deletar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_deletar.Click += new System.EventHandler(this.Btn_deletar_Click);
             // 
             // Btn_atualizar
             // 
@@ -329,6 +330,7 @@
             this.Btn_atualizar.TabIndex = 54;
             this.Btn_atualizar.Text = "Atualizar";
             this.Btn_atualizar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_atualizar.Click += new System.EventHandler(this.Btn_atualizar_Click);
             // 
             // guna2HtmlLabel6
             // 
