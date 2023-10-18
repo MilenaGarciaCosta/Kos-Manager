@@ -93,8 +93,8 @@ namespace Kos_Manager.Estoque_manu
         private void Btn_atualizar_Click(object sender, EventArgs e)
         {
             string novoNome = Txt_nome_produto_manu.Text;
-            string novoDtfab = Txt_dt_fab.Text;
-            string novoDtval = Txt_dt_validade.Text;
+            string novoDtfab = DateTime.Parse(Txt_dt_fab.Text).ToString("yyyy-MM-dd");
+            string novoDtval = DateTime.Parse(Txt_dt_validade.Text).ToString("yyyy-MM-dd");
             string novoLote = Txt_lote.Text;
             string novoQuantidade = Txt_quantidade.Text;
 

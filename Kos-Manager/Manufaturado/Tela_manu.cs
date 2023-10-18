@@ -77,7 +77,9 @@ namespace Kos_Manager
                 // Limpar o conteúdo atual do Panel
                 Pnl_produto_manu.Controls.Clear();
 
+
                 int top = 10; // Posição vertical inicial
+
 
                 while (reader.Read())
                 {
