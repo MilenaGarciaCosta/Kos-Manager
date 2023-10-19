@@ -193,6 +193,7 @@
             this.Btn_adicionar.TabIndex = 36;
             this.Btn_adicionar.Text = "Adicionar";
             this.Btn_adicionar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_adicionar.Click += new System.EventHandler(this.Btn_adicionar_Click);
             // 
             // Btn_voltar
             // 
