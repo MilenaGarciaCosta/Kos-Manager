@@ -26,5 +26,20 @@ namespace Kos_Manager.Solicitação
         {
             this.Close();
         }
+
+        private void Guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Btn_deletar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_atualizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_atualizar_solicitacao));
-            this.Btn_voltar = new Guna.UI2.WinForms.Guna2Button();
-            this.Btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Lbl_adicionar = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -43,58 +41,10 @@
             this.Txt_quantidade = new Guna.UI2.WinForms.Guna2TextBox();
             this.Txt_produto = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Btn_voltar = new Guna.UI2.WinForms.Guna2Button();
+            this.Btn_deletar = new Guna.UI2.WinForms.Guna2Button();
+            this.Btn_atualizar = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
-            // 
-            // Btn_voltar
-            // 
-            this.Btn_voltar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Btn_voltar.Animated = true;
-            this.Btn_voltar.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_voltar.BorderRadius = 10;
-            this.Btn_voltar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_voltar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_voltar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_voltar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_voltar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
-            this.Btn_voltar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.Btn_voltar.ForeColor = System.Drawing.Color.White;
-            this.Btn_voltar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_voltar.Image")));
-            this.Btn_voltar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Btn_voltar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_voltar.Location = new System.Drawing.Point(576, 580);
-            this.Btn_voltar.Name = "Btn_voltar";
-            this.Btn_voltar.ShadowDecoration.Depth = 5;
-            this.Btn_voltar.ShadowDecoration.Enabled = true;
-            this.Btn_voltar.Size = new System.Drawing.Size(144, 39);
-            this.Btn_voltar.TabIndex = 89;
-            this.Btn_voltar.Text = "Voltar";
-            this.Btn_voltar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_voltar.Click += new System.EventHandler(this.Btn_voltar_Click);
-            // 
-            // Btn_adicionar
-            // 
-            this.Btn_adicionar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Btn_adicionar.Animated = true;
-            this.Btn_adicionar.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_adicionar.BorderRadius = 10;
-            this.Btn_adicionar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_adicionar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_adicionar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_adicionar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_adicionar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(79)))), ((int)(((byte)(82)))));
-            this.Btn_adicionar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.Btn_adicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
-            this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(347, 580);
-            this.Btn_adicionar.Name = "Btn_adicionar";
-            this.Btn_adicionar.ShadowDecoration.Depth = 5;
-            this.Btn_adicionar.ShadowDecoration.Enabled = true;
-            this.Btn_adicionar.Size = new System.Drawing.Size(144, 39);
-            this.Btn_adicionar.TabIndex = 88;
-            this.Btn_adicionar.Text = "Adicionar";
-            this.Btn_adicionar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // guna2HtmlLabel2
             // 
@@ -149,7 +99,7 @@
             this.cmb_status_solicitacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.cmb_status_solicitacao.ItemHeight = 30;
             this.cmb_status_solicitacao.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmb_status_solicitacao.Location = new System.Drawing.Point(300, 343);
+            this.cmb_status_solicitacao.Location = new System.Drawing.Point(298, 343);
             this.cmb_status_solicitacao.Name = "cmb_status_solicitacao";
             this.cmb_status_solicitacao.Size = new System.Drawing.Size(503, 36);
             this.cmb_status_solicitacao.TabIndex = 98;
@@ -322,12 +272,90 @@
             this.guna2HtmlLabel3.Text = "Nome do produto (nomenclatura)";
             this.guna2HtmlLabel3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // Btn_voltar
+            // 
+            this.Btn_voltar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Btn_voltar.Animated = true;
+            this.Btn_voltar.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_voltar.BorderRadius = 10;
+            this.Btn_voltar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_voltar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_voltar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_voltar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_voltar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.Btn_voltar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.Btn_voltar.ForeColor = System.Drawing.Color.White;
+            this.Btn_voltar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_voltar.Image")));
+            this.Btn_voltar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Btn_voltar.ImageSize = new System.Drawing.Size(19, 19);
+            this.Btn_voltar.Location = new System.Drawing.Point(657, 581);
+            this.Btn_voltar.Name = "Btn_voltar";
+            this.Btn_voltar.ShadowDecoration.Depth = 5;
+            this.Btn_voltar.ShadowDecoration.Enabled = true;
+            this.Btn_voltar.Size = new System.Drawing.Size(144, 39);
+            this.Btn_voltar.TabIndex = 102;
+            this.Btn_voltar.Text = "Voltar";
+            this.Btn_voltar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_voltar.Click += new System.EventHandler(this.Guna2Button1_Click);
+            // 
+            // Btn_deletar
+            // 
+            this.Btn_deletar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Btn_deletar.Animated = true;
+            this.Btn_deletar.BorderRadius = 10;
+            this.Btn_deletar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_deletar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_deletar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_deletar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_deletar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Btn_deletar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.Btn_deletar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.Btn_deletar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_deletar.Image")));
+            this.Btn_deletar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Btn_deletar.ImageSize = new System.Drawing.Size(17, 17);
+            this.Btn_deletar.Location = new System.Drawing.Point(478, 581);
+            this.Btn_deletar.Name = "Btn_deletar";
+            this.Btn_deletar.Size = new System.Drawing.Size(144, 39);
+            this.Btn_deletar.TabIndex = 101;
+            this.Btn_deletar.Text = "Deletar";
+            this.Btn_deletar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_deletar.Click += new System.EventHandler(this.Btn_deletar_Click);
+            // 
+            // Btn_atualizar
+            // 
+            this.Btn_atualizar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Btn_atualizar.Animated = true;
+            this.Btn_atualizar.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_atualizar.BorderRadius = 10;
+            this.Btn_atualizar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_atualizar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_atualizar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_atualizar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_atualizar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(96)))), ((int)(((byte)(132)))));
+            this.Btn_atualizar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.Btn_atualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.Btn_atualizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_atualizar.Image")));
+            this.Btn_atualizar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Btn_atualizar.ImageSize = new System.Drawing.Size(17, 17);
+            this.Btn_atualizar.Location = new System.Drawing.Point(298, 581);
+            this.Btn_atualizar.Name = "Btn_atualizar";
+            this.Btn_atualizar.ShadowDecoration.Depth = 5;
+            this.Btn_atualizar.ShadowDecoration.Enabled = true;
+            this.Btn_atualizar.Size = new System.Drawing.Size(144, 39);
+            this.Btn_atualizar.TabIndex = 100;
+            this.Btn_atualizar.Text = "Atualizar";
+            this.Btn_atualizar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_atualizar.Click += new System.EventHandler(this.Btn_atualizar_Click);
+            // 
             // Tela_atualizar_solicitacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1087, 727);
+            this.Controls.Add(this.Btn_voltar);
+            this.Controls.Add(this.Btn_deletar);
+            this.Controls.Add(this.Btn_atualizar);
             this.Controls.Add(this.guna2HtmlLabel7);
             this.Controls.Add(this.cmb_status_solicitacao);
             this.Controls.Add(this.Txt_fornecedor);
@@ -338,8 +366,6 @@
             this.Controls.Add(this.Txt_quantidade);
             this.Controls.Add(this.Txt_produto);
             this.Controls.Add(this.guna2HtmlLabel3);
-            this.Controls.Add(this.Btn_voltar);
-            this.Controls.Add(this.Btn_adicionar);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.Lbl_adicionar);
             this.Name = "Tela_atualizar_solicitacao";
@@ -351,8 +377,6 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2Button Btn_voltar;
-        private Guna.UI2.WinForms.Guna2Button Btn_adicionar;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel Lbl_adicionar;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
@@ -365,5 +389,8 @@
         private Guna.UI2.WinForms.Guna2TextBox Txt_quantidade;
         private Guna.UI2.WinForms.Guna2TextBox Txt_produto;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2Button Btn_voltar;
+        private Guna.UI2.WinForms.Guna2Button Btn_deletar;
+        private Guna.UI2.WinForms.Guna2Button Btn_atualizar;
     }
 }
