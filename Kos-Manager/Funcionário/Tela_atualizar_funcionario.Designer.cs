@@ -125,6 +125,7 @@
             this.Btn_atualizar.TabIndex = 50;
             this.Btn_atualizar.Text = "Atualizar";
             this.Btn_atualizar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_atualizar.Click += new System.EventHandler(this.Btn_atualizar_Click);
             // 
             // Btn_deletar
             // 
@@ -147,6 +148,7 @@
             this.Btn_deletar.TabIndex = 52;
             this.Btn_deletar.Text = "Deletar";
             this.Btn_deletar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_deletar.Click += new System.EventHandler(this.Btn_deletar_Click);
             // 
             // Btn_voltar
             // 
