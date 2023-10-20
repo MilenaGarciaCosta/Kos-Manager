@@ -15,7 +15,7 @@ namespace Kos_Manager
     public partial class Tela_atualizar_funcionario : Form
     {
         string conexao = ConfigurationManager.ConnectionStrings["BD_KOSMANAGER"].ConnectionString;
-
+        string id;
         public Tela_atualizar_funcionario()
         {
             InitializeComponent();
@@ -27,9 +27,9 @@ namespace Kos_Manager
         }
 
         private void Btn_atualizar_Click(object sender, EventArgs e)
-        { 
+        {
             //atualizando apartir do id
-            string id = txt_cod.Text;
+            this.id = id;
             string nome = Txt_nome_funcionario.Text;
             string email = Txt_email_funcionario.Text;
             string senha = Txt_senha_funcionario.Text;
@@ -68,7 +68,7 @@ namespace Kos_Manager
             //dletando apartir do id
 
             // Declarando variável e inserindo conteúdo do textbox nela
-            int codigo = int.Parse(txt_cod.Text);
+            
 
             // Conectando ao banco de dados MySql
             MySqlConnection con = new MySqlConnection(conexao);
@@ -80,7 +80,7 @@ namespace Kos_Manager
 
             MySqlCommand executarcmdMySql_delete_funcionario = new MySqlCommand(sql_delete_funcionario, con);
 
-            executarcmdMySql_delete_funcionario.Parameters.AddWithValue("@codigo", codigo);
+            executarcmdMySql_delete_funcionario.Parameters.AddWithValue("@codigo", this.id);
 
             executarcmdMySql_delete_funcionario.ExecuteNonQuery();
 

@@ -158,6 +158,7 @@
             this.Txt_buscar_produto_manu.SelectedText = "";
             this.Txt_buscar_produto_manu.Size = new System.Drawing.Size(285, 39);
             this.Txt_buscar_produto_manu.TabIndex = 34;
+            this.Txt_buscar_produto_manu.TextChanged += new System.EventHandler(this.Txt_buscar_produto_manu_TextChanged);
             // 
             // Btn_adicionar
             // 

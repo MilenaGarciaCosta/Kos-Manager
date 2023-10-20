@@ -265,6 +265,7 @@
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Name = "Tela_atualizar_nivel_acesso";
             this.Text = "Tela_atualizar_nivel_acesso";
+            this.Load += new System.EventHandler(this.Tela_atualizar_nivel_acesso_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

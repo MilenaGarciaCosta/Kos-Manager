@@ -357,6 +357,7 @@
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Name = "Tela_add_funcionario";
             this.Text = "Tela_add_funcionario";
+            this.Load += new System.EventHandler(this.Tela_add_funcionario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

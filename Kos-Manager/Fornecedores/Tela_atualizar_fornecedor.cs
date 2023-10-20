@@ -169,5 +169,10 @@ namespace Kos_Manager
         {
 
         }
+
+        private void Tela_atualizar_fornecedor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

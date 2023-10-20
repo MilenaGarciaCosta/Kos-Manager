@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_funcionarios));
             this.Child_panel = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlFuncionario = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
             this.txt_buscar_func = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -41,6 +42,7 @@
             // 
             this.Child_panel.BackColor = System.Drawing.Color.Transparent;
             this.Child_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Child_panel.Controls.Add(this.pnlFuncionario);
             this.Child_panel.Controls.Add(this.btn_adicionar);
             this.Child_panel.Controls.Add(this.txt_buscar_func);
             this.Child_panel.Controls.Add(this.guna2HtmlLabel2);
@@ -52,6 +54,14 @@
             this.Child_panel.TabIndex = 17;
             this.Child_panel.UseTransparentBackground = true;
             this.Child_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Child_panel_Paint);
+            // 
+            // pnlFuncionario
+            // 
+            this.pnlFuncionario.Location = new System.Drawing.Point(106, 225);
+            this.pnlFuncionario.Name = "pnlFuncionario";
+            this.pnlFuncionario.Size = new System.Drawing.Size(824, 334);
+            this.pnlFuncionario.TabIndex = 18;
+            this.pnlFuncionario.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlFuncionario_Paint);
             // 
             // btn_adicionar
             // 
@@ -103,6 +113,7 @@
             this.txt_buscar_func.SelectedText = "";
             this.txt_buscar_func.Size = new System.Drawing.Size(285, 36);
             this.txt_buscar_func.TabIndex = 14;
+            this.txt_buscar_func.TextChanged += new System.EventHandler(this.Txt_buscar_func_TextChanged_1);
             // 
             // guna2HtmlLabel2
             // 
@@ -153,5 +164,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txt_buscar_func;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2Panel pnlFuncionario;
     }
 }

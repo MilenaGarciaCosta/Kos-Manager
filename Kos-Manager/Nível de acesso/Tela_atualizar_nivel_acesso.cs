@@ -17,9 +17,16 @@ namespace Kos_Manager.Nível_de_acesso
     {
         string conexao = ConfigurationManager.ConnectionStrings["BD_KOSMANAGER"].ConnectionString;
 
-        public Tela_atualizar_nivel_acesso()
+        string id;
+
+        public Tela_atualizar_nivel_acesso(
+            string id)
         {
+            
+
             InitializeComponent();
+
+            this.id = id;
         }
 
         private void Btn_voltar_Click(object sender, EventArgs e)
@@ -29,41 +36,54 @@ namespace Kos_Manager.Nível_de_acesso
 
         private void Btn_atualizar_Click(object sender, EventArgs e)
         {
-            /
-            string id = txt_cod.Text;
-            string nome = txt_nome.Text;
+            
+            string nome = txt_atualizar_nivel.Text;
 
-            MySqlConnection con = new MySqlConnection(conexao);
+            if (!string.IsNullOrWhiteSpace(this.id))
+            {
+                try
+                {
+                    MySqlConnection con = new MySqlConnection(conexao);
 
 
-            string sql_update_fornecedor = @"update tb_nivel_acesso
+                    string sql_update_fornecedor = @"update tb_nivel_acesso
                                   set tb_nivel_acesso_nome = @nome,
                                   where tb_nivel_acesso_id = @id";
 
 
 
 
-            MySqlCommand executacmdMySql_update_fornecedor = new MySqlCommand(sql_update_fornecedor, con);
-            executacmdMySql_update_fornecedor.Parameters.AddWithValue("@id", id);
-            executacmdMySql_update_fornecedor.Parameters.AddWithValue("@nome", nome);
+                    MySqlCommand executacmdMySql_update_fornecedor = new MySqlCommand(sql_update_fornecedor, con);
+                    executacmdMySql_update_fornecedor.Parameters.AddWithValue("@id", this.id);
+                    executacmdMySql_update_fornecedor.Parameters.AddWithValue("@nome", nome);
 
-            con.Open();
-            executacmdMySql_update_fornecedor.ExecuteNonQuery();
+                    con.Open();
+                    executacmdMySql_update_fornecedor.ExecuteNonQuery();
 
-            MessageBox.Show("Atualização realizada com sucesso");
+                    MessageBox.Show("Atualização realizada com sucesso");
 
-            //listarNiveis();
+                    //listarNiveis();
 
-            con.Close();
+                    con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao atualizar nivel de acesso: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Digite o nome do nivel de acesso para atualizá-lo.");
+            }
         }
+        
 
         private void Btn_deletar_Click(object sender, EventArgs e)
         {
             // deletar pelo id
             //Declarando variavel e inserindo conteudo do textbox nela
-            int codigo;
 
-            codigo = int.Parse(txt_cod.Text);
+
 
             //Conectanto banco de dados MySql
 
@@ -76,7 +96,7 @@ namespace Kos_Manager.Nível_de_acesso
 
             MySqlCommand executarcmdMySql_delete_nivel_acesso = new MySqlCommand(sql_delete_nivel_acesso, con);
 
-            executarcmdMySql_delete_nivel_acesso.Parameters.AddWithValue("@id", codigo);
+            executarcmdMySql_delete_nivel_acesso.Parameters.AddWithValue("@id", this.id);
 
             executarcmdMySql_delete_nivel_acesso.ExecuteNonQuery();
 
@@ -85,6 +105,11 @@ namespace Kos_Manager.Nível_de_acesso
             //Fechando conexão
 
             con.Close();
+        }
+
+        private void Tela_atualizar_nivel_acesso_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

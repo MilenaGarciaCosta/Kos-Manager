@@ -156,5 +156,102 @@ namespace Kos_Manager
         {
             AtualizarTextBoxProdutoManu();
         }
+
+        private void Txt_buscar_produto_manu_TextChanged(object sender, EventArgs e)
+        {
+            RealizarPesquisa(Txt_buscar_produto_manu.Text);
+        }
+        private void RealizarPesquisa(string termoPesquisa)
+        {
+            // Verifique se o termo de pesquisa não está vazio
+            if (!string.IsNullOrEmpty(termoPesquisa))
+            {
+                // Limpar o conteúdo atual do Panel
+                Pnl_produto_manu.Controls.Clear();
+
+                try
+                {
+                    using (MySqlConnection con = new MySqlConnection(conexao))
+                    {
+                        con.Open();
+
+                        // Consulta SQL para pesquisar fornecedores com base no termo de pesquisa
+                        string sqlSelect = "SELECT tb_produto_manu_id, tb_produto_manu_nome, tb_produto_manu_dt_fab, " +
+                                           "tb_manu_dt_val, tb_produto_manu_lote, tb_produto_manu_quantidade " +
+                                           "FROM tb_produto_manu " +
+                                           "WHERE tb_produto_manu_nome LIKE @termoPesquisa " +
+                                           "OR tb_produto_manu_dt_fab LIKE @termoPesquisa " +
+                                           "OR tb_produto_manu_dt_val LIKE @termoPesquisa " +
+                                           "OR tb_produto_manu_lote LIKE @termoPesquisa " +
+                                           "OR tb_produto_manu_quantidade LIKE @termoPesquisa";
+
+                        MySqlCommand cmd = new MySqlCommand(sqlSelect, con);
+                        cmd.Parameters.AddWithValue("@termoPesquisa", "%" + termoPesquisa + "%");
+
+                        MySqlDataReader reader = cmd.ExecuteReader();
+
+                        int top = 10; // Posição vertical inicial
+
+
+
+                        while (reader.Read())
+                        {
+                            // Ler as informações de cada fornecedor
+                            string id = reader["tb_produto_manu_id"].ToString();
+                            string nome = reader["tb_produto_manu_nome"].ToString();
+                            string datafab = reader["tb_produto_manu_dt_fab"].ToString();
+                            string dataval = reader["tb_produto_manu_dt_val"].ToString();
+                            string lote = reader["tb_produto_manu_lote"].ToString();
+                            string quantidade = reader["tb_produto_manu_quantidade"].ToString();
+
+                            // Criar uma nova TextBox para exibir as informações do fornecedor
+                            TextBox txtManu = new TextBox();
+                            txtManu.Multiline = true;
+                            txtManu.ReadOnly = true;
+                            txtManu.Text = $"Nome: {nome}, Data de fabricação: {datafab}, Data de validade: {dataval}, Quantos lotes: {lote}, Quantidade: {quantidade}";
+
+
+                            //testegepeto 
+
+                            txtManu.Click += (sender, e) =>
+                            {
+                                abrirChildForm(new Tela_atualizar_manu(id, nome, datafab, dataval, lote, quantidade));
+                            };
+
+
+
+
+
+                            //style 
+
+
+                            // Definir a posição vertical da TextBox
+                            txtManu.Top = top;
+
+                            // Ajustar o tamanho da TextBox conforme necessário
+                            txtManu.Width = Pnl_produto_manu.Width - 20; // Subtrair margens
+                            txtManu.Height = 60; // Altura da TextBox
+
+                            // Adicionar a TextBox ao Panel
+                            Pnl_produto_manu.Controls.Add(txtManu);
+
+                            // Aumentar a posição vertical para a próxima TextBox
+                            top += txtManu.Height + 10; // 10 pixels de margem entre TextBoxes
+                        }
+
+                        con.Close();
+                    }
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show("Erro ao realizar a pesquisa: " + erro);
+                }
+            }
+            else
+            {
+                // Se o campo de pesquisa estiver vazio, atualize o Panel com todos os fornecedores
+               // AtualizarTextBoxFornecedores();
+            }
+        }
     }
 }
