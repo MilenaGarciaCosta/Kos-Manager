@@ -35,7 +35,7 @@ namespace Kos_Manager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Tela_funcionarios());
+            Application.Run(new Tela_inicial());
         }
     }
 }

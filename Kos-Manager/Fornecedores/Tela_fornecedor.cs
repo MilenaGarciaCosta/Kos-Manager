@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Configuration;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using System.Drawing.Drawing2D;
+using System.Runtime.InteropServices;
 
 namespace Kos_Manager
 {
@@ -28,6 +30,22 @@ namespace Kos_Manager
             InitializeComponent();
         }
 
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+        private static extern IntPtr CreateRoundRectRgn
+(
+        int nLeftRect,     // x-coordenada superior esquerda
+        int nTopRect,      // y-coordenada superior esquerda
+        int nRightRect,    // x-coordenada inferior direita
+        int nBottomRect,   // y-coordenada inferior direita
+        int nWidthEllipse, // largura da elipse
+        int nHeightEllipse // altura da elipse
+);
+        private void SetRoundedEdges(Control control, int curve)
+        {
+            IntPtr ptr = CreateRoundRectRgn(0, 0, control.Width, control.Height, curve, curve);
+            control.Region = System.Drawing.Region.FromHrgn(ptr);
+            Marshal.Release(ptr);
+        }
 
 
         private Form FormAtivo = null;
@@ -115,7 +133,7 @@ namespace Kos_Manager
                     TextBox txtFornecedor = new TextBox();
                     txtFornecedor.Multiline = true;
                     txtFornecedor.ReadOnly = true;
-                    txtFornecedor.Text = $"Nome: {nome}, Produto: {produto}, Contato: {contato}, Outro meio de contato: {outro}";
+                    txtFornecedor.Text = $"Nome: {nome}\r\nProduto: {produto}\r\nContato: {contato}\r\nOutro meio de contato: {outro}";
 
 
                     //testegepeto 
@@ -132,18 +150,45 @@ namespace Kos_Manager
                     //style 
 
 
-                    // Definir a posição vertical da TextBox
                     txtFornecedor.Top = top;
 
-                    // Ajustar o tamanho da TextBox conforme necessário
-                    txtFornecedor.Width = pnlFornecedores.Width - 20; // Subtrair margens
-                    txtFornecedor.Height = 60; // Altura da TextBox
+                    // Ajustar o tamanho da TextBox para corresponder à largura total do Panel
+                    txtFornecedor.Width = pnlFornecedores.ClientSize.Width;
+
+                    // Se o TextBox permitir várias linhas, você pode calcular a altura necessária com base no número de linhas.
+                    int linesCount = txtFornecedor.Text.Split('\n').Length;
+                    txtFornecedor.Height = linesCount * 20 + 20; // 20 é a altura aproximada por linha. Ajuste conforme necessário.
+
+                    // Estilizar a TextBox
+                    txtFornecedor.BackColor = System.Drawing.ColorTranslator.FromHtml("#84A98C");
+                    txtFornecedor.ForeColor = System.Drawing.ColorTranslator.FromHtml("#171717");
+
+                    // Adicionar margem interna (n funfo)
+                    //txtFornecedor.Padding = new Padding(10);
+
+                    //Border do capeta
+                    SetRoundedEdges(txtFornecedor, 8);
+
+                    // Alterar a fonte
+                    Font font = new Font("Segoe UI", 13);
+                    txtFornecedor.Font = font;
+
+                    // O TextBox padrão não suporta alinhamento vertical, então essa linha foi comentada.
+                    //txtFornecedor.TextAlign = ContentAlignment.MiddleCenter;
+
+                    // Definir a borda da TextBox como None
+                    txtFornecedor.BorderStyle = BorderStyle.None;
+
+                    // Alterar o cursor para o estilo "pointer" (mãozinha)
+                    txtFornecedor.Cursor = Cursors.Hand;
 
                     // Adicionar a TextBox ao Panel
                     pnlFornecedores.Controls.Add(txtFornecedor);
 
                     // Aumentar a posição vertical para a próxima TextBox
                     top += txtFornecedor.Height + 10; // 10 pixels de margem entre TextBoxes
+
+
                 }
 
                 con.Close();
@@ -206,20 +251,50 @@ namespace Kos_Manager
                             TextBox txtFornecedor = new TextBox();
                             txtFornecedor.Multiline = true;
                             txtFornecedor.ReadOnly = true;
-                            txtFornecedor.Text = $"Nome: {nome}, Produto: {produto}, Contato: {contato}, Outro meio de contato: {outro}";
+                            txtFornecedor.Text = $"Nome: {nome}\r\nProduto: {produto}\r\nContato: {contato}\r\nOutro meio de contato: {outro}";
 
-                            // Definir a posição vertical da TextBox
+
+                            //style
+
+
                             txtFornecedor.Top = top;
 
-                            // Ajustar o tamanho da TextBox conforme necessário
-                            txtFornecedor.Width = pnlFornecedores.Width - 20; // Subtrair margens
-                            txtFornecedor.Height = 60; // Altura da TextBox
+                            // Ajustar o tamanho da TextBox para corresponder à largura total do Panel
+                            txtFornecedor.Width = pnlFornecedores.ClientSize.Width;
+
+                            // Se o TextBox permitir várias linhas, você pode calcular a altura necessária com base no número de linhas.
+                            int linesCount = txtFornecedor.Text.Split('\n').Length;
+                            txtFornecedor.Height = linesCount * 20 + 20; // 20 é a altura aproximada por linha. Ajuste conforme necessário.
+
+                            // Estilizar a TextBox
+                            txtFornecedor.BackColor = System.Drawing.ColorTranslator.FromHtml("#84A98C");
+                            txtFornecedor.ForeColor = System.Drawing.ColorTranslator.FromHtml("#171717");
+
+                            // Adicionar margem interna
+                            txtFornecedor.Padding = new Padding(10);
+
+                            //Border do capeta
+                            SetRoundedEdges(txtFornecedor, 8);
+
+                            // Alterar a fonte
+                            Font font = new Font("Segoe UI", 13);
+                            txtFornecedor.Font = font;
+
+                            // O TextBox padrão não suporta alinhamento vertical, então essa linha foi comentada.
+                            //txtFornecedor.TextAlign = ContentAlignment.MiddleCenter;
+
+                            // Definir a borda da TextBox como None
+                            txtFornecedor.BorderStyle = BorderStyle.None;
+
+                            // Alterar o cursor para o estilo "pointer" (mãozinha)
+                            txtFornecedor.Cursor = Cursors.Hand;
 
                             // Adicionar a TextBox ao Panel
                             pnlFornecedores.Controls.Add(txtFornecedor);
 
                             // Aumentar a posição vertical para a próxima TextBox
                             top += txtFornecedor.Height + 10; // 10 pixels de margem entre TextBoxes
+
 
                             // Adicione um evento de clique para abrir a tela de atualização do fornecedor
                             txtFornecedor.Click += (sender, e) =>
@@ -243,6 +318,9 @@ namespace Kos_Manager
             }
         }
 
+        private void pnlFornecedores_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
     }
 }
