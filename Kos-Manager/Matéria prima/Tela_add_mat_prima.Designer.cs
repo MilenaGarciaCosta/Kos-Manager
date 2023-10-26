@@ -35,7 +35,6 @@
             this.Btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
             this.Txt_lote = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txt_marca = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txt_produto = new Guna.UI2.WinForms.Guna2TextBox();
             this.Txt_quantidade = new Guna.UI2.WinForms.Guna2TextBox();
@@ -45,6 +44,7 @@
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmb_fornecedor = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmb_marca = new Guna.UI2.WinForms.Guna2ComboBox();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel2
@@ -167,35 +167,6 @@
             this.guna2HtmlLabel4.TabIndex = 55;
             this.guna2HtmlLabel4.Text = "Marca do Produto";
             this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txt_marca
-            // 
-            this.txt_marca.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_marca.BorderRadius = 6;
-            this.txt_marca.BorderThickness = 0;
-            this.txt_marca.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_marca.DefaultText = "";
-            this.txt_marca.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txt_marca.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txt_marca.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_marca.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txt_marca.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.txt_marca.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_marca.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txt_marca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.txt_marca.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txt_marca.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
-            this.txt_marca.IconRightOffset = new System.Drawing.Point(10, -10);
-            this.txt_marca.IconRightSize = new System.Drawing.Size(10, 10);
-            this.txt_marca.Location = new System.Drawing.Point(32, 278);
-            this.txt_marca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txt_marca.Name = "txt_marca";
-            this.txt_marca.PasswordChar = '\0';
-            this.txt_marca.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.txt_marca.PlaceholderText = "Digite aqui";
-            this.txt_marca.SelectedText = "";
-            this.txt_marca.Size = new System.Drawing.Size(503, 43);
-            this.txt_marca.TabIndex = 54;
             // 
             // guna2HtmlLabel1
             // 
@@ -371,12 +342,33 @@
             this.cmb_fornecedor.Size = new System.Drawing.Size(503, 36);
             this.cmb_fornecedor.TabIndex = 66;
             // 
+            // cmb_marca
+            // 
+            this.cmb_marca.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmb_marca.BackColor = System.Drawing.Color.Transparent;
+            this.cmb_marca.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.cmb_marca.BorderRadius = 10;
+            this.cmb_marca.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_marca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_marca.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.cmb_marca.FocusedColor = System.Drawing.Color.Transparent;
+            this.cmb_marca.FocusedState.BorderColor = System.Drawing.Color.Transparent;
+            this.cmb_marca.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmb_marca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.cmb_marca.ItemHeight = 30;
+            this.cmb_marca.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cmb_marca.Location = new System.Drawing.Point(32, 278);
+            this.cmb_marca.Name = "cmb_marca";
+            this.cmb_marca.Size = new System.Drawing.Size(503, 36);
+            this.cmb_marca.TabIndex = 68;
+            // 
             // Tela_add_mat_prima
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1103, 622);
+            this.Controls.Add(this.cmb_marca);
             this.Controls.Add(this.guna2HtmlLabel7);
             this.Controls.Add(this.cmb_fornecedor);
             this.Controls.Add(this.guna2HtmlLabel6);
@@ -388,7 +380,6 @@
             this.Controls.Add(this.Btn_adicionar);
             this.Controls.Add(this.Txt_lote);
             this.Controls.Add(this.guna2HtmlLabel4);
-            this.Controls.Add(this.txt_marca);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.txt_produto);
             this.Controls.Add(this.guna2HtmlLabel2);
@@ -409,7 +400,6 @@
         private Guna.UI2.WinForms.Guna2Button Btn_adicionar;
         private Guna.UI2.WinForms.Guna2TextBox Txt_lote;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2TextBox txt_marca;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txt_produto;
         private Guna.UI2.WinForms.Guna2TextBox Txt_quantidade;
@@ -419,5 +409,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2ComboBox cmb_fornecedor;
+        private Guna.UI2.WinForms.Guna2ComboBox cmb_marca;
     }
 }

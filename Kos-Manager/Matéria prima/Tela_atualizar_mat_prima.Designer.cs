@@ -34,7 +34,6 @@
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Txt_quantidade = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Txt_marca = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Txt_produto = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -48,6 +47,7 @@
             this.Btn_voltar = new Guna.UI2.WinForms.Guna2Button();
             this.Btn_deletar = new Guna.UI2.WinForms.Guna2Button();
             this.Btn_atualizar = new Guna.UI2.WinForms.Guna2Button();
+            this.cmb_marca = new Guna.UI2.WinForms.Guna2ComboBox();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel2
@@ -132,36 +132,6 @@
             this.guna2HtmlLabel4.Text = "Lote";
             this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.guna2HtmlLabel4.Click += new System.EventHandler(this.Guna2HtmlLabel4_Click);
-            // 
-            // Txt_marca
-            // 
-            this.Txt_marca.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Txt_marca.BorderRadius = 6;
-            this.Txt_marca.BorderThickness = 0;
-            this.Txt_marca.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Txt_marca.DefaultText = "";
-            this.Txt_marca.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Txt_marca.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Txt_marca.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Txt_marca.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Txt_marca.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.Txt_marca.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_marca.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Txt_marca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.Txt_marca.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_marca.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
-            this.Txt_marca.IconRightOffset = new System.Drawing.Point(10, -10);
-            this.Txt_marca.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_marca.Location = new System.Drawing.Point(299, 267);
-            this.Txt_marca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Txt_marca.Name = "Txt_marca";
-            this.Txt_marca.PasswordChar = '\0';
-            this.Txt_marca.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.Txt_marca.PlaceholderText = "Digite aqui";
-            this.Txt_marca.SelectedText = "";
-            this.Txt_marca.Size = new System.Drawing.Size(503, 43);
-            this.Txt_marca.TabIndex = 55;
-            this.Txt_marca.TextChanged += new System.EventHandler(this.Txt_marca_TextChanged);
             // 
             // guna2HtmlLabel1
             // 
@@ -444,12 +414,33 @@
             this.Btn_atualizar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_atualizar.Click += new System.EventHandler(this.Btn_atualizar_Click);
             // 
+            // cmb_marca
+            // 
+            this.cmb_marca.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmb_marca.BackColor = System.Drawing.Color.Transparent;
+            this.cmb_marca.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.cmb_marca.BorderRadius = 10;
+            this.cmb_marca.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_marca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_marca.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.cmb_marca.FocusedColor = System.Drawing.Color.Transparent;
+            this.cmb_marca.FocusedState.BorderColor = System.Drawing.Color.Transparent;
+            this.cmb_marca.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmb_marca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.cmb_marca.ItemHeight = 30;
+            this.cmb_marca.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cmb_marca.Location = new System.Drawing.Point(298, 274);
+            this.cmb_marca.Name = "cmb_marca";
+            this.cmb_marca.Size = new System.Drawing.Size(503, 36);
+            this.cmb_marca.TabIndex = 73;
+            // 
             // Tela_atualizar_mat_prima
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1103, 770);
+            this.Controls.Add(this.cmb_marca);
             this.Controls.Add(this.Btn_voltar);
             this.Controls.Add(this.Btn_deletar);
             this.Controls.Add(this.Btn_atualizar);
@@ -463,7 +454,6 @@
             this.Controls.Add(this.guna2HtmlLabel5);
             this.Controls.Add(this.Txt_quantidade);
             this.Controls.Add(this.guna2HtmlLabel4);
-            this.Controls.Add(this.Txt_marca);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.Txt_produto);
             this.Controls.Add(this.guna2HtmlLabel3);
@@ -484,7 +474,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2TextBox Txt_quantidade;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2TextBox Txt_marca;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox Txt_produto;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
@@ -498,5 +487,6 @@
         private Guna.UI2.WinForms.Guna2Button Btn_voltar;
         private Guna.UI2.WinForms.Guna2Button Btn_deletar;
         private Guna.UI2.WinForms.Guna2Button Btn_atualizar;
+        private Guna.UI2.WinForms.Guna2ComboBox cmb_marca;
     }
 }

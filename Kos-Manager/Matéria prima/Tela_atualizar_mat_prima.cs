@@ -27,7 +27,7 @@ namespace Kos_Manager.Matéria_prima
             InitializeComponent();
             this.id = id;
             Txt_produto.Text = nomenclatura;
-            Txt_marca.Text = marca;
+            cmb_marca.Text = marca;
             Txt_lote.Text = lote;
             Txt_dt_validade.Text = dtval;
             Txt_quantidade.Text = quantidade;
@@ -144,7 +144,7 @@ namespace Kos_Manager.Matéria_prima
         {
             string id = txt_id.Text;
             string nome = Txt_produto.Text;
-            string marca = Txt_marca.Text;
+            string marca = cmb_marca.Text;
             string lote = Txt_lote.Text;
             string quantidade = Txt_quantidade.Text;
             string dtVal = Txt_quantidade.Text;
@@ -156,7 +156,7 @@ namespace Kos_Manager.Matéria_prima
 
             string sql_update_fornecedor = @"update tb_materia_prima 
                                   set tb_materia_prima_nomenclatura = @nome,
-                                      tb_materia_prima_marca = @marca,
+                                      tb_materia_prima_marca_id = @marca,
                                       tb_materia_prima_lote = @lote,
                                       tb_materia_prima_quantidade = @quantidade,
                                       tb_materia_prima_dt_val = @dtVal,

@@ -34,7 +34,7 @@ namespace Kos_Manager.Matéria_prima
 
 
             nomenclatura = txt_produto.Text;
-            marca = txt_marca.Text;
+            marca = cmb_marca.Text;
             lote = Txt_lote.Text;
             dtval = Txt_dt_validade.Text;
             quantidade = Txt_quantidade.Text;
@@ -49,15 +49,17 @@ namespace Kos_Manager.Matéria_prima
                     SELECT
                      m.tb_materia_prima_id AS Id,
                      m.tb_materia_prima_nomenclatura AS Nomenclatura,
-                     m.tb_materia_prima_marca AS Marca,
+                     p.tb_materia_prima_marca_nome AS Marca,
                      m.tb_materia_prima_lote AS Lote,
                      m.tb_materia_prima_dt_val AS Data_de_Validade,
-                        m.tb_materia_prima_quantidade AS Quantidade,
-                    f.tb_fornecedor_nome AS Fornecedor
+					 m.tb_materia_prima_quantidade AS Quantidade,
+                     f.tb_fornecedor_nome AS Fornecedor
                     FROM
                      tb_materia_prima m
                      INNER JOIN
-                     tb_fornecedor f ON m.tb_fornecedor_id = f.tb_fornecedor_id";
+                     tb_fornecedor f ON m.tb_fornecedor_id = f.tb_fornecedor_id
+                     INNER JOIN
+                     tb_materia_prima_marca p ON m.tb_materia_prima_marca_id = p.tb_materia_prima_marca_id";
 
                 con.Open();
 
@@ -121,55 +123,125 @@ namespace Kos_Manager.Matéria_prima
         {
             try
             {
-                MySqlConnection con = new MySqlConnection(conexao);
-
                 string nome = txt_produto.Text;
-                string marca = txt_marca.Text;
+                int cmbMarca = Convert.ToInt32(cmb_marca.SelectedValue);
                 string lote = Txt_lote.Text;
                 string quantidade = Txt_quantidade.Text;
                 DateTime dtVal = DateTime.ParseExact(Txt_dt_validade.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture); // Converter a data para DateTime
-                string formattedDate = dtVal.ToString("yyyy-MM-dd"); // Formatar a data no formato MySQL
-
+                string formattedDate = dtVal.ToString("yyyy-MM-dd"); // Formatar a data no estilo MySQL
                 int cmbFornecedor = Convert.ToInt32(cmb_fornecedor.SelectedValue);
 
-                string sql_insert = @"insert into tb_materia_prima
-                (  
-                   tb_materia_prima_nomenclatura, 
-                    TB_MATERIA_PRIMA_MARCA, 
-                    TB_MATERIA_PRIMA_LOTE,
-                    TB_MATERIA_PRIMA_DT_VAL,
-                    TB_MATERIA_PRIMA_QUANTIDADE,
-                    TB_FORNECEDOR_ID
-                 )
-                values
-                (
-                    @materia_prima_nomenclatura, @MATERIA_PRIMA_MARCA, @MATERIA_PRIMA_LOTE, @MATERIA_PRIMA_DT_VAL, @MATERIA_PRIMA_QUANTIDADE, @FORNECEDOR_ID
-                 )";
+                using (MySqlConnection con = new MySqlConnection(conexao))
+                {
+                    con.Open();
 
-                MySqlCommand executacmdMySql_insert = new MySqlCommand(sql_insert, con);
+                    string sql_insert = @"INSERT INTO tb_materia_prima
+                             (tb_materia_prima_nomenclatura, 
+                              TB_MATERIA_PRIMA_MARCA_ID, 
+                              TB_MATERIA_PRIMA_LOTE,
+                              TB_MATERIA_PRIMA_DT_VAL,
+                              TB_MATERIA_PRIMA_QUANTIDADE,
+                              TB_FORNECEDOR_ID)
 
-                executacmdMySql_insert.Parameters.AddWithValue("@materia_prima_nomenclatura", nome);
-                executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_MARCA", marca);
-                executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_LOTE", lote);
-                executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_DT_VAL", formattedDate); // Usar a data formatada para MySQL
-                executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_QUANTIDADE", quantidade);
-                executacmdMySql_insert.Parameters.AddWithValue("@FORNECEDOR_ID", cmbFornecedor);
+                             VALUES
+                             (@materia_prima_nomenclatura, 
+                              @MATERIA_PRIMA_MARCA_ID, 
+                              @MATERIA_PRIMA_LOTE, 
+                              @MATERIA_PRIMA_DT_VAL, 
+                              @MATERIA_PRIMA_QUANTIDADE, 
+                              @FORNECEDOR_ID)";
 
-                con.Open();
-                executacmdMySql_insert.ExecuteNonQuery();
-                ListarEstoqueMp();
-                con.Close();
-                MessageBox.Show("Cadastrado com Sucesso!");
+                    using (MySqlCommand executacmdMySql_insert = new MySqlCommand(sql_insert, con))
+                    {
+                        executacmdMySql_insert.Parameters.AddWithValue("@materia_prima_nomenclatura", nome);
+                        executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_MARCA_ID", cmbMarca);
+                        executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_LOTE", lote);
+                        executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_DT_VAL", formattedDate);
+                        executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_QUANTIDADE", quantidade);
+                        executacmdMySql_insert.Parameters.AddWithValue("@FORNECEDOR_ID", cmbFornecedor);
+
+                        executacmdMySql_insert.ExecuteNonQuery();
+                    }
+
+                    ListarEstoqueMp();
+                    MessageBox.Show("Cadastrado com Sucesso!");
+                }
             }
             catch (Exception erro)
             {
                 MessageBox.Show("Aconteceu o Erro: " + erro);
             }
+
         }
 
         private void Tela_add_mat_prima_Load(object sender, EventArgs e)
         {
+            //MOSTRAR OS DADOS DO COMBOBOX
 
+            MySqlConnection con = new MySqlConnection(conexao);
+
+            string sql_select_estoque = @"
+                     SELECT
+                     m.tb_materia_prima_id AS Id,
+                     m.tb_materia_prima_nomenclatura AS Nomenclatura,
+                     p.tb_materia_prima_marca_nome AS Marca,
+                     m.tb_materia_prima_lote AS Lote,
+                     m.tb_materia_prima_dt_val AS Data_de_Validade,
+					 m.tb_materia_prima_quantidade AS Quantidade,
+                     f.tb_fornecedor_nome AS Fornecedor
+                    FROM
+                     tb_materia_prima m
+                     INNER JOIN
+                     tb_fornecedor f ON m.tb_fornecedor_id = f.tb_fornecedor_id
+                     INNER JOIN
+                     tb_materia_prima_marca p ON m.tb_materia_prima_marca_id = p.tb_materia_prima_marca_id";
+            string sql_select_fornecedor = "select * from tb_fornecedor";
+            string sql_select_marca = "select * from tb_materia_prima_marca";
+
+
+            MySqlCommand executacmdMySql_select_estoque = new MySqlCommand(sql_select_estoque, con);
+            MySqlCommand executacmdMySql_select_fornecedor = new MySqlCommand(sql_select_fornecedor, con);
+            MySqlCommand executacmdMySql_select_marca= new MySqlCommand(sql_select_marca, con);
+
+            con.Open();
+
+            executacmdMySql_select_estoque.ExecuteNonQuery();
+            executacmdMySql_select_fornecedor.ExecuteNonQuery();
+            executacmdMySql_select_marca.ExecuteNonQuery();
+
+            DataTable tabela_estoque = new DataTable();
+            DataTable tabela_fornecedor = new DataTable();
+            DataTable tabela_marca = new DataTable();
+
+
+            MySqlDataAdapter da_estoque = new MySqlDataAdapter(executacmdMySql_select_estoque);
+            da_estoque.Fill(tabela_estoque);
+
+            MySqlDataAdapter da_fornecedor = new MySqlDataAdapter(executacmdMySql_select_fornecedor);
+            da_fornecedor.Fill(tabela_fornecedor);
+
+            MySqlDataAdapter da_marca= new MySqlDataAdapter(executacmdMySql_select_marca);
+            da_marca.Fill(tabela_marca);
+
+
+            cmb_fornecedor.DataSource = tabela_fornecedor;
+
+            cmb_fornecedor.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmb_fornecedor.DisplayMember = "TB_FORNECEDOR_NOME"; //Exibe os dados para o usuário
+            cmb_fornecedor.ValueMember = "TB_FORNECEDOR_ID";  //Pega os dados     
+
+            cmb_fornecedor.SelectedItem = null;
+
+           
+
+            cmb_marca.DataSource = tabela_marca;
+
+            cmb_marca.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmb_marca.DisplayMember = "TB_MATERIA_PRIMA_MARCA_NOME"; //Exibe os dados para o usuário
+            cmb_marca.ValueMember = "TB_MATERIA_PRIMA_MARCA_ID";  //Pega os dados            
+            cmb_marca.DataSource = tabela_marca;
+
+            cmb_marca.SelectedItem = null;
         }
     }
 }
