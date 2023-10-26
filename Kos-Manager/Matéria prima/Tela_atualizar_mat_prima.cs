@@ -14,11 +14,25 @@ namespace Kos_Manager.Matéria_prima
 {
     public partial class Tela_atualizar_mat_prima : Form
     {
+
+        public event EventHandler PrimaAtualizado;
+
+
         string conexao = ConfigurationManager.ConnectionStrings["BD_KOSMANAGER"].ConnectionString;
 
-        public Tela_atualizar_mat_prima()
+        string id;
+
+        public Tela_atualizar_mat_prima(string id, string nomenclatura, string marca, string lote, string dtval, string quantidade, string fornecedor)
         {
             InitializeComponent();
+            this.id = id;
+            Txt_produto.Text = nomenclatura;
+            Txt_marca.Text = marca;
+            Txt_lote.Text = lote;
+            Txt_dt_validade.Text = dtval;
+            Txt_quantidade.Text = quantidade;
+            cmb_fornecedor.Text = fornecedor;
+
         }
 
         public void ListarEstoqueMp()
@@ -48,8 +62,10 @@ namespace Kos_Manager.Matéria_prima
 
            //DgvEstoqueMp.DataSource = tabela_estoqueMp; mostrar no Datagridview
 
+
             con.Close();
 
+            PrimaAtualizado?.Invoke(this, EventArgs.Empty);
 
         }
 
@@ -111,12 +127,27 @@ namespace Kos_Manager.Matéria_prima
 
         private void Btn_adicionar_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void Tela_atualizar_mat_prima_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_deletar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btn_atualizar_Click(object sender, EventArgs e)
+        {
             string id = txt_id.Text;
             string nome = Txt_produto.Text;
             string marca = Txt_marca.Text;
             string lote = Txt_lote.Text;
             string quantidade = Txt_quantidade.Text;
-            string dtVal = Txt_quantidade .Text;
+            string dtVal = Txt_quantidade.Text;
             int cmbFornecedor = Convert.ToInt32(cmb_fornecedor.SelectedValue);
 
 

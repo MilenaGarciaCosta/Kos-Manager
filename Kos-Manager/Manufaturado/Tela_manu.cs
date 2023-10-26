@@ -253,5 +253,10 @@ namespace Kos_Manager
                // AtualizarTextBoxFornecedores();
             }
         }
+
+        private void Pnl_produto_manu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

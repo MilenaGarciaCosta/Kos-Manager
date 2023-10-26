@@ -24,6 +24,22 @@ namespace Kos_Manager
         public static string quantidade { get; internal set; }
     }
 
+    public static class Prima
+
+        {
+
+        public static string nomenclatura { get; set; }
+
+        public static string marca { get; set; }
+
+        public static string lote { get; set; }
+
+        public static string dtval { get; set; }
+
+        public static string quantidade { get; set; }
+
+        public static string IDfornecedor { get; internal set; }
+    }
         
     internal static class Program
     {

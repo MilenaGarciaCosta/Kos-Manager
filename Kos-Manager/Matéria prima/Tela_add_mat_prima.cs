@@ -24,9 +24,28 @@ namespace Kos_Manager.Matéria_prima
 
         public void ListarEstoqueMp()
         {
-            MySqlConnection con = new MySqlConnection(conexao);
 
-            string sql_select_estoqueMp = @"
+            string nomenclatura;
+            string marca;
+            string lote;
+            string dtval;
+            string quantidade;
+            string fornecedor;
+
+
+            nomenclatura = txt_produto.Text;
+            marca = txt_marca.Text;
+            lote = Txt_lote.Text;
+            dtval = Txt_dt_validade.Text;
+            quantidade = Txt_quantidade.Text;
+            fornecedor = cmb_fornecedor.Text;
+
+
+            try
+            {
+                MySqlConnection con = new MySqlConnection(conexao);
+
+                string sql_select_estoqueMp = @"
                     SELECT
                      m.tb_materia_prima_id AS Id,
                      m.tb_materia_prima_nomenclatura AS Nomenclatura,
@@ -40,17 +59,31 @@ namespace Kos_Manager.Matéria_prima
                      INNER JOIN
                      tb_fornecedor f ON m.tb_fornecedor_id = f.tb_fornecedor_id";
 
-            con.Open();
+                con.Open();
 
-            DataTable tabela_estoqueMp = new DataTable();
+                DataTable tabela_estoqueMp = new DataTable();
 
-            MySqlDataAdapter da_estoqueMp = new MySqlDataAdapter(sql_select_estoqueMp, con);
-            da_estoqueMp.Fill(tabela_estoqueMp);
+                MySqlDataAdapter da_estoqueMp = new MySqlDataAdapter(sql_select_estoqueMp, con);
+                da_estoqueMp.Fill(tabela_estoqueMp);
 
-            //DgvEstoqueMp.DataSource = tabela_estoqueMp; aparecer no datagridview 
+               
 
-            con.Close();
+                con.Close();
 
+                Prima.nomenclatura = nomenclatura;
+                Prima.marca = marca;
+                Prima.lote = lote;
+                Prima.dtval = dtval;
+                Prima.quantidade = quantidade;
+                Prima.IDfornecedor = fornecedor;
+
+
+            }
+
+            catch
+            {
+
+            }
 
         }
 

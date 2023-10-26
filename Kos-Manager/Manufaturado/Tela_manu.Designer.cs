@@ -120,6 +120,7 @@
             this.Pnl_produto_manu.Name = "Pnl_produto_manu";
             this.Pnl_produto_manu.Size = new System.Drawing.Size(1039, 353);
             this.Pnl_produto_manu.TabIndex = 36;
+            this.Pnl_produto_manu.Paint += new System.Windows.Forms.PaintEventHandler(this.Pnl_produto_manu_Paint);
             // 
             // Lbl_titulo
             // 

@@ -416,6 +416,7 @@
             this.Btn_deletar.TabIndex = 71;
             this.Btn_deletar.Text = "Deletar";
             this.Btn_deletar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_deletar.Click += new System.EventHandler(this.Btn_deletar_Click);
             // 
             // Btn_atualizar
             // 
@@ -441,6 +442,7 @@
             this.Btn_atualizar.TabIndex = 70;
             this.Btn_atualizar.Text = "Atualizar";
             this.Btn_atualizar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_atualizar.Click += new System.EventHandler(this.Btn_atualizar_Click);
             // 
             // Tela_atualizar_mat_prima
             // 
@@ -469,6 +471,7 @@
             this.Controls.Add(this.Lbl_adicionar);
             this.Name = "Tela_atualizar_mat_prima";
             this.Text = "Tela_atualizar_mat_prima";
+            this.Load += new System.EventHandler(this.Tela_atualizar_mat_prima_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
