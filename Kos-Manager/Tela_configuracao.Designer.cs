@@ -61,7 +61,7 @@
             this.guna2ContainerControl4.Controls.Add(this.guna2PictureBox1);
             this.guna2ContainerControl4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.guna2ContainerControl4.Location = new System.Drawing.Point(92, 71);
-            this.guna2ContainerControl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ContainerControl4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ContainerControl4.Name = "guna2ContainerControl4";
             this.guna2ContainerControl4.Size = new System.Drawing.Size(161, 162);
             this.guna2ContainerControl4.TabIndex = 7;
@@ -86,7 +86,7 @@
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(48, 78);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(76, 73);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -100,7 +100,7 @@
             this.guna2ContainerControl3.Controls.Add(this.guna2PictureBox2);
             this.guna2ContainerControl3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.guna2ContainerControl3.Location = new System.Drawing.Point(313, 71);
-            this.guna2ContainerControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ContainerControl3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ContainerControl3.Name = "guna2ContainerControl3";
             this.guna2ContainerControl3.Size = new System.Drawing.Size(161, 162);
             this.guna2ContainerControl3.TabIndex = 6;
@@ -125,7 +125,7 @@
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(50, 74);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(80, 86);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -142,7 +142,7 @@
             this.guna2ContainerControl2.Controls.Add(this.guna2TextBox1);
             this.guna2ContainerControl2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.guna2ContainerControl2.Location = new System.Drawing.Point(533, 269);
-            this.guna2ContainerControl2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ContainerControl2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ContainerControl2.Name = "guna2ContainerControl2";
             this.guna2ContainerControl2.Size = new System.Drawing.Size(477, 162);
             this.guna2ContainerControl2.TabIndex = 5;
@@ -237,7 +237,7 @@
             this.guna2ContainerControl1.Controls.Add(this.txt_atualizar_nivel);
             this.guna2ContainerControl1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.guna2ContainerControl1.Location = new System.Drawing.Point(533, 71);
-            this.guna2ContainerControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ContainerControl1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ContainerControl1.Name = "guna2ContainerControl1";
             this.guna2ContainerControl1.Size = new System.Drawing.Size(477, 162);
             this.guna2ContainerControl1.TabIndex = 4;
@@ -283,7 +283,7 @@
             this.senha_visivel.Image = ((System.Drawing.Image)(resources.GetObject("senha_visivel.Image")));
             this.senha_visivel.ImageSize = new System.Drawing.Size(30, 30);
             this.senha_visivel.Location = new System.Drawing.Point(238, 93);
-            this.senha_visivel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.senha_visivel.Margin = new System.Windows.Forms.Padding(2);
             this.senha_visivel.Name = "senha_visivel";
             this.senha_visivel.Padding = new System.Windows.Forms.Padding(0, 12, 0, 12);
             this.senha_visivel.PressedColor = System.Drawing.Color.Transparent;
@@ -356,6 +356,7 @@
             this.Controls.Add(this.guna2ContainerControl1);
             this.Name = "Tela_configuracao";
             this.Text = "Tela_configuracao";
+            this.Load += new System.EventHandler(this.Tela_configuracao_Load);
             this.guna2ContainerControl4.ResumeLayout(false);
             this.guna2ContainerControl4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();

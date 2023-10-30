@@ -16,5 +16,31 @@ namespace Kos_Manager
         {
             InitializeComponent();
         }
+
+        private void Tela_configuracao_Load(object sender, EventArgs e)
+        {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
     }
 }
