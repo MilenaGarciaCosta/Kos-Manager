@@ -161,7 +161,7 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(32, 253);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(32, 244);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(143, 25);
             this.guna2HtmlLabel4.TabIndex = 55;
@@ -174,7 +174,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(32, 150);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(32, 148);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(280, 25);
             this.guna2HtmlLabel1.TabIndex = 53;
@@ -288,7 +288,7 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(50, 449);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(33, 442);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(36, 25);
             this.guna2HtmlLabel5.TabIndex = 64;
@@ -302,7 +302,7 @@
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(571, 150);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(571, 147);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(205, 25);
             this.guna2HtmlLabel6.TabIndex = 65;
@@ -315,7 +315,7 @@
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(571, 247);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(571, 243);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(90, 25);
             this.guna2HtmlLabel7.TabIndex = 67;

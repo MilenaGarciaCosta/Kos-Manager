@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_vendas));
             this.Child_panel = new Guna.UI2.WinForms.Guna2Panel();
+            this.Btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
             this.Txt_buscar_venda = new Guna.UI2.WinForms.Guna2TextBox();
             this.Lbl_venda = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
             this.Child_panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,50 +45,11 @@
             this.Child_panel.Controls.Add(this.Lbl_venda);
             this.Child_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Child_panel.Location = new System.Drawing.Point(0, 0);
-            this.Child_panel.Margin = new System.Windows.Forms.Padding(4);
             this.Child_panel.Name = "Child_panel";
-            this.Child_panel.Size = new System.Drawing.Size(1471, 766);
+            this.Child_panel.Size = new System.Drawing.Size(1085, 657);
             this.Child_panel.TabIndex = 18;
             this.Child_panel.UseTransparentBackground = true;
             this.Child_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Child_panel_Paint);
-            // 
-            // Txt_buscar_venda
-            // 
-            this.Txt_buscar_venda.BorderRadius = 10;
-            this.Txt_buscar_venda.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Txt_buscar_venda.DefaultText = "";
-            this.Txt_buscar_venda.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Txt_buscar_venda.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Txt_buscar_venda.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Txt_buscar_venda.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Txt_buscar_venda.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.Txt_buscar_venda.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_buscar_venda.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Txt_buscar_venda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.Txt_buscar_venda.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_buscar_venda.Location = new System.Drawing.Point(851, 199);
-            this.Txt_buscar_venda.Margin = new System.Windows.Forms.Padding(5);
-            this.Txt_buscar_venda.Name = "Txt_buscar_venda";
-            this.Txt_buscar_venda.PasswordChar = '\0';
-            this.Txt_buscar_venda.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.Txt_buscar_venda.PlaceholderText = "Buscar por algo aqui";
-            this.Txt_buscar_venda.SelectedText = "";
-            this.Txt_buscar_venda.Size = new System.Drawing.Size(380, 48);
-            this.Txt_buscar_venda.TabIndex = 17;
-            // 
-            // Lbl_venda
-            // 
-            this.Lbl_venda.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Lbl_venda.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_venda.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.Lbl_venda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Lbl_venda.Location = new System.Drawing.Point(696, 74);
-            this.Lbl_venda.Margin = new System.Windows.Forms.Padding(4);
-            this.Lbl_venda.Name = "Lbl_venda";
-            this.Lbl_venda.Size = new System.Drawing.Size(110, 39);
-            this.Lbl_venda.TabIndex = 16;
-            this.Lbl_venda.Text = "VENDAS";
-            this.Lbl_venda.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Btn_adicionar
             // 
@@ -106,24 +67,60 @@
             this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
             this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(231, 199);
-            this.Btn_adicionar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_adicionar.Location = new System.Drawing.Point(164, 162);
             this.Btn_adicionar.Name = "Btn_adicionar";
             this.Btn_adicionar.ShadowDecoration.Depth = 5;
             this.Btn_adicionar.ShadowDecoration.Enabled = true;
-            this.Btn_adicionar.Size = new System.Drawing.Size(192, 48);
+            this.Btn_adicionar.Size = new System.Drawing.Size(144, 39);
             this.Btn_adicionar.TabIndex = 18;
             this.Btn_adicionar.Text = "Adicionar";
             this.Btn_adicionar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_adicionar.Click += new System.EventHandler(this.Btn_adicionar_Click);
+            // 
+            // Txt_buscar_venda
+            // 
+            this.Txt_buscar_venda.BorderRadius = 10;
+            this.Txt_buscar_venda.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Txt_buscar_venda.DefaultText = "";
+            this.Txt_buscar_venda.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Txt_buscar_venda.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Txt_buscar_venda.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Txt_buscar_venda.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Txt_buscar_venda.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.Txt_buscar_venda.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_buscar_venda.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Txt_buscar_venda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Txt_buscar_venda.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_buscar_venda.Location = new System.Drawing.Point(638, 162);
+            this.Txt_buscar_venda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_buscar_venda.Name = "Txt_buscar_venda";
+            this.Txt_buscar_venda.PasswordChar = '\0';
+            this.Txt_buscar_venda.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.Txt_buscar_venda.PlaceholderText = "Buscar por algo aqui";
+            this.Txt_buscar_venda.SelectedText = "";
+            this.Txt_buscar_venda.Size = new System.Drawing.Size(285, 39);
+            this.Txt_buscar_venda.TabIndex = 17;
+            // 
+            // Lbl_venda
+            // 
+            this.Lbl_venda.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Lbl_venda.BackColor = System.Drawing.Color.Transparent;
+            this.Lbl_venda.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.Lbl_venda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.Lbl_venda.Location = new System.Drawing.Point(513, 60);
+            this.Lbl_venda.Name = "Lbl_venda";
+            this.Lbl_venda.Size = new System.Drawing.Size(87, 32);
+            this.Lbl_venda.TabIndex = 16;
+            this.Lbl_venda.Text = "VENDAS";
+            this.Lbl_venda.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Tela_vendas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1471, 766);
+            this.ClientSize = new System.Drawing.Size(1085, 657);
             this.Controls.Add(this.Child_panel);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Tela_vendas";
             this.Text = "Tela_vendas";
             this.Child_panel.ResumeLayout(false);

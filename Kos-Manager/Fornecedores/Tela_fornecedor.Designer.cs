@@ -62,7 +62,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlFornecedores.AutoScroll = true;
             this.pnlFornecedores.Location = new System.Drawing.Point(56, 245);
-            this.pnlFornecedores.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.pnlFornecedores.Margin = new System.Windows.Forms.Padding(0);
             this.pnlFornecedores.Name = "pnlFornecedores";
             this.pnlFornecedores.Size = new System.Drawing.Size(881, 353);
             this.pnlFornecedores.TabIndex = 20;
@@ -75,7 +75,7 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(252, 131);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(252, 127);
             this.guna2HtmlLabel2.MinimumSize = new System.Drawing.Size(229, 24);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(247, 24);

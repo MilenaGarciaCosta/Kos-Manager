@@ -129,7 +129,7 @@
             this.Lbl_titulo.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_titulo.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Lbl_titulo.Location = new System.Drawing.Point(228, 119);
+            this.Lbl_titulo.Location = new System.Drawing.Point(228, 104);
             this.Lbl_titulo.MinimumSize = new System.Drawing.Size(229, 24);
             this.Lbl_titulo.Name = "Lbl_titulo";
             this.Lbl_titulo.Size = new System.Drawing.Size(229, 24);
@@ -150,7 +150,7 @@
             this.Txt_buscar_produto_manu.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Txt_buscar_produto_manu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.Txt_buscar_produto_manu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_buscar_produto_manu.Location = new System.Drawing.Point(228, 150);
+            this.Txt_buscar_produto_manu.Location = new System.Drawing.Point(228, 153);
             this.Txt_buscar_produto_manu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_buscar_produto_manu.Name = "Txt_buscar_produto_manu";
             this.Txt_buscar_produto_manu.PasswordChar = '\0';

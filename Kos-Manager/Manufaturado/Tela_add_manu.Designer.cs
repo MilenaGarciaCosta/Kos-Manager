@@ -39,7 +39,6 @@
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Txt_quantidade = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.Btn_voltar = new Guna.UI2.WinForms.Guna2Button();
             this.Btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -66,14 +65,14 @@
             this.Txt_nome_manu.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_nome_manu.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_nome_manu.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_nome_manu.Location = new System.Drawing.Point(427, 206);
-            this.Txt_nome_manu.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Txt_nome_manu.Location = new System.Drawing.Point(331, 237);
+            this.Txt_nome_manu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_nome_manu.Name = "Txt_nome_manu";
             this.Txt_nome_manu.PasswordChar = '\0';
             this.Txt_nome_manu.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.Txt_nome_manu.PlaceholderText = "Digite aqui";
             this.Txt_nome_manu.SelectedText = "";
-            this.Txt_nome_manu.Size = new System.Drawing.Size(671, 53);
+            this.Txt_nome_manu.Size = new System.Drawing.Size(503, 43);
             this.Txt_nome_manu.TabIndex = 24;
             // 
             // guna2HtmlLabel3
@@ -82,10 +81,9 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(427, 167);
-            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(331, 206);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(332, 32);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(265, 25);
             this.guna2HtmlLabel3.TabIndex = 23;
             this.guna2HtmlLabel3.Text = "Nome do produto (nomenclatura)";
             this.guna2HtmlLabel3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -96,10 +94,9 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(612, 130);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(470, 106);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(294, 30);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(232, 23);
             this.guna2HtmlLabel2.TabIndex = 41;
             this.guna2HtmlLabel2.Text = "Adicionar produto manufaturado\r\n";
             // 
@@ -109,10 +106,9 @@
             this.Lbl_estoque.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_estoque.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.Lbl_estoque.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Lbl_estoque.Location = new System.Drawing.Point(571, 82);
-            this.Lbl_estoque.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Lbl_estoque.Location = new System.Drawing.Point(439, 67);
             this.Lbl_estoque.Name = "Lbl_estoque";
-            this.Lbl_estoque.Size = new System.Drawing.Size(373, 39);
+            this.Lbl_estoque.Size = new System.Drawing.Size(290, 32);
             this.Lbl_estoque.TabIndex = 40;
             this.Lbl_estoque.Text = "PRODUTO MANUFATURADO\r\n";
             this.Lbl_estoque.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -121,9 +117,8 @@
             // 
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1545, 74);
+            this.guna2Panel1.Size = new System.Drawing.Size(1045, 60);
             this.guna2Panel1.TabIndex = 43;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
@@ -133,10 +128,9 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(427, 385);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(331, 383);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(164, 32);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(132, 25);
             this.guna2HtmlLabel1.TabIndex = 44;
             this.guna2HtmlLabel1.Text = "Data de validade";
             this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -160,14 +154,14 @@
             this.Txt_lote.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_lote.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_lote.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_lote.Location = new System.Drawing.Point(427, 541);
-            this.Txt_lote.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Txt_lote.Location = new System.Drawing.Point(331, 510);
+            this.Txt_lote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_lote.Name = "Txt_lote";
             this.Txt_lote.PasswordChar = '\0';
             this.Txt_lote.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.Txt_lote.PlaceholderText = "Digite aqui";
             this.Txt_lote.SelectedText = "";
-            this.Txt_lote.Size = new System.Drawing.Size(671, 53);
+            this.Txt_lote.Size = new System.Drawing.Size(503, 43);
             this.Txt_lote.TabIndex = 47;
             // 
             // guna2HtmlLabel4
@@ -176,10 +170,9 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(427, 501);
-            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(331, 477);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(45, 32);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(36, 25);
             this.guna2HtmlLabel4.TabIndex = 46;
             this.guna2HtmlLabel4.Text = "Lote";
             this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -203,14 +196,14 @@
             this.Txt_quantidade.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_quantidade.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_quantidade.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_quantidade.Location = new System.Drawing.Point(427, 661);
-            this.Txt_quantidade.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Txt_quantidade.Location = new System.Drawing.Point(331, 607);
+            this.Txt_quantidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_quantidade.Name = "Txt_quantidade";
             this.Txt_quantidade.PasswordChar = '\0';
             this.Txt_quantidade.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.Txt_quantidade.PlaceholderText = "Digite aqui";
             this.Txt_quantidade.SelectedText = "";
-            this.Txt_quantidade.Size = new System.Drawing.Size(671, 53);
+            this.Txt_quantidade.Size = new System.Drawing.Size(503, 43);
             this.Txt_quantidade.TabIndex = 49;
             // 
             // guna2HtmlLabel5
@@ -219,22 +212,12 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(427, 622);
-            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(331, 575);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(222, 32);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(180, 25);
             this.guna2HtmlLabel5.TabIndex = 48;
             this.guna2HtmlLabel5.Text = "Quantidade (mínimo 1)";
             this.guna2HtmlLabel5.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 807);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1545, 74);
-            this.guna2Panel2.TabIndex = 52;
             // 
             // Btn_voltar
             // 
@@ -252,12 +235,11 @@
             this.Btn_voltar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_voltar.Image")));
             this.Btn_voltar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_voltar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_voltar.Location = new System.Drawing.Point(808, 748);
-            this.Btn_voltar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_voltar.Location = new System.Drawing.Point(617, 678);
             this.Btn_voltar.Name = "Btn_voltar";
             this.Btn_voltar.ShadowDecoration.Depth = 5;
             this.Btn_voltar.ShadowDecoration.Enabled = true;
-            this.Btn_voltar.Size = new System.Drawing.Size(192, 48);
+            this.Btn_voltar.Size = new System.Drawing.Size(144, 39);
             this.Btn_voltar.TabIndex = 51;
             this.Btn_voltar.Text = "Voltar";
             this.Btn_voltar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -279,12 +261,11 @@
             this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
             this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(548, 748);
-            this.Btn_adicionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_adicionar.Location = new System.Drawing.Point(422, 678);
             this.Btn_adicionar.Name = "Btn_adicionar";
             this.Btn_adicionar.ShadowDecoration.Depth = 5;
             this.Btn_adicionar.ShadowDecoration.Enabled = true;
-            this.Btn_adicionar.Size = new System.Drawing.Size(192, 48);
+            this.Btn_adicionar.Size = new System.Drawing.Size(144, 39);
             this.Btn_adicionar.TabIndex = 50;
             this.Btn_adicionar.Text = "Adicionar";
             this.Btn_adicionar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -296,10 +277,9 @@
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(427, 285);
-            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(331, 302);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(183, 32);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(147, 25);
             this.guna2HtmlLabel6.TabIndex = 53;
             this.guna2HtmlLabel6.Text = "Data de fabricação";
             this.guna2HtmlLabel6.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -323,14 +303,14 @@
             this.Txt_dt_val.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_dt_val.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_dt_val.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_dt_val.Location = new System.Drawing.Point(427, 420);
-            this.Txt_dt_val.Margin = new System.Windows.Forms.Padding(5);
+            this.Txt_dt_val.Location = new System.Drawing.Point(331, 411);
+            this.Txt_dt_val.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_dt_val.Name = "Txt_dt_val";
             this.Txt_dt_val.PasswordChar = '\0';
             this.Txt_dt_val.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.Txt_dt_val.PlaceholderText = "Digite aqui";
             this.Txt_dt_val.SelectedText = "";
-            this.Txt_dt_val.Size = new System.Drawing.Size(671, 53);
+            this.Txt_dt_val.Size = new System.Drawing.Size(503, 43);
             this.Txt_dt_val.TabIndex = 45;
             // 
             // Txt_dt_fab
@@ -352,25 +332,24 @@
             this.Txt_dt_fab.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_dt_fab.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_dt_fab.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_dt_fab.Location = new System.Drawing.Point(427, 313);
-            this.Txt_dt_fab.Margin = new System.Windows.Forms.Padding(5);
+            this.Txt_dt_fab.Location = new System.Drawing.Point(331, 324);
+            this.Txt_dt_fab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_dt_fab.Name = "Txt_dt_fab";
             this.Txt_dt_fab.PasswordChar = '\0';
             this.Txt_dt_fab.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.Txt_dt_fab.PlaceholderText = "Digite aqui";
             this.Txt_dt_fab.SelectedText = "";
-            this.Txt_dt_fab.Size = new System.Drawing.Size(671, 53);
+            this.Txt_dt_fab.Size = new System.Drawing.Size(503, 43);
             this.Txt_dt_fab.TabIndex = 54;
             // 
             // Tela_add_manu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1545, 881);
+            this.ClientSize = new System.Drawing.Size(1045, 749);
             this.Controls.Add(this.Txt_dt_fab);
             this.Controls.Add(this.guna2HtmlLabel6);
-            this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.Btn_voltar);
             this.Controls.Add(this.Btn_adicionar);
             this.Controls.Add(this.Txt_quantidade);
@@ -384,7 +363,6 @@
             this.Controls.Add(this.Lbl_estoque);
             this.Controls.Add(this.Txt_nome_manu);
             this.Controls.Add(this.guna2HtmlLabel3);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Tela_add_manu";
             this.Text = "Tela_add_manu";
             this.Load += new System.EventHandler(this.Tela_add_manu_Load);
@@ -405,7 +383,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2TextBox Txt_quantidade;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Button Btn_voltar;
         private Guna.UI2.WinForms.Guna2Button Btn_adicionar;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;

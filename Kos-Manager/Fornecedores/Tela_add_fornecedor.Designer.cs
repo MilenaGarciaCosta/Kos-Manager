@@ -42,7 +42,6 @@
             this.Btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
             this.Btn_voltar = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.SuspendLayout();
             // 
             // Lbl_fornecedor
@@ -256,7 +255,7 @@
             this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
             this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(260, 616);
+            this.Btn_adicionar.Location = new System.Drawing.Point(260, 606);
             this.Btn_adicionar.Name = "Btn_adicionar";
             this.Btn_adicionar.ShadowDecoration.Depth = 5;
             this.Btn_adicionar.ShadowDecoration.Enabled = true;
@@ -282,7 +281,7 @@
             this.Btn_voltar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_voltar.Image")));
             this.Btn_voltar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_voltar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_voltar.Location = new System.Drawing.Point(455, 616);
+            this.Btn_voltar.Location = new System.Drawing.Point(455, 606);
             this.Btn_voltar.Name = "Btn_voltar";
             this.Btn_voltar.ShadowDecoration.Depth = 5;
             this.Btn_voltar.ShadowDecoration.Enabled = true;
@@ -300,14 +299,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(922, 60);
             this.guna2Panel1.TabIndex = 31;
             // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 656);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(922, 60);
-            this.guna2Panel2.TabIndex = 32;
-            // 
             // Tela_add_fornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,7 +306,6 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(922, 716);
-            this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.Btn_voltar);
             this.Controls.Add(this.Btn_adicionar);
@@ -351,6 +341,5 @@
         private Guna.UI2.WinForms.Guna2Button Btn_adicionar;
         private Guna.UI2.WinForms.Guna2Button Btn_voltar;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
     }
 }
