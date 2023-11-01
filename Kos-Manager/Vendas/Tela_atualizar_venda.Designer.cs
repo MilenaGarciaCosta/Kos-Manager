@@ -367,9 +367,10 @@
             this.Controls.Add(this.Btn_deletar);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.guna2HtmlLabel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Tela_atualizar_venda";
             this.Text = "Tela_atualizar_venda";
+            this.Load += new System.EventHandler(this.Tela_atualizar_venda_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

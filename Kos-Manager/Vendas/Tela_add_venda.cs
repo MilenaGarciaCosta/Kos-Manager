@@ -118,5 +118,93 @@ namespace Kos_Manager.Vendas
             }
 
         }
+
+        private void Tela_add_venda_Load(object sender, EventArgs e)
+        {
+            //MOSTRAR OS DADOS DO COMBOBOX
+
+            MySqlConnection con = new MySqlConnection(conexao);
+
+            string sql_select_venda = @"
+                     SELECT
+                     v.tb_venda_id AS Id,
+                     v.tb_venda_quantidade AS Quantidade,
+                     v.tb_venda_valor as Valor,
+                     p.tb_produto_manu_nome AS Produto,
+                     f.tb_funcionario_nome AS Funcionario,
+                     s.tb_venda_status_nome AS Status
+                    FROM
+                     tb_venda v
+                     INNER JOIN
+                     tb_produto_manu p ON v.tb_produto_manu_id = p.tb_produto_manu_id
+                        INNER JOIN
+                     tb_funcionario f ON v.tb_funcionario_id = f.tb_funcionario_id
+                              INNER JOIN
+                     tb_venda_status s ON v.tb_venda_status_id = s.tb_venda_status_id";
+
+            string sql_select_produto = "select * from tb_produto_manu";
+            string sql_select_venda_status = "select * from tb_venda_status";
+            string sql_select_funcionario = "select * from tb_funcionario";
+
+            MySqlCommand executacmdMySql_select_venda = new MySqlCommand(sql_select_venda, con);
+            MySqlCommand executacmdMySql_select_produto = new MySqlCommand(sql_select_produto, con);
+            MySqlCommand executacmdMySql_select_venda_status = new MySqlCommand(sql_select_venda_status, con);
+            MySqlCommand executacmdMySql_select_funcionario = new MySqlCommand(sql_select_funcionario, con);
+
+            con.Open();
+
+            executacmdMySql_select_venda.ExecuteNonQuery();
+            executacmdMySql_select_produto.ExecuteNonQuery();
+            executacmdMySql_select_venda_status.ExecuteNonQuery();
+            executacmdMySql_select_funcionario.ExecuteNonQuery();
+
+            DataTable tabela_venda = new DataTable();
+            DataTable tabela_produto = new DataTable();
+            DataTable tabela_venda_status = new DataTable();
+            DataTable tabela_funcionario = new DataTable();
+
+            MySqlDataAdapter da_venda = new MySqlDataAdapter(executacmdMySql_select_venda);
+            da_venda.Fill(tabela_venda);
+
+            MySqlDataAdapter da_produto = new MySqlDataAdapter(executacmdMySql_select_produto);
+            da_produto.Fill(tabela_produto);
+
+            MySqlDataAdapter da_venda_status = new MySqlDataAdapter(executacmdMySql_select_venda_status);
+            da_venda_status.Fill(tabela_venda_status);
+
+            MySqlDataAdapter da_funcionario = new MySqlDataAdapter(executacmdMySql_select_funcionario);
+            da_funcionario.Fill(tabela_funcionario);
+
+
+
+            cmb_nome_produto.DataSource = tabela_produto;
+
+            cmb_nome_produto.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmb_nome_produto.DisplayMember = "TB_PRODUTO_MANU_NOME"; //Exibe os dados para o usuário
+            cmb_nome_produto.ValueMember = "TB_PRODUTO_MANU_ID";  //Pega os dados            
+            cmb_nome_produto.DataSource = tabela_produto;
+
+            cmb_nome_produto.SelectedItem = null;
+
+
+            cmb_status.DataSource = tabela_venda_status;
+
+            cmb_status.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmb_status.DisplayMember = "TB_VENDA_STATUS_NOME"; //Exibe os dados para o usuário
+            cmb_status.ValueMember = "TB_VENDA_STATUS_ID";  //Pega os dados            
+            cmb_status.DataSource = tabela_venda_status;
+
+            cmb_status.SelectedItem = null;
+
+
+            cmb_funcionario.DataSource = tabela_funcionario;
+
+            cmb_funcionario.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmb_funcionario.DisplayMember = "TB_funcionario_NOME"; //Exibe os dados para o usuário
+            cmb_funcionario.ValueMember = "TB_funcionario_ID";  //Pega os dados            
+            cmb_funcionario.DataSource = tabela_funcionario;
+
+            cmb_funcionario.SelectedItem = null;
+        }
     }
 }

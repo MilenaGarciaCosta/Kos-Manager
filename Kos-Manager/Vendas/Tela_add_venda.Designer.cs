@@ -344,6 +344,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Tela_add_venda";
             this.Text = "Tela_add_venda";
+            this.Load += new System.EventHandler(this.Tela_add_venda_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
