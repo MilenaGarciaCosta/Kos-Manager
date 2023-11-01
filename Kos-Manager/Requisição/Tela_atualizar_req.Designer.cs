@@ -38,12 +38,12 @@
             this.Btn_atualizar = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmb_status_requisicao = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.Txt_nome_responsavel = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Tct_quantidade = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Txt_nome_produto_manu = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.cmb_funcionario = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmb_nome_produto = new Guna.UI2.WinForms.Guna2ComboBox();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -194,34 +194,6 @@
             this.cmb_status_requisicao.Size = new System.Drawing.Size(503, 36);
             this.cmb_status_requisicao.TabIndex = 93;
             // 
-            // Txt_nome_responsavel
-            // 
-            this.Txt_nome_responsavel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Txt_nome_responsavel.BorderRadius = 6;
-            this.Txt_nome_responsavel.BorderThickness = 0;
-            this.Txt_nome_responsavel.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Txt_nome_responsavel.DefaultText = "";
-            this.Txt_nome_responsavel.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Txt_nome_responsavel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Txt_nome_responsavel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Txt_nome_responsavel.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Txt_nome_responsavel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.Txt_nome_responsavel.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_nome_responsavel.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Txt_nome_responsavel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.Txt_nome_responsavel.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_nome_responsavel.IconRightOffset = new System.Drawing.Point(10, -10);
-            this.Txt_nome_responsavel.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_nome_responsavel.Location = new System.Drawing.Point(293, 467);
-            this.Txt_nome_responsavel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Txt_nome_responsavel.Name = "Txt_nome_responsavel";
-            this.Txt_nome_responsavel.PasswordChar = '\0';
-            this.Txt_nome_responsavel.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.Txt_nome_responsavel.PlaceholderText = "Digite aqui";
-            this.Txt_nome_responsavel.SelectedText = "";
-            this.Txt_nome_responsavel.Size = new System.Drawing.Size(503, 43);
-            this.Txt_nome_responsavel.TabIndex = 92;
-            // 
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -277,35 +249,6 @@
             this.guna2HtmlLabel3.Text = "Quantidade";
             this.guna2HtmlLabel3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Txt_nome_produto_manu
-            // 
-            this.Txt_nome_produto_manu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Txt_nome_produto_manu.BorderRadius = 6;
-            this.Txt_nome_produto_manu.BorderThickness = 0;
-            this.Txt_nome_produto_manu.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Txt_nome_produto_manu.DefaultText = "";
-            this.Txt_nome_produto_manu.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Txt_nome_produto_manu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Txt_nome_produto_manu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Txt_nome_produto_manu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Txt_nome_produto_manu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.Txt_nome_produto_manu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_nome_produto_manu.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Txt_nome_produto_manu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.Txt_nome_produto_manu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_nome_produto_manu.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
-            this.Txt_nome_produto_manu.IconRightOffset = new System.Drawing.Point(10, -10);
-            this.Txt_nome_produto_manu.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_nome_produto_manu.Location = new System.Drawing.Point(293, 203);
-            this.Txt_nome_produto_manu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Txt_nome_produto_manu.Name = "Txt_nome_produto_manu";
-            this.Txt_nome_produto_manu.PasswordChar = '\0';
-            this.Txt_nome_produto_manu.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.Txt_nome_produto_manu.PlaceholderText = "Digite aqui";
-            this.Txt_nome_produto_manu.SelectedText = "";
-            this.Txt_nome_produto_manu.Size = new System.Drawing.Size(503, 43);
-            this.Txt_nome_produto_manu.TabIndex = 88;
-            // 
             // guna2HtmlLabel6
             // 
             this.guna2HtmlLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -319,19 +262,59 @@
             this.guna2HtmlLabel6.Text = "Nome do produto (nomenclatura)";
             this.guna2HtmlLabel6.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // cmb_funcionario
+            // 
+            this.cmb_funcionario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmb_funcionario.BackColor = System.Drawing.Color.Transparent;
+            this.cmb_funcionario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.cmb_funcionario.BorderRadius = 10;
+            this.cmb_funcionario.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_funcionario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_funcionario.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.cmb_funcionario.FocusedColor = System.Drawing.Color.Transparent;
+            this.cmb_funcionario.FocusedState.BorderColor = System.Drawing.Color.Transparent;
+            this.cmb_funcionario.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmb_funcionario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.cmb_funcionario.ItemHeight = 30;
+            this.cmb_funcionario.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cmb_funcionario.Location = new System.Drawing.Point(289, 466);
+            this.cmb_funcionario.Name = "cmb_funcionario";
+            this.cmb_funcionario.Size = new System.Drawing.Size(503, 36);
+            this.cmb_funcionario.TabIndex = 95;
+            // 
+            // cmb_nome_produto
+            // 
+            this.cmb_nome_produto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmb_nome_produto.BackColor = System.Drawing.Color.Transparent;
+            this.cmb_nome_produto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.cmb_nome_produto.BorderRadius = 10;
+            this.cmb_nome_produto.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_nome_produto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_nome_produto.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.cmb_nome_produto.FocusedColor = System.Drawing.Color.Transparent;
+            this.cmb_nome_produto.FocusedState.BorderColor = System.Drawing.Color.Transparent;
+            this.cmb_nome_produto.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmb_nome_produto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.cmb_nome_produto.ItemHeight = 30;
+            this.cmb_nome_produto.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cmb_nome_produto.Location = new System.Drawing.Point(293, 217);
+            this.cmb_nome_produto.Name = "cmb_nome_produto";
+            this.cmb_nome_produto.Size = new System.Drawing.Size(503, 36);
+            this.cmb_nome_produto.TabIndex = 96;
+            // 
             // Tela_atualizar_req
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1087, 746);
+            this.Controls.Add(this.cmb_nome_produto);
+            this.Controls.Add(this.cmb_funcionario);
             this.Controls.Add(this.guna2HtmlLabel7);
             this.Controls.Add(this.cmb_status_requisicao);
-            this.Controls.Add(this.Txt_nome_responsavel);
             this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.Tct_quantidade);
             this.Controls.Add(this.guna2HtmlLabel3);
-            this.Controls.Add(this.Txt_nome_produto_manu);
             this.Controls.Add(this.guna2HtmlLabel6);
             this.Controls.Add(this.Btn_voltar);
             this.Controls.Add(this.Btn_deletar);
@@ -342,6 +325,7 @@
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Name = "Tela_atualizar_req";
             this.Text = "Tela_atualizar_req";
+            this.Load += new System.EventHandler(this.Tela_atualizar_req_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,11 +341,11 @@
         private Guna.UI2.WinForms.Guna2Button Btn_atualizar;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2ComboBox cmb_status_requisicao;
-        private Guna.UI2.WinForms.Guna2TextBox Txt_nome_responsavel;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2TextBox Tct_quantidade;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2TextBox Txt_nome_produto_manu;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2ComboBox cmb_funcionario;
+        private Guna.UI2.WinForms.Guna2ComboBox cmb_nome_produto;
     }
 }

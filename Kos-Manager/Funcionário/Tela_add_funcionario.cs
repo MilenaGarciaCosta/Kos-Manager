@@ -189,5 +189,10 @@ namespace Kos_Manager
             cmb_status_funcionario.ValueMember = "TB_STATUS_ID";  //Pega os dados            
             cmb_status_funcionario.SelectedItem = null;
         }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
