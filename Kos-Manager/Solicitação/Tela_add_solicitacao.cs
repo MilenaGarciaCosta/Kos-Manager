@@ -61,6 +61,8 @@ namespace Kos_Manager.Solicitação
 
         private void Tela_add_solicitacao_Load(object sender, EventArgs e)
         {
+            //MOSTRAR OS DADOS DO COMBOBOX
+
             MySqlConnection con = new MySqlConnection(conexao);
 
             string sql_select_solicitacao = @"
@@ -69,22 +71,23 @@ namespace Kos_Manager.Solicitação
                      s.tb_solicitacao_quantidade as Quantidade,
                      t.tb_solicitacao_status_nome as Status,
                      m.TB_MATERIA_PRIMA_NOMENCLATURA AS Nome,
-                     m.TB_MATERIA_PRIMA_MARCA_NOME AS Marca,
+                     p.TB_MATERIA_PRIMA_MARCA_NOME AS Marca,
                      f.tb_fornecedor_nome AS Fornecedor
                     FROM
                      tb_solicitacao s
                      INNER JOIN
-                     TB_MATERIA_PRIMA_MARCA m ON m.TB_MATERIA_PRIMA_id = s.TB_MATERIA_PRIMA_id
+                     TB_MATERIA_PRIMA m ON m.TB_MATERIA_PRIMA_id = s.TB_MATERIA_PRIMA_id
                         INNER JOIN
                      tb_fornecedor f ON f.tb_fornecedor_id = s.tb_fornecedor_id    
                      INNER JOIN
-                     tb_solicitacao_status t ON t.tb_solicitacao_status_id = s.tb_solicitacao_status_id";
+                     tb_solicitacao_status t ON t.tb_solicitacao_status_id = s.tb_solicitacao_status_id
+                    INNER JOIN
+                     tb_materia_prima_marca p ON p.tb_materia_prima_marca_id = s.tb_materia_prima_marca_id";
 
             string sql_select_produto = "select * from tb_materia_prima";
             string sql_select_fornecedor = "select * from tb_fornecedor";
             string sql_select_status = "select * from tb_solicitacao_status";
-
-            string sql_select_marca = "select tb_materia_prima_marca from tb_materia_prima";
+            string sql_select_marca = "select * from tb_materia_prima_marca";
 
             MySqlCommand executacmdMySql_select_solicitacao = new MySqlCommand(sql_select_solicitacao, con);
             MySqlCommand executacmdMySql_select_produto = new MySqlCommand(sql_select_produto, con);
@@ -121,7 +124,7 @@ namespace Kos_Manager.Solicitação
             da_marca.Fill(tabela_marca);
 
 
-          
+           
 
 
             cmb_nome_produto.DataSource = tabela_produto;
@@ -147,8 +150,8 @@ namespace Kos_Manager.Solicitação
             cmb_marca.DataSource = tabela_marca;
 
             cmb_marca.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmb_marca.DisplayMember = "TB_MATERIA_PRIMA_MARCA"; // Exibe os dados para o usuário
-            cmb_marca.ValueMember = "TB_MATERIA_PRIMA_MARCA"; // Pega os dados
+            cmb_marca.DisplayMember = "TB_MATERIA_PRIMA_MARCA_NOME"; // Exibe os dados para o usuário
+            cmb_marca.ValueMember = "TB_MATERIA_PRIMA_MARCA_ID"; // Pega os dados
 
             cmb_marca.SelectedItem = null;
 
@@ -160,6 +163,8 @@ namespace Kos_Manager.Solicitação
             cmb_status_solicitacao.DataSource = tabela_status;
 
             cmb_status_solicitacao.SelectedItem = null;
+
+
 
         }
 
