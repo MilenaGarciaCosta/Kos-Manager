@@ -319,6 +319,7 @@
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Name = "Tela_add_req";
             this.Text = "Tela_add_req";
+            this.Load += new System.EventHandler(this.Tela_add_req_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

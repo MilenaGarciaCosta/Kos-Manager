@@ -393,6 +393,7 @@
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Name = "Tela_atualizar_funcionario";
             this.Text = "Tela_atualizar_funcionario";
+            this.Load += new System.EventHandler(this.Tela_atualizar_funcionario_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

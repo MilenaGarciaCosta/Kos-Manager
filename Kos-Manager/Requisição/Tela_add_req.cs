@@ -41,5 +41,10 @@ namespace Kos_Manager
         {
             ClearTextBoxes(this.Controls);
         }
+
+        private void Tela_add_req_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
