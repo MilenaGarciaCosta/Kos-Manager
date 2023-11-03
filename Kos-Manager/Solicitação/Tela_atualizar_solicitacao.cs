@@ -29,28 +29,25 @@ namespace Kos_Manager.Solicitação
             MySqlConnection con = new MySqlConnection(conexao);
 
             string sql_select_solicitacao = @"
-                    SELECT
-                     s.tb_solicitacao_id AS Id,
-                     s.tb_solicitacao_quantidade as Quantidade,
-                     t.tb_solicitacao_status_nome as Status,
-                     m.TB_MATERIA_PRIMA_NOMENCLATURA AS Nome,
-                     p.TB_MATERIA_PRIMA_MARCA_NOME AS Marca,
-                     f.tb_fornecedor_nome AS Fornecedor
-                    FROM
-                     tb_solicitacao s
-                     INNER JOIN
-                     TB_MATERIA_PRIMA m ON m.TB_MATERIA_PRIMA_id = s.TB_MATERIA_PRIMA_id
-                        INNER JOIN
-                     tb_fornecedor f ON f.tb_fornecedor_id = s.tb_fornecedor_id    
-                     INNER JOIN
-                     tb_solicitacao_status t ON t.tb_solicitacao_status_id = s.tb_solicitacao_status_id
-                    INNER JOIN
-                     tb_materia_prima_marca p ON p.tb_materia_prima_marca_id = s.tb_materia_prima_marca_id";
+                      SELECT
+                         s.tb_solicitacao_id AS Id,
+                         s.tb_solicitacao_quantidade as quantidade,
+                         mp.TB_MATERIA_PRIMA_NOMENCLATURA AS Nome,
+                         m.TB_MARCA_NOME AS Marca,
+                         f.tb_fornecedor_nome AS Fornecedor
+                        FROM
+                         tb_solicitacao s
+                         INNER JOIN
+                         TB_MATERIA_PRIMA mp ON s.TB_MATERIA_PRIMA_id = mp.TB_MATERIA_PRIMA_id
+                            INNER JOIN
+                         tb_fornecedor f ON s.tb_fornecedor_id = f.tb_fornecedor_id
+                            INNER JOIN
+                         tb_marca m ON s.tb_marca_id = m.tb_marca_id";
 
             string sql_select_produto = "select * from tb_materia_prima";
             string sql_select_fornecedor = "select * from tb_fornecedor";
             string sql_select_status = "select * from tb_solicitacao_status";
-            string sql_select_marca = "select * from tb_materia_prima_marca";
+            string sql_select_marca = "select * from tb_marca";
 
             MySqlCommand executacmdMySql_select_solicitacao = new MySqlCommand(sql_select_solicitacao, con);
             MySqlCommand executacmdMySql_select_produto = new MySqlCommand(sql_select_produto, con);
@@ -113,8 +110,8 @@ namespace Kos_Manager.Solicitação
             cmb_marca.DataSource = tabela_marca;
 
             cmb_marca.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmb_marca.DisplayMember = "TB_MATERIA_PRIMA_MARCA_NOME"; // Exibe os dados para o usuário
-            cmb_marca.ValueMember = "TB_MATERIA_PRIMA_MARCA_ID"; // Pega os dados
+            cmb_marca.DisplayMember = "TB_MARCA_NOME"; // Exibe os dados para o usuário
+            cmb_marca.ValueMember = "TB_MARCA_ID"; // Pega os dados
 
             cmb_marca.SelectedItem = null;
 
@@ -142,12 +139,66 @@ namespace Kos_Manager.Solicitação
 
         private void Btn_deletar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                // Obtém o ID da solicitação que deseja excluir
+                //string id = txt_cod.Text; id
 
-        }
+                MySqlConnection con = new MySqlConnection(conexao);
+
+                // Define a consulta SQL para exclusão
+                string sql_delete_tb_solicitacao = "DELETE FROM tb_solicitacao WHERE tb_solicitacao_id = @id";
+
+                MySqlCommand executacmdMySql_delete_tb_solicitacao = new MySqlCommand(sql_delete_tb_solicitacao, con);
+                //executacmdMySql_delete_tb_solicitacao.Parameters.AddWithValue("@id", id);
+
+                con.Open();
+                executacmdMySql_delete_tb_solicitacao.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show("Exclusão realizada com sucesso");
+
+                // Atualize a exibição da lista de solicitações
+               
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Aconteceu um erro: " + erro);
+            }
+        
+    }
 
         private void Btn_atualizar_Click(object sender, EventArgs e)
         {
+            //string id = txt_cod.Text;
+            string quantidade = Txt_quantidade.Text;
+            int cmb_Produto = Convert.ToInt32(cmb_nome_produto.SelectedValue);
+            int cmb_Fornecedor = Convert.ToInt32(cmb_fornecedor.SelectedValue);
+            int cmb_Marca = Convert.ToInt32(cmb_marca.SelectedValue);
 
+            MySqlConnection con = new MySqlConnection(conexao);
+
+            string sql_update_tb_solicitacao = @"UPDATE tb_solicitacao
+                                    SET tb_solicitacao_quantidade = @quantidade,
+                                        tb_fornecedor_id = @cmbfornecedor,
+                                        tb_materia_prima_id = @cmbproduto,
+                                        tb_marca_id = @cmbmarca
+                                    WHERE tb_solicitacao_id = @id";
+
+            MySqlCommand executacmdMySql_update_tb_solicitacao = new MySqlCommand(sql_update_tb_solicitacao, con);
+            //executacmdMySql_update_tb_solicitacao.Parameters.AddWithValue("@id", id);
+            executacmdMySql_update_tb_solicitacao.Parameters.AddWithValue("@quantidade", quantidade);
+            executacmdMySql_update_tb_solicitacao.Parameters.AddWithValue("@cmbfornecedor", cmb_Fornecedor);
+            executacmdMySql_update_tb_solicitacao.Parameters.AddWithValue("@cmbproduto", cmb_Produto);
+            executacmdMySql_update_tb_solicitacao.Parameters.AddWithValue("@cmbmarca", cmb_Marca);
+
+            con.Open();
+            executacmdMySql_update_tb_solicitacao.ExecuteNonQuery();
+
+            MessageBox.Show("Atualização realizada com sucesso");
+
+
+            con.Close();
         }
     }
 }

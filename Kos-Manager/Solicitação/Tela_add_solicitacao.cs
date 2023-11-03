@@ -29,15 +29,17 @@ namespace Kos_Manager.Solicitação
                         SELECT
                      s.tb_solicitacao_id AS Id,
                      s.tb_solicitacao_quantidade as quantidade,
-                     m.TB_MATERIA_PRIMA_NOMENCLATURA AS Nome,
-                     m.TB_MATERIA_PRIMA_MARCA AS Marca,
+                     mp.TB_MATERIA_PRIMA_NOMENCLATURA AS Nome,
+                     m.TB_MARCA_NOME AS Marca,
                      f.tb_fornecedor_nome AS Fornecedor
                     FROM
                      tb_solicitacao s
                      INNER JOIN
-                     TB_MATERIA_PRIMA m ON s.TB_MATERIA_PRIMA_id = m.TB_MATERIA_PRIMA_id
+                     TB_MATERIA_PRIMA mp ON s.TB_MATERIA_PRIMA_id = mp.TB_MATERIA_PRIMA_id
                         INNER JOIN
-                     tb_fornecedor f ON s.tb_fornecedor_id = f.tb_fornecedor_id";
+                     tb_fornecedor f ON s.tb_fornecedor_id = f.tb_fornecedor_id
+                        INNER JOIN
+                     tb_marca m ON s.tb_marca_id = m.tb_marca_id";
 
             con.Open();
 
@@ -66,28 +68,25 @@ namespace Kos_Manager.Solicitação
             MySqlConnection con = new MySqlConnection(conexao);
 
             string sql_select_solicitacao = @"
-                    SELECT
+                      SELECT
                      s.tb_solicitacao_id AS Id,
-                     s.tb_solicitacao_quantidade as Quantidade,
-                     t.tb_solicitacao_status_nome as Status,
-                     m.TB_MATERIA_PRIMA_NOMENCLATURA AS Nome,
-                     p.TB_MATERIA_PRIMA_MARCA_NOME AS Marca,
+                     s.tb_solicitacao_quantidade as quantidade,
+                     mp.TB_MATERIA_PRIMA_NOMENCLATURA AS Nome,
+                     m.TB_MARCA_NOME AS Marca,
                      f.tb_fornecedor_nome AS Fornecedor
                     FROM
                      tb_solicitacao s
                      INNER JOIN
-                     TB_MATERIA_PRIMA m ON m.TB_MATERIA_PRIMA_id = s.TB_MATERIA_PRIMA_id
+                     TB_MATERIA_PRIMA mp ON s.TB_MATERIA_PRIMA_id = mp.TB_MATERIA_PRIMA_id
                         INNER JOIN
-                     tb_fornecedor f ON f.tb_fornecedor_id = s.tb_fornecedor_id    
-                     INNER JOIN
-                     tb_solicitacao_status t ON t.tb_solicitacao_status_id = s.tb_solicitacao_status_id
-                    INNER JOIN
-                     tb_materia_prima_marca p ON p.tb_materia_prima_marca_id = s.tb_materia_prima_marca_id";
+                     tb_fornecedor f ON s.tb_fornecedor_id = f.tb_fornecedor_id
+                        INNER JOIN
+                     tb_marca m ON s.tb_marca_id = m.tb_marca_id";
 
             string sql_select_produto = "select * from tb_materia_prima";
             string sql_select_fornecedor = "select * from tb_fornecedor";
             string sql_select_status = "select * from tb_solicitacao_status";
-            string sql_select_marca = "select * from tb_materia_prima_marca";
+            string sql_select_marca = "select * from tb_marca";
 
             MySqlCommand executacmdMySql_select_solicitacao = new MySqlCommand(sql_select_solicitacao, con);
             MySqlCommand executacmdMySql_select_produto = new MySqlCommand(sql_select_produto, con);
@@ -150,8 +149,8 @@ namespace Kos_Manager.Solicitação
             cmb_marca.DataSource = tabela_marca;
 
             cmb_marca.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmb_marca.DisplayMember = "TB_MATERIA_PRIMA_MARCA_NOME"; // Exibe os dados para o usuário
-            cmb_marca.ValueMember = "TB_MATERIA_PRIMA_MARCA_ID"; // Pega os dados
+            cmb_marca.DisplayMember = "TB_MARCA_NOME"; // Exibe os dados para o usuário
+            cmb_marca.ValueMember = "TB_MARCA_ID"; // Pega os dados
 
             cmb_marca.SelectedItem = null;
 
@@ -181,6 +180,7 @@ namespace Kos_Manager.Solicitação
 
                 string quantidade = Txt_quantidade.Text;
                 int cmb_Fornecedor = Convert.ToInt32(cmb_fornecedor.SelectedValue);
+                int cmb_Marca = Convert.ToInt32(cmb_marca.SelectedValue);
                 int cmb_Produto = Convert.ToInt32(cmb_nome_produto.SelectedValue);
 
                 string sql_insert = @"insert into TB_SOLICITACAO
@@ -188,12 +188,13 @@ namespace Kos_Manager.Solicitação
                  
                    TB_SOLICITACAO_QUANTIDADE,
                    TB_MATERIA_PRIMA_ID, 
-                   TB_FORNECEDOR_ID
+                   TB_FORNECEDOR_ID,
+                   TB_MARCA_ID
             
                  )
                 values
                 (
-                   @SOLICITACAO_QUANTIDADE, @MATERIA_PRIMA_ID, @FORNECEDOR_ID
+                   @SOLICITACAO_QUANTIDADE, @MATERIA_PRIMA_ID, @FORNECEDOR_ID, @MARCA_ID
                  )";
 
                 MySqlCommand executacmdMySql_insert = new MySqlCommand(sql_insert, con);
@@ -201,6 +202,7 @@ namespace Kos_Manager.Solicitação
                 executacmdMySql_insert.Parameters.AddWithValue("@SOLICITACAO_QUANTIDADE", quantidade);
                 executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_ID", cmb_Produto);
                 executacmdMySql_insert.Parameters.AddWithValue("@FORNECEDOR_ID", cmb_Fornecedor);
+                executacmdMySql_insert.Parameters.AddWithValue("@MARCA_ID", cmb_Marca);
 
 
                 con.Open();
