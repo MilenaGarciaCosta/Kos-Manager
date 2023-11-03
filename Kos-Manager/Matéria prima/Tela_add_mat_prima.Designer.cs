@@ -44,7 +44,7 @@
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmb_fornecedor = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cmb_marca = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Txt_marca = new Guna.UI2.WinForms.Guna2TextBox();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel2
@@ -342,25 +342,34 @@
             this.cmb_fornecedor.Size = new System.Drawing.Size(503, 36);
             this.cmb_fornecedor.TabIndex = 66;
             // 
-            // cmb_marca
+            // Txt_marca
             // 
-            this.cmb_marca.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmb_marca.BackColor = System.Drawing.Color.Transparent;
-            this.cmb_marca.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.cmb_marca.BorderRadius = 10;
-            this.cmb_marca.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmb_marca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_marca.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.cmb_marca.FocusedColor = System.Drawing.Color.Transparent;
-            this.cmb_marca.FocusedState.BorderColor = System.Drawing.Color.Transparent;
-            this.cmb_marca.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmb_marca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.cmb_marca.ItemHeight = 30;
-            this.cmb_marca.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmb_marca.Location = new System.Drawing.Point(32, 278);
-            this.cmb_marca.Name = "cmb_marca";
-            this.cmb_marca.Size = new System.Drawing.Size(503, 36);
-            this.cmb_marca.TabIndex = 68;
+            this.Txt_marca.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_marca.BorderRadius = 6;
+            this.Txt_marca.BorderThickness = 0;
+            this.Txt_marca.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Txt_marca.DefaultText = "";
+            this.Txt_marca.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Txt_marca.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Txt_marca.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Txt_marca.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Txt_marca.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.Txt_marca.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_marca.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Txt_marca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Txt_marca.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_marca.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
+            this.Txt_marca.IconRightOffset = new System.Drawing.Point(10, -10);
+            this.Txt_marca.IconRightSize = new System.Drawing.Size(10, 10);
+            this.Txt_marca.Location = new System.Drawing.Point(33, 276);
+            this.Txt_marca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_marca.Name = "Txt_marca";
+            this.Txt_marca.PasswordChar = '\0';
+            this.Txt_marca.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.Txt_marca.PlaceholderText = "Digite aqui";
+            this.Txt_marca.SelectedText = "";
+            this.Txt_marca.Size = new System.Drawing.Size(503, 43);
+            this.Txt_marca.TabIndex = 69;
             // 
             // Tela_add_mat_prima
             // 
@@ -368,7 +377,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1103, 622);
-            this.Controls.Add(this.cmb_marca);
+            this.Controls.Add(this.Txt_marca);
             this.Controls.Add(this.guna2HtmlLabel7);
             this.Controls.Add(this.cmb_fornecedor);
             this.Controls.Add(this.guna2HtmlLabel6);
@@ -409,6 +418,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2ComboBox cmb_fornecedor;
-        private Guna.UI2.WinForms.Guna2ComboBox cmb_marca;
+        private Guna.UI2.WinForms.Guna2TextBox Txt_marca;
     }
 }

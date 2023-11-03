@@ -34,7 +34,7 @@ namespace Kos_Manager.Matéria_prima
 
 
             nomenclatura = txt_produto.Text;
-            marca = cmb_marca.Text;
+            marca = Txt_marca.Text;
             lote = Txt_lote.Text;
             dtval = Txt_dt_validade.Text;
             quantidade = Txt_quantidade.Text;
@@ -49,7 +49,7 @@ namespace Kos_Manager.Matéria_prima
                     SELECT
                      m.tb_materia_prima_id AS Id,
                      m.tb_materia_prima_nomenclatura AS Nomenclatura,
-                     p.tb_materia_prima_marca_nome AS Marca,
+                     m.tb_materia_prima_marca AS Marca,
                      m.tb_materia_prima_lote AS Lote,
                      m.tb_materia_prima_dt_val AS Data_de_Validade,
 					 m.tb_materia_prima_quantidade AS Quantidade,
@@ -57,9 +57,7 @@ namespace Kos_Manager.Matéria_prima
                     FROM
                      tb_materia_prima m
                      INNER JOIN
-                     tb_fornecedor f ON m.tb_fornecedor_id = f.tb_fornecedor_id
-                     INNER JOIN
-                     tb_materia_prima_marca p ON m.tb_materia_prima_marca_id = p.tb_materia_prima_marca_id";
+                     tb_fornecedor f ON m.tb_fornecedor_id = f.tb_fornecedor_id";
 
                 con.Open();
 
@@ -73,7 +71,6 @@ namespace Kos_Manager.Matéria_prima
                 con.Close();
 
                 Prima.nomenclatura = nomenclatura;
-                Prima.marca = marca;
                 Prima.lote = lote;
                 Prima.dtval = dtval;
                 Prima.quantidade = quantidade;
@@ -124,7 +121,7 @@ namespace Kos_Manager.Matéria_prima
             try
             {
                 string nome = txt_produto.Text;
-                int cmbMarca = Convert.ToInt32(cmb_marca.SelectedValue);
+                string marca = Txt_marca.Text;
                 string lote = Txt_lote.Text;
                 string quantidade = Txt_quantidade.Text;
                 DateTime dtVal = DateTime.ParseExact(Txt_dt_validade.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture); // Converter a data para DateTime
@@ -137,7 +134,7 @@ namespace Kos_Manager.Matéria_prima
 
                     string sql_insert = @"INSERT INTO tb_materia_prima
                              (tb_materia_prima_nomenclatura, 
-                              TB_MATERIA_PRIMA_MARCA_ID, 
+                              TB_MATERIA_PRIMA_MARCA, 
                               TB_MATERIA_PRIMA_LOTE,
                               TB_MATERIA_PRIMA_DT_VAL,
                               TB_MATERIA_PRIMA_QUANTIDADE,
@@ -145,7 +142,7 @@ namespace Kos_Manager.Matéria_prima
 
                              VALUES
                              (@materia_prima_nomenclatura, 
-                              @MATERIA_PRIMA_MARCA_ID, 
+                              @MATERIA_PRIMA_MARCA, 
                               @MATERIA_PRIMA_LOTE, 
                               @MATERIA_PRIMA_DT_VAL, 
                               @MATERIA_PRIMA_QUANTIDADE, 
@@ -154,7 +151,7 @@ namespace Kos_Manager.Matéria_prima
                     using (MySqlCommand executacmdMySql_insert = new MySqlCommand(sql_insert, con))
                     {
                         executacmdMySql_insert.Parameters.AddWithValue("@materia_prima_nomenclatura", nome);
-                        executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_MARCA_ID", cmbMarca);
+                        executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_MARCA", marca);
                         executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_LOTE", lote);
                         executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_DT_VAL", formattedDate);
                         executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_QUANTIDADE", quantidade);
@@ -184,7 +181,7 @@ namespace Kos_Manager.Matéria_prima
                      SELECT
                      m.tb_materia_prima_id AS Id,
                      m.tb_materia_prima_nomenclatura AS Nomenclatura,
-                     p.tb_materia_prima_marca_nome AS Marca,
+                     m.tb_materia_prima_marca AS Marca,
                      m.tb_materia_prima_lote AS Lote,
                      m.tb_materia_prima_dt_val AS Data_de_Validade,
 					 m.tb_materia_prima_quantidade AS Quantidade,
@@ -192,26 +189,20 @@ namespace Kos_Manager.Matéria_prima
                     FROM
                      tb_materia_prima m
                      INNER JOIN
-                     tb_fornecedor f ON m.tb_fornecedor_id = f.tb_fornecedor_id
-                     INNER JOIN
-                     tb_materia_prima_marca p ON m.tb_materia_prima_marca_id = p.tb_materia_prima_marca_id";
+                     tb_fornecedor f ON m.tb_fornecedor_id = f.tb_fornecedor_id";
             string sql_select_fornecedor = "select * from tb_fornecedor";
-            string sql_select_marca = "select * from tb_materia_prima_marca";
 
 
             MySqlCommand executacmdMySql_select_estoque = new MySqlCommand(sql_select_estoque, con);
             MySqlCommand executacmdMySql_select_fornecedor = new MySqlCommand(sql_select_fornecedor, con);
-            MySqlCommand executacmdMySql_select_marca= new MySqlCommand(sql_select_marca, con);
 
             con.Open();
 
             executacmdMySql_select_estoque.ExecuteNonQuery();
             executacmdMySql_select_fornecedor.ExecuteNonQuery();
-            executacmdMySql_select_marca.ExecuteNonQuery();
 
             DataTable tabela_estoque = new DataTable();
             DataTable tabela_fornecedor = new DataTable();
-            DataTable tabela_marca = new DataTable();
 
 
             MySqlDataAdapter da_estoque = new MySqlDataAdapter(executacmdMySql_select_estoque);
@@ -219,9 +210,6 @@ namespace Kos_Manager.Matéria_prima
 
             MySqlDataAdapter da_fornecedor = new MySqlDataAdapter(executacmdMySql_select_fornecedor);
             da_fornecedor.Fill(tabela_fornecedor);
-
-            MySqlDataAdapter da_marca= new MySqlDataAdapter(executacmdMySql_select_marca);
-            da_marca.Fill(tabela_marca);
 
 
             cmb_fornecedor.DataSource = tabela_fornecedor;
@@ -232,16 +220,7 @@ namespace Kos_Manager.Matéria_prima
 
             cmb_fornecedor.SelectedItem = null;
 
-           
-
-            cmb_marca.DataSource = tabela_marca;
-
-            cmb_marca.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmb_marca.DisplayMember = "TB_MATERIA_PRIMA_MARCA_NOME"; //Exibe os dados para o usuário
-            cmb_marca.ValueMember = "TB_MATERIA_PRIMA_MARCA_ID";  //Pega os dados            
-            cmb_marca.DataSource = tabela_marca;
-
-            cmb_marca.SelectedItem = null;
+         
         }
     }
 }

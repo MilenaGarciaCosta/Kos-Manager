@@ -27,7 +27,7 @@ namespace Kos_Manager.Matéria_prima
             InitializeComponent();
             this.id = id;
             Txt_produto.Text = nomenclatura;
-            cmb_marca.Text = marca;
+            Txt_marca.Text = marca;
             Txt_lote.Text = lote;
             Txt_dt_validade.Text = dtval;
             Txt_quantidade.Text = quantidade;
@@ -137,14 +137,40 @@ namespace Kos_Manager.Matéria_prima
 
         private void Btn_deletar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                
+                //string id = txt_cod.Text; id
 
+                MySqlConnection con = new MySqlConnection(conexao);
+
+                // Define a consulta SQL para exclusão
+                string sql_delete_tb_materia_prima = "DELETE FROM tb_materia_prima WHERE tb_materia_prima_id = @id";
+
+                MySqlCommand executacmdMySql_delete_tb_materia_prima = new MySqlCommand(sql_delete_tb_materia_prima, con);
+
+                //executacmdMySql_delete_tb_materia_prima.Parameters.AddWithValue("@id", id);
+
+                con.Open();
+                executacmdMySql_delete_tb_materia_prima.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show("Exclusão realizada com sucesso");
+
+                // Atualize a exibição da lista de solicitações
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Aconteceu um erro: " + erro);
+            }
         }
 
         private void Btn_atualizar_Click(object sender, EventArgs e)
         {
             string id = txt_id.Text;
             string nome = Txt_produto.Text;
-            string marca = cmb_marca.Text;
+            string marca = Txt_marca.Text;
             string lote = Txt_lote.Text;
             string quantidade = Txt_quantidade.Text;
             string dtVal = Txt_quantidade.Text;
@@ -156,7 +182,7 @@ namespace Kos_Manager.Matéria_prima
 
             string sql_update_fornecedor = @"update tb_materia_prima 
                                   set tb_materia_prima_nomenclatura = @nome,
-                                      tb_materia_prima_marca_id = @marca,
+                                      tb_materia_prima_marca = @marca,
                                       tb_materia_prima_lote = @lote,
                                       tb_materia_prima_quantidade = @quantidade,
                                       tb_materia_prima_dt_val = @dtVal,
