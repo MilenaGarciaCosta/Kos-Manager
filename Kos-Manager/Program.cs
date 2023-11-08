@@ -19,8 +19,8 @@ namespace Kos_Manager
     public static class Manu
     {
         public static string nome { get; set; }
-        public static string datafab { get; set; }
-        public static string dataval { get; set; }
+        public static DateTime datafab { get; set; }
+        public static DateTime dataval { get; set; }
         public static string lote { get; set; }
         public static string quantidade { get; internal set; }
     }
@@ -52,7 +52,7 @@ namespace Kos_Manager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Tela_inicial());
+            Application.Run(new Tela_login());
         }
     }
 }

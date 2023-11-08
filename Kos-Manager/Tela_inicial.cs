@@ -253,7 +253,7 @@ namespace Kos_Manager
 
         private void Btn_nota_fiscal_Click(object sender, EventArgs e)
         {
-            abrirChildForm(new Tela_nota_fiscal());
+         
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)

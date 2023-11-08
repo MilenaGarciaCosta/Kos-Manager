@@ -49,8 +49,6 @@
             this.Btn_vendas = new Guna.UI2.WinForms.Guna2Button();
             this.Panel_4 = new Guna.UI2.WinForms.Guna2Panel();
             this.Btn_fornecedores = new Guna.UI2.WinForms.Guna2Button();
-            this.Panel_5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.Btn_nota_fiscal = new Guna.UI2.WinForms.Guna2Button();
             this.Funcionario_container = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -85,7 +83,6 @@
             this.Panel_2.SuspendLayout();
             this.Panel_3.SuspendLayout();
             this.Panel_4.SuspendLayout();
-            this.Panel_5.SuspendLayout();
             this.Funcionario_container.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             this.Panel_gerenciar_funcionario.SuspendLayout();
@@ -106,14 +103,13 @@
             this.Lateral_menu.Controls.Add(this.Solicitacao_container);
             this.Lateral_menu.Controls.Add(this.Panel_3);
             this.Lateral_menu.Controls.Add(this.Panel_4);
-            this.Lateral_menu.Controls.Add(this.Panel_5);
             this.Lateral_menu.Controls.Add(this.Funcionario_container);
             this.Lateral_menu.Controls.Add(this.Panel_7);
             this.Lateral_menu.Controls.Add(this.Panel_8);
             this.Lateral_menu.Controls.Add(this.Panel_9);
             this.Lateral_menu.Dock = System.Windows.Forms.DockStyle.Left;
             this.Lateral_menu.Location = new System.Drawing.Point(0, 108);
-            this.Lateral_menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Lateral_menu.Margin = new System.Windows.Forms.Padding(4);
             this.Lateral_menu.MaximumSize = new System.Drawing.Size(327, 0);
             this.Lateral_menu.MinimumSize = new System.Drawing.Size(97, 0);
             this.Lateral_menu.Name = "Lateral_menu";
@@ -126,7 +122,7 @@
             this.Estoque_container.Controls.Add(this.Panel_mp);
             this.Estoque_container.Controls.Add(this.Panel_1);
             this.Estoque_container.Location = new System.Drawing.Point(4, 4);
-            this.Estoque_container.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Estoque_container.Margin = new System.Windows.Forms.Padding(4);
             this.Estoque_container.MaximumSize = new System.Drawing.Size(323, 187);
             this.Estoque_container.MinimumSize = new System.Drawing.Size(323, 65);
             this.Estoque_container.Name = "Estoque_container";
@@ -137,7 +133,7 @@
             // 
             this.Panel_produto_manu.Controls.Add(this.Btn_produto_manu);
             this.Panel_produto_manu.Location = new System.Drawing.Point(5, 129);
-            this.Panel_produto_manu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel_produto_manu.Margin = new System.Windows.Forms.Padding(4);
             this.Panel_produto_manu.Name = "Panel_produto_manu";
             this.Panel_produto_manu.Size = new System.Drawing.Size(317, 54);
             this.Panel_produto_manu.TabIndex = 5;
@@ -154,7 +150,7 @@
             this.Btn_produto_manu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_produto_manu.ImageSize = new System.Drawing.Size(40, 40);
             this.Btn_produto_manu.Location = new System.Drawing.Point(0, 4);
-            this.Btn_produto_manu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_produto_manu.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_produto_manu.Name = "Btn_produto_manu";
             this.Btn_produto_manu.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
             this.Btn_produto_manu.Size = new System.Drawing.Size(317, 50);
@@ -167,7 +163,7 @@
             // 
             this.Panel_mp.Controls.Add(this.Btn_materia_prima);
             this.Panel_mp.Location = new System.Drawing.Point(5, 66);
-            this.Panel_mp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel_mp.Margin = new System.Windows.Forms.Padding(4);
             this.Panel_mp.Name = "Panel_mp";
             this.Panel_mp.Size = new System.Drawing.Size(317, 62);
             this.Panel_mp.TabIndex = 4;
@@ -184,7 +180,7 @@
             this.Btn_materia_prima.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_materia_prima.ImageSize = new System.Drawing.Size(40, 40);
             this.Btn_materia_prima.Location = new System.Drawing.Point(0, 4);
-            this.Btn_materia_prima.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_materia_prima.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_materia_prima.Name = "Btn_materia_prima";
             this.Btn_materia_prima.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
             this.Btn_materia_prima.Size = new System.Drawing.Size(317, 57);
@@ -197,7 +193,7 @@
             // 
             this.Panel_1.Controls.Add(this.Btn_estoque_menu);
             this.Panel_1.Location = new System.Drawing.Point(7, 4);
-            this.Panel_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel_1.Margin = new System.Windows.Forms.Padding(4);
             this.Panel_1.Name = "Panel_1";
             this.Panel_1.Size = new System.Drawing.Size(316, 65);
             this.Panel_1.TabIndex = 2;
@@ -215,7 +211,7 @@
             this.Btn_estoque_menu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_estoque_menu.ImageSize = new System.Drawing.Size(40, 40);
             this.Btn_estoque_menu.Location = new System.Drawing.Point(0, -1);
-            this.Btn_estoque_menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_estoque_menu.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_estoque_menu.Name = "Btn_estoque_menu";
             this.Btn_estoque_menu.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.Btn_estoque_menu.Size = new System.Drawing.Size(316, 66);
@@ -230,7 +226,7 @@
             this.Solicitacao_container.Controls.Add(this.guna2Panel2);
             this.Solicitacao_container.Controls.Add(this.Panel_2);
             this.Solicitacao_container.Location = new System.Drawing.Point(4, 77);
-            this.Solicitacao_container.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Solicitacao_container.Margin = new System.Windows.Forms.Padding(4);
             this.Solicitacao_container.MaximumSize = new System.Drawing.Size(323, 187);
             this.Solicitacao_container.MinimumSize = new System.Drawing.Size(323, 65);
             this.Solicitacao_container.Name = "Solicitacao_container";
@@ -241,7 +237,7 @@
             // 
             this.guna2Panel3.Controls.Add(this.Btn_requisicao);
             this.guna2Panel3.Location = new System.Drawing.Point(1, 129);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(321, 57);
             this.guna2Panel3.TabIndex = 5;
@@ -258,7 +254,7 @@
             this.Btn_requisicao.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_requisicao.ImageSize = new System.Drawing.Size(40, 40);
             this.Btn_requisicao.Location = new System.Drawing.Point(0, 0);
-            this.Btn_requisicao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_requisicao.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_requisicao.Name = "Btn_requisicao";
             this.Btn_requisicao.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
             this.Btn_requisicao.Size = new System.Drawing.Size(321, 53);
@@ -271,7 +267,7 @@
             // 
             this.guna2Panel2.Controls.Add(this.Btn_solicitacao);
             this.guna2Panel2.Location = new System.Drawing.Point(4, 70);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(319, 57);
             this.guna2Panel2.TabIndex = 4;
@@ -288,7 +284,7 @@
             this.Btn_solicitacao.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_solicitacao.ImageSize = new System.Drawing.Size(40, 40);
             this.Btn_solicitacao.Location = new System.Drawing.Point(0, 1);
-            this.Btn_solicitacao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_solicitacao.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_solicitacao.Name = "Btn_solicitacao";
             this.Btn_solicitacao.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
             this.Btn_solicitacao.Size = new System.Drawing.Size(319, 53);
@@ -301,7 +297,7 @@
             // 
             this.Panel_2.Controls.Add(this.Btn_solicitacao_menu);
             this.Panel_2.Location = new System.Drawing.Point(4, 4);
-            this.Panel_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel_2.Margin = new System.Windows.Forms.Padding(4);
             this.Panel_2.Name = "Panel_2";
             this.Panel_2.Size = new System.Drawing.Size(319, 74);
             this.Panel_2.TabIndex = 3;
@@ -319,7 +315,7 @@
             this.Btn_solicitacao_menu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_solicitacao_menu.ImageSize = new System.Drawing.Size(40, 40);
             this.Btn_solicitacao_menu.Location = new System.Drawing.Point(-1, 0);
-            this.Btn_solicitacao_menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_solicitacao_menu.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_solicitacao_menu.Name = "Btn_solicitacao_menu";
             this.Btn_solicitacao_menu.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.Btn_solicitacao_menu.Size = new System.Drawing.Size(320, 65);
@@ -332,7 +328,7 @@
             // 
             this.Panel_3.Controls.Add(this.Btn_vendas);
             this.Panel_3.Location = new System.Drawing.Point(4, 150);
-            this.Panel_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel_3.Margin = new System.Windows.Forms.Padding(4);
             this.Panel_3.Name = "Panel_3";
             this.Panel_3.Size = new System.Drawing.Size(323, 74);
             this.Panel_3.TabIndex = 4;
@@ -350,7 +346,7 @@
             this.Btn_vendas.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_vendas.ImageSize = new System.Drawing.Size(40, 40);
             this.Btn_vendas.Location = new System.Drawing.Point(1, 4);
-            this.Btn_vendas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_vendas.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_vendas.Name = "Btn_vendas";
             this.Btn_vendas.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.Btn_vendas.Size = new System.Drawing.Size(323, 66);
@@ -363,7 +359,7 @@
             // 
             this.Panel_4.Controls.Add(this.Btn_fornecedores);
             this.Panel_4.Location = new System.Drawing.Point(4, 232);
-            this.Panel_4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel_4.Margin = new System.Windows.Forms.Padding(4);
             this.Panel_4.Name = "Panel_4";
             this.Panel_4.Size = new System.Drawing.Size(323, 74);
             this.Panel_4.TabIndex = 5;
@@ -381,7 +377,7 @@
             this.Btn_fornecedores.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_fornecedores.ImageSize = new System.Drawing.Size(40, 40);
             this.Btn_fornecedores.Location = new System.Drawing.Point(0, 4);
-            this.Btn_fornecedores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_fornecedores.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_fornecedores.Name = "Btn_fornecedores";
             this.Btn_fornecedores.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.Btn_fornecedores.Size = new System.Drawing.Size(323, 66);
@@ -390,44 +386,13 @@
             this.Btn_fornecedores.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_fornecedores.Click += new System.EventHandler(this.Btn_fornecedores_Click);
             // 
-            // Panel_5
-            // 
-            this.Panel_5.Controls.Add(this.Btn_nota_fiscal);
-            this.Panel_5.Location = new System.Drawing.Point(4, 314);
-            this.Panel_5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Panel_5.Name = "Panel_5";
-            this.Panel_5.Size = new System.Drawing.Size(323, 74);
-            this.Panel_5.TabIndex = 6;
-            // 
-            // Btn_nota_fiscal
-            // 
-            this.Btn_nota_fiscal.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_nota_fiscal.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_nota_fiscal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_nota_fiscal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_nota_fiscal.FillColor = System.Drawing.Color.Transparent;
-            this.Btn_nota_fiscal.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Btn_nota_fiscal.ForeColor = System.Drawing.Color.White;
-            this.Btn_nota_fiscal.Image = global::Kos_Manager.Properties.Resources.notafiscal;
-            this.Btn_nota_fiscal.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_nota_fiscal.ImageSize = new System.Drawing.Size(40, 40);
-            this.Btn_nota_fiscal.Location = new System.Drawing.Point(0, 4);
-            this.Btn_nota_fiscal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Btn_nota_fiscal.Name = "Btn_nota_fiscal";
-            this.Btn_nota_fiscal.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
-            this.Btn_nota_fiscal.Size = new System.Drawing.Size(323, 66);
-            this.Btn_nota_fiscal.TabIndex = 3;
-            this.Btn_nota_fiscal.Text = "NOTA FISCAL";
-            this.Btn_nota_fiscal.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_nota_fiscal.Click += new System.EventHandler(this.Btn_nota_fiscal_Click);
-            // 
             // Funcionario_container
             // 
             this.Funcionario_container.Controls.Add(this.guna2Panel4);
             this.Funcionario_container.Controls.Add(this.Panel_gerenciar_funcionario);
             this.Funcionario_container.Controls.Add(this.Panel_6);
-            this.Funcionario_container.Location = new System.Drawing.Point(4, 396);
-            this.Funcionario_container.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Funcionario_container.Location = new System.Drawing.Point(4, 314);
+            this.Funcionario_container.Margin = new System.Windows.Forms.Padding(4);
             this.Funcionario_container.MaximumSize = new System.Drawing.Size(320, 197);
             this.Funcionario_container.MinimumSize = new System.Drawing.Size(320, 78);
             this.Funcionario_container.Name = "Funcionario_container";
@@ -438,7 +403,7 @@
             // 
             this.guna2Panel4.Controls.Add(this.guna2Button1);
             this.guna2Panel4.Location = new System.Drawing.Point(4, 139);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(312, 54);
             this.guna2Panel4.TabIndex = 9;
@@ -455,7 +420,7 @@
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.ImageSize = new System.Drawing.Size(40, 40);
             this.guna2Button1.Location = new System.Drawing.Point(4, 0);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
             this.guna2Button1.Size = new System.Drawing.Size(308, 54);
@@ -468,7 +433,7 @@
             // 
             this.Panel_gerenciar_funcionario.Controls.Add(this.Btn_gerenciar_funcionarios);
             this.Panel_gerenciar_funcionario.Location = new System.Drawing.Point(4, 79);
-            this.Panel_gerenciar_funcionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel_gerenciar_funcionario.Margin = new System.Windows.Forms.Padding(4);
             this.Panel_gerenciar_funcionario.Name = "Panel_gerenciar_funcionario";
             this.Panel_gerenciar_funcionario.Size = new System.Drawing.Size(316, 54);
             this.Panel_gerenciar_funcionario.TabIndex = 8;
@@ -485,7 +450,7 @@
             this.Btn_gerenciar_funcionarios.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_gerenciar_funcionarios.ImageSize = new System.Drawing.Size(40, 40);
             this.Btn_gerenciar_funcionarios.Location = new System.Drawing.Point(4, 4);
-            this.Btn_gerenciar_funcionarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_gerenciar_funcionarios.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_gerenciar_funcionarios.Name = "Btn_gerenciar_funcionarios";
             this.Btn_gerenciar_funcionarios.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
             this.Btn_gerenciar_funcionarios.Size = new System.Drawing.Size(308, 54);
@@ -498,7 +463,7 @@
             // 
             this.Panel_6.Controls.Add(this.Btn_funcionarios);
             this.Panel_6.Location = new System.Drawing.Point(4, 4);
-            this.Panel_6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel_6.Margin = new System.Windows.Forms.Padding(4);
             this.Panel_6.Name = "Panel_6";
             this.Panel_6.Size = new System.Drawing.Size(319, 74);
             this.Panel_6.TabIndex = 7;
@@ -516,7 +481,7 @@
             this.Btn_funcionarios.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_funcionarios.ImageSize = new System.Drawing.Size(40, 40);
             this.Btn_funcionarios.Location = new System.Drawing.Point(0, 0);
-            this.Btn_funcionarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_funcionarios.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_funcionarios.Name = "Btn_funcionarios";
             this.Btn_funcionarios.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.Btn_funcionarios.Size = new System.Drawing.Size(316, 66);
@@ -528,8 +493,8 @@
             // Panel_7
             // 
             this.Panel_7.Controls.Add(this.Btn_dashboard);
-            this.Panel_7.Location = new System.Drawing.Point(4, 482);
-            this.Panel_7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel_7.Location = new System.Drawing.Point(4, 400);
+            this.Panel_7.Margin = new System.Windows.Forms.Padding(4);
             this.Panel_7.Name = "Panel_7";
             this.Panel_7.Size = new System.Drawing.Size(323, 74);
             this.Panel_7.TabIndex = 8;
@@ -547,7 +512,7 @@
             this.Btn_dashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_dashboard.ImageSize = new System.Drawing.Size(40, 40);
             this.Btn_dashboard.Location = new System.Drawing.Point(0, 4);
-            this.Btn_dashboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_dashboard.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_dashboard.Name = "Btn_dashboard";
             this.Btn_dashboard.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.Btn_dashboard.Size = new System.Drawing.Size(323, 66);
@@ -559,8 +524,8 @@
             // Panel_8
             // 
             this.Panel_8.Controls.Add(this.Btn_reg_autoria);
-            this.Panel_8.Location = new System.Drawing.Point(4, 564);
-            this.Panel_8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel_8.Location = new System.Drawing.Point(4, 482);
+            this.Panel_8.Margin = new System.Windows.Forms.Padding(4);
             this.Panel_8.Name = "Panel_8";
             this.Panel_8.Size = new System.Drawing.Size(323, 74);
             this.Panel_8.TabIndex = 9;
@@ -578,7 +543,7 @@
             this.Btn_reg_autoria.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_reg_autoria.ImageSize = new System.Drawing.Size(40, 40);
             this.Btn_reg_autoria.Location = new System.Drawing.Point(0, 4);
-            this.Btn_reg_autoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_reg_autoria.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_reg_autoria.Name = "Btn_reg_autoria";
             this.Btn_reg_autoria.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.Btn_reg_autoria.Size = new System.Drawing.Size(323, 66);
@@ -590,8 +555,8 @@
             // Panel_9
             // 
             this.Panel_9.Controls.Add(this.Btn_config);
-            this.Panel_9.Location = new System.Drawing.Point(4, 646);
-            this.Panel_9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel_9.Location = new System.Drawing.Point(4, 564);
+            this.Panel_9.Margin = new System.Windows.Forms.Padding(4);
             this.Panel_9.Name = "Panel_9";
             this.Panel_9.Size = new System.Drawing.Size(331, 74);
             this.Panel_9.TabIndex = 10;
@@ -609,7 +574,7 @@
             this.Btn_config.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_config.ImageSize = new System.Drawing.Size(40, 40);
             this.Btn_config.Location = new System.Drawing.Point(1, 4);
-            this.Btn_config.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_config.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_config.Name = "Btn_config";
             this.Btn_config.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
             this.Btn_config.Size = new System.Drawing.Size(323, 66);
@@ -623,7 +588,7 @@
             this.Panel_0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
             this.Panel_0.Controls.Add(this.Menu_burguer);
             this.Panel_0.Location = new System.Drawing.Point(0, 0);
-            this.Panel_0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Panel_0.Margin = new System.Windows.Forms.Padding(4);
             this.Panel_0.Name = "Panel_0";
             this.Panel_0.Size = new System.Drawing.Size(97, 108);
             this.Panel_0.TabIndex = 3;
@@ -634,7 +599,7 @@
             this.Menu_burguer.Image = global::Kos_Manager.Properties.Resources.menu_burguer;
             this.Menu_burguer.ImageRotate = 0F;
             this.Menu_burguer.Location = new System.Drawing.Point(23, 28);
-            this.Menu_burguer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Menu_burguer.Margin = new System.Windows.Forms.Padding(4);
             this.Menu_burguer.Name = "Menu_burguer";
             this.Menu_burguer.Size = new System.Drawing.Size(53, 49);
             this.Menu_burguer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -669,7 +634,7 @@
             this.Lbl_date.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_date.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Lbl_date.Location = new System.Drawing.Point(1679, 25);
-            this.Lbl_date.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Lbl_date.Margin = new System.Windows.Forms.Padding(4);
             this.Lbl_date.Name = "Lbl_date";
             this.Lbl_date.Size = new System.Drawing.Size(97, 27);
             this.Lbl_date.TabIndex = 4;
@@ -683,7 +648,7 @@
             this.Lbl_hora.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_hora.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Lbl_hora.Location = new System.Drawing.Point(1733, 55);
-            this.Lbl_hora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Lbl_hora.Margin = new System.Windows.Forms.Padding(4);
             this.Lbl_hora.Name = "Lbl_hora";
             this.Lbl_hora.Size = new System.Drawing.Size(47, 27);
             this.Lbl_hora.TabIndex = 5;
@@ -696,7 +661,7 @@
             this.Child_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.Child_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Child_panel.Location = new System.Drawing.Point(97, 108);
-            this.Child_panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Child_panel.Margin = new System.Windows.Forms.Padding(4);
             this.Child_panel.Name = "Child_panel";
             this.Child_panel.Size = new System.Drawing.Size(1722, 814);
             this.Child_panel.TabIndex = 6;
@@ -710,7 +675,7 @@
             this.Img_header_menu.Image = global::Kos_Manager.Properties.Resources.logo_horizontal;
             this.Img_header_menu.ImageRotate = 0F;
             this.Img_header_menu.Location = new System.Drawing.Point(0, 0);
-            this.Img_header_menu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Img_header_menu.Margin = new System.Windows.Forms.Padding(4);
             this.Img_header_menu.Name = "Img_header_menu";
             this.Img_header_menu.Size = new System.Drawing.Size(1819, 108);
             this.Img_header_menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -733,7 +698,7 @@
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Tela_inicial";
             this.Text = "Kos Manager";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -749,7 +714,6 @@
             this.Panel_2.ResumeLayout(false);
             this.Panel_3.ResumeLayout(false);
             this.Panel_4.ResumeLayout(false);
-            this.Panel_5.ResumeLayout(false);
             this.Funcionario_container.ResumeLayout(false);
             this.guna2Panel4.ResumeLayout(false);
             this.Panel_gerenciar_funcionario.ResumeLayout(false);
@@ -777,8 +741,6 @@
         private Guna.UI2.WinForms.Guna2Button Btn_vendas;
         private Guna.UI2.WinForms.Guna2Panel Panel_4;
         private Guna.UI2.WinForms.Guna2Button Btn_fornecedores;
-        private Guna.UI2.WinForms.Guna2Panel Panel_5;
-        private Guna.UI2.WinForms.Guna2Button Btn_nota_fiscal;
         private Guna.UI2.WinForms.Guna2Panel Panel_6;
         private Guna.UI2.WinForms.Guna2Button Btn_funcionarios;
         private Guna.UI2.WinForms.Guna2Panel Panel_7;

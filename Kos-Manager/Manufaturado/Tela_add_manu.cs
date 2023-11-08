@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Configuration;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using System.Globalization;
 
 namespace Kos_Manager
 {
@@ -51,14 +52,16 @@ namespace Kos_Manager
                 MySqlConnection con = new MySqlConnection(conexao);
 
                 string nome;
-                string dataval;
-                string datafab;
+                DateTime dataval = DateTime.ParseExact(Txt_dt_val.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture); // Converter a data para DateTime
+                string formattedDate = dataval.ToString("yyyy-MM-dd"); // Formatar a data no estilo MySQL
+
+
+                DateTime datafab = DateTime.ParseExact(Txt_dt_fab.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture); // Converter a data para DateTime
+                         formattedDate = datafab.ToString("yyyy-MM-dd"); // Formatar a data no estilo MySQL
                 string lote;
                 string quantidade;
 
                 nome = Txt_nome_manu.Text;
-                datafab = Txt_dt_fab.Text;
-                dataval = Txt_dt_val.Text;
                 lote = Txt_lote.Text;
                 quantidade = Txt_quantidade.Text;
 

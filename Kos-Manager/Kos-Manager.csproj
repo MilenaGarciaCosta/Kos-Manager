@@ -264,12 +264,6 @@
     <Compile Include="Nível de acesso\Tela_nivel_acesso.Designer.cs">
       <DependentUpon>Tela_nivel_acesso.cs</DependentUpon>
     </Compile>
-    <Compile Include="Nota fiscal\Tela_nota_fiscal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Nota fiscal\Tela_nota_fiscal.Designer.cs">
-      <DependentUpon>Tela_nota_fiscal.cs</DependentUpon>
-    </Compile>
     <Compile Include="Tela_reg_autoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -395,9 +389,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Nível de acesso\Tela_nivel_acesso.resx">
       <DependentUpon>Tela_nivel_acesso.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Nota fiscal\Tela_nota_fiscal.resx">
-      <DependentUpon>Tela_nota_fiscal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tela_reg_autoria.resx">
       <DependentUpon>Tela_reg_autoria.cs</DependentUpon>

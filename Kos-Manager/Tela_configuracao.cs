@@ -20,26 +20,15 @@ namespace Kos_Manager
         private void Tela_configuracao_Load(object sender, EventArgs e)
         {
 
+        }
 
+        private void txt_atualizar_nivel_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        private void txt_email_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

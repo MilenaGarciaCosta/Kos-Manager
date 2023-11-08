@@ -43,6 +43,49 @@ namespace Kos_Manager
 
         private void Btn_adicionar_Click(object sender, EventArgs e)
         {
+
+            try
+            {
+                MySqlConnection con = new MySqlConnection(conexao);
+
+                string quantidade = Txt_quantidade.Text;
+                int cmb_Status = Convert.ToInt32(cmb_status_requisicao.SelectedValue);
+                int cmb_Produto = Convert.ToInt32(cmb_nome_produto.SelectedValue);
+                int cmb_Funcionario= Convert.ToInt32(cmb_funcionario.SelectedValue);
+
+                string sql_insert = @"insert into TB_REQUISICAO
+                (  
+                 
+                   TB_REQUISICAO_QUANTIDADE,
+                   TB_REQUISICAO_STATUS_ID,
+                   TB_PRODUTO_MANU_ID,
+                   TB_FUNCIONARIO_ID
+            
+                 )
+                values
+                (
+                   @REQUISICAO_QUANTIDADE, @REQUISICAO_STATUS, @PRODUTO_MANU_ID, @FUNCIONARIO_ID
+                 )";
+
+                MySqlCommand executacmdMySql_insert = new MySqlCommand(sql_insert, con);
+
+                executacmdMySql_insert.Parameters.AddWithValue("@REQUISICAO_QUANTIDADE", quantidade);
+                executacmdMySql_insert.Parameters.AddWithValue("@REQUISICAO_STATUS", cmb_Status);
+                executacmdMySql_insert.Parameters.AddWithValue("@PRODUTO_MANU_ID", cmb_Produto);
+                executacmdMySql_insert.Parameters.AddWithValue("@FUNCIONARIO_ID", cmb_Funcionario);
+
+
+                con.Open();
+                executacmdMySql_insert.ExecuteNonQuery();
+              
+                con.Close();
+                MessageBox.Show("Cadastrado com Sucesso!");
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show("Aconteceu o Erro: " + erro);
+            }
+
             ClearTextBoxes(this.Controls);
         }
 

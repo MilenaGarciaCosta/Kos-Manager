@@ -16,6 +16,7 @@ namespace Kos_Manager
     {
         string conexao = ConfigurationManager.ConnectionStrings["BD_KOSMANAGER"].ConnectionString;
 
+
         public Tela_login()
         {
             InitializeComponent();
@@ -49,6 +50,7 @@ namespace Kos_Manager
                     if (count > 0)
                     {
 
+
                         Tela_inicial tinc = new Tela_inicial();
                         tinc.Show();
                         this.Hide();
@@ -59,7 +61,7 @@ namespace Kos_Manager
                     }
                 }
             }
-           
+
         }
 
         private void Check_ver_senha_CheckedChanged(object sender, EventArgs e)

@@ -47,6 +47,7 @@ namespace Kos_Manager
             {
                 MySqlConnection con = new MySqlConnection(conexao);
 
+
                 string email = Txt_email_cad.Text;
                 string senha = Txt_senha_cad.Text;
 
@@ -66,6 +67,7 @@ namespace Kos_Manager
                     con.Open();
                     executacmdMysql_insert.ExecuteNonQuery();
                     con.Close();
+
 
                     Tela_inicial tinc = new Tela_inicial();
                     tinc.Show();
