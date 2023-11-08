@@ -82,45 +82,50 @@ namespace Kos_Manager
             lblNomenclatura.Text = "Nomenclatura: " + Prima.nomenclatura;
             lblNomenclatura.Location = new Point(10, 10);
 
-            Label lblmarca = new Label();
-            lblmarca.Text = "Data de fabricação: " + Prima.marca;
-            lblmarca.Location = new Point(10, 30);
 
             Label lbllote = new Label();
             lbllote.Text = "Data de validade: " + Prima.lote;
-            lbllote.Location = new Point(10, 50);
+            lbllote.Location = new Point(10, 30);
 
             Label lbldtval = new Label();
             lbldtval.Text = "Quantos lotes: " + Prima.dtval;
-            lbldtval.Location = new Point(10, 70);
+            lbldtval.Location = new Point(10, 50);
 
             Label lblquantidade = new Label();
-            lblquantidade.Text = " Quantidade: " + Prima.quantidade;
-            lblquantidade.Location = new Point(10, 90);
+            lblquantidade.Text = " Quantidade: " + Prima.marca;
+            lblquantidade.Location = new Point(10, 70);
+
+            Label lblmarca = new Label();
+            lblmarca.Text = " Quantidade: " + Prima.quantidade;
+            lblmarca.Location = new Point(10, 70); 
 
             Label lblidfornecedor = new Label();
-            lblidfornecedor.Text = " Quantidade: " + Prima.IDfornecedor;
+            lblidfornecedor.Text = " fornecedor: " + Prima.fornecedorID;
             lblidfornecedor.Location = new Point(10, 110);
         }
 
-        private void AtualizarTextBoxProdutoManu()
+        private void AtualizarTextBoxPrima()
         {
             try
             {
                 MySqlConnection con = new MySqlConnection(conexao);
-                string sql_select = @"SELECT 
+                string sql_select = @"
+SELECT 
                 v.tb_materia_prima_id,
-                v.tb_materia_prima_nomenclatura,
-                v.tb_materia_prima_marca, 
-                v.tb_materia_prima_lote,
-                v.tb_materia_prima_dt_val,
-                v.tb_materia_prima_quantidade
-                f.tb_funcionario_nome AS funcionario
+                v.tb_materia_prima_nomenclatura as Produto,
+                v.tb_materia_prima_lote as Lote,
+                v.tb_materia_prima_marca as Marca, 
+                v.tb_materia_prima_dt_val as Validade,
+                v.tb_materia_prima_quantidade as Quantidade,
+                f.tb_fornecedor_nome AS fornecedor,
+                v.tb_materia_prima_id AS id
 
                 FROM tb_materia_prima v 
 
                     INNER JOIN
-                    tb_funcionario f  ON v.tb_meteria_prima_id = p.tb_materia_prima ";
+                    tb_fornecedor f  ON v.tb_fornecedor_id = f.tb_fornecedor_id  
+";
+
                 MySqlCommand cmd = new MySqlCommand(sql_select, con);
                 con.Open();
                 MySqlDataReader reader = cmd.ExecuteReader();
@@ -131,36 +136,36 @@ namespace Kos_Manager
 
                 int top = 10; // Posição vertical inicial
 
-
                 while (reader.Read())
                 {
                     // Ler as informações de cada fornecedor
-                    string id = reader["tb_produto_manu_id"].ToString();
-                    string nome = reader["tb_produto_manu_nome"].ToString();
-                    string datafab = reader["tb_produto_manu_dt_fab"].ToString();
-                    string dataval = reader["tb_produto_manu_dt_val"].ToString();
-                    string lote = reader["tb_produto_manu_lote"].ToString();
-                    string quantidade = reader["tb_produto_manu_quantidade"].ToString();
+                    string id = reader["tb_materia_prima_id"].ToString();
+                    string nome = reader["Produto"].ToString(); // Aguarde até que o registro seja lido
+                    string lote = reader["lote"].ToString();
+                    string marca = reader["Marca"].ToString();
+                    string dataval = reader["Validade"].ToString();
+                    string quantidade = reader["Quantidade"].ToString();
+                    string fornecedorID = reader["fornecedor"].ToString();
 
                     // Criar uma nova TextBox para exibir as informações do fornecedor
                     TextBox txtManu = new TextBox();
                     txtManu.Multiline = true;
                     txtManu.ReadOnly = true;
-                    txtManu.Text = $"Nome: {nome}, Data de fabricação: {datafab}, Data de validade: {dataval}, Quantos lotes: {lote}, Quantidade: {quantidade}";
+                    txtManu.Text = $"Nome: {nome}, Data de validade: {dataval}, Quantos lotes: {lote}, Quantidade: {quantidade}, marca: {marca}, fornecedor{fornecedorID}";
 
 
-                    //testegepeto 
+                    // testegepto 
 
-                    txtManu.Click += (sender, e) =>
-                    {
-                        abrirChildForm(new Tela_atualizar_manu(id, nome, datafab, dataval, lote, quantidade));
-                    };
-
-
+                    //  txtManu.Click += (sender, e) =>
+                    //  {
+                    //      abrirChildForm(new Tela_atualizar_manu(id, nome,  dataval, lote, quantidade));
+                    //  };
 
 
 
-                    //style 
+
+
+                    // style 
 
 
                     // Definir a posição vertical da TextBox
@@ -187,5 +192,9 @@ namespace Kos_Manager
 
         }
 
+        private void Tela_mat_prima_Load(object sender, EventArgs e)
+        {
+            AtualizarTextBoxPrima();
+        }
     }
 }

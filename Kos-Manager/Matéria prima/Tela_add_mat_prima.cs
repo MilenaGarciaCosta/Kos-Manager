@@ -70,11 +70,6 @@ namespace Kos_Manager.Matéria_prima
 
                 con.Close();
 
-                Prima.nomenclatura = nomenclatura;
-                Prima.lote = lote;
-                Prima.dtval = dtval;
-                Prima.quantidade = quantidade;
-                Prima.IDfornecedor = fornecedor;
 
 
             }
@@ -162,6 +157,16 @@ namespace Kos_Manager.Matéria_prima
 
                     ListarEstoqueMp();
                     MessageBox.Show("Cadastrado com Sucesso!");
+
+
+
+                    Prima.nomenclatura = nome;
+                    Prima.marca = marca;
+                    Prima.lote = lote;
+                    Prima.dtval = dtVal;
+                    Prima.quantidade = quantidade;
+                    Prima.fornecedorID = cmbFornecedor;
+
                 }
             }
             catch (Exception erro)

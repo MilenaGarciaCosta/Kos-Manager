@@ -46,9 +46,10 @@
             this.Lbl_estoque.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_estoque.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.Lbl_estoque.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Lbl_estoque.Location = new System.Drawing.Point(522, 56);
+            this.Lbl_estoque.Location = new System.Drawing.Point(696, 69);
+            this.Lbl_estoque.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Lbl_estoque.Name = "Lbl_estoque";
-            this.Lbl_estoque.Size = new System.Drawing.Size(96, 32);
+            this.Lbl_estoque.Size = new System.Drawing.Size(122, 39);
             this.Lbl_estoque.TabIndex = 16;
             this.Lbl_estoque.Text = "ESTOQUE";
             this.Lbl_estoque.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -60,9 +61,10 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(506, 94);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(675, 116);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(126, 23);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(153, 30);
             this.guna2HtmlLabel2.TabIndex = 19;
             this.guna2HtmlLabel2.Text = "MATÉRIA PRIMA";
             this.guna2HtmlLabel2.Click += new System.EventHandler(this.guna2HtmlLabel2_Click);
@@ -74,10 +76,11 @@
             this.Lbl_titulo.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_titulo.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Lbl_titulo.Location = new System.Drawing.Point(251, 130);
-            this.Lbl_titulo.MinimumSize = new System.Drawing.Size(229, 24);
+            this.Lbl_titulo.Location = new System.Drawing.Point(335, 160);
+            this.Lbl_titulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Lbl_titulo.MinimumSize = new System.Drawing.Size(305, 30);
             this.Lbl_titulo.Name = "Lbl_titulo";
-            this.Lbl_titulo.Size = new System.Drawing.Size(229, 24);
+            this.Lbl_titulo.Size = new System.Drawing.Size(305, 30);
             this.Lbl_titulo.TabIndex = 22;
             this.Lbl_titulo.Text = "Nome do produto";
             // 
@@ -95,14 +98,14 @@
             this.Txt_buscar_mat_prima.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
             this.Txt_buscar_mat_prima.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.Txt_buscar_mat_prima.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_buscar_mat_prima.Location = new System.Drawing.Point(251, 162);
-            this.Txt_buscar_mat_prima.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_buscar_mat_prima.Location = new System.Drawing.Point(335, 199);
+            this.Txt_buscar_mat_prima.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Txt_buscar_mat_prima.Name = "Txt_buscar_mat_prima";
             this.Txt_buscar_mat_prima.PasswordChar = '\0';
             this.Txt_buscar_mat_prima.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.Txt_buscar_mat_prima.PlaceholderText = "Buscar por algo aqui";
             this.Txt_buscar_mat_prima.SelectedText = "";
-            this.Txt_buscar_mat_prima.Size = new System.Drawing.Size(285, 39);
+            this.Txt_buscar_mat_prima.Size = new System.Drawing.Size(380, 48);
             this.Txt_buscar_mat_prima.TabIndex = 17;
             this.Txt_buscar_mat_prima.TextChanged += new System.EventHandler(this.Txt_buscar_fornecedor_TextChanged);
             // 
@@ -122,11 +125,12 @@
             this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
             this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(588, 162);
+            this.Btn_adicionar.Location = new System.Drawing.Point(784, 199);
+            this.Btn_adicionar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_adicionar.Name = "Btn_adicionar";
             this.Btn_adicionar.ShadowDecoration.Depth = 5;
             this.Btn_adicionar.ShadowDecoration.Enabled = true;
-            this.Btn_adicionar.Size = new System.Drawing.Size(144, 39);
+            this.Btn_adicionar.Size = new System.Drawing.Size(192, 48);
             this.Btn_adicionar.TabIndex = 18;
             this.Btn_adicionar.Text = "Adicionar";
             this.Btn_adicionar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -148,11 +152,12 @@
             this.Btn_solicitar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_solicitar.Image")));
             this.Btn_solicitar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_solicitar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_solicitar.Location = new System.Drawing.Point(757, 162);
+            this.Btn_solicitar.Location = new System.Drawing.Point(1009, 199);
+            this.Btn_solicitar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_solicitar.Name = "Btn_solicitar";
             this.Btn_solicitar.ShadowDecoration.Depth = 5;
             this.Btn_solicitar.ShadowDecoration.Enabled = true;
-            this.Btn_solicitar.Size = new System.Drawing.Size(144, 39);
+            this.Btn_solicitar.Size = new System.Drawing.Size(192, 48);
             this.Btn_solicitar.TabIndex = 20;
             this.Btn_solicitar.Text = "Solicitar";
             this.Btn_solicitar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -171,8 +176,9 @@
             this.Child_panel.Controls.Add(this.Lbl_estoque);
             this.Child_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Child_panel.Location = new System.Drawing.Point(0, 0);
+            this.Child_panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Child_panel.Name = "Child_panel";
-            this.Child_panel.Size = new System.Drawing.Size(1103, 622);
+            this.Child_panel.Size = new System.Drawing.Size(1471, 766);
             this.Child_panel.TabIndex = 17;
             this.Child_panel.UseTransparentBackground = true;
             this.Child_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Child_panel_Paint);
@@ -183,21 +189,24 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Pnl_mat_prima.AutoScroll = true;
-            this.Pnl_mat_prima.Location = new System.Drawing.Point(34, 242);
+            this.Pnl_mat_prima.Location = new System.Drawing.Point(45, 298);
+            this.Pnl_mat_prima.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Pnl_mat_prima.Name = "Pnl_mat_prima";
-            this.Pnl_mat_prima.Size = new System.Drawing.Size(1039, 353);
+            this.Pnl_mat_prima.Size = new System.Drawing.Size(1385, 434);
             this.Pnl_mat_prima.TabIndex = 23;
             this.Pnl_mat_prima.Paint += new System.Windows.Forms.PaintEventHandler(this.Pnl_mat_prima_Paint);
             // 
             // Tela_mat_prima
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1103, 622);
+            this.ClientSize = new System.Drawing.Size(1471, 766);
             this.Controls.Add(this.Child_panel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Tela_mat_prima";
             this.Text = "Kos Manager";
+            this.Load += new System.EventHandler(this.Tela_mat_prima_Load);
             this.Child_panel.ResumeLayout(false);
             this.Child_panel.PerformLayout();
             this.ResumeLayout(false);

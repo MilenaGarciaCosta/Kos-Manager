@@ -31,15 +31,18 @@ namespace Kos_Manager
 
         public static string nomenclatura { get; set; }
 
-        public static string marca { get; set; }
 
         public static string lote { get; set; }
 
-        public static string dtval { get; set; }
+        public static DateTime dtval { get; set; }
+
 
         public static string quantidade { get; set; }
 
-        public static string IDfornecedor { get; internal set; }
+        public static string marca { get; set; }
+
+
+        public static int fornecedorID { get; internal set; }
     }
         
     internal static class Program
@@ -52,7 +55,7 @@ namespace Kos_Manager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Tela_login());
+            Application.Run(new Tela_inicial());
         }
     }
 }
