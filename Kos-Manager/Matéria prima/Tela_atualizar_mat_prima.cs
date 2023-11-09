@@ -20,17 +20,17 @@ namespace Kos_Manager.Matéria_prima
 
         string conexao = ConfigurationManager.ConnectionStrings["BD_KOSMANAGER"].ConnectionString;
 
-        string id;
+       // string id;
 
-        public Tela_atualizar_mat_prima(string id, string nomenclatura, string marca, string lote, string dtval, string quantidade, string fornecedor)
+        public Tela_atualizar_mat_prima(string id, string nomenclatura, string marca, string quantidade, string lote, string dtval, string fornecedor)
         {
             InitializeComponent();
-            this.id = id;
+            txt_id.Text = id;
             Txt_produto.Text = nomenclatura;
             Txt_marca.Text = marca;
+            Txt_quantidade.Text = quantidade;
             Txt_lote.Text = lote;
             Txt_dt_validade.Text = dtval;
-            Txt_quantidade.Text = quantidade;
             cmb_fornecedor.Text = fornecedor;
 
         }
@@ -46,7 +46,8 @@ namespace Kos_Manager.Matéria_prima
                      m.tb_materia_prima_marca AS Marca,
                      m.tb_materia_prima_lote AS Lote,
                      m.tb_materia_prima_dt_val AS Data_de_Validade,
-                        m.tb_materia_prima_quantidade AS Quantidade,
+                     m.tb_materia_prima_quantidade AS Quantidade,
+                        
                     f.tb_fornecedor_nome AS Fornecedor
                     FROM
                      tb_materia_prima m
@@ -132,7 +133,55 @@ namespace Kos_Manager.Matéria_prima
 
         private void Tela_atualizar_mat_prima_Load(object sender, EventArgs e)
         {
+            //MOSTRAR OS DADOS DO COMBOBOX
 
+            MySqlConnection con = new MySqlConnection(conexao);
+
+            string sql_select_estoque = @"
+                     SELECT
+                     m.tb_materia_prima_id AS Id,
+                     m.tb_materia_prima_nomenclatura AS Nomenclatura,
+                     m.tb_materia_prima_marca AS Marca,
+                     m.tb_materia_prima_lote AS Lote,
+                     m.tb_materia_prima_dt_val AS Data_de_Validade,
+                        m.tb_materia_prima_quantidade AS Quantidade,
+                    f.tb_fornecedor_nome AS Fornecedor
+                    FROM
+                     tb_materia_prima m
+                     INNER JOIN
+                     tb_fornecedor f ON m.tb_fornecedor_id = f.tb_fornecedor_id";
+            string sql_select_fornecedor = "select * from tb_fornecedor";
+
+
+
+            MySqlCommand executacmdMySql_select_estoque = new MySqlCommand(sql_select_estoque, con);
+            MySqlCommand executacmdMySql_select_fornecedor = new MySqlCommand(sql_select_fornecedor, con);
+
+            con.Open();
+
+            executacmdMySql_select_estoque.ExecuteNonQuery();
+            executacmdMySql_select_fornecedor.ExecuteNonQuery();
+
+
+            DataTable tabela_estoque = new DataTable();
+            DataTable tabela_fornecedor = new DataTable();
+
+
+            MySqlDataAdapter da_estoque = new MySqlDataAdapter(executacmdMySql_select_estoque);
+            da_estoque.Fill(tabela_estoque);
+
+            MySqlDataAdapter da_fornecedor = new MySqlDataAdapter(executacmdMySql_select_fornecedor);
+            da_fornecedor.Fill(tabela_fornecedor);
+
+
+            cmb_fornecedor.DataSource = tabela_fornecedor;
+
+            cmb_fornecedor.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmb_fornecedor.DisplayMember = "TB_FORNECEDOR_NOME"; //Exibe os dados para o usuário
+            cmb_fornecedor.ValueMember = "TB_FORNECEDOR_ID";  //Pega os dados            
+            cmb_fornecedor.DataSource = tabela_fornecedor;
+
+            cmb_fornecedor.SelectedItem = null;
         }
 
         private void Btn_deletar_Click(object sender, EventArgs e)
@@ -140,7 +189,7 @@ namespace Kos_Manager.Matéria_prima
             try
             {
                 
-                //string id = txt_cod.Text; id
+                string id = txt_id.Text; 
 
                 MySqlConnection con = new MySqlConnection(conexao);
 
@@ -149,7 +198,7 @@ namespace Kos_Manager.Matéria_prima
 
                 MySqlCommand executacmdMySql_delete_tb_materia_prima = new MySqlCommand(sql_delete_tb_materia_prima, con);
 
-                //executacmdMySql_delete_tb_materia_prima.Parameters.AddWithValue("@id", id);
+                executacmdMySql_delete_tb_materia_prima.Parameters.AddWithValue("@id", id);
 
                 con.Open();
                 executacmdMySql_delete_tb_materia_prima.ExecuteNonQuery();
@@ -173,7 +222,7 @@ namespace Kos_Manager.Matéria_prima
             string marca = Txt_marca.Text;
             string lote = Txt_lote.Text;
             string quantidade = Txt_quantidade.Text;
-            string dtVal = Txt_quantidade.Text;
+            string dtVal = DateTime.Parse(Txt_dt_validade.Text).ToString("yyyy-MM-dd");
             int cmbFornecedor = Convert.ToInt32(cmb_fornecedor.SelectedValue);
 
 
@@ -209,6 +258,12 @@ namespace Kos_Manager.Matéria_prima
             ListarEstoqueMp();
 
             con.Close();
+        }
+
+        private void Btn_voltar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+
         }
     }
 }

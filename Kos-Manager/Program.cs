@@ -29,6 +29,7 @@ namespace Kos_Manager
 
         {
 
+   
         public static string nomenclatura { get; set; }
 
 
@@ -43,6 +44,7 @@ namespace Kos_Manager
 
 
         public static int fornecedorID { get; internal set; }
+
     }
         
     internal static class Program

@@ -19,7 +19,11 @@ namespace Kos_Manager.Matéria_prima
 
         public Tela_add_mat_prima()
         {
+           
+
             InitializeComponent();
+          
+
         }
 
         public void ListarEstoqueMp()
@@ -109,6 +113,7 @@ namespace Kos_Manager.Matéria_prima
         private void Btn_voltar_Click(object sender, EventArgs e)
         {
             this.Close();
+            this.Refresh();
         }
 
         private void Btn_adicionar_Click(object sender, EventArgs e)
@@ -122,6 +127,7 @@ namespace Kos_Manager.Matéria_prima
                 DateTime dtVal = DateTime.ParseExact(Txt_dt_validade.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture); // Converter a data para DateTime
                 string formattedDate = dtVal.ToString("yyyy-MM-dd"); // Formatar a data no estilo MySQL
                 int cmbFornecedor = Convert.ToInt32(cmb_fornecedor.SelectedValue);
+
 
                 using (MySqlConnection con = new MySqlConnection(conexao))
                 {
