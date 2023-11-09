@@ -151,15 +151,15 @@ SELECT
                     TextBox txtManu = new TextBox();
                     txtManu.Multiline = true;
                     txtManu.ReadOnly = true;
-                    txtManu.Text = $"Nome: {nome}, Data de validade: {dataval}, Quantos lotes: {lote}, Quantidade: {quantidade}, marca: {marca}, fornecedor{fornecedorID}";
+                    txtManu.Text = $"Nome: {nome}, Data de validade: {dataval}, Quantos lotes: {lote}, Quantidade: {quantidade}, marca: {marca}, fornecedor: {fornecedorID}";
 
 
                     // testegepto 
 
-                    //  txtManu.Click += (sender, e) =>
-                    //  {
-                    //      abrirChildForm(new Tela_atualizar_manu(id, nome,  dataval, lote, quantidade));
-                    //  };
+                      txtManu.Click += (sender, e) =>
+                      {
+                          abrirChildForm(new Tela_atualizar_mat_prima(id, nome,  dataval, lote, quantidade, marca, fornecedorID));
+                      };
 
 
 
