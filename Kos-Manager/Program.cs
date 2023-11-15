@@ -1,4 +1,5 @@
 ﻿using Kos_Manager.Matéria_prima;
+using Kos_Manager.Vendas;
 using System;
 using System.Collections.Generic;
 using System.Linq;

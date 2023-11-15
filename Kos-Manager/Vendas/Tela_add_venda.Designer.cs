@@ -227,6 +227,7 @@
             this.Link_ja_tem_cad.TabIndex = 94;
             this.Link_ja_tem_cad.TabStop = true;
             this.Link_ja_tem_cad.Text = "Não achou o produto? Clique aqui para requisitar!";
+            this.Link_ja_tem_cad.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Link_ja_tem_cad_LinkClicked);
             // 
             // guna2HtmlLabel1
             // 

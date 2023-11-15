@@ -293,7 +293,7 @@
             this.cmb_nivel_funcionario.FocusedColor = System.Drawing.Color.Transparent;
             this.cmb_nivel_funcionario.FocusedState.BorderColor = System.Drawing.Color.Transparent;
             this.cmb_nivel_funcionario.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmb_nivel_funcionario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.cmb_nivel_funcionario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.cmb_nivel_funcionario.ItemHeight = 30;
             this.cmb_nivel_funcionario.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cmb_nivel_funcionario.Location = new System.Drawing.Point(273, 277);
@@ -313,7 +313,7 @@
             this.cmb_status_funcionario.FocusedColor = System.Drawing.Color.Transparent;
             this.cmb_status_funcionario.FocusedState.BorderColor = System.Drawing.Color.Transparent;
             this.cmb_status_funcionario.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmb_status_funcionario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.cmb_status_funcionario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.cmb_status_funcionario.ItemHeight = 30;
             this.cmb_status_funcionario.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cmb_status_funcionario.Location = new System.Drawing.Point(273, 364);

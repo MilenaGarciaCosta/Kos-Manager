@@ -206,5 +206,10 @@ namespace Kos_Manager.Vendas
 
             cmb_funcionario.SelectedItem = null;
         }
+
+        private void Link_ja_tem_cad_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+        }
     }
 }
