@@ -296,6 +296,7 @@
             this.senha_visivel.PressedColor = System.Drawing.Color.Transparent;
             this.senha_visivel.Size = new System.Drawing.Size(56, 40);
             this.senha_visivel.TabIndex = 6;
+            this.senha_visivel.Click += new System.EventHandler(this.senha_visivel_Click);
             // 
             // guna2HtmlLabel1
             // 
@@ -346,7 +347,7 @@
             this.txt_senha.Location = new System.Drawing.Point(29, 114);
             this.txt_senha.Margin = new System.Windows.Forms.Padding(5);
             this.txt_senha.Name = "txt_senha";
-            this.txt_senha.PasswordChar = '\0';
+            this.txt_senha.PasswordChar = '*';
             this.txt_senha.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.txt_senha.PlaceholderText = "Digite algo aqui";
             this.txt_senha.SelectedText = "";

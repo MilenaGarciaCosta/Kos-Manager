@@ -20,16 +20,30 @@ namespace Kos_Manager
         private void Tela_configuracao_Load(object sender, EventArgs e)
         {
 
+            txt_email.Text = Usuario.email;
+            txt_senha.Text = Usuario.senha;
+
         }
 
         private void txt_atualizar_nivel_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void txt_email_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void senha_visivel_Click(object sender, EventArgs e)
+        {
+           
+            
+                txt_senha.PasswordChar = '\0';
+
+               //txt_senha.PasswordChar = '*';
+
+    
         }
     }
 }

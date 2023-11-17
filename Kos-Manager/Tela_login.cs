@@ -51,6 +51,9 @@ namespace Kos_Manager
                     {
 
 
+                        Usuario.email = email;
+                        Usuario.senha = senha;
+
                         Tela_inicial tinc = new Tela_inicial();
                         tinc.Show();
                         this.Hide();

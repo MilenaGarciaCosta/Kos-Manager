@@ -47,6 +47,15 @@ namespace Kos_Manager
         public static int fornecedorID { get; internal set; }
 
     }
+
+   
+    public static class Usuario
+    {
+        public static string email { get; set; }
+
+        public static string senha { get; set; }
+    }
+
         
     internal static class Program
     {
@@ -58,7 +67,7 @@ namespace Kos_Manager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Tela_inicial());
+            Application.Run(new Tela_login());
         }
     }
 }
