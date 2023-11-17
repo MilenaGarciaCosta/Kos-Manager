@@ -28,88 +28,407 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_requisicao));
+            this.Dgv_requisita = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Btn_deletar = new Guna.UI2.WinForms.Guna2Button();
+            this.Btn_atualizar = new Guna.UI2.WinForms.Guna2Button();
+            this.cmb_funcionario = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cmb_nome_produto = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.cmb_status_requisicao = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.Btn_voltar = new Guna.UI2.WinForms.Guna2Button();
+            this.Btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Txt_quantidade = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Child_panel = new Guna.UI2.WinForms.Guna2Panel();
-            this.Pnl_mat_prima = new Guna.UI2.WinForms.Guna2Panel();
-            this.Lbl_estoque = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.Btn_requisitar = new Guna.UI2.WinForms.Guna2Button();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_requisita)).BeginInit();
             this.Child_panel.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // Dgv_requisita
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.Dgv_requisita.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_requisita.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.Dgv_requisita.ColumnHeadersHeight = 4;
+            this.Dgv_requisita.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgv_requisita.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Dgv_requisita.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.Dgv_requisita.Location = new System.Drawing.Point(-5, 503);
+            this.Dgv_requisita.Margin = new System.Windows.Forms.Padding(4);
+            this.Dgv_requisita.Name = "Dgv_requisita";
+            this.Dgv_requisita.RowHeadersVisible = false;
+            this.Dgv_requisita.RowHeadersWidth = 51;
+            this.Dgv_requisita.Size = new System.Drawing.Size(1356, 210);
+            this.Dgv_requisita.TabIndex = 108;
+            this.Dgv_requisita.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.Dgv_requisita.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.Dgv_requisita.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.Dgv_requisita.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.Dgv_requisita.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.Dgv_requisita.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.Dgv_requisita.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.Dgv_requisita.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.Dgv_requisita.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.Dgv_requisita.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dgv_requisita.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.Dgv_requisita.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.Dgv_requisita.ThemeStyle.HeaderStyle.Height = 4;
+            this.Dgv_requisita.ThemeStyle.ReadOnly = false;
+            this.Dgv_requisita.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.Dgv_requisita.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.Dgv_requisita.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dgv_requisita.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.Dgv_requisita.ThemeStyle.RowsStyle.Height = 22;
+            this.Dgv_requisita.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.Dgv_requisita.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // Btn_deletar
+            // 
+            this.Btn_deletar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Btn_deletar.Animated = true;
+            this.Btn_deletar.BorderRadius = 10;
+            this.Btn_deletar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_deletar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_deletar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_deletar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_deletar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Btn_deletar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.Btn_deletar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.Btn_deletar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_deletar.Image")));
+            this.Btn_deletar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Btn_deletar.ImageSize = new System.Drawing.Size(17, 17);
+            this.Btn_deletar.Location = new System.Drawing.Point(939, 351);
+            this.Btn_deletar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_deletar.Name = "Btn_deletar";
+            this.Btn_deletar.Size = new System.Drawing.Size(167, 43);
+            this.Btn_deletar.TabIndex = 107;
+            this.Btn_deletar.Text = "Deletar";
+            this.Btn_deletar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_deletar.Click += new System.EventHandler(this.Btn_deletar_Click);
+            // 
+            // Btn_atualizar
+            // 
+            this.Btn_atualizar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Btn_atualizar.Animated = true;
+            this.Btn_atualizar.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_atualizar.BorderRadius = 10;
+            this.Btn_atualizar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_atualizar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_atualizar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_atualizar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_atualizar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(96)))), ((int)(((byte)(132)))));
+            this.Btn_atualizar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.Btn_atualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.Btn_atualizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_atualizar.Image")));
+            this.Btn_atualizar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Btn_atualizar.ImageSize = new System.Drawing.Size(17, 17);
+            this.Btn_atualizar.Location = new System.Drawing.Point(696, 351);
+            this.Btn_atualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_atualizar.Name = "Btn_atualizar";
+            this.Btn_atualizar.ShadowDecoration.Depth = 5;
+            this.Btn_atualizar.ShadowDecoration.Enabled = true;
+            this.Btn_atualizar.Size = new System.Drawing.Size(167, 43);
+            this.Btn_atualizar.TabIndex = 106;
+            this.Btn_atualizar.Text = "Atualizar";
+            this.Btn_atualizar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_atualizar.Click += new System.EventHandler(this.Btn_atualizar_Click);
+            // 
+            // cmb_funcionario
+            // 
+            this.cmb_funcionario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmb_funcionario.BackColor = System.Drawing.Color.Transparent;
+            this.cmb_funcionario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.cmb_funcionario.BorderRadius = 10;
+            this.cmb_funcionario.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_funcionario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_funcionario.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.cmb_funcionario.FocusedColor = System.Drawing.Color.Transparent;
+            this.cmb_funcionario.FocusedState.BorderColor = System.Drawing.Color.Transparent;
+            this.cmb_funcionario.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmb_funcionario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.cmb_funcionario.ItemHeight = 30;
+            this.cmb_funcionario.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cmb_funcionario.Location = new System.Drawing.Point(728, 256);
+            this.cmb_funcionario.Margin = new System.Windows.Forms.Padding(4);
+            this.cmb_funcionario.Name = "cmb_funcionario";
+            this.cmb_funcionario.Size = new System.Drawing.Size(644, 36);
+            this.cmb_funcionario.TabIndex = 105;
+            // 
+            // cmb_nome_produto
+            // 
+            this.cmb_nome_produto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmb_nome_produto.BackColor = System.Drawing.Color.Transparent;
+            this.cmb_nome_produto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.cmb_nome_produto.BorderRadius = 10;
+            this.cmb_nome_produto.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_nome_produto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_nome_produto.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.cmb_nome_produto.FocusedColor = System.Drawing.Color.Transparent;
+            this.cmb_nome_produto.FocusedState.BorderColor = System.Drawing.Color.Transparent;
+            this.cmb_nome_produto.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmb_nome_produto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.cmb_nome_produto.ItemHeight = 30;
+            this.cmb_nome_produto.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cmb_nome_produto.Location = new System.Drawing.Point(24, 150);
+            this.cmb_nome_produto.Margin = new System.Windows.Forms.Padding(4);
+            this.cmb_nome_produto.Name = "cmb_nome_produto";
+            this.cmb_nome_produto.Size = new System.Drawing.Size(644, 36);
+            this.cmb_nome_produto.TabIndex = 104;
+            // 
+            // guna2HtmlLabel7
+            // 
+            this.guna2HtmlLabel7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(728, 97);
+            this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(62, 32);
+            this.guna2HtmlLabel7.TabIndex = 103;
+            this.guna2HtmlLabel7.Text = "Status";
+            this.guna2HtmlLabel7.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // cmb_status_requisicao
+            // 
+            this.cmb_status_requisicao.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmb_status_requisicao.BackColor = System.Drawing.Color.Transparent;
+            this.cmb_status_requisicao.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
+            this.cmb_status_requisicao.BorderRadius = 10;
+            this.cmb_status_requisicao.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmb_status_requisicao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_status_requisicao.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.cmb_status_requisicao.FocusedColor = System.Drawing.Color.Transparent;
+            this.cmb_status_requisicao.FocusedState.BorderColor = System.Drawing.Color.Transparent;
+            this.cmb_status_requisicao.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmb_status_requisicao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.cmb_status_requisicao.ItemHeight = 30;
+            this.cmb_status_requisicao.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cmb_status_requisicao.Location = new System.Drawing.Point(728, 149);
+            this.cmb_status_requisicao.Margin = new System.Windows.Forms.Padding(4);
+            this.cmb_status_requisicao.Name = "cmb_status_requisicao";
+            this.cmb_status_requisicao.Size = new System.Drawing.Size(644, 36);
+            this.cmb_status_requisicao.TabIndex = 102;
+            // 
+            // Btn_voltar
+            // 
+            this.Btn_voltar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Btn_voltar.Animated = true;
+            this.Btn_voltar.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_voltar.BorderRadius = 10;
+            this.Btn_voltar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_voltar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_voltar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_voltar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_voltar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
+            this.Btn_voltar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.Btn_voltar.ForeColor = System.Drawing.Color.White;
+            this.Btn_voltar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_voltar.Image")));
+            this.Btn_voltar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Btn_voltar.ImageSize = new System.Drawing.Size(19, 19);
+            this.Btn_voltar.Location = new System.Drawing.Point(1182, 351);
+            this.Btn_voltar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_voltar.Name = "Btn_voltar";
+            this.Btn_voltar.ShadowDecoration.Depth = 5;
+            this.Btn_voltar.ShadowDecoration.Enabled = true;
+            this.Btn_voltar.Size = new System.Drawing.Size(167, 43);
+            this.Btn_voltar.TabIndex = 101;
+            this.Btn_voltar.Text = "Voltar";
+            this.Btn_voltar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_voltar.Click += new System.EventHandler(this.Btn_voltar_Click);
+            // 
+            // Btn_adicionar
+            // 
+            this.Btn_adicionar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Btn_adicionar.Animated = true;
+            this.Btn_adicionar.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_adicionar.BorderRadius = 10;
+            this.Btn_adicionar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_adicionar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_adicionar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_adicionar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_adicionar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(79)))), ((int)(((byte)(82)))));
+            this.Btn_adicionar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.Btn_adicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
+            this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
+            this.Btn_adicionar.Location = new System.Drawing.Point(460, 351);
+            this.Btn_adicionar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_adicionar.Name = "Btn_adicionar";
+            this.Btn_adicionar.ShadowDecoration.Depth = 5;
+            this.Btn_adicionar.ShadowDecoration.Enabled = true;
+            this.Btn_adicionar.Size = new System.Drawing.Size(179, 43);
+            this.Btn_adicionar.TabIndex = 100;
+            this.Btn_adicionar.Text = "Adicionar";
+            this.Btn_adicionar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_adicionar.Click += new System.EventHandler(this.Btn_adicionar_Click);
+            // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(728, 192);
+            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(121, 32);
+            this.guna2HtmlLabel4.TabIndex = 99;
+            this.guna2HtmlLabel4.Text = "Responsável";
+            this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // Txt_quantidade
+            // 
+            this.Txt_quantidade.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_quantidade.BorderRadius = 6;
+            this.Txt_quantidade.BorderThickness = 0;
+            this.Txt_quantidade.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Txt_quantidade.DefaultText = "";
+            this.Txt_quantidade.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Txt_quantidade.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Txt_quantidade.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Txt_quantidade.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Txt_quantidade.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.Txt_quantidade.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_quantidade.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Txt_quantidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Txt_quantidade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_quantidade.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
+            this.Txt_quantidade.IconRightOffset = new System.Drawing.Point(10, -10);
+            this.Txt_quantidade.IconRightSize = new System.Drawing.Size(10, 10);
+            this.Txt_quantidade.Location = new System.Drawing.Point(24, 242);
+            this.Txt_quantidade.Margin = new System.Windows.Forms.Padding(5);
+            this.Txt_quantidade.Name = "Txt_quantidade";
+            this.Txt_quantidade.PasswordChar = '\0';
+            this.Txt_quantidade.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.Txt_quantidade.PlaceholderText = "Digite aqui";
+            this.Txt_quantidade.SelectedText = "";
+            this.Txt_quantidade.Size = new System.Drawing.Size(645, 58);
+            this.Txt_quantidade.TabIndex = 98;
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(24, 203);
+            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(115, 32);
+            this.guna2HtmlLabel3.TabIndex = 97;
+            this.guna2HtmlLabel3.Text = "Quantidade";
+            this.guna2HtmlLabel3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // guna2HtmlLabel6
+            // 
+            this.guna2HtmlLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(24, 81);
+            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(332, 32);
+            this.guna2HtmlLabel6.TabIndex = 96;
+            this.guna2HtmlLabel6.Text = "Nome do produto (nomenclatura)";
+            this.guna2HtmlLabel6.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1364, 12);
+            this.guna2Panel1.TabIndex = 95;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 695);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(1364, 55);
+            this.guna2Panel2.TabIndex = 94;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(600, 20);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(164, 39);
+            this.guna2HtmlLabel1.TabIndex = 92;
+            this.guna2HtmlLabel1.Text = "REQUISIÇÃO\r\n";
+            this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Child_panel
             // 
             this.Child_panel.BackColor = System.Drawing.Color.Transparent;
             this.Child_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.Child_panel.Controls.Add(this.Pnl_mat_prima);
-            this.Child_panel.Controls.Add(this.Lbl_estoque);
-            this.Child_panel.Controls.Add(this.Btn_requisitar);
+            this.Child_panel.Controls.Add(this.Dgv_requisita);
+            this.Child_panel.Controls.Add(this.Btn_deletar);
+            this.Child_panel.Controls.Add(this.Btn_atualizar);
+            this.Child_panel.Controls.Add(this.cmb_funcionario);
+            this.Child_panel.Controls.Add(this.cmb_nome_produto);
+            this.Child_panel.Controls.Add(this.guna2HtmlLabel7);
+            this.Child_panel.Controls.Add(this.cmb_status_requisicao);
+            this.Child_panel.Controls.Add(this.Btn_voltar);
+            this.Child_panel.Controls.Add(this.Btn_adicionar);
+            this.Child_panel.Controls.Add(this.guna2HtmlLabel4);
+            this.Child_panel.Controls.Add(this.Txt_quantidade);
+            this.Child_panel.Controls.Add(this.guna2HtmlLabel3);
+            this.Child_panel.Controls.Add(this.guna2HtmlLabel6);
+            this.Child_panel.Controls.Add(this.guna2Panel1);
+            this.Child_panel.Controls.Add(this.guna2Panel2);
+            this.Child_panel.Controls.Add(this.guna2HtmlLabel1);
             this.Child_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Child_panel.Location = new System.Drawing.Point(0, 0);
+            this.Child_panel.Margin = new System.Windows.Forms.Padding(4);
             this.Child_panel.Name = "Child_panel";
-            this.Child_panel.Size = new System.Drawing.Size(1023, 609);
-            this.Child_panel.TabIndex = 18;
+            this.Child_panel.Size = new System.Drawing.Size(1364, 750);
+            this.Child_panel.TabIndex = 19;
             this.Child_panel.UseTransparentBackground = true;
-            this.Child_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Child_panel_Paint);
-            // 
-            // Pnl_mat_prima
-            // 
-            this.Pnl_mat_prima.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Pnl_mat_prima.AutoScroll = true;
-            this.Pnl_mat_prima.Location = new System.Drawing.Point(41, 257);
-            this.Pnl_mat_prima.Name = "Pnl_mat_prima";
-            this.Pnl_mat_prima.Size = new System.Drawing.Size(959, 340);
-            this.Pnl_mat_prima.TabIndex = 54;
-            // 
-            // Lbl_estoque
-            // 
-            this.Lbl_estoque.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Lbl_estoque.BackColor = System.Drawing.Color.Transparent;
-            this.Lbl_estoque.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
-            this.Lbl_estoque.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Lbl_estoque.Location = new System.Drawing.Point(439, 56);
-            this.Lbl_estoque.Name = "Lbl_estoque";
-            this.Lbl_estoque.Size = new System.Drawing.Size(137, 32);
-            this.Lbl_estoque.TabIndex = 38;
-            this.Lbl_estoque.Text = "REQUISIÇÕES";
-            this.Lbl_estoque.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // Btn_requisitar
-            // 
-            this.Btn_requisitar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Btn_requisitar.Animated = true;
-            this.Btn_requisitar.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_requisitar.BorderRadius = 10;
-            this.Btn_requisitar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_requisitar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_requisitar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_requisitar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_requisitar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(82)))), ((int)(((byte)(53)))));
-            this.Btn_requisitar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.Btn_requisitar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Btn_requisitar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_requisitar.Image")));
-            this.Btn_requisitar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Btn_requisitar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_requisitar.Location = new System.Drawing.Point(437, 126);
-            this.Btn_requisitar.Name = "Btn_requisitar";
-            this.Btn_requisitar.ShadowDecoration.Depth = 5;
-            this.Btn_requisitar.ShadowDecoration.Enabled = true;
-            this.Btn_requisitar.Size = new System.Drawing.Size(144, 39);
-            this.Btn_requisitar.TabIndex = 37;
-            this.Btn_requisitar.Text = "Requisitar";
-            this.Btn_requisitar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_requisitar.Click += new System.EventHandler(this.Btn_requisitar_Click);
             // 
             // Tela_requisicao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1023, 609);
+            this.ClientSize = new System.Drawing.Size(1364, 750);
             this.Controls.Add(this.Child_panel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Tela_requisicao";
             this.Text = "Tela_requisicao";
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_requisita)).EndInit();
             this.Child_panel.ResumeLayout(false);
             this.Child_panel.PerformLayout();
             this.ResumeLayout(false);
@@ -118,9 +437,22 @@
 
         #endregion
 
+        private Guna.UI2.WinForms.Guna2DataGridView Dgv_requisita;
+        private Guna.UI2.WinForms.Guna2Button Btn_deletar;
+        private Guna.UI2.WinForms.Guna2Button Btn_atualizar;
+        private Guna.UI2.WinForms.Guna2ComboBox cmb_funcionario;
+        private Guna.UI2.WinForms.Guna2ComboBox cmb_nome_produto;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private Guna.UI2.WinForms.Guna2ComboBox cmb_status_requisicao;
+        private Guna.UI2.WinForms.Guna2Button Btn_voltar;
+        private Guna.UI2.WinForms.Guna2Button Btn_adicionar;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2TextBox Txt_quantidade;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Panel Child_panel;
-        private Guna.UI2.WinForms.Guna2HtmlLabel Lbl_estoque;
-        private Guna.UI2.WinForms.Guna2Button Btn_requisitar;
-        private Guna.UI2.WinForms.Guna2Panel Pnl_mat_prima;
     }
 }
