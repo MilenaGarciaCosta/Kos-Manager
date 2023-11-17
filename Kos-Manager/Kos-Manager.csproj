@@ -144,18 +144,6 @@
     <Compile Include="Fornecedores\Tela_atualizar_fornecedor.Designer.cs">
       <DependentUpon>Tela_atualizar_fornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Matéria prima\Tela_add_mat_prima.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Matéria prima\Tela_add_mat_prima.Designer.cs">
-      <DependentUpon>Tela_add_mat_prima.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Matéria prima\Tela_atualizar_mat_prima.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Matéria prima\Tela_atualizar_mat_prima.Designer.cs">
-      <DependentUpon>Tela_atualizar_mat_prima.cs</DependentUpon>
-    </Compile>
     <Compile Include="Tela_cad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,12 +238,6 @@
     </Compile>
     <EmbeddedResource Include="Manufaturado\Tela_atualizar_manu.resx">
       <DependentUpon>Tela_atualizar_manu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Matéria prima\Tela_add_mat_prima.resx">
-      <DependentUpon>Tela_add_mat_prima.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Matéria prima\Tela_atualizar_mat_prima.resx">
-      <DependentUpon>Tela_atualizar_mat_prima.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
