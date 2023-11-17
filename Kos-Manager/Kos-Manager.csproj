@@ -132,12 +132,6 @@
     <Compile Include="Fornecedores\Tela_add_fornecedor.Designer.cs">
       <DependentUpon>Tela_add_fornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Funcionário\Tela_add_funcionario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Funcionário\Tela_add_funcionario.Designer.cs">
-      <DependentUpon>Tela_add_funcionario.cs</DependentUpon>
-    </Compile>
     <Compile Include="Manufaturado\Tela_add_manu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,12 +143,6 @@
     </Compile>
     <Compile Include="Fornecedores\Tela_atualizar_fornecedor.Designer.cs">
       <DependentUpon>Tela_atualizar_fornecedor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Funcionário\Tela_atualizar_funcionario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Funcionário\Tela_atualizar_funcionario.Designer.cs">
-      <DependentUpon>Tela_atualizar_funcionario.cs</DependentUpon>
     </Compile>
     <Compile Include="Matéria prima\Tela_add_mat_prima.cs">
       <SubType>Form</SubType>
@@ -336,17 +324,11 @@
     <EmbeddedResource Include="Fornecedores\Tela_add_fornecedor.resx">
       <DependentUpon>Tela_add_fornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Funcionário\Tela_add_funcionario.resx">
-      <DependentUpon>Tela_add_funcionario.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Manufaturado\Tela_add_manu.resx">
       <DependentUpon>Tela_add_manu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fornecedores\Tela_atualizar_fornecedor.resx">
       <DependentUpon>Tela_atualizar_fornecedor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Funcionário\Tela_atualizar_funcionario.resx">
-      <DependentUpon>Tela_atualizar_funcionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Requisição\Tela_add_req.resx">
       <DependentUpon>Tela_add_req.cs</DependentUpon>

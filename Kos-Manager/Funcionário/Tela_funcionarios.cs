@@ -21,6 +21,46 @@ namespace Kos_Manager
         public Tela_funcionarios()
         {
             InitializeComponent();
+            ListarFuncionario();
+        }
+
+        public void ListarFuncionario()
+        {
+            MySqlConnection con = new MySqlConnection(conexao);
+            string sql_select_funcionario = @"SELECT 
+				 f.tb_funcionario_id AS Id,
+                 f.tb_funcionario_nome AS Nome,
+                 f.tb_funcionario_email AS Email,
+                 f.tb_funcionario_senha AS Senha,
+                 s.tb_status_nome AS Status,
+                 n.tb_nivel_acesso_nome AS Nivel_de_Acesso
+
+            FROM
+                tb_funcionario f
+            INNER JOIN
+                tb_status s ON f.tb_status_id = s.tb_status_id
+                INNER JOIN
+                tb_nivel_acesso n ON f.tb_nivel_acesso_id = n.tb_nivel_acesso_id";
+
+
+            con.Open();
+
+            MySqlCommand executacmdMySql_select_funcionario = new MySqlCommand(sql_select_funcionario, con);
+            executacmdMySql_select_funcionario.ExecuteNonQuery();
+
+
+
+            DataTable tabela_funcionario = new DataTable();
+
+            MySqlDataAdapter da_funcionario = new MySqlDataAdapter(executacmdMySql_select_funcionario);
+            da_funcionario.Fill(tabela_funcionario);
+
+
+
+            Dgv_funcionario.DataSource = tabela_funcionario;
+
+
+            con.Close();
         }
 
         private Form FormAtivo = null;
@@ -63,119 +103,154 @@ namespace Kos_Manager
 
         }
 
-        private void btn_deletar_Click(object sender, EventArgs e)
+
+       
+        private void Btn_adicionar_Click_2(object sender, EventArgs e)
         {
-
-        }
-
-        private void txt_buscar_func_id_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_adicionar_Click_1(object sender, EventArgs e)
-        {
-            abrirChildForm(new Tela_add_funcionario());
-        }
-
-        private void Child_panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Txt_buscar_func_TextChanged_1(object sender, EventArgs e)
-        {
-            RealizarPesquisa(txt_buscar_func.Text);
-        }
-        private void RealizarPesquisa(string termoPesquisa)
-        {
-            // Verifique se o termo de pesquisa não está vazio
-            if (!string.IsNullOrEmpty(termoPesquisa))
+            try
             {
-                // Limpar o conteúdo atual do Panel
-                pnlFuncionario.Controls.Clear();
+                MySqlConnection con = new MySqlConnection(conexao);
 
-                try
-                {
-                    using (MySqlConnection con = new MySqlConnection(conexao))
-                    {
-                        con.Open();
+                string nome = Txt_nome_funcionario.Text;
+                string email = Txt_email_funcionario.Text;
+                string senha = Txt_senha_funcionario.Text;
+                int cmbnivelId = Convert.ToInt32(cmb_nivel_funcionario.SelectedValue); // Use SelectedValue para obter o ID do nível de acesso
+                int cmbstatusId = Convert.ToInt32(cmb_status_funcionario.SelectedValue); // Use SelectedValue para obter o ID do status
 
-                        // Consulta SQL para pesquisar fornecedores com base no termo de pesquisa
-                        string sqlSelect = "SELECT TB_FUNCIONARIO_ID, TB_FUNCIONARIO_NOME, TB_FUNCIONARIO_EMAIL, " +
-                                           "TB_FUNCIONARIO_SENHA, TB_STATUS_ID, TB_NIVEL_ACESSO_ID" +
-                                           "FROM tb_funcionario " +
-                                           "WHERE TB_FUNCIONARIO_NOME  LIKE @termoPesquisa " +
-                                           "OR TB_FUNCIONARIO_EMAIL LIKE @termoPesquisa " +
-                                           "OR TB_FUNCIONARIO_SENHA LIKE @termoPesquisa " +
-                                           "OR TB_STATUS_ID LIKE @termoPesquisa " +
-                                           "OR TB_NIVEL_ACESSO_ID LIKE @termoPesquisa";
+                string sql_insert = @"INSERT INTO tb_funcionario
+                            (  
+                                tb_funcionario_nome, 
+                                tb_funcionario_email,
+                                tb_funcionario_senha,
+                                tb_nivel_acesso_id,
+                                tb_status_id
+                            )
+                            VALUES
+                            (
+                                @funcionario_nome, @funcionario_email, @funcionario_senha, @nivel_acesso_id, @status_id
+                             )";
 
-                        MySqlCommand cmd = new MySqlCommand(sqlSelect, con);
-                        cmd.Parameters.AddWithValue("@termoPesquisa", "%" + termoPesquisa + "%");
+                MySqlCommand executacmdMySql_insert = new MySqlCommand(sql_insert, con);
 
-                        MySqlDataReader reader = cmd.ExecuteReader();
+                executacmdMySql_insert.Parameters.AddWithValue("@funcionario_nome", nome);
+                executacmdMySql_insert.Parameters.AddWithValue("@funcionario_email", email);
+                executacmdMySql_insert.Parameters.AddWithValue("@funcionario_senha", senha);
+                executacmdMySql_insert.Parameters.AddWithValue("@nivel_acesso_id", cmbnivelId);
+                executacmdMySql_insert.Parameters.AddWithValue("@status_id", cmbstatusId);
 
-                        int top = 10; // Posição vertical inicial
-
-
-
-                        while (reader.Read())
-                        {
-                            // Ler as informações de cada fornecedor
-                            string id = reader["TB_FUNCIONARIO_ID"].ToString();
-                            string nome = reader["TB_FUNCIONARIO_NOME"].ToString();
-                            string email = reader["TB_FUNCIONARIO_EMAIL"].ToString();
-                            string senha = reader["TB_FUNCIONARIO_SENHA"].ToString();
-                            string status = reader["TB_STATUS_ID"].ToString();
-                            string nivel = reader["TB_NIVEL_ACESSO_ID"].ToString();
-
-                            // Criar uma nova TextBox para exibir as informações do fornecedor
-                            TextBox txtManu = new TextBox();
-                            txtManu.Multiline = true;
-                            txtManu.ReadOnly = true;
-                            txtManu.Text = $"Nome: {nome}, E-mail: {email}, Senha: {senha}, Status : {status}, Nível de Acesso: {nivel}";
-
-
-
-
-
-
-                            //style 
-
-
-                            // Definir a posição vertical da TextBox
-                            txtManu.Top = top;
-
-                            // Ajustar o tamanho da TextBox conforme necessário
-                            txtManu.Width = pnlFuncionario.Width - 20; // Subtrair margens
-                            txtManu.Height = 60; // Altura da TextBox
-
-                            // Adicionar a TextBox ao Panel
-                            pnlFuncionario.Controls.Add(txtManu);
-
-                            // Aumentar a posição vertical para a próxima TextBox
-                            top += txtManu.Height + 10; // 10 pixels de margem entre TextBoxes
-                        }
-
-                        con.Close();
-                    }
-                }
-                catch (Exception erro)
-                {
-                    MessageBox.Show("Erro ao realizar a pesquisa: " + erro);
-                }
+                con.Open();
+                executacmdMySql_insert.ExecuteNonQuery();
+                ListarFuncionario();
+                con.Close();
+                MessageBox.Show("Cadastrado com Sucesso!");
             }
-            else
+            catch (Exception erro)
             {
-                // Se o campo de pesquisa estiver vazio, atualize o Panel com todos os fornecedores
-                // AtualizarTextBoxFornecedores();
+                MessageBox.Show("Aconteceu o Erro:" + erro);
             }
+
         }
 
-        private void PnlFuncionario_Paint(object sender, PaintEventArgs e)
+        private void Btn_atualizar_Click_1(object sender, EventArgs e)
         {
+            string id = txt_cod.Text;
+            string nome = Txt_nome_funcionario.Text;
+            string email = Txt_email_funcionario.Text;
+            string senha = Txt_senha_funcionario.Text;
+            int cmb_Nivel = Convert.ToInt32(cmb_nivel_funcionario.SelectedValue);
+            int cmb_Status = Convert.ToInt32(cmb_status_funcionario.SelectedValue);
 
+            MySqlConnection con = new MySqlConnection(conexao);
+
+            string sql_update_venda = @"update tb_funcionario
+    set tb_funcionario_nome = @nome,
+        tb_funcionario_email = @email,
+        tb_funcionario_senha = @senha,
+        tb_status_id = @status,
+        tb_nivel_acesso_id = @nivel
+    where tb_funcionario_id = @id";
+
+            MySqlCommand executacmdMySql_update_venda = new MySqlCommand(sql_update_venda, con);
+            executacmdMySql_update_venda.Parameters.AddWithValue("@id", id);
+            executacmdMySql_update_venda.Parameters.AddWithValue("@nome", nome);
+            executacmdMySql_update_venda.Parameters.AddWithValue("@email", email);
+            executacmdMySql_update_venda.Parameters.AddWithValue("@senha", senha);
+            executacmdMySql_update_venda.Parameters.AddWithValue("@status", cmb_Status);
+            executacmdMySql_update_venda.Parameters.AddWithValue("@nivel", cmb_Nivel);
+            con.Open();
+            executacmdMySql_update_venda.ExecuteNonQuery();
+
+            MessageBox.Show("Atualização realizada com sucesso");
+
+            ListarFuncionario();
+
+            con.Close();
+        }
+
+        private void Btn_atualizar_Click_2(object sender, EventArgs e)
+        {
+            string id = txt_cod.Text;
+            string nome = Txt_nome_funcionario.Text;
+            string email = Txt_email_funcionario.Text;
+            string senha = Txt_senha_funcionario.Text;
+            int cmb_Nivel = Convert.ToInt32(cmb_nivel_funcionario.SelectedValue);
+            int cmb_Status = Convert.ToInt32(cmb_status_funcionario.SelectedValue);
+
+            MySqlConnection con = new MySqlConnection(conexao);
+
+            string sql_update_venda = @"update tb_funcionario
+    set tb_funcionario_nome = @nome,
+        tb_funcionario_email = @email,
+        tb_funcionario_senha = @senha,
+        tb_status_id = @status,
+        tb_nivel_acesso_id = @nivel
+    where tb_funcionario_id = @id";
+
+            MySqlCommand executacmdMySql_update_venda = new MySqlCommand(sql_update_venda, con);
+            executacmdMySql_update_venda.Parameters.AddWithValue("@id", id);
+            executacmdMySql_update_venda.Parameters.AddWithValue("@nome", nome);
+            executacmdMySql_update_venda.Parameters.AddWithValue("@email", email);
+            executacmdMySql_update_venda.Parameters.AddWithValue("@senha", senha);
+            executacmdMySql_update_venda.Parameters.AddWithValue("@status", cmb_Status);
+            executacmdMySql_update_venda.Parameters.AddWithValue("@nivel", cmb_Nivel);
+            con.Open();
+            executacmdMySql_update_venda.ExecuteNonQuery();
+
+            MessageBox.Show("Atualização realizada com sucesso");
+
+            ListarFuncionario();
+
+            con.Close();
+        }
+
+        private void Btn_deletar_Click_1(object sender, EventArgs e)
+        {
+            int codigo = int.Parse(txt_cod.Text);
+
+            // Conectando ao banco de dados MySql
+            MySqlConnection con = new MySqlConnection(conexao);
+
+            // Abrindo conexão
+            con.Open();
+
+            string sql_delete_funcionario = @"DELETE FROM tb_funcionario WHERE tb_funcionario_id = @codigo";
+
+            MySqlCommand executarcmdMySql_delete_funcionario = new MySqlCommand(sql_delete_funcionario, con);
+
+            executarcmdMySql_delete_funcionario.Parameters.AddWithValue("@codigo", codigo);
+
+            executarcmdMySql_delete_funcionario.ExecuteNonQuery();
+
+            MessageBox.Show("Registro deletado com sucesso");
+            ListarFuncionario();
+
+            // Fechando conexão
+            con.Close();
+        }
+
+        private void Btn_voltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
