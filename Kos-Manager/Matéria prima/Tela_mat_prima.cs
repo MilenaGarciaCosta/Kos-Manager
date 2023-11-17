@@ -23,7 +23,6 @@ namespace Kos_Manager
                 InitializeComponent();
                 ListarEstoqueMp();
 
-
         }
 
         public void ListarEstoqueMp()

@@ -120,18 +120,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Manufaturado\Tela_atualizar_manu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manufaturado\Tela_atualizar_manu.Designer.cs">
-      <DependentUpon>Tela_atualizar_manu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Manufaturado\Tela_add_manu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Manufaturado\Tela_add_manu.Designer.cs">
-      <DependentUpon>Tela_add_manu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Tela_cad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,9 +212,6 @@
     <Compile Include="Vendas\Tela_vendas.Designer.cs">
       <DependentUpon>Tela_vendas.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Manufaturado\Tela_atualizar_manu.resx">
-      <DependentUpon>Tela_atualizar_manu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -237,9 +222,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Manufaturado\Tela_add_manu.resx">
-      <DependentUpon>Tela_add_manu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Tela_cad.resx">
       <DependentUpon>Tela_cad.cs</DependentUpon>
     </EmbeddedResource>

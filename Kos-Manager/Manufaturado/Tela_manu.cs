@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Configuration;
 using MySql.Data;
 using MySql.Data.MySqlClient;
-using Kos_Manager.Estoque_manu;
+using System.Globalization;
 
 namespace Kos_Manager
 {
@@ -23,115 +23,33 @@ namespace Kos_Manager
         public Tela_manu()
         {
             InitializeComponent();
-        }
-        private Form FormAtivo = null;
-        private void abrirChildForm(Form ChildForm)
-        {
-            if (FormAtivo != null)
-                FormAtivo.Close();
-            FormAtivo = ChildForm;
-            ChildForm.TopLevel = false;
-            ChildForm.FormBorderStyle = FormBorderStyle.None;
-            ChildForm.Dock = DockStyle.Fill;
-            Child_panel.Controls.Add(ChildForm);
-            Child_panel.Tag = ChildForm;
-            ChildForm.BringToFront();
-            ChildForm.Show();
+            ListarEstoquePm();
         }
 
-        public void AdicionarFornecedorAoPanel()
+        public void ListarEstoquePm()
         {
-            // Crie controles (por exemplo, Label) para exibir as informações do fornecedor
-            Label lblNome = new Label();
-            lblNome.Text = "Nome: " + Manu.nome;
-            lblNome.Location = new Point(10, 10);
+            MySqlConnection con = new MySqlConnection(conexao);
 
-            Label lbldatafab = new Label();
-            lbldatafab.Text = "Data de fabricação: " + Manu.datafab;
-            lbldatafab.Location = new Point(10, 30);
+            string sql_select_estoqueMp = @"
+               select 
+                    TB_PRODUTO_MANU_ID as id,
+					TB_PRODUTO_MANU_NOME as Produto,
+					TB_PRODUTO_MANU_DT_FAB as Fabricação,
+					TB_PRODUTO_MANU_DT_VAL as Validade,
+					TB_PRODUTO_MANU_LOTE as Lote,
+					TB_PRODUTO_MANU_QUANTIDADE as Quantidade
+                        from TB_PRODUTO_MANU";
 
-            Label lbldataval = new Label();
-            lbldataval.Text = "Data de validade: " + Manu.dataval;
-            lbldataval.Location = new Point(10, 50);
+            con.Open();
 
-            Label lbllote = new Label();
-            lbllote.Text = "Quantos lotes: " + Manu.lote;
-            lbllote.Location = new Point(10, 70);
+            DataTable tabela_estoqueMp = new DataTable();
 
-            Label lblquantidade = new Label();
-            lblquantidade.Text = " Quantidade: " + Manu.quantidade;
-            lblquantidade.Location = new Point(10, 90);
-        }
+            MySqlDataAdapter da_estoqueMp = new MySqlDataAdapter(sql_select_estoqueMp, con);
+            da_estoqueMp.Fill(tabela_estoqueMp);
 
+            DgvEstoquePm.DataSource = tabela_estoqueMp;
 
-        private void AtualizarTextBoxProdutoManu()
-        {
-            try
-            {
-                MySqlConnection con = new MySqlConnection(conexao);
-                string sql_select = "SELECT tb_produto_manu_id, tb_produto_manu_nome, tb_produto_manu_dt_fab, tb_produto_manu_dt_val, tb_produto_manu_lote, tb_produto_manu_quantidade FROM tb_produto_manu";
-                MySqlCommand cmd = new MySqlCommand(sql_select, con);
-                con.Open();
-                MySqlDataReader reader = cmd.ExecuteReader();
-
-                // Limpar o conteúdo atual do Panel
-                Pnl_produto_manu.Controls.Clear();
-
-
-                int top = 10; // Posição vertical inicial
-
-
-                while (reader.Read())
-                {
-                    // Ler as informações de cada fornecedor
-                    string id = reader["tb_produto_manu_id"].ToString();
-                    string nome = reader["tb_produto_manu_nome"].ToString();
-                    string datafab = reader["tb_produto_manu_dt_fab"].ToString();
-                    string dataval = reader["tb_produto_manu_dt_val"].ToString();
-                    string lote = reader["tb_produto_manu_lote"].ToString();
-                    string quantidade = reader["tb_produto_manu_quantidade"].ToString();
-
-                    // Criar uma nova TextBox para exibir as informações do fornecedor
-                    TextBox txtManu = new TextBox();
-                    txtManu.Multiline = true;
-                    txtManu.ReadOnly = true;
-                    txtManu.Text = $"Nome: {nome}, Data de fabricação: {datafab}, Data de validade: {dataval}, Quantos lotes: {lote}, Quantidade: {quantidade}";
-
-
-                    //testegepeto 
-
-                    txtManu.Click += (sender, e) =>
-                   {
-                       abrirChildForm(new Tela_atualizar_manu(id, nome, datafab, dataval, lote, quantidade));
-                   };
-
-
-
-
-
-                    //style 
-
-
-                    // Definir a posição vertical da TextBox
-                    txtManu.Top = top;
-
-                    // Ajustar o tamanho da TextBox conforme necessário
-                    txtManu.Width = Pnl_produto_manu.Width - 20; // Subtrair margens
-                    txtManu.Height = 60; // Altura da TextBox
-
-                    // Adicionar a TextBox ao Panel
-                    Pnl_produto_manu.Controls.Add(txtManu);
-
-                    // Aumentar a posição vertical para a próxima TextBox
-                    top += txtManu.Height + 10; // 10 pixels de margem entre TextBoxes
-                }
-
-                con.Close();
-            }
-            catch (Exception erro)
-            {
-                MessageBox.Show("Erro ao atualizar fornecedores: " + erro);
-            }
+            con.Close();
 
 
         }
@@ -139,12 +57,11 @@ namespace Kos_Manager
 
         private void Btn_adicionar_Click(object sender, EventArgs e)
         {
-            abrirChildForm(new Tela_add_manu());
         }
 
         private void Btn_requisitar_Click(object sender, EventArgs e)
         {
-            abrirChildForm(new Tela_requisicao());
+            
         }
 
         private void Child_panel_Paint(object sender, PaintEventArgs e)
@@ -154,109 +71,104 @@ namespace Kos_Manager
 
         private void Tela_manu_Load(object sender, EventArgs e)
         {
-            AtualizarTextBoxProdutoManu();
+            
         }
 
-        private void Txt_buscar_produto_manu_TextChanged(object sender, EventArgs e)
+        
+        
+
+        private void Btn_adicionar_Click_1(object sender, EventArgs e)
         {
-            RealizarPesquisa(Txt_buscar_produto_manu.Text);
-        }
-        private void RealizarPesquisa(string termoPesquisa)
-        {
-            // Verifique se o termo de pesquisa não está vazio
-            if (!string.IsNullOrEmpty(termoPesquisa))
+            try
             {
-                // Limpar o conteúdo atual do Panel
-                Pnl_produto_manu.Controls.Clear();
+                MySqlConnection con = new MySqlConnection(conexao);
 
-                try
-                {
-                    using (MySqlConnection con = new MySqlConnection(conexao))
-                    {
-                        con.Open();
+                string produto = Txt_nome_produto_manu.Text;
+                string lote = Txt_lote.Text;
+                string quantidade = Txt_quantidade.Text;
+                DateTime dtVal = DateTime.ParseExact(Txt_dt_validade.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture); // Converter a data para DateTime
+                DateTime dtFab = DateTime.ParseExact(Txt_dt_fab.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture); // Converter a data para DateTime
+                string formattedDateV = dtVal.ToString("yyyy-MM-dd"); // Formatar a data no formato MySQL
+                string formattedDateF = dtFab.ToString("yyyy-MM-dd"); // Formatar a data no formato MySQL
 
-                        // Consulta SQL para pesquisar fornecedores com base no termo de pesquisa
-                        string sqlSelect = "SELECT tb_produto_manu_id, tb_produto_manu_nome, tb_produto_manu_dt_fab, " +
-                                           "tb_manu_dt_val, tb_produto_manu_lote, tb_produto_manu_quantidade " +
-                                           "FROM tb_produto_manu " +
-                                           "WHERE tb_produto_manu_nome LIKE @termoPesquisa " +
-                                           "OR tb_produto_manu_dt_fab LIKE @termoPesquisa " +
-                                           "OR tb_produto_manu_dt_val LIKE @termoPesquisa " +
-                                           "OR tb_produto_manu_lote LIKE @termoPesquisa " +
-                                           "OR tb_produto_manu_quantidade LIKE @termoPesquisa";
+                string sql_insert = @"insert into tb_materia_prima
+                (  
+                    TB_PRODUTO_MANU_NOME,
+                    TB_PRODUTO_MANU_DT_FAB, 
+                    TB_PRODUTO_MANU_DT_VAL, 
+                    TB_PRODUTO_MANU_LOTE, 
+                    TB_PRODUTO_MANU_QUANTIDADE
+                 )
+                values
+                (
+                    @PRODUTO_MANU_NOME, @PRODUTO_MANU_DT_FAB, @PRODUTO_MANU_DT_VAL, @PRODUTO_MANU_LOTE, @PRODUTO_MANU_QUANTIDADE
+                 )";
 
-                        MySqlCommand cmd = new MySqlCommand(sqlSelect, con);
-                        cmd.Parameters.AddWithValue("@termoPesquisa", "%" + termoPesquisa + "%");
+                MySqlCommand executacmdMySql_insert = new MySqlCommand(sql_insert, con);
 
-                        MySqlDataReader reader = cmd.ExecuteReader();
+                executacmdMySql_insert.Parameters.AddWithValue("@materia_prima_nomenclatura", produto);
+                executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_DT_FAL", formattedDateF); // Usar a data formatada para MySQL
+                executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_DT_VAL", formattedDateV); // Usar a data formatada para MySQL
+                executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_LOTE", lote);
+                executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_QUANTIDADE", quantidade);
 
-                        int top = 10; // Posição vertical inicial
-
-
-
-                        while (reader.Read())
-                        {
-                            // Ler as informações de cada fornecedor
-                            string id = reader["tb_produto_manu_id"].ToString();
-                            string nome = reader["tb_produto_manu_nome"].ToString();
-                            string datafab = reader["tb_produto_manu_dt_fab"].ToString();
-                            string dataval = reader["tb_produto_manu_dt_val"].ToString();
-                            string lote = reader["tb_produto_manu_lote"].ToString();
-                            string quantidade = reader["tb_produto_manu_quantidade"].ToString();
-
-                            // Criar uma nova TextBox para exibir as informações do fornecedor
-                            TextBox txtManu = new TextBox();
-                            txtManu.Multiline = true;
-                            txtManu.ReadOnly = true;
-                            txtManu.Text = $"Nome: {nome}, Data de fabricação: {datafab}, Data de validade: {dataval}, Quantos lotes: {lote}, Quantidade: {quantidade}";
-
-
-                            //testegepeto 
-
-                            txtManu.Click += (sender, e) =>
-                            {
-                                abrirChildForm(new Tela_atualizar_manu(id, nome, datafab, dataval, lote, quantidade));
-                            };
-
-
-
-
-
-                            //style 
-
-
-                            // Definir a posição vertical da TextBox
-                            txtManu.Top = top;
-
-                            // Ajustar o tamanho da TextBox conforme necessário
-                            txtManu.Width = Pnl_produto_manu.Width - 20; // Subtrair margens
-                            txtManu.Height = 60; // Altura da TextBox
-
-                            // Adicionar a TextBox ao Panel
-                            Pnl_produto_manu.Controls.Add(txtManu);
-
-                            // Aumentar a posição vertical para a próxima TextBox
-                            top += txtManu.Height + 10; // 10 pixels de margem entre TextBoxes
-                        }
-
-                        con.Close();
-                    }
-                }
-                catch (Exception erro)
-                {
-                    MessageBox.Show("Erro ao realizar a pesquisa: " + erro);
-                }
+                con.Open();
+                executacmdMySql_insert.ExecuteNonQuery();
+                ListarEstoquePm();
+                con.Close();
+                MessageBox.Show("Cadastrado com Sucesso!");
             }
-            else
+            catch (Exception erro)
             {
-                // Se o campo de pesquisa estiver vazio, atualize o Panel com todos os fornecedores
-               // AtualizarTextBoxFornecedores();
+                MessageBox.Show("Aconteceu o Erro: " + erro);
             }
         }
 
-        private void Pnl_produto_manu_Paint(object sender, PaintEventArgs e)
+        private void Btn_atualizar_Click(object sender, EventArgs e)
         {
 
-        }
+            MySqlConnection con = new MySqlConnection(conexao);
+
+            string produto = Txt_nome_produto_manu.Text;
+            string lote = Txt_lote.Text;
+            string quantidade = Txt_quantidade.Text;
+            DateTime dtVal = DateTime.ParseExact(Txt_dt_validade.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture); // Converter a data para DateTime
+            DateTime dtFab = DateTime.ParseExact(Txt_dt_fab.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture); // Converter a data para DateTime
+            string formattedDateV = dtVal.ToString("yyyy-MM-dd"); // Formatar a data no formato MySQL
+            string formattedDateF = dtFab.ToString("yyyy-MM-dd"); // Formatar a data no formato MySQL
+
+
+
+
+
+            string sql_update_fornecedor = @"update tb_materia_prima 
+                                  set TB_PRODUTO_MANU_NOME = @nome,
+                                      TB_PRODUTO_MANU_DT_FAB = @dtfab,
+                                      TB_PRODUTO_MANU_DT_VAL = @dtval,
+                                      TB_PRODUTO_MANU_LOTE = @quantidade,
+                                      TB_PRODUTO_MANU_QUANTIDADE = @dtVal
+                                  where TB_PRODUTO_MANU_ID = @id";
+ 
+                    
+
+            MySqlCommand executacmdMySql_update_fornecedor = new MySqlCommand(sql_update_fornecedor, con);
+            executacmdMySql_update_fornecedor.Parameters.AddWithValue("@id", id);
+            executacmdMySql_update_fornecedor.Parameters.AddWithValue("@nome", nome);
+            executacmdMySql_update_fornecedor.Parameters.AddWithValue("@marca", marca);
+            executacmdMySql_update_fornecedor.Parameters.AddWithValue("@lote", lote);
+            executacmdMySql_update_fornecedor.Parameters.AddWithValue("@quantidade", quantidade);
+            executacmdMySql_update_fornecedor.Parameters.AddWithValue("@dtVal", dtVal);
+            executacmdMySql_update_fornecedor.Parameters.AddWithValue("@cmbfornecedor", cmbFornecedor);
+
+            con.Open();
+            executacmdMySql_update_fornecedor.ExecuteNonQuery();
+
+            MessageBox.Show("Atualização realizada com sucesso");
+
+            ListarEstoquePm();
+
+            con.Close();
+        
+    }
     }
 }
