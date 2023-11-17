@@ -126,23 +126,11 @@
     <Compile Include="Manufaturado\Tela_atualizar_manu.Designer.cs">
       <DependentUpon>Tela_atualizar_manu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fornecedores\Tela_add_fornecedor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Fornecedores\Tela_add_fornecedor.Designer.cs">
-      <DependentUpon>Tela_add_fornecedor.cs</DependentUpon>
-    </Compile>
     <Compile Include="Manufaturado\Tela_add_manu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Manufaturado\Tela_add_manu.Designer.cs">
       <DependentUpon>Tela_add_manu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Fornecedores\Tela_atualizar_fornecedor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Fornecedores\Tela_atualizar_fornecedor.Designer.cs">
-      <DependentUpon>Tela_atualizar_fornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Tela_cad.cs">
       <SubType>Form</SubType>
@@ -249,14 +237,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Fornecedores\Tela_add_fornecedor.resx">
-      <DependentUpon>Tela_add_fornecedor.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Manufaturado\Tela_add_manu.resx">
       <DependentUpon>Tela_add_manu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Fornecedores\Tela_atualizar_fornecedor.resx">
-      <DependentUpon>Tela_atualizar_fornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tela_cad.resx">
       <DependentUpon>Tela_cad.cs</DependentUpon>
