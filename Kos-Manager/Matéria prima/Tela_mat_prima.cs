@@ -196,7 +196,7 @@ namespace Kos_Manager
             executacmdMySql_update_fornecedor.Parameters.AddWithValue("@marca", marca);
             executacmdMySql_update_fornecedor.Parameters.AddWithValue("@lote", lote);
             executacmdMySql_update_fornecedor.Parameters.AddWithValue("@quantidade", quantidade);
-            executacmdMySql_update_fornecedor.Parameters.AddWithValue("@dtVal", dtVal);
+            executacmdMySql_update_fornecedor.Parameters.AddWithValue("@dtVal", formattedDate);
             executacmdMySql_update_fornecedor.Parameters.AddWithValue("@cmbfornecedor", cmbFornecedor);
 
             con.Open();

@@ -126,7 +126,7 @@ namespace Kos_Manager
 
         private void Btn_atualizar_Click(object sender, EventArgs e)
         {
-
+           
             MySqlConnection con = new MySqlConnection(conexao);
 
             string produto = Txt_nome_produto_manu.Text;
@@ -141,7 +141,7 @@ namespace Kos_Manager
 
 
 
-            string sql_update_fornecedor = @"update tb_materia_prima 
+            string sql_update_manu = @"update tb_materia_prima 
                                   set TB_PRODUTO_MANU_NOME = @nome,
                                       TB_PRODUTO_MANU_DT_FAB = @dtfab,
                                       TB_PRODUTO_MANU_DT_VAL = @dtval,
@@ -151,17 +151,15 @@ namespace Kos_Manager
  
                     
 
-            MySqlCommand executacmdMySql_update_fornecedor = new MySqlCommand(sql_update_fornecedor, con);
-            executacmdMySql_update_fornecedor.Parameters.AddWithValue("@id", id);
-            executacmdMySql_update_fornecedor.Parameters.AddWithValue("@nome", nome);
-            executacmdMySql_update_fornecedor.Parameters.AddWithValue("@marca", marca);
-            executacmdMySql_update_fornecedor.Parameters.AddWithValue("@lote", lote);
-            executacmdMySql_update_fornecedor.Parameters.AddWithValue("@quantidade", quantidade);
-            executacmdMySql_update_fornecedor.Parameters.AddWithValue("@dtVal", dtVal);
-            executacmdMySql_update_fornecedor.Parameters.AddWithValue("@cmbfornecedor", cmbFornecedor);
+            MySqlCommand executacmdMySql_update_manu = new MySqlCommand(sql_update_manu, con);
+            executacmdMySql_update_manu.Parameters.AddWithValue("@nome", produto);
+            executacmdMySql_update_manu.Parameters.AddWithValue("@lote", lote);
+            executacmdMySql_update_manu.Parameters.AddWithValue("@quantidade", quantidade);
+            executacmdMySql_update_manu.Parameters.AddWithValue("@dtVal", formattedDateV);
+            executacmdMySql_update_manu .Parameters.AddWithValue("@dtFab", formattedDateF);
 
             con.Open();
-            executacmdMySql_update_fornecedor.ExecuteNonQuery();
+            executacmdMySql_update_manu.ExecuteNonQuery();
 
             MessageBox.Show("Atualização realizada com sucesso");
 
@@ -170,5 +168,36 @@ namespace Kos_Manager
             con.Close();
         
     }
+
+        private void Btn_deletar_Click(object sender, EventArgs e)
+        {
+            // Declarando variável e inserindo conteúdo do textbox nela
+            int codigo = int.Parse(txt_id.Text);
+
+            // Conectando ao banco de dados MySql
+            MySqlConnection con = new MySqlConnection(conexao);
+
+            // Abrindo conexão
+            con.Open();
+
+            string sql_delete_produto_manu = @"DELETE FROM tb_produto_manu WHERE tb_produto_manu_id = @codigo";
+
+            MySqlCommand executarcmdMySql_delete_produto_manu = new MySqlCommand(sql_delete_produto_manu, con);
+
+            executarcmdMySql_delete_produto_manu.Parameters.AddWithValue("@codigo", codigo);
+
+            executarcmdMySql_delete_produto_manu.ExecuteNonQuery();
+
+            MessageBox.Show("Registro deletado com sucesso");
+            ListarEstoquePm();
+
+            // Fechando conexão
+            con.Close();
+        }
+
+        private void Btn_voltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
