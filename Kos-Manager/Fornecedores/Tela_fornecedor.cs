@@ -31,6 +31,8 @@ namespace Kos_Manager
             ListarFornecedores();
         }
 
+        string id;
+
         public void ListarFornecedores()
         {
             MySqlConnection con = new MySqlConnection(conexao);
@@ -156,7 +158,7 @@ namespace Kos_Manager
         private void Btn_deletar_Click(object sender, EventArgs e)
         {
             // Declarando variável e inserindo conteúdo do textbox nela
-            int codigo = int.Parse(txt_id.Text);
+            //int codigo = int.Parse(txt_id.Text);
 
             // Conectando ao banco de dados MySql
             MySqlConnection con = new MySqlConnection(conexao);
@@ -164,11 +166,11 @@ namespace Kos_Manager
             // Abrindo conexão
             con.Open();
 
-            string sql_delete_fornecedor = @"DELETE FROM tb_fornecedor WHERE tb_fornecedor_id = @codigo";
+            string sql_delete_fornecedor = @"DELETE FROM tb_fornecedor WHERE tb_fornecedor_id = @id";
 
-            MySqlCommand executarcmdMySql_delete_fornecedor = new MySqlCommand(sql_delete_fornecedor con);
+            MySqlCommand executarcmdMySql_delete_fornecedor = new MySqlCommand(sql_delete_fornecedor, con);
 
-            executarcmdMySql_delete_fornecedor.Parameters.AddWithValue("@codigo", codigo);
+            executarcmdMySql_delete_fornecedor.Parameters.AddWithValue("@id", id);
 
             executarcmdMySql_delete_fornecedor.ExecuteNonQuery();
 

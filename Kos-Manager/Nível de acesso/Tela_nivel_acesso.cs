@@ -23,6 +23,8 @@ namespace Kos_Manager
             listarNiveis();
         }
 
+        string id;
+
         public void listarNiveis()
         {
             MySqlConnection con = new MySqlConnection(conexao);
@@ -57,8 +59,8 @@ namespace Kos_Manager
             ChildForm.TopLevel = false;
             ChildForm.FormBorderStyle = FormBorderStyle.None;
             ChildForm.Dock = DockStyle.Fill;
-            Child_panel.Controls.Add(ChildForm);
-            Child_panel.Tag = ChildForm;
+            //Child_panel.Controls.Add(ChildForm);
+            //Child_panel.Tag = ChildForm;
             ChildForm.BringToFront();
             ChildForm.Show();
         }
@@ -119,7 +121,7 @@ namespace Kos_Manager
 
         private void Btn_atualizar_Click(object sender, EventArgs e)
         {
-            string id = txt_cod.Text;
+           // string id = txt_cod.Text;
             string nome = txt_nome.Text;
 
             MySqlConnection con = new MySqlConnection(conexao);
@@ -149,9 +151,9 @@ namespace Kos_Manager
         private void Btn_deletar_Click(object sender, EventArgs e)
         {
             //Declarando variavel e inserindo conteudo do textbox nela
-            int codigo;
+            //int codigo;
 
-            codigo = int.Parse(txt_cod.Text);
+            //codigo = int.Parse(txt_cod.Text);
 
             //Conectanto banco de dados MySql
 
@@ -164,7 +166,7 @@ namespace Kos_Manager
 
             MySqlCommand executarcmdMySql_delete_nivel_acesso = new MySqlCommand(sql_delete_nivel_acesso, con);
 
-            executarcmdMySql_delete_nivel_acesso.Parameters.AddWithValue("@id", codigo);
+            executarcmdMySql_delete_nivel_acesso.Parameters.AddWithValue("@id", id);
 
             executarcmdMySql_delete_nivel_acesso.ExecuteNonQuery();
 

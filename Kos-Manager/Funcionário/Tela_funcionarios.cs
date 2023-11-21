@@ -24,6 +24,8 @@ namespace Kos_Manager
             ListarFuncionario();
         }
 
+        string id; 
+
         public void ListarFuncionario()
         {
             MySqlConnection con = new MySqlConnection(conexao);
@@ -72,8 +74,8 @@ namespace Kos_Manager
             ChildForm.TopLevel = false;
             ChildForm.FormBorderStyle = FormBorderStyle.None;
             ChildForm.Dock = DockStyle.Fill;
-            Child_panel.Controls.Add(ChildForm);
-            Child_panel.Tag = ChildForm;
+            //Child_panel.Controls.Add(ChildForm);
+            //Child_panel.Tag = ChildForm;
             ChildForm.BringToFront();
             ChildForm.Show();
         }
@@ -85,7 +87,63 @@ namespace Kos_Manager
 
         private void Tela_funcionarios_Load(object sender, EventArgs e)
         {
+            MySqlConnection con = new MySqlConnection(conexao);
 
+            string sql_select_funcionario = @"SELECT 
+				f.tb_funcionario_id AS Id,
+                 f.tb_funcionario_nome AS Nome,
+                 f.tb_funcionario_email AS Email,
+                 f.tb_funcionario_senha AS Senha,
+                 s.tb_status_nome AS Status,
+                 n.tb_nivel_acesso_nome AS Nivel_de_Acesso
+
+            FROM
+                tb_funcionario f
+            INNER JOIN
+                tb_status s ON f.tb_status_id = f.tb_status_id
+                INNER JOIN
+                tb_nivel_acesso n ON n.tb_nivel_acesso_id = f.tb_nivel_acesso_id ";
+            string sql_select_nivel = "select * from tb_nivel_acesso";
+            string sql_select_status = "select * from tb_status";
+
+            //Execute o cargo e funcionario
+            MySqlCommand executacmdMySql_select_funcionario = new MySqlCommand(sql_select_funcionario, con);
+            MySqlCommand executacmdMySql_select_nivel = new MySqlCommand(sql_select_nivel, con);
+            MySqlCommand executacmdMySql_select_status = new MySqlCommand(sql_select_status, con);
+            con.Open();
+
+            executacmdMySql_select_funcionario.ExecuteNonQuery();
+            executacmdMySql_select_nivel.ExecuteNonQuery();
+            executacmdMySql_select_status.ExecuteNonQuery();
+
+            DataTable tabela_funcionario = new DataTable();
+            DataTable tabela_nivel = new DataTable();
+            DataTable tabela_status = new DataTable();
+
+            MySqlDataAdapter da_funcionario = new MySqlDataAdapter(executacmdMySql_select_funcionario);
+            da_funcionario.Fill(tabela_funcionario);
+
+            MySqlDataAdapter da_nivel = new MySqlDataAdapter(executacmdMySql_select_nivel);
+            da_nivel.Fill(tabela_nivel);
+
+            MySqlDataAdapter da_status = new MySqlDataAdapter(executacmdMySql_select_status);
+            da_status.Fill(tabela_status);
+
+           // DgvFuncionario.DataSource = tabela_funcionario;
+
+            cmb_nivel_funcionario.DataSource = tabela_nivel;
+
+            cmb_nivel_funcionario.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmb_nivel_funcionario.DisplayMember = "TB_NIVEL_ACESSO_NOME"; //Exibe os dados para o usuário
+            cmb_nivel_funcionario.ValueMember = "TB_NIVEL_ACESSO_ID";  //Pega os dados            
+            cmb_nivel_funcionario.SelectedItem = null;
+
+            cmb_status_funcionario.DataSource = tabela_status;
+
+            cmb_status_funcionario.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmb_status_funcionario.DisplayMember = "TB_STATUS_NOME"; //Exibe os dados para o usuário
+            cmb_status_funcionario.ValueMember = "TB_STATUS_ID";  //Pega os dados            
+            cmb_status_funcionario.SelectedItem = null;
         }
 
         private void txt_buscar_func_TextChanged(object sender, EventArgs e)
@@ -153,7 +211,7 @@ namespace Kos_Manager
 
         private void Btn_atualizar_Click_1(object sender, EventArgs e)
         {
-            string id = txt_cod.Text;
+           // string id = txt_cod.Text;
             string nome = Txt_nome_funcionario.Text;
             string email = Txt_email_funcionario.Text;
             string senha = Txt_senha_funcionario.Text;
@@ -189,7 +247,7 @@ namespace Kos_Manager
 
         private void Btn_atualizar_Click_2(object sender, EventArgs e)
         {
-            string id = txt_cod.Text;
+           // string id = txt_cod.Text;
             string nome = Txt_nome_funcionario.Text;
             string email = Txt_email_funcionario.Text;
             string senha = Txt_senha_funcionario.Text;
@@ -225,7 +283,7 @@ namespace Kos_Manager
 
         private void Btn_deletar_Click_1(object sender, EventArgs e)
         {
-            int codigo = int.Parse(txt_cod.Text);
+            //int codigo = int.Parse(txt_cod.Text);
 
             // Conectando ao banco de dados MySql
             MySqlConnection con = new MySqlConnection(conexao);
@@ -233,11 +291,11 @@ namespace Kos_Manager
             // Abrindo conexão
             con.Open();
 
-            string sql_delete_funcionario = @"DELETE FROM tb_funcionario WHERE tb_funcionario_id = @codigo";
+            string sql_delete_funcionario = @"DELETE FROM tb_funcionario WHERE tb_funcionario_id = @id";
 
             MySqlCommand executarcmdMySql_delete_funcionario = new MySqlCommand(sql_delete_funcionario, con);
 
-            executarcmdMySql_delete_funcionario.Parameters.AddWithValue("@codigo", codigo);
+            executarcmdMySql_delete_funcionario.Parameters.AddWithValue("@id", id);
 
             executarcmdMySql_delete_funcionario.ExecuteNonQuery();
 

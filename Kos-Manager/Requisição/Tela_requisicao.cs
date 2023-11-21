@@ -22,6 +22,8 @@ namespace Kos_Manager
             ListarRequisicao();
         }
 
+        string id;
+
         public void ListarRequisicao()
         {
             MySqlConnection con = new MySqlConnection(conexao);
@@ -71,7 +73,7 @@ namespace Kos_Manager
 
         private void Btn_requisitar_Click(object sender, EventArgs e)
         {
-            abrirChildForm(new Tela_add_req());
+          //  abrirChildForm(new Tela_add_req());
         }
 
         private void Child_panel_Paint(object sender, PaintEventArgs e)
@@ -126,7 +128,7 @@ namespace Kos_Manager
 
         private void Btn_atualizar_Click(object sender, EventArgs e)
         {
-            string id = txt_cod.Text;
+           // string id = txt_cod.Text;
             int quantidade = Convert.ToInt32(Txt_quantidade.Text);
             int cmb_Produto = Convert.ToInt32(cmb_nome_produto.SelectedValue);
             int cmb_Status = Convert.ToInt32(cmb_status_requisicao.SelectedValue);
@@ -163,7 +165,7 @@ namespace Kos_Manager
             try
             {
                 // Obtém o ID da solicitação que deseja excluir
-                string id = txt_cod.Text;
+               // string id = txt_cod.Text;
 
                 MySqlConnection con = new MySqlConnection(conexao);
 
@@ -201,6 +203,20 @@ namespace Kos_Manager
         private void Child_panel_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Dgv_requisita_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.id = Dgv_requisita.CurrentRow.Cells[0].Value.ToString();
+            Txt_quantidade.Text = Dgv_requisita.CurrentRow.Cells[1].Value.ToString();
+            cmb_status_requisicao.Text = Dgv_requisita.CurrentRow.Cells[2].Value.ToString();
+            cmb_nome_produto.Text = Dgv_requisita.CurrentRow.Cells[3].Value.ToString();
+            cmb_funcionario.Text = Dgv_requisita.CurrentRow.Cells[4].Value.ToString();
+        }
+
+        private void Tela_requisicao_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

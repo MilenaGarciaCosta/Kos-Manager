@@ -1,4 +1,4 @@
-﻿using Kos_Manager.Solicitação;
+﻿//using Kos_Manager.Solicitação;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,28 +23,27 @@ namespace Kos_Manager
             ListarSolicitacao();
         }
 
+        string id; 
+
         public void ListarSolicitacao()
         {
             MySqlConnection con = new MySqlConnection(conexao);
 
             string sql_select_solicitacao = @"
-                         SELECT
-                     s.tb_solicitacao_id AS Id,
-                     s.tb_solicitacao_quantidade as Quantidade,
-                     t.tb_solicitacao_status_nome as Status,
-                     m.TB_MATERIA_PRIMA_NOMENCLATURA AS Nome,
-                     p.TB_MATERIA_PRIMA_MARCA_NOME AS Marca,
-                     f.tb_fornecedor_nome AS Fornecedor
-                    FROM
-                     tb_solicitacao s
-                     INNER JOIN
-                     TB_MATERIA_PRIMA m ON m.TB_MATERIA_PRIMA_id = s.TB_MATERIA_PRIMA_id
-                        INNER JOIN
-                     tb_fornecedor f ON f.tb_fornecedor_id = s.tb_fornecedor_id    
-                     INNER JOIN
-                     tb_solicitacao_status t ON t.tb_solicitacao_status_id = s.tb_solicitacao_status_id
-                    INNER JOIN
-                     tb_materia_prima_marca p ON p.tb_materia_prima_marca_id = s.tb_materia_prima_marca_id";
+       SELECT
+    s.tb_solicitacao_id AS Id,
+    s.tb_solicitacao_quantidade as Quantidade,
+    t.tb_solicitacao_status_nome as Status,
+    m.TB_MATERIA_PRIMA_NOMENCLATURA AS Nome,
+    mp.TB_MATERIA_PRIMA_MARCA_NOME AS Marca,
+    f.tb_fornecedor_nome AS Fornecedor
+FROM
+    tb_solicitacao s
+    INNER JOIN TB_MATERIA_PRIMA m ON m.TB_MATERIA_PRIMA_id = s.TB_MATERIA_PRIMA_id
+    INNER JOIN tb_fornecedor f ON f.tb_fornecedor_id = s.tb_fornecedor_id    
+    INNER JOIN tb_solicitacao_status t ON t.tb_solicitacao_status_id = s.tb_solicitacao_status_id
+    INNER JOIN tb_materia_prima_marca mp ON mp.tb_materia_prima_marca_id = m.TB_MATERIA_PRIMA_MARCA_ID";
+
 
             con.Open();
 
@@ -98,7 +97,7 @@ namespace Kos_Manager
 
         private void Btn_solicitar_Click(object sender, EventArgs e)
         {
-            abrirChildForm(new Tela_add_solicitacao());
+           // abrirChildForm(new Tela_add_solicitacao());
         }
 
         private void Btn_adicionar_Click(object sender, EventArgs e)
@@ -151,7 +150,7 @@ namespace Kos_Manager
 
         private void Btn_atualizar_Click(object sender, EventArgs e)
         {
-            string id = txt_cod.Text;
+            //string id = txt_cod.Text;
             string quantidade = Txt_quantidade.Text;
             int cmb_Status = Convert.ToInt32(cmb_status_solicitacao.SelectedValue);
             int cmb_Fornecedor = Convert.ToInt32(cmb_fornecedor.SelectedValue);
@@ -194,7 +193,7 @@ namespace Kos_Manager
             try
             {
                 // Obtém o ID da solicitação que deseja excluir
-                string id = txt_cod.Text;
+                //string id = txt_cod.Text;
 
                 MySqlConnection con = new MySqlConnection(conexao);
 
@@ -236,23 +235,7 @@ namespace Kos_Manager
             MySqlConnection con = new MySqlConnection(conexao);
 
             string sql_select_solicitacao = @"
-                    SELECT
-                     s.tb_solicitacao_id AS Id,
-                     s.tb_solicitacao_quantidade as Quantidade,
-                     t.tb_solicitacao_status_nome as Status,
-                     m.TB_MATERIA_PRIMA_NOMENCLATURA AS Nome,
-                     p.TB_MATERIA_PRIMA_MARCA_NOME AS Marca,
-                     f.tb_fornecedor_nome AS Fornecedor
-                    FROM
-                     tb_solicitacao s
-                     INNER JOIN
-                     TB_MATERIA_PRIMA m ON m.TB_MATERIA_PRIMA_id = s.TB_MATERIA_PRIMA_id
-                        INNER JOIN
-                     tb_fornecedor f ON f.tb_fornecedor_id = s.tb_fornecedor_id    
-                     INNER JOIN
-                     tb_solicitacao_status t ON t.tb_solicitacao_status_id = s.tb_solicitacao_status_id
-                    INNER JOIN
-                     tb_materia_prima_marca p ON p.tb_materia_prima_marca_id = s.tb_materia_prima_marca_id";
+                    ";
 
             string sql_select_produto = "select * from tb_materia_prima";
             string sql_select_fornecedor = "select * from tb_fornecedor";

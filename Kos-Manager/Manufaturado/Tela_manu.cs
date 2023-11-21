@@ -26,6 +26,8 @@ namespace Kos_Manager
             ListarEstoquePm();
         }
 
+        string id;
+
         public void ListarEstoquePm()
         {
             MySqlConnection con = new MySqlConnection(conexao);
@@ -86,31 +88,33 @@ namespace Kos_Manager
                 string produto = Txt_nome_produto_manu.Text;
                 string lote = Txt_lote.Text;
                 string quantidade = Txt_quantidade.Text;
-                DateTime dtVal = DateTime.ParseExact(Txt_dt_validade.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture); // Converter a data para DateTime
-                DateTime dtFab = DateTime.ParseExact(Txt_dt_fab.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture); // Converter a data para DateTime
-                string formattedDateV = dtVal.ToString("yyyy-MM-dd"); // Formatar a data no formato MySQL
-                string formattedDateF = dtFab.ToString("yyyy-MM-dd"); // Formatar a data no formato MySQL
+                DateTime dtVal = DateTime.ParseExact(Txt_dt_validade.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                DateTime dtFab = DateTime.ParseExact(Txt_dt_fab.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                string formattedDateV = dtVal.ToString("yyyy-MM-dd");
+                string formattedDateF = dtFab.ToString("yyyy-MM-dd");
 
-                string sql_insert = @"insert into tb_materia_prima
-                (  
-                    TB_PRODUTO_MANU_NOME,
-                    TB_PRODUTO_MANU_DT_FAB, 
-                    TB_PRODUTO_MANU_DT_VAL, 
-                    TB_PRODUTO_MANU_LOTE, 
-                    TB_PRODUTO_MANU_QUANTIDADE
-                 )
-                values
-                (
-                    @PRODUTO_MANU_NOME, @PRODUTO_MANU_DT_FAB, @PRODUTO_MANU_DT_VAL, @PRODUTO_MANU_LOTE, @PRODUTO_MANU_QUANTIDADE
-                 )";
+                // Correção do comando SQL para inserção na tabela correta (TB_PRODUTO_MANU)
+                string sql_insert = @"
+            insert into TB_PRODUTO_MANU
+            (
+                TB_PRODUTO_MANU_NOME,
+                TB_PRODUTO_MANU_DT_FAB,
+                TB_PRODUTO_MANU_DT_VAL,
+                TB_PRODUTO_MANU_LOTE,
+                TB_PRODUTO_MANU_QUANTIDADE
+            )
+            values
+            (
+                @PRODUTO_MANU_NOME, @PRODUTO_MANU_DT_FAB, @PRODUTO_MANU_DT_VAL, @PRODUTO_MANU_LOTE, @PRODUTO_MANU_QUANTIDADE
+            )";
 
                 MySqlCommand executacmdMySql_insert = new MySqlCommand(sql_insert, con);
 
-                executacmdMySql_insert.Parameters.AddWithValue("@materia_prima_nomenclatura", produto);
-                executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_DT_FAL", formattedDateF); // Usar a data formatada para MySQL
-                executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_DT_VAL", formattedDateV); // Usar a data formatada para MySQL
-                executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_LOTE", lote);
-                executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_QUANTIDADE", quantidade);
+                executacmdMySql_insert.Parameters.AddWithValue("@PRODUTO_MANU_NOME", produto);
+                executacmdMySql_insert.Parameters.AddWithValue("@PRODUTO_MANU_DT_FAB", formattedDateF);
+                executacmdMySql_insert.Parameters.AddWithValue("@PRODUTO_MANU_DT_VAL", formattedDateV);
+                executacmdMySql_insert.Parameters.AddWithValue("@PRODUTO_MANU_LOTE", lote);
+                executacmdMySql_insert.Parameters.AddWithValue("@PRODUTO_MANU_QUANTIDADE", quantidade);
 
                 con.Open();
                 executacmdMySql_insert.ExecuteNonQuery();
@@ -126,53 +130,47 @@ namespace Kos_Manager
 
         private void Btn_atualizar_Click(object sender, EventArgs e)
         {
-           
+
             MySqlConnection con = new MySqlConnection(conexao);
 
             string produto = Txt_nome_produto_manu.Text;
             string lote = Txt_lote.Text;
             string quantidade = Txt_quantidade.Text;
-            DateTime dtVal = DateTime.ParseExact(Txt_dt_validade.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture); // Converter a data para DateTime
-            DateTime dtFab = DateTime.ParseExact(Txt_dt_fab.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture); // Converter a data para DateTime
-            string formattedDateV = dtVal.ToString("yyyy-MM-dd"); // Formatar a data no formato MySQL
-            string formattedDateF = dtFab.ToString("yyyy-MM-dd"); // Formatar a data no formato MySQL
+            DateTime dtVal = DateTime.ParseExact(Txt_dt_validade.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            DateTime dtFab = DateTime.ParseExact(Txt_dt_fab.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            string formattedDateV = dtVal.ToString("yyyy-MM-dd");
+            string formattedDateF = dtFab.ToString("yyyy-MM-dd");
 
-
-
-
-
-            string sql_update_manu = @"update tb_materia_prima 
-                                  set TB_PRODUTO_MANU_NOME = @nome,
-                                      TB_PRODUTO_MANU_DT_FAB = @dtfab,
-                                      TB_PRODUTO_MANU_DT_VAL = @dtval,
-                                      TB_PRODUTO_MANU_LOTE = @quantidade,
-                                      TB_PRODUTO_MANU_QUANTIDADE = @dtVal
-                                  where TB_PRODUTO_MANU_ID = @id";
- 
-                    
+            // Correção do comando SQL para atualização na tabela correta (TB_PRODUTO_MANU)
+            string sql_update_manu = @"
+        update TB_PRODUTO_MANU 
+        set TB_PRODUTO_MANU_NOME = @nome,
+            TB_PRODUTO_MANU_DT_FAB = @dtfab,
+            TB_PRODUTO_MANU_DT_VAL = @dtval,
+            TB_PRODUTO_MANU_LOTE = @lote,
+            TB_PRODUTO_MANU_QUANTIDADE = @quantidade
+        where TB_PRODUTO_MANU_ID = @id";
 
             MySqlCommand executacmdMySql_update_manu = new MySqlCommand(sql_update_manu, con);
+            executacmdMySql_update_manu.Parameters.AddWithValue("@id", id);
             executacmdMySql_update_manu.Parameters.AddWithValue("@nome", produto);
             executacmdMySql_update_manu.Parameters.AddWithValue("@lote", lote);
             executacmdMySql_update_manu.Parameters.AddWithValue("@quantidade", quantidade);
-            executacmdMySql_update_manu.Parameters.AddWithValue("@dtVal", formattedDateV);
-            executacmdMySql_update_manu .Parameters.AddWithValue("@dtFab", formattedDateF);
+            executacmdMySql_update_manu.Parameters.AddWithValue("@dtval", formattedDateV);
+            executacmdMySql_update_manu.Parameters.AddWithValue("@dtfab", formattedDateF);
 
             con.Open();
             executacmdMySql_update_manu.ExecuteNonQuery();
-
             MessageBox.Show("Atualização realizada com sucesso");
-
             ListarEstoquePm();
-
             con.Close();
-        
-    }
+
+        }
 
         private void Btn_deletar_Click(object sender, EventArgs e)
         {
             // Declarando variável e inserindo conteúdo do textbox nela
-            int codigo = int.Parse(txt_id.Text);
+            int codigo = int.Parse(this.id);
 
             // Conectando ao banco de dados MySql
             MySqlConnection con = new MySqlConnection(conexao);
@@ -198,6 +196,16 @@ namespace Kos_Manager
         private void Btn_voltar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void DgvEstoquePm_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.id = DgvEstoquePm.CurrentRow.Cells[0].Value.ToString();
+            Txt_nome_produto_manu.Text = DgvEstoquePm.CurrentRow.Cells[1].Value.ToString();
+            Txt_dt_fab.Text = DgvEstoquePm.CurrentRow.Cells[2].Value.ToString();
+            Txt_dt_validade.Text = DgvEstoquePm.CurrentRow.Cells[3].Value.ToString();
+            Txt_lote.Text = DgvEstoquePm.CurrentRow.Cells[4].Value.ToString();
+            Txt_quantidade.Text = DgvEstoquePm.CurrentRow.Cells[5].Value.ToString();
         }
     }
 }

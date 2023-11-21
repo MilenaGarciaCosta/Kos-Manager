@@ -1,4 +1,4 @@
-﻿using Kos_Manager.Matéria_prima;
+﻿//using Kos_Manager.Matéria_prima;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +23,9 @@ namespace Kos_Manager
             InitializeComponent();
             ListarVendas();
         }
+
+        string id;
+
 
         public void ListarVendas()
         {
@@ -67,8 +70,8 @@ namespace Kos_Manager
             ChildForm.TopLevel = false;
             ChildForm.FormBorderStyle = FormBorderStyle.None;
             ChildForm.Dock = DockStyle.Fill;
-            Child_panel.Controls.Add(ChildForm);
-            Child_panel.Tag = ChildForm;
+           // Child_panel.Controls.Add(ChildForm);
+           // Child_panel.Tag = ChildForm;
             ChildForm.BringToFront();
             ChildForm.Show();
         }
@@ -138,7 +141,7 @@ namespace Kos_Manager
 
         private void Btn_atualizar_Click(object sender, EventArgs e)
         {
-            string id = txt_id.Text;
+           // string id = txt_id.Text;
             string quantidade = Txt_quantidade.Text;
             decimal valor = decimal.Parse(Txt_valor_produto.Text, CultureInfo.GetCultureInfo("pt-BR")); // Converter para decimal
             int cmb_Funcionario = Convert.ToInt32(cmb_funcionario.SelectedValue);
@@ -182,7 +185,7 @@ namespace Kos_Manager
         private void Btn_deletar_Click(object sender, EventArgs e)
         {
             // Declarando variável e inserindo conteúdo do textbox nela
-            int codigo = int.Parse(txt_id.Text);
+            //int codigo = int.Parse(txt_id.Text);
 
             // Conectando ao banco de dados MySql
             MySqlConnection con = new MySqlConnection(conexao);
@@ -190,11 +193,11 @@ namespace Kos_Manager
             // Abrindo conexão
             con.Open();
 
-            string sql_delete_venda = @"DELETE FROM tb_venda WHERE tb_venda_id = @codigo";
+            string sql_delete_venda = @"DELETE FROM tb_venda WHERE tb_venda_id = @id";
 
             MySqlCommand executarcmdMySql_delete_venda = new MySqlCommand(sql_delete_venda, con);
 
-            executarcmdMySql_delete_venda.Parameters.AddWithValue("@codigo", codigo);
+            executarcmdMySql_delete_venda.Parameters.AddWithValue("@id", id);
 
             executarcmdMySql_delete_venda.ExecuteNonQuery();
 
@@ -302,6 +305,16 @@ namespace Kos_Manager
         private void Link_ja_tem_cad_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
+        }
+
+        private void Dgv_venda_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.id = Dgv_venda.CurrentRow.Cells[0].Value.ToString();
+            Txt_quantidade.Text = Dgv_venda.CurrentRow.Cells[1].Value.ToString();
+            Txt_valor_produto.Text = Dgv_venda.CurrentRow.Cells[2].Value.ToString();
+            cmb_nome_produto.Text = Dgv_venda.CurrentRow.Cells[3].Value.ToString();
+            cmb_funcionario.Text = Dgv_venda.CurrentRow.Cells[4].Value.ToString();
+            cmb_status.Text = Dgv_venda.CurrentRow.Cells[5].Value.ToString();
         }
     }
 }
