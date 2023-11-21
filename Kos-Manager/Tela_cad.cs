@@ -47,7 +47,7 @@ namespace Kos_Manager
             {
                 MySqlConnection con = new MySqlConnection(conexao);
 
-
+                string nome = Txt_nome_cad.Text;
                 string email = Txt_email_cad.Text;
                 string senha = Txt_senha_cad.Text;
 
@@ -55,18 +55,20 @@ namespace Kos_Manager
                 if (SenhaContemCaracterEspecial(senha) && EmailArroba(email) && senha.Length >= 8 && senha.Length == 8)
                 {
                     string sql_insert = @"insert into TB_OPERADOR_PRINCIPAL
-                                  (TB_OPERADOR_PRINCIPAL_EMAIL, TB_OPERADOR_PRINCIPAL_SENHA)
+                                  (TB_OPERADOR_PRINCIPAL_NOME, TB_OPERADOR_PRINCIPAL_EMAIL, TB_OPERADOR_PRINCIPAL_SENHA)
                                   values 
-                                  (@OPERADOR_PRINCIPAL_EMAIL, @OPERADOR_PRINCIPAL_SENHA)";
+                                  (@OPERADOR_PRINCIPAL_NOME, @OPERADOR_PRINCIPAL_EMAIL, @OPERADOR_PRINCIPAL_SENHA)";
 
                     MySqlCommand executacmdMysql_insert = new MySqlCommand(sql_insert, con);
 
+                    executacmdMysql_insert.Parameters.AddWithValue("@OPERADOR_PRINCIPAL_NOME", nome);
                     executacmdMysql_insert.Parameters.AddWithValue("@OPERADOR_PRINCIPAL_EMAIL", email);
                     executacmdMysql_insert.Parameters.AddWithValue("@OPERADOR_PRINCIPAL_SENHA", senha);
 
                     con.Open();
                     executacmdMysql_insert.ExecuteNonQuery();
                     con.Close();
+
 
                     Usuario.email = email;
                     Usuario.senha = senha;

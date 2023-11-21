@@ -175,6 +175,7 @@
             this.guna2Button1.TabIndex = 61;
             this.guna2Button1.Text = "Atualizar";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2HtmlLabel3
             // 
@@ -274,6 +275,7 @@
             this.Btn_atualizar.TabIndex = 52;
             this.Btn_atualizar.Text = "Atualizar";
             this.Btn_atualizar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_atualizar.Click += new System.EventHandler(this.Btn_atualizar_Click);
             // 
             // senha_visivel
             // 
