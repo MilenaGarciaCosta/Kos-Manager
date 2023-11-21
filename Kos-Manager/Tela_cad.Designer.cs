@@ -37,6 +37,7 @@
             this.Txt_senha_cad = new Guna.UI2.WinForms.Guna2TextBox();
             this.Txt_email_cad = new Guna.UI2.WinForms.Guna2TextBox();
             this.Check_ver_senha = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.Txt_nome_cad = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Picture_box)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +47,7 @@
             this.Lbl_caracteres_min.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_caracteres_min.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_caracteres_min.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Lbl_caracteres_min.Location = new System.Drawing.Point(264, 459);
+            this.Lbl_caracteres_min.Location = new System.Drawing.Point(265, 484);
             this.Lbl_caracteres_min.Name = "Lbl_caracteres_min";
             this.Lbl_caracteres_min.Size = new System.Drawing.Size(136, 17);
             this.Lbl_caracteres_min.TabIndex = 4;
@@ -59,7 +60,7 @@
             this.Lbl_caracteres_especiais.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_caracteres_especiais.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_caracteres_especiais.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Lbl_caracteres_especiais.Location = new System.Drawing.Point(264, 478);
+            this.Lbl_caracteres_especiais.Location = new System.Drawing.Point(265, 503);
             this.Lbl_caracteres_especiais.Name = "Lbl_caracteres_especiais";
             this.Lbl_caracteres_especiais.Size = new System.Drawing.Size(161, 17);
             this.Lbl_caracteres_especiais.TabIndex = 5;
@@ -76,7 +77,7 @@
             this.Btn_cadastrar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
             this.Btn_cadastrar.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.Btn_cadastrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.Btn_cadastrar.Location = new System.Drawing.Point(427, 554);
+            this.Btn_cadastrar.Location = new System.Drawing.Point(428, 565);
             this.Btn_cadastrar.MinimumSize = new System.Drawing.Size(180, 45);
             this.Btn_cadastrar.Name = "Btn_cadastrar";
             this.Btn_cadastrar.Size = new System.Drawing.Size(180, 45);
@@ -91,7 +92,7 @@
             this.Link_ja_tem_cad.AutoSize = true;
             this.Link_ja_tem_cad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Link_ja_tem_cad.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
-            this.Link_ja_tem_cad.Location = new System.Drawing.Point(394, 607);
+            this.Link_ja_tem_cad.Location = new System.Drawing.Point(395, 618);
             this.Link_ja_tem_cad.Name = "Link_ja_tem_cad";
             this.Link_ja_tem_cad.Size = new System.Drawing.Size(246, 17);
             this.Link_ja_tem_cad.TabIndex = 7;
@@ -130,9 +131,8 @@
             this.Txt_senha_cad.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_senha_cad.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_senha_cad.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_senha_cad.Location = new System.Drawing.Point(264, 383);
+            this.Txt_senha_cad.Location = new System.Drawing.Point(265, 408);
             this.Txt_senha_cad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Txt_senha_cad.MinimumSize = new System.Drawing.Size(503, 43);
             this.Txt_senha_cad.Name = "Txt_senha_cad";
             this.Txt_senha_cad.PasswordChar = '*';
             this.Txt_senha_cad.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
@@ -161,9 +161,8 @@
             this.Txt_email_cad.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_email_cad.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_email_cad.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_email_cad.Location = new System.Drawing.Point(264, 305);
+            this.Txt_email_cad.Location = new System.Drawing.Point(265, 340);
             this.Txt_email_cad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Txt_email_cad.MinimumSize = new System.Drawing.Size(503, 43);
             this.Txt_email_cad.Name = "Txt_email_cad";
             this.Txt_email_cad.PasswordChar = '\0';
             this.Txt_email_cad.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
@@ -186,7 +185,7 @@
             this.Check_ver_senha.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Check_ver_senha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Check_ver_senha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Check_ver_senha.Location = new System.Drawing.Point(264, 433);
+            this.Check_ver_senha.Location = new System.Drawing.Point(265, 458);
             this.Check_ver_senha.Margin = new System.Windows.Forms.Padding(2);
             this.Check_ver_senha.Name = "Check_ver_senha";
             this.Check_ver_senha.Size = new System.Drawing.Size(118, 21);
@@ -199,12 +198,42 @@
             this.Check_ver_senha.UseVisualStyleBackColor = false;
             this.Check_ver_senha.CheckedChanged += new System.EventHandler(this.Check_ver_senha_CheckedChanged);
             // 
+            // Txt_nome_cad
+            // 
+            this.Txt_nome_cad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_nome_cad.BorderRadius = 6;
+            this.Txt_nome_cad.BorderThickness = 0;
+            this.Txt_nome_cad.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Txt_nome_cad.DefaultText = "";
+            this.Txt_nome_cad.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Txt_nome_cad.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Txt_nome_cad.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Txt_nome_cad.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Txt_nome_cad.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.Txt_nome_cad.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_nome_cad.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Txt_nome_cad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Txt_nome_cad.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_nome_cad.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
+            this.Txt_nome_cad.IconRightOffset = new System.Drawing.Point(10, -10);
+            this.Txt_nome_cad.IconRightSize = new System.Drawing.Size(10, 10);
+            this.Txt_nome_cad.Location = new System.Drawing.Point(265, 276);
+            this.Txt_nome_cad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_nome_cad.Name = "Txt_nome_cad";
+            this.Txt_nome_cad.PasswordChar = '\0';
+            this.Txt_nome_cad.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.Txt_nome_cad.PlaceholderText = "Digite seu nome";
+            this.Txt_nome_cad.SelectedText = "";
+            this.Txt_nome_cad.Size = new System.Drawing.Size(503, 43);
+            this.Txt_nome_cad.TabIndex = 9;
+            // 
             // Tela_cad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1028, 736);
+            this.Controls.Add(this.Txt_nome_cad);
             this.Controls.Add(this.Check_ver_senha);
             this.Controls.Add(this.Link_ja_tem_cad);
             this.Controls.Add(this.Btn_cadastrar);
@@ -234,5 +263,6 @@
         private Guna.UI2.WinForms.Guna2TextBox Txt_senha_cad;
         private Guna.UI2.WinForms.Guna2TextBox Txt_email_cad;
         private Guna.UI2.WinForms.Guna2CheckBox Check_ver_senha;
+        private Guna.UI2.WinForms.Guna2TextBox Txt_nome_cad;
     }
 }

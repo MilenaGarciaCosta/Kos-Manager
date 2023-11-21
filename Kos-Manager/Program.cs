@@ -67,7 +67,7 @@ namespace Kos_Manager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Tela_login());
+            Application.Run(new Tela_splash());
         }
     }
 }

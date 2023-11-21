@@ -192,5 +192,15 @@ namespace Kos_Manager
         {
             this.Close();
         }
+
+        private void guna2HtmlLabel7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Child_panel_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

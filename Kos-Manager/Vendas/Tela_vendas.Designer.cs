@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_vendas));
             this.Dgv_venda = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Btn_deletar = new Guna.UI2.WinForms.Guna2Button();
@@ -44,7 +44,6 @@
             this.Link_ja_tem_cad = new System.Windows.Forms.LinkLabel();
             this.cmb_nome_produto = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Txt_quantidade = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Btn_voltar = new Guna.UI2.WinForms.Guna2Button();
             this.Btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
             this.Txt_valor_produto = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -54,41 +53,44 @@
             // 
             // Dgv_venda
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.Dgv_venda.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_venda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.Dgv_venda.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.Dgv_venda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Dgv_venda.BackgroundColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_venda.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Dgv_venda.ColumnHeadersHeight = 4;
             this.Dgv_venda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dgv_venda.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Dgv_venda.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.Dgv_venda.Location = new System.Drawing.Point(29, 527);
-            this.Dgv_venda.Margin = new System.Windows.Forms.Padding(4);
+            this.Dgv_venda.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgv_venda.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Dgv_venda.GridColor = System.Drawing.Color.Silver;
+            this.Dgv_venda.Location = new System.Drawing.Point(22, 428);
             this.Dgv_venda.Name = "Dgv_venda";
             this.Dgv_venda.RowHeadersVisible = false;
             this.Dgv_venda.RowHeadersWidth = 51;
-            this.Dgv_venda.Size = new System.Drawing.Size(1389, 271);
+            this.Dgv_venda.Size = new System.Drawing.Size(1042, 220);
             this.Dgv_venda.TabIndex = 141;
             this.Dgv_venda.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.Dgv_venda.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.Dgv_venda.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.Dgv_venda.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.Dgv_venda.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.Dgv_venda.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.Dgv_venda.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.Dgv_venda.ThemeStyle.BackColor = System.Drawing.Color.DimGray;
+            this.Dgv_venda.ThemeStyle.GridColor = System.Drawing.Color.Silver;
             this.Dgv_venda.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.Dgv_venda.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.Dgv_venda.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -119,10 +121,9 @@
             this.Btn_deletar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_deletar.Image")));
             this.Btn_deletar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_deletar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_deletar.Location = new System.Drawing.Point(1012, 447);
-            this.Btn_deletar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_deletar.Location = new System.Drawing.Point(920, 379);
             this.Btn_deletar.Name = "Btn_deletar";
-            this.Btn_deletar.Size = new System.Drawing.Size(192, 48);
+            this.Btn_deletar.Size = new System.Drawing.Size(144, 39);
             this.Btn_deletar.TabIndex = 140;
             this.Btn_deletar.Text = "Deletar";
             this.Btn_deletar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -144,12 +145,11 @@
             this.Btn_atualizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_atualizar.Image")));
             this.Btn_atualizar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_atualizar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_atualizar.Location = new System.Drawing.Point(790, 447);
-            this.Btn_atualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_atualizar.Location = new System.Drawing.Point(770, 379);
             this.Btn_atualizar.Name = "Btn_atualizar";
             this.Btn_atualizar.ShadowDecoration.Depth = 5;
             this.Btn_atualizar.ShadowDecoration.Enabled = true;
-            this.Btn_atualizar.Size = new System.Drawing.Size(192, 48);
+            this.Btn_atualizar.Size = new System.Drawing.Size(144, 39);
             this.Btn_atualizar.TabIndex = 139;
             this.Btn_atualizar.Text = "Atualizar";
             this.Btn_atualizar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -170,10 +170,9 @@
             this.cmb_funcionario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.cmb_funcionario.ItemHeight = 30;
             this.cmb_funcionario.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmb_funcionario.Location = new System.Drawing.Point(38, 245);
-            this.cmb_funcionario.Margin = new System.Windows.Forms.Padding(4);
+            this.cmb_funcionario.Location = new System.Drawing.Point(22, 213);
             this.cmb_funcionario.Name = "cmb_funcionario";
-            this.cmb_funcionario.Size = new System.Drawing.Size(669, 36);
+            this.cmb_funcionario.Size = new System.Drawing.Size(452, 36);
             this.cmb_funcionario.TabIndex = 138;
             // 
             // cmb_status
@@ -191,10 +190,9 @@
             this.cmb_status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.cmb_status.ItemHeight = 30;
             this.cmb_status.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmb_status.Location = new System.Drawing.Point(733, 245);
-            this.cmb_status.Margin = new System.Windows.Forms.Padding(4);
+            this.cmb_status.Location = new System.Drawing.Point(612, 213);
             this.cmb_status.Name = "cmb_status";
-            this.cmb_status.Size = new System.Drawing.Size(669, 36);
+            this.cmb_status.Size = new System.Drawing.Size(452, 36);
             this.cmb_status.TabIndex = 137;
             // 
             // guna2HtmlLabel2
@@ -203,10 +201,9 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(733, 204);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(612, 182);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(156, 32);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(126, 25);
             this.guna2HtmlLabel2.TabIndex = 136;
             this.guna2HtmlLabel2.Text = "Status da venda";
             this.guna2HtmlLabel2.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -217,10 +214,9 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(733, 92);
-            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(612, 75);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(171, 32);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(135, 25);
             this.guna2HtmlLabel5.TabIndex = 135;
             this.guna2HtmlLabel5.Text = "Valor do produto";
             this.guna2HtmlLabel5.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -231,10 +227,9 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(38, 314);
-            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(22, 267);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(253, 32);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(205, 25);
             this.guna2HtmlLabel4.TabIndex = 134;
             this.guna2HtmlLabel4.Text = "Quantidade (no mínimo 1)";
             this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -245,10 +240,9 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(29, 207);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(22, 181);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(231, 32);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(187, 25);
             this.guna2HtmlLabel1.TabIndex = 133;
             this.guna2HtmlLabel1.Text = "Responsável pela venda";
             this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -260,13 +254,13 @@
             this.Link_ja_tem_cad.AutoSize = true;
             this.Link_ja_tem_cad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Link_ja_tem_cad.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
-            this.Link_ja_tem_cad.Location = new System.Drawing.Point(49, 181);
-            this.Link_ja_tem_cad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Link_ja_tem_cad.Location = new System.Drawing.Point(29, 147);
             this.Link_ja_tem_cad.Name = "Link_ja_tem_cad";
-            this.Link_ja_tem_cad.Size = new System.Drawing.Size(395, 23);
+            this.Link_ja_tem_cad.Size = new System.Drawing.Size(305, 17);
             this.Link_ja_tem_cad.TabIndex = 132;
             this.Link_ja_tem_cad.TabStop = true;
             this.Link_ja_tem_cad.Text = "Não achou o produto? Clique aqui para requisitar!";
+            this.Link_ja_tem_cad.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Link_ja_tem_cad_LinkClicked);
             // 
             // cmb_nome_produto
             // 
@@ -283,10 +277,9 @@
             this.cmb_nome_produto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.cmb_nome_produto.ItemHeight = 30;
             this.cmb_nome_produto.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmb_nome_produto.Location = new System.Drawing.Point(40, 135);
-            this.cmb_nome_produto.Margin = new System.Windows.Forms.Padding(4);
+            this.cmb_nome_produto.Location = new System.Drawing.Point(22, 110);
             this.cmb_nome_produto.Name = "cmb_nome_produto";
-            this.cmb_nome_produto.Size = new System.Drawing.Size(669, 36);
+            this.cmb_nome_produto.Size = new System.Drawing.Size(452, 36);
             this.cmb_nome_produto.TabIndex = 131;
             // 
             // Txt_quantidade
@@ -306,44 +299,17 @@
             this.Txt_quantidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.Txt_quantidade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Txt_quantidade.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
-            this.Txt_quantidade.IconRightOffset = new System.Drawing.Point(10, -10);
+            this.Txt_quantidade.IconRightOffset = new System.Drawing.Point(10, -5);
             this.Txt_quantidade.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_quantidade.Location = new System.Drawing.Point(38, 356);
-            this.Txt_quantidade.Margin = new System.Windows.Forms.Padding(5);
+            this.Txt_quantidade.Location = new System.Drawing.Point(24, 299);
+            this.Txt_quantidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_quantidade.Name = "Txt_quantidade";
             this.Txt_quantidade.PasswordChar = '\0';
             this.Txt_quantidade.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.Txt_quantidade.PlaceholderText = "Digite aqui";
             this.Txt_quantidade.SelectedText = "";
-            this.Txt_quantidade.Size = new System.Drawing.Size(671, 46);
+            this.Txt_quantidade.Size = new System.Drawing.Size(452, 36);
             this.Txt_quantidade.TabIndex = 130;
-            // 
-            // Btn_voltar
-            // 
-            this.Btn_voltar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Btn_voltar.Animated = true;
-            this.Btn_voltar.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_voltar.BorderRadius = 10;
-            this.Btn_voltar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_voltar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_voltar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_voltar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_voltar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
-            this.Btn_voltar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.Btn_voltar.ForeColor = System.Drawing.Color.White;
-            this.Btn_voltar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_voltar.Image")));
-            this.Btn_voltar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Btn_voltar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_voltar.Location = new System.Drawing.Point(1226, 447);
-            this.Btn_voltar.Margin = new System.Windows.Forms.Padding(4);
-            this.Btn_voltar.Name = "Btn_voltar";
-            this.Btn_voltar.ShadowDecoration.Depth = 5;
-            this.Btn_voltar.ShadowDecoration.Enabled = true;
-            this.Btn_voltar.Size = new System.Drawing.Size(192, 48);
-            this.Btn_voltar.TabIndex = 129;
-            this.Btn_voltar.Text = "Voltar";
-            this.Btn_voltar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_voltar.Click += new System.EventHandler(this.Btn_voltar_Click);
             // 
             // Btn_adicionar
             // 
@@ -361,12 +327,11 @@
             this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
             this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(550, 447);
-            this.Btn_adicionar.Margin = new System.Windows.Forms.Padding(4);
+            this.Btn_adicionar.Location = new System.Drawing.Point(620, 379);
             this.Btn_adicionar.Name = "Btn_adicionar";
             this.Btn_adicionar.ShadowDecoration.Depth = 5;
             this.Btn_adicionar.ShadowDecoration.Enabled = true;
-            this.Btn_adicionar.Size = new System.Drawing.Size(192, 48);
+            this.Btn_adicionar.Size = new System.Drawing.Size(144, 39);
             this.Btn_adicionar.TabIndex = 128;
             this.Btn_adicionar.Text = "Adicionar";
             this.Btn_adicionar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -391,14 +356,14 @@
             this.Txt_valor_produto.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_valor_produto.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_valor_produto.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_valor_produto.Location = new System.Drawing.Point(733, 135);
-            this.Txt_valor_produto.Margin = new System.Windows.Forms.Padding(5);
+            this.Txt_valor_produto.Location = new System.Drawing.Point(612, 110);
+            this.Txt_valor_produto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_valor_produto.Name = "Txt_valor_produto";
             this.Txt_valor_produto.PasswordChar = '\0';
             this.Txt_valor_produto.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.Txt_valor_produto.PlaceholderText = "Digite aqui";
             this.Txt_valor_produto.SelectedText = "";
-            this.Txt_valor_produto.Size = new System.Drawing.Size(671, 53);
+            this.Txt_valor_produto.Size = new System.Drawing.Size(452, 36);
             this.Txt_valor_produto.TabIndex = 127;
             // 
             // guna2HtmlLabel3
@@ -407,10 +372,9 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(40, 95);
-            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(22, 79);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(332, 32);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(265, 25);
             this.guna2HtmlLabel3.TabIndex = 126;
             this.guna2HtmlLabel3.Text = "Nome do produto (nomenclatura)";
             this.guna2HtmlLabel3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
@@ -421,20 +385,19 @@
             this.Lbl_adicionar.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_adicionar.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.Lbl_adicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Lbl_adicionar.Location = new System.Drawing.Point(642, 10);
-            this.Lbl_adicionar.Margin = new System.Windows.Forms.Padding(4);
+            this.Lbl_adicionar.Location = new System.Drawing.Point(482, 21);
             this.Lbl_adicionar.Name = "Lbl_adicionar";
-            this.Lbl_adicionar.Size = new System.Drawing.Size(95, 39);
+            this.Lbl_adicionar.Size = new System.Drawing.Size(87, 32);
             this.Lbl_adicionar.TabIndex = 125;
-            this.Lbl_adicionar.Text = "VENDA";
+            this.Lbl_adicionar.Text = "VENDAS";
             this.Lbl_adicionar.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Tela_vendas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1447, 809);
+            this.ClientSize = new System.Drawing.Size(1085, 657);
             this.Controls.Add(this.Dgv_venda);
             this.Controls.Add(this.Btn_deletar);
             this.Controls.Add(this.Btn_atualizar);
@@ -447,12 +410,10 @@
             this.Controls.Add(this.Link_ja_tem_cad);
             this.Controls.Add(this.cmb_nome_produto);
             this.Controls.Add(this.Txt_quantidade);
-            this.Controls.Add(this.Btn_voltar);
             this.Controls.Add(this.Btn_adicionar);
             this.Controls.Add(this.Txt_valor_produto);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.Lbl_adicionar);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Tela_vendas";
             this.Text = "Tela_vendas";
             this.Load += new System.EventHandler(this.Tela_vendas_Load);
@@ -476,7 +437,6 @@
         private System.Windows.Forms.LinkLabel Link_ja_tem_cad;
         private Guna.UI2.WinForms.Guna2ComboBox cmb_nome_produto;
         private Guna.UI2.WinForms.Guna2TextBox Txt_quantidade;
-        private Guna.UI2.WinForms.Guna2Button Btn_voltar;
         private Guna.UI2.WinForms.Guna2Button Btn_adicionar;
         private Guna.UI2.WinForms.Guna2TextBox Txt_valor_produto;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
