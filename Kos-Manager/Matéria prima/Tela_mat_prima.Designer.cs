@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.Txt_marca = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmb_fornecedor = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -42,7 +41,6 @@
             this.Txt_quantidade = new Guna.UI2.WinForms.Guna2TextBox();
             this.Btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
             this.Txt_lote = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txt_produto = new Guna.UI2.WinForms.Guna2TextBox();
             this.Lbl_estoque = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -51,35 +49,6 @@
             this.DgvEstoqueMp = new Guna.UI2.WinForms.Guna2DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.DgvEstoqueMp)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Txt_marca
-            // 
-            this.Txt_marca.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Txt_marca.BorderRadius = 6;
-            this.Txt_marca.BorderThickness = 0;
-            this.Txt_marca.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Txt_marca.DefaultText = "";
-            this.Txt_marca.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Txt_marca.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Txt_marca.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Txt_marca.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Txt_marca.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.Txt_marca.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_marca.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Txt_marca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.Txt_marca.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_marca.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
-            this.Txt_marca.IconRightOffset = new System.Drawing.Point(10, -5);
-            this.Txt_marca.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_marca.Location = new System.Drawing.Point(13, 198);
-            this.Txt_marca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Txt_marca.Name = "Txt_marca";
-            this.Txt_marca.PasswordChar = '\0';
-            this.Txt_marca.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.Txt_marca.PlaceholderText = "Digite aqui";
-            this.Txt_marca.SelectedText = "";
-            this.Txt_marca.Size = new System.Drawing.Size(452, 36);
-            this.Txt_marca.TabIndex = 85;
             // 
             // guna2HtmlLabel7
             // 
@@ -159,7 +128,7 @@
             this.Txt_dt_validade.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_dt_validade.IconRightOffset = new System.Drawing.Point(10, -5);
             this.Txt_dt_validade.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_dt_validade.Location = new System.Drawing.Point(13, 287);
+            this.Txt_dt_validade.Location = new System.Drawing.Point(13, 207);
             this.Txt_dt_validade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_dt_validade.Name = "Txt_dt_validade";
             this.Txt_dt_validade.PasswordChar = '\0';
@@ -175,7 +144,7 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(13, 255);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(13, 175);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(132, 25);
             this.guna2HtmlLabel3.TabIndex = 79;
@@ -265,19 +234,6 @@
             this.Txt_lote.SelectedText = "";
             this.Txt_lote.Size = new System.Drawing.Size(452, 36);
             this.Txt_lote.TabIndex = 75;
-            // 
-            // guna2HtmlLabel4
-            // 
-            this.guna2HtmlLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(13, 166);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(143, 25);
-            this.guna2HtmlLabel4.TabIndex = 74;
-            this.guna2HtmlLabel4.Text = "Marca do Produto";
-            this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
             // guna2HtmlLabel1
             // 
@@ -449,7 +405,6 @@
             this.Controls.Add(this.DgvEstoqueMp);
             this.Controls.Add(this.Btn_deletar);
             this.Controls.Add(this.Btn_atualizar);
-            this.Controls.Add(this.Txt_marca);
             this.Controls.Add(this.guna2HtmlLabel7);
             this.Controls.Add(this.cmb_fornecedor);
             this.Controls.Add(this.guna2HtmlLabel6);
@@ -459,7 +414,6 @@
             this.Controls.Add(this.Txt_quantidade);
             this.Controls.Add(this.Btn_adicionar);
             this.Controls.Add(this.Txt_lote);
-            this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.txt_produto);
             this.Controls.Add(this.Lbl_estoque);
@@ -473,8 +427,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2TextBox Txt_marca;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2ComboBox cmb_fornecedor;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
@@ -484,7 +436,6 @@
         private Guna.UI2.WinForms.Guna2TextBox Txt_quantidade;
         private Guna.UI2.WinForms.Guna2Button Btn_adicionar;
         private Guna.UI2.WinForms.Guna2TextBox Txt_lote;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txt_produto;
         private Guna.UI2.WinForms.Guna2HtmlLabel Lbl_estoque;

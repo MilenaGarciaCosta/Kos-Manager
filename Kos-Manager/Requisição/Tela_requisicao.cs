@@ -90,20 +90,18 @@ namespace Kos_Manager
                 string quantidade = Txt_quantidade.Text;
                 int cmb_Status = Convert.ToInt32(cmb_status_requisicao.SelectedValue);
                 int cmb_Produto = Convert.ToInt32(cmb_nome_produto.SelectedValue);
-                int cmb_Funcionario = Convert.ToInt32(cmb_funcionario.SelectedValue);
 
                 string sql_insert = @"insert into TB_REQUISICAO
                 (  
                  
                    TB_REQUISICAO_QUANTIDADE,
                    TB_REQUISICAO_STATUS_ID,
-                   TB_PRODUTO_MANU_ID,
-                   TB_FUNCIONARIO_ID
+                   TB_PRODUTO_MANU_ID
             
                  )
                 values
                 (
-                   @REQUISICAO_QUANTIDADE, @REQUISICAO_STATUS, @PRODUTO_MANU_ID, @FUNCIONARIO_ID
+                   @REQUISICAO_QUANTIDADE, @REQUISICAO_STATUS, @PRODUTO_MANU_ID
                  )";
 
                 MySqlCommand executacmdMySql_insert = new MySqlCommand(sql_insert, con);
@@ -111,7 +109,6 @@ namespace Kos_Manager
                 executacmdMySql_insert.Parameters.AddWithValue("@REQUISICAO_QUANTIDADE", quantidade);
                 executacmdMySql_insert.Parameters.AddWithValue("@REQUISICAO_STATUS", cmb_Status);
                 executacmdMySql_insert.Parameters.AddWithValue("@PRODUTO_MANU_ID", cmb_Produto);
-                executacmdMySql_insert.Parameters.AddWithValue("@FUNCIONARIO_ID", cmb_Funcionario);
 
 
                 con.Open();
@@ -132,7 +129,6 @@ namespace Kos_Manager
             int quantidade = Convert.ToInt32(Txt_quantidade.Text);
             int cmb_Produto = Convert.ToInt32(cmb_nome_produto.SelectedValue);
             int cmb_Status = Convert.ToInt32(cmb_status_requisicao.SelectedValue);
-            int cmb_Funcionario = Convert.ToInt32(cmb_funcionario.SelectedValue);
 
             using (MySqlConnection con = new MySqlConnection(conexao))
             {
@@ -142,7 +138,6 @@ namespace Kos_Manager
             SET tb_requisicao_quantidade = @quantidade,
                 tb_requisicao_status_id = @status,
                 tb_produto_manu_id = @produto,
-                tb_funcionario_id = @funcionario
             WHERE tb_requisicao_id = @id";
 
                 MySqlCommand executacmdMySql_update_tb_requisicao = new MySqlCommand(sql_update_tb_requisicao, con);
@@ -150,7 +145,6 @@ namespace Kos_Manager
                 executacmdMySql_update_tb_requisicao.Parameters.AddWithValue("@quantidade", quantidade);
                 executacmdMySql_update_tb_requisicao.Parameters.AddWithValue("@status", cmb_Status);
                 executacmdMySql_update_tb_requisicao.Parameters.AddWithValue("@produto", cmb_Produto);
-                executacmdMySql_update_tb_requisicao.Parameters.AddWithValue("@funcionario", cmb_Funcionario);
 
                 con.Open();
                 executacmdMySql_update_tb_requisicao.ExecuteNonQuery();
@@ -211,12 +205,75 @@ namespace Kos_Manager
             Txt_quantidade.Text = Dgv_requisita.CurrentRow.Cells[1].Value.ToString();
             cmb_status_requisicao.Text = Dgv_requisita.CurrentRow.Cells[2].Value.ToString();
             cmb_nome_produto.Text = Dgv_requisita.CurrentRow.Cells[3].Value.ToString();
-            cmb_funcionario.Text = Dgv_requisita.CurrentRow.Cells[4].Value.ToString();
         }
 
         private void Tela_requisicao_Load(object sender, EventArgs e)
         {
-            
+            //MOSTRAR OS DADOS DO COMBOBOX
+
+            MySqlConnection con = new MySqlConnection(conexao);
+
+                        string sql_select_requisicao = @"
+            SELECT
+                            r.tb_requisicao_id AS Id,
+                            pm.tb_produto_manu_nome AS Nome,
+                            r.tb_requisicao_quantidade as Quantidade,
+                            rs.tb_requisicao_status_nome as Status
+                
+                        FROM
+                            tb_requisicao r
+                            INNER JOIN tb_produto_manu pm ON pm.tb_produto_manu_id = r.tb_produto_manu_id
+                            INNER JOIN tb_requisicao_status rs ON rs.tb_requisicao_status_id = r.tb_requisicao_status_id";
+
+
+            string sql_select_produto = "select * from tb_produto_manu";
+            string sql_select_status = "select * from tb_requisicao_status";
+
+            MySqlCommand executacmdMySql_select_produto = new MySqlCommand(sql_select_produto, con);
+            MySqlCommand executacmdMySql_select_status = new MySqlCommand(sql_select_status, con);
+            MySqlCommand executacmdMySql_select_requisicao = new MySqlCommand(sql_select_requisicao, con);
+            con.Open();
+
+            executacmdMySql_select_produto.ExecuteNonQuery();
+            executacmdMySql_select_status.ExecuteNonQuery();
+            executacmdMySql_select_requisicao.ExecuteNonQuery();
+
+            DataTable tabela_requisicao = new DataTable();
+            DataTable tabela_produto = new DataTable();
+            DataTable tabela_status = new DataTable();
+
+            MySqlDataAdapter da_solicitacao = new MySqlDataAdapter(executacmdMySql_select_requisicao);
+            da_solicitacao.Fill(tabela_requisicao);
+
+            MySqlDataAdapter da_produto = new MySqlDataAdapter(executacmdMySql_select_produto);
+            da_produto.Fill(tabela_produto);
+
+            MySqlDataAdapter da_status = new MySqlDataAdapter(executacmdMySql_select_status);
+            da_status.Fill(tabela_status);
+
+
+
+            Dgv_requisita.DataSource = tabela_requisicao;
+
+
+            cmb_nome_produto.DataSource = tabela_produto;
+
+            cmb_nome_produto.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmb_nome_produto.DisplayMember = "TB_PRODUTO_MANU_NOME"; //Exibe os dados para o usuário
+            cmb_nome_produto.ValueMember = "TB_PRODUTO_MANU_ID";  //Pega os dados            
+            cmb_nome_produto.DataSource = tabela_produto;
+
+            cmb_nome_produto.SelectedItem = null;
+
+
+            cmb_status_requisicao.DataSource = tabela_status;
+
+            cmb_status_requisicao.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmb_status_requisicao.DisplayMember = "TB_REQUISICAO_STATUS_NOME"; //Exibe os dados para o usuário
+            cmb_status_requisicao.ValueMember = "TB_REQUISICAO_STATUS_ID";  //Pega os dados            
+            cmb_status_requisicao.DataSource = tabela_status;
+
+            cmb_status_requisicao.SelectedItem = null;
         }
     }
 }

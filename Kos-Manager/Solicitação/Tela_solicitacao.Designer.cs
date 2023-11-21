@@ -37,7 +37,6 @@
             this.Btn_deletar = new Guna.UI2.WinForms.Guna2Button();
             this.Btn_atualizar = new Guna.UI2.WinForms.Guna2Button();
             this.cmb_fornecedor = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cmb_marca = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmb_nome_produto = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmb_status_solicitacao = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -48,6 +47,7 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Lbl_adicionar = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Child_panel = new Guna.UI2.WinForms.Guna2Panel();
+            this.Txt_solicitacao_marca = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_solicita)).BeginInit();
             this.Child_panel.SuspendLayout();
             this.SuspendLayout();
@@ -187,26 +187,6 @@
             this.cmb_fornecedor.Name = "cmb_fornecedor";
             this.cmb_fornecedor.Size = new System.Drawing.Size(452, 36);
             this.cmb_fornecedor.TabIndex = 115;
-            // 
-            // cmb_marca
-            // 
-            this.cmb_marca.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cmb_marca.BackColor = System.Drawing.Color.Transparent;
-            this.cmb_marca.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.cmb_marca.BorderRadius = 10;
-            this.cmb_marca.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmb_marca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_marca.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.cmb_marca.FocusedColor = System.Drawing.Color.Transparent;
-            this.cmb_marca.FocusedState.BorderColor = System.Drawing.Color.Transparent;
-            this.cmb_marca.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmb_marca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.cmb_marca.ItemHeight = 30;
-            this.cmb_marca.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmb_marca.Location = new System.Drawing.Point(625, 94);
-            this.cmb_marca.Name = "cmb_marca";
-            this.cmb_marca.Size = new System.Drawing.Size(452, 36);
-            this.cmb_marca.TabIndex = 114;
             // 
             // cmb_nome_produto
             // 
@@ -372,12 +352,12 @@
             // 
             this.Child_panel.BackColor = System.Drawing.Color.Transparent;
             this.Child_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Child_panel.Controls.Add(this.Txt_solicitacao_marca);
             this.Child_panel.Controls.Add(this.guna2HtmlLabel7);
             this.Child_panel.Controls.Add(this.Dgv_solicita);
             this.Child_panel.Controls.Add(this.Btn_deletar);
             this.Child_panel.Controls.Add(this.Btn_atualizar);
             this.Child_panel.Controls.Add(this.cmb_fornecedor);
-            this.Child_panel.Controls.Add(this.cmb_marca);
             this.Child_panel.Controls.Add(this.cmb_nome_produto);
             this.Child_panel.Controls.Add(this.cmb_status_solicitacao);
             this.Child_panel.Controls.Add(this.guna2HtmlLabel4);
@@ -394,6 +374,35 @@
             this.Child_panel.TabIndex = 19;
             this.Child_panel.UseTransparentBackground = true;
             this.Child_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Child_panel_Paint_1);
+            // 
+            // Txt_solicitacao_marca
+            // 
+            this.Txt_solicitacao_marca.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_solicitacao_marca.BorderRadius = 6;
+            this.Txt_solicitacao_marca.BorderThickness = 0;
+            this.Txt_solicitacao_marca.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Txt_solicitacao_marca.DefaultText = "";
+            this.Txt_solicitacao_marca.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Txt_solicitacao_marca.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Txt_solicitacao_marca.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Txt_solicitacao_marca.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Txt_solicitacao_marca.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.Txt_solicitacao_marca.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_solicitacao_marca.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Txt_solicitacao_marca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Txt_solicitacao_marca.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_solicitacao_marca.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
+            this.Txt_solicitacao_marca.IconRightOffset = new System.Drawing.Point(10, -5);
+            this.Txt_solicitacao_marca.IconRightSize = new System.Drawing.Size(10, 10);
+            this.Txt_solicitacao_marca.Location = new System.Drawing.Point(625, 104);
+            this.Txt_solicitacao_marca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_solicitacao_marca.Name = "Txt_solicitacao_marca";
+            this.Txt_solicitacao_marca.PasswordChar = '\0';
+            this.Txt_solicitacao_marca.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.Txt_solicitacao_marca.PlaceholderText = "Digite aqui";
+            this.Txt_solicitacao_marca.SelectedText = "";
+            this.Txt_solicitacao_marca.Size = new System.Drawing.Size(452, 36);
+            this.Txt_solicitacao_marca.TabIndex = 120;
             // 
             // Tela_solicitacao
             // 
@@ -418,7 +427,6 @@
         private Guna.UI2.WinForms.Guna2Button Btn_deletar;
         private Guna.UI2.WinForms.Guna2Button Btn_atualizar;
         private Guna.UI2.WinForms.Guna2ComboBox cmb_fornecedor;
-        private Guna.UI2.WinForms.Guna2ComboBox cmb_marca;
         private Guna.UI2.WinForms.Guna2ComboBox cmb_nome_produto;
         private Guna.UI2.WinForms.Guna2ComboBox cmb_status_solicitacao;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
@@ -429,5 +437,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel Lbl_adicionar;
         private Guna.UI2.WinForms.Guna2Panel Child_panel;
+        private Guna.UI2.WinForms.Guna2TextBox Txt_solicitacao_marca;
     }
 }

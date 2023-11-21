@@ -35,11 +35,10 @@
                         SELECT
                          m.tb_materia_prima_id AS Id,
                          m.tb_materia_prima_nomenclatura AS Nomenclatura,
-                         m.tb_materia_prima_marca AS Marca,
                          m.tb_materia_prima_lote AS Lote,
                          m.tb_materia_prima_dt_val AS Data_de_Validade,
-                            m.tb_materia_prima_quantidade AS Quantidade,
-                        f.tb_fornecedor_nome AS Fornecedor
+                         m.tb_materia_prima_quantidade AS Quantidade,
+                         f.tb_fornecedor_nome AS Fornecedor
                         FROM
                          tb_materia_prima m
                          INNER JOIN
@@ -68,17 +67,17 @@
 
                     string sql_select_estoque = @"
                              SELECT
-                             m.tb_materia_prima_id AS Id,
-                             m.tb_materia_prima_nomenclatura AS Nomenclatura,
-                             m.tb_materia_prima_marca AS Marca,
-                             m.tb_materia_prima_lote AS Lote,
-                             m.tb_materia_prima_dt_val AS Data_de_Validade,
-                                m.tb_materia_prima_quantidade AS Quantidade,
-                            f.tb_fornecedor_nome AS Fornecedor
-                            FROM
-                             tb_materia_prima m
-                             INNER JOIN
-                             tb_fornecedor f ON m.tb_fornecedor_id = f.tb_fornecedor_id";
+                         m.tb_materia_prima_id AS Id,
+                         m.tb_materia_prima_nomenclatura AS Nomenclatura,
+                         m.tb_materia_prima_lote AS Lote,
+                         m.tb_materia_prima_dt_val AS Data_de_Validade,
+                         m.tb_materia_prima_quantidade AS Quantidade,
+                         f.tb_fornecedor_nome AS Fornecedor
+                        FROM
+                         tb_materia_prima m
+                         INNER JOIN
+                         tb_fornecedor f ON m.tb_fornecedor_id = f.tb_fornecedor_id";
+
                     string sql_select_fornecedor = "select * from tb_fornecedor";
 
 
@@ -123,7 +122,6 @@
                     MySqlConnection con = new MySqlConnection(conexao);
 
                     string nome = txt_produto.Text;
-                    string marca = Txt_marca.Text;
                     string lote = Txt_lote.Text;
                     string quantidade = Txt_quantidade.Text;
                     DateTime dtVal = DateTime.ParseExact(Txt_dt_validade.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture); // Converter a data para DateTime
@@ -133,7 +131,6 @@
                     string sql_insert = @"insert into tb_materia_prima
                     (  
                        tb_materia_prima_nomenclatura, 
-                        TB_MATERIA_PRIMA_MARCA, 
                         TB_MATERIA_PRIMA_LOTE,
                         TB_MATERIA_PRIMA_DT_VAL,
                         TB_MATERIA_PRIMA_QUANTIDADE,
@@ -141,13 +138,12 @@
                      )
                     values
                     (
-                        @materia_prima_nomenclatura, @MATERIA_PRIMA_MARCA, @MATERIA_PRIMA_LOTE, @MATERIA_PRIMA_DT_VAL, @MATERIA_PRIMA_QUANTIDADE, @FORNECEDOR_ID
+                        @materia_prima_nomenclatura, @MATERIA_PRIMA_LOTE, @MATERIA_PRIMA_DT_VAL, @MATERIA_PRIMA_QUANTIDADE, @FORNECEDOR_ID
                      )";
 
                     MySqlCommand executacmdMySql_insert = new MySqlCommand(sql_insert, con);
 
                     executacmdMySql_insert.Parameters.AddWithValue("@materia_prima_nomenclatura", nome);
-                    executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_MARCA", marca);
                     executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_LOTE", lote);
                     executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_DT_VAL", formattedDate); // Usar a data formatada para MySQL
                     executacmdMySql_insert.Parameters.AddWithValue("@MATERIA_PRIMA_QUANTIDADE", quantidade);
@@ -168,7 +164,6 @@
             private void Btn_atualizar_Click(object sender, EventArgs e)
             {
                 string nome = txt_produto.Text;
-                string marca = Txt_marca.Text;
                 string lote = Txt_lote.Text;
                 string quantidade = Txt_quantidade.Text;
                 DateTime dtVal = DateTime.ParseExact(Txt_dt_validade.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture); // Converter a data para DateTime
@@ -182,7 +177,6 @@
 
                 string sql_update_fornecedor = @"update tb_materia_prima 
                                       set tb_materia_prima_nomenclatura = @nome,
-                                          tb_materia_prima_marca = @marca,
                                           tb_materia_prima_lote = @lote,
                                           tb_materia_prima_quantidade = @quantidade,
                                           tb_materia_prima_dt_val = @dtVal,
@@ -195,7 +189,6 @@
                 MySqlCommand executacmdMySql_update_fornecedor = new MySqlCommand(sql_update_fornecedor, con);
                 executacmdMySql_update_fornecedor.Parameters.AddWithValue("@id", id);
                 executacmdMySql_update_fornecedor.Parameters.AddWithValue("@nome", nome);
-                executacmdMySql_update_fornecedor.Parameters.AddWithValue("@marca", marca);
                 executacmdMySql_update_fornecedor.Parameters.AddWithValue("@lote", lote);
                 executacmdMySql_update_fornecedor.Parameters.AddWithValue("@quantidade", quantidade);
                 executacmdMySql_update_fornecedor.Parameters.AddWithValue("@dtVal", formattedDate);
@@ -246,7 +239,6 @@
             {
                 this.id = DgvEstoqueMp.CurrentRow.Cells[0].Value.ToString();
                 txt_produto.Text = DgvEstoqueMp.CurrentRow.Cells[1].Value.ToString();
-                Txt_marca.Text = DgvEstoqueMp.CurrentRow.Cells[2].Value.ToString();
                 Txt_dt_validade.Text = DgvEstoqueMp.CurrentRow.Cells[3].Value.ToString();
                 Txt_lote.Text = DgvEstoqueMp.CurrentRow.Cells[4].Value.ToString();
                 Txt_quantidade.Text = DgvEstoqueMp.CurrentRow.Cells[5].Value.ToString();
