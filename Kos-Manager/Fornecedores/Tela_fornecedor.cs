@@ -70,7 +70,15 @@ namespace Kos_Manager
         {
             
         }
-      
+
+        private void LimparDados()
+        {
+            // Limpar TextBox
+            Txt_nome_fornecedor.Clear();
+            Txt_produto_fornecido.Clear();
+            Txt_tel_fornecedor.Clear();
+            Txt_outro_contato_fornecedor.Clear();
+        }
 
         private void Btn_adicionar_Click(object sender, EventArgs e)
         {
@@ -107,7 +115,9 @@ namespace Kos_Manager
                 executacmdMySql_insert.ExecuteNonQuery();
                 ListarFornecedores();
                 con.Close();
-                MessageBox.Show("Cadastrado com Sucesso!");
+                LimparDados();
+                //nnotificação aqui
+                
             }
             catch (Exception erro)
             {
@@ -148,7 +158,7 @@ namespace Kos_Manager
             con.Open();
             executacmdMySql_update_fornecedor.ExecuteNonQuery();
 
-            MessageBox.Show("Atualização realizada com sucesso");
+            //notificação aqui
 
             ListarFornecedores();
 
@@ -174,7 +184,7 @@ namespace Kos_Manager
 
             executarcmdMySql_delete_fornecedor.ExecuteNonQuery();
 
-            MessageBox.Show("Registro deletado com sucesso");
+            //notificação aqui
             ListarFornecedores();
 
             // Fechando conexão

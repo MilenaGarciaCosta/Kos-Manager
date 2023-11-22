@@ -31,9 +31,9 @@ namespace Kos_Manager
             string sql_select_requisicao = @"
                            SELECT
                      r.tb_requisicao_id AS Id,
+                     p.TB_PRODUTO_MANU_NOME AS Nome,
                      r.tb_requisicao_quantidade as Quantidade,
-                     s.tb_requisicao_status_nome as Status,
-                     p.TB_PRODUTO_MANU_NOME AS Nome
+                     s.tb_requisicao_status_nome as Status
                     FROM
                      tb_requisicao r
                      INNER JOIN
@@ -55,6 +55,14 @@ namespace Kos_Manager
 
         }
 
+
+        private void LimparDados()
+        {
+            // Limpar TextBox
+            Txt_quantidade.Clear();
+
+            // Limpar ComboBox
+        }
         private void Btn_adicionar_Click(object sender, EventArgs e)
         {
             try
@@ -89,7 +97,8 @@ namespace Kos_Manager
                 executacmdMySql_insert.ExecuteNonQuery();
                 ListarRequisicao();
                 con.Close();
-                MessageBox.Show("Cadastrado com Sucesso!");
+                LimparDados();
+                //notificação aqui
             }
             catch (Exception erro)
             {
@@ -99,19 +108,19 @@ namespace Kos_Manager
 
         private void Btn_atualizar_Click(object sender, EventArgs e)
         {
-           // string id = txt_cod.Text;
+            string id = Txt_id.Text;
             int quantidade = Convert.ToInt32(Txt_quantidade.Text);
             int cmb_Produto = Convert.ToInt32(cmb_nome_produto.SelectedValue);
             int cmb_Status = Convert.ToInt32(cmb_status_requisicao.SelectedValue);
 
             using (MySqlConnection con = new MySqlConnection(conexao))
             {
-                con.Open();
+                
 
                 string sql_update_tb_requisicao = @"UPDATE tb_requisicao
             SET tb_requisicao_quantidade = @quantidade,
                 tb_requisicao_status_id = @status,
-                tb_produto_manu_id = @produto,
+                tb_produto_manu_id = @produto
             WHERE tb_requisicao_id = @id";
 
                 MySqlCommand executacmdMySql_update_tb_requisicao = new MySqlCommand(sql_update_tb_requisicao, con);
@@ -124,7 +133,7 @@ namespace Kos_Manager
                 executacmdMySql_update_tb_requisicao.ExecuteNonQuery();
                 ListarRequisicao();
                 con.Close();
-                MessageBox.Show("Cadastrado com Sucesso!"); ;
+                //notificação aqui
             }
         }
 
@@ -133,7 +142,7 @@ namespace Kos_Manager
             try
             {
                 // Obtém o ID da solicitação que deseja excluir
-               // string id = txt_cod.Text;
+                string id = Txt_id.Text;
 
                 MySqlConnection con = new MySqlConnection(conexao);
 
@@ -147,7 +156,7 @@ namespace Kos_Manager
                 executacmdMySql_delete_tb_requisicao.ExecuteNonQuery();
                 con.Close();
 
-                MessageBox.Show("Exclusão realizada com sucesso");
+                //notificação aqui
 
                 // Atualize a exibição da lista de solicitações
                 ListarRequisicao();
@@ -176,9 +185,9 @@ namespace Kos_Manager
         private void Dgv_requisita_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             this.id = Dgv_requisita.CurrentRow.Cells[0].Value.ToString();
-            Txt_quantidade.Text = Dgv_requisita.CurrentRow.Cells[1].Value.ToString();
-            cmb_status_requisicao.Text = Dgv_requisita.CurrentRow.Cells[2].Value.ToString();
-            cmb_nome_produto.Text = Dgv_requisita.CurrentRow.Cells[3].Value.ToString();
+            cmb_nome_produto.Text = Dgv_requisita.CurrentRow.Cells[1].Value.ToString();
+            Txt_quantidade.Text = Dgv_requisita.CurrentRow.Cells[2].Value.ToString();
+            cmb_status_requisicao.Text = Dgv_requisita.CurrentRow.Cells[3].Value.ToString();
         }
 
         private void Tela_requisicao_Load(object sender, EventArgs e)

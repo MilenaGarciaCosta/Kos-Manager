@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_mat_prima));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmb_fornecedor = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -47,6 +47,7 @@
             this.Btn_deletar = new Guna.UI2.WinForms.Guna2Button();
             this.Btn_atualizar = new Guna.UI2.WinForms.Guna2Button();
             this.DgvEstoqueMp = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Txt_id = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgvEstoqueMp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +76,7 @@
             this.cmb_fornecedor.FocusedColor = System.Drawing.Color.Transparent;
             this.cmb_fornecedor.FocusedState.BorderColor = System.Drawing.Color.Transparent;
             this.cmb_fornecedor.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmb_fornecedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.cmb_fornecedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.cmb_fornecedor.ItemHeight = 30;
             this.cmb_fornecedor.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cmb_fornecedor.Location = new System.Drawing.Point(639, 207);
@@ -341,29 +342,29 @@
             // 
             // DgvEstoqueMp
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.DgvEstoqueMp.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.DgvEstoqueMp.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DgvEstoqueMp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvEstoqueMp.BackgroundColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvEstoqueMp.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvEstoqueMp.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DgvEstoqueMp.ColumnHeadersHeight = 4;
             this.DgvEstoqueMp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvEstoqueMp.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvEstoqueMp.DefaultCellStyle = dataGridViewCellStyle6;
             this.DgvEstoqueMp.GridColor = System.Drawing.Color.Silver;
             this.DgvEstoqueMp.Location = new System.Drawing.Point(13, 448);
             this.DgvEstoqueMp.Margin = new System.Windows.Forms.Padding(2);
@@ -396,12 +397,45 @@
             this.DgvEstoqueMp.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.DgvEstoqueMp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvEstoqueMp_CellContentClick);
             // 
+            // Txt_id
+            // 
+            this.Txt_id.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_id.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Txt_id.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.Txt_id.BorderColor = System.Drawing.Color.Transparent;
+            this.Txt_id.BorderRadius = 6;
+            this.Txt_id.BorderThickness = 0;
+            this.Txt_id.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Txt_id.DefaultText = "";
+            this.Txt_id.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Txt_id.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Txt_id.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Txt_id.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Txt_id.FillColor = System.Drawing.Color.Transparent;
+            this.Txt_id.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_id.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Txt_id.ForeColor = System.Drawing.Color.Transparent;
+            this.Txt_id.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_id.IconRightOffset = new System.Drawing.Point(10, -5);
+            this.Txt_id.IconRightSize = new System.Drawing.Size(10, 10);
+            this.Txt_id.Location = new System.Drawing.Point(34, 296);
+            this.Txt_id.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_id.Name = "Txt_id";
+            this.Txt_id.PasswordChar = '\0';
+            this.Txt_id.PlaceholderForeColor = System.Drawing.Color.Transparent;
+            this.Txt_id.PlaceholderText = "Digite aqui";
+            this.Txt_id.SelectedText = "";
+            this.Txt_id.Size = new System.Drawing.Size(276, 36);
+            this.Txt_id.TabIndex = 89;
+            this.Txt_id.Visible = false;
+            // 
             // Tela_mat_prima
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1103, 679);
+            this.Controls.Add(this.Txt_id);
             this.Controls.Add(this.DgvEstoqueMp);
             this.Controls.Add(this.Btn_deletar);
             this.Controls.Add(this.Btn_atualizar);
@@ -442,5 +476,6 @@
         private Guna.UI2.WinForms.Guna2Button Btn_deletar;
         private Guna.UI2.WinForms.Guna2Button Btn_atualizar;
         private Guna.UI2.WinForms.Guna2DataGridView DgvEstoqueMp;
+        private Guna.UI2.WinForms.Guna2TextBox Txt_id;
     }
 }

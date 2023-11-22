@@ -86,6 +86,15 @@ namespace Kos_Manager
            // abrirChildForm(new Tela_add_solicitacao());
         }
 
+        private void LimparDados()
+        {
+            // Limpar TextBox
+            Txt_quantidade.Clear();
+            Txt_solicitacao_marca.Clear();
+
+            // Limpar ComboBox
+        }
+
         private void Btn_adicionar_Click(object sender, EventArgs e)
         {
             try
@@ -126,7 +135,11 @@ namespace Kos_Manager
                 executacmdMySql_insert.ExecuteNonQuery();
                 ListarSolicitacao();
                 con.Close();
+                LimparDados();
                 MessageBox.Show("Cadastrado com Sucesso!");
+                //notificação aqui
+
+                
             }
             catch (Exception erro)
             {
@@ -136,7 +149,7 @@ namespace Kos_Manager
 
         private void Btn_atualizar_Click(object sender, EventArgs e)
         {
-            //string id = txt_cod.Text;
+            string id = Txt_id.Text;
             string quantidade = Txt_quantidade.Text;
             int cmb_Status = Convert.ToInt32(cmb_status_solicitacao.SelectedValue);
             int cmb_Fornecedor = Convert.ToInt32(cmb_fornecedor.SelectedValue);
@@ -145,13 +158,12 @@ namespace Kos_Manager
 
             using (MySqlConnection con = new MySqlConnection(conexao))
             {
-                con.Open();
-
+                
                 string sql_update_tb_requisicao = @"
             UPDATE TB_SOLICITACAO
             SET TB_SOLICITACAO_QUANTIDADE = @quantidade,
                 TB_SOLICITACAO_STATUS_ID = @status,
-                TB_SOLICITACAO_MARCA = @marca,
+                TB_SOLICITACAO_MARCA = @Marca,
                 TB_MATERIA_PRIMA_ID = @produto,
                 TB_FORNECEDOR_ID = @fornecedor
             WHERE TB_SOLICITACAO_ID = @id";
@@ -163,15 +175,19 @@ namespace Kos_Manager
                 executacmdMySql_update_tb_requisicao.Parameters.AddWithValue("@status", cmb_Status);
                 executacmdMySql_update_tb_requisicao.Parameters.AddWithValue("@marca", marca);
                 executacmdMySql_update_tb_requisicao.Parameters.AddWithValue("@produto", cmb_Produto);
-                executacmdMySql_update_tb_requisicao.Parameters.AddWithValue("@marca", marca);
                 executacmdMySql_update_tb_requisicao.Parameters.AddWithValue("@fornecedor", cmb_Fornecedor);
 
+             
+                con.Open();
                 executacmdMySql_update_tb_requisicao.ExecuteNonQuery();
-
-                MessageBox.Show("Atualização realizada com sucesso");
+                ListarSolicitacao();
+                con.Close();
+                LimparDados();
+                MessageBox.Show("Atualizado com Sucesso!");
             }
 
-            ListarSolicitacao();
+           
+
 
         }
 
@@ -180,7 +196,7 @@ namespace Kos_Manager
             try
             {
                 // Obtém o ID da solicitação que deseja excluir
-                //string id = txt_cod.Text;
+                string id = Txt_id.Text;
 
                 MySqlConnection con = new MySqlConnection(conexao);
 
@@ -190,14 +206,13 @@ namespace Kos_Manager
                 MySqlCommand executacmdMySql_delete_tb_solicitacao = new MySqlCommand(sql_delete_tb_solicitacao, con);
                 executacmdMySql_delete_tb_solicitacao.Parameters.AddWithValue("@id", id);
 
+               
                 con.Open();
                 executacmdMySql_delete_tb_solicitacao.ExecuteNonQuery();
-                con.Close();
-
-                MessageBox.Show("Exclusão realizada com sucesso");
-
-                // Atualize a exibição da lista de solicitações
                 ListarSolicitacao();
+                con.Close();
+                LimparDados();
+                MessageBox.Show("Deletado com Sucesso!");
             }
             catch (Exception erro)
             {

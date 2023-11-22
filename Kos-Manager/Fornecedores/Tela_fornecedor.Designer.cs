@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_fornecedor));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Txt_nome_fornecedor = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Lbl_fornecedor = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -87,9 +87,9 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(21, 112);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(265, 25);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(164, 25);
             this.guna2HtmlLabel1.TabIndex = 69;
-            this.guna2HtmlLabel1.Text = "Nome do produto (nomenclatura)";
+            this.guna2HtmlLabel1.Text = "Nome do fornecedor";
             this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Lbl_fornecedor
@@ -100,7 +100,7 @@
             this.Lbl_fornecedor.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_fornecedor.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.Lbl_fornecedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Lbl_fornecedor.Location = new System.Drawing.Point(439, 34);
+            this.Lbl_fornecedor.Location = new System.Drawing.Point(438, 44);
             this.Lbl_fornecedor.MinimumSize = new System.Drawing.Size(156, 32);
             this.Lbl_fornecedor.Name = "Lbl_fornecedor";
             this.Lbl_fornecedor.Size = new System.Drawing.Size(234, 32);
@@ -198,7 +198,7 @@
             this.Txt_outro_contato_fornecedor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Txt_outro_contato_fornecedor.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_outro_contato_fornecedor.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_outro_contato_fornecedor.Location = new System.Drawing.Point(632, 229);
+            this.Txt_outro_contato_fornecedor.Location = new System.Drawing.Point(640, 247);
             this.Txt_outro_contato_fornecedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_outro_contato_fornecedor.Name = "Txt_outro_contato_fornecedor";
             this.Txt_outro_contato_fornecedor.PasswordChar = '\0';
@@ -280,7 +280,7 @@
             this.Txt_produto_fornecido.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Txt_produto_fornecido.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_produto_fornecido.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_produto_fornecido.Location = new System.Drawing.Point(19, 229);
+            this.Txt_produto_fornecido.Location = new System.Drawing.Point(13, 247);
             this.Txt_produto_fornecido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_produto_fornecido.Name = "Txt_produto_fornecido";
             this.Txt_produto_fornecido.PasswordChar = '\0';
@@ -318,29 +318,29 @@
             // 
             // DgvFornecedor
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.DgvFornecedor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.DgvFornecedor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.DgvFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvFornecedor.BackgroundColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvFornecedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvFornecedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.DgvFornecedor.ColumnHeadersHeight = 4;
             this.DgvFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvFornecedor.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvFornecedor.DefaultCellStyle = dataGridViewCellStyle9;
             this.DgvFornecedor.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DgvFornecedor.Location = new System.Drawing.Point(21, 447);
             this.DgvFornecedor.Margin = new System.Windows.Forms.Padding(2);

@@ -61,83 +61,72 @@ namespace Kos_Manager
         }
 
 
-        private Form FormAtivo = null;
-        private void abrirChildForm(Form ChildForm)
+        private void LimparDados()
         {
-            if (FormAtivo != null)
-                FormAtivo.Close();
-            FormAtivo = ChildForm;
-            ChildForm.TopLevel = false;
-            ChildForm.FormBorderStyle = FormBorderStyle.None;
-            ChildForm.Dock = DockStyle.Fill;
-           // Child_panel.Controls.Add(ChildForm);
-           // Child_panel.Tag = ChildForm;
-            ChildForm.BringToFront();
-            ChildForm.Show();
+            // Limpar TextBox
+            Txt_quantidade.Clear();
+            Txt_valor_produto.Clear();
+            // Limpar ComboBox
         }
 
-        private void Child_panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-      
         private void Btn_adicionar_Click_1(object sender, EventArgs e)
         {
             try
             {
-                MySqlConnection con = new MySqlConnection(conexao);
-
-                string quantidade = Txt_quantidade.Text;
-                string valor = Txt_valor_produto.Text;
-                int cmb_Funcionario = Convert.ToInt32(cmb_funcionario.SelectedValue);
-                int cmb_Produto = Convert.ToInt32(cmb_nome_produto.SelectedValue);
-                int cmb_Venda_status = Convert.ToInt32(cmb_status.SelectedValue);
-
-                // Força a cultura de interpretação para Português (Brasil)
-                CultureInfo culturaBrasileira = new CultureInfo("pt-BR");
-
-                // Verifique se a quantidade é maior que 0 e se o valor é um número decimal válido
-
-                if (int.TryParse(quantidade, out int quantidadeInt) && decimal.TryParse(valor, NumberStyles.AllowDecimalPoint, culturaBrasileira, out decimal valorDecimal) && quantidadeInt > 0)
+                using (MySqlConnection con = new MySqlConnection(conexao))
                 {
-                    // Calcule o valor total com base na quantidade e no valor unitário
-                    decimal valorTotal = quantidadeInt * valorDecimal;
+                    string quantidade = Txt_quantidade.Text;
+                    string valor = Txt_valor_produto.Text;
+                    int cmb_Funcionario = Convert.ToInt32(cmb_funcionario.SelectedValue);
+                    int cmb_Produto = Convert.ToInt32(cmb_nome_produto.SelectedValue);
+                    int cmb_Venda_status = Convert.ToInt32(cmb_status.SelectedValue);
 
+                    // Força a cultura de interpretação para Português (Brasil)
+                    CultureInfo culturaBrasileira = new CultureInfo("pt-BR");
 
-                    string sql_insert = @"insert into TB_VENDA
-        (  
-           TB_VENDA_QUANTIDADE, 
-           TB_VENDA_VALOR,
-           TB_PRODUTO_MANU_ID, 
-           TB_FUNCIONARIO_ID,
-           TB_VENDA_STATUS_ID
-         )
-        values
-        (
-            @VENDA_QUANTIDADE, @VENDA_VALOR, @PRODUTO_MANU_ID, @FUNCIONARIO_ID, @VENDA_STATUS_ID
-         )";
+                    // Verifique se a quantidade é maior que 0 e se o valor é um número decimal válido
+                    if (int.TryParse(quantidade, out int quantidadeInt) && decimal.TryParse(valor, NumberStyles.AllowDecimalPoint, culturaBrasileira, out decimal valorDecimal) && quantidadeInt > 0)
+                    {
+                        // Calcule o valor total com base na quantidade e no valor unitário
+                        decimal valorTotal = quantidadeInt * valorDecimal;
 
-                    MySqlCommand executacmdMySql_insert = new MySqlCommand(sql_insert, con);
+                        string sql_insert = @"INSERT INTO TB_VENDA
+                (  
+                   TB_VENDA_QUANTIDADE, 
+                   TB_VENDA_VALOR,
+                   TB_PRODUTO_MANU_ID, 
+                   TB_FUNCIONARIO_ID,
+                   TB_VENDA_STATUS_ID
+                 )
+                VALUES
+                (
+                    @VENDA_QUANTIDADE, @VENDA_VALOR, @PRODUTO_MANU_ID, @FUNCIONARIO_ID, @VENDA_STATUS_ID
+                 )";
 
-                    executacmdMySql_insert.Parameters.AddWithValue("@VENDA_QUANTIDADE", quantidadeInt);
-                    executacmdMySql_insert.Parameters.AddWithValue("@VENDA_VALOR", valorTotal);
-                    executacmdMySql_insert.Parameters.AddWithValue("@PRODUTO_MANU_ID", cmb_Produto);
-                    executacmdMySql_insert.Parameters.AddWithValue("@FUNCIONARIO_ID", cmb_Funcionario);
-                    executacmdMySql_insert.Parameters.AddWithValue("@VENDA_STATUS_ID", cmb_Venda_status);
+                        using (MySqlCommand executacmdMySql_insert = new MySqlCommand(sql_insert, con))
+                        {
+                            executacmdMySql_insert.Parameters.AddWithValue("@VENDA_QUANTIDADE", quantidadeInt);
+                            executacmdMySql_insert.Parameters.AddWithValue("@VENDA_VALOR", valorTotal);
+                            executacmdMySql_insert.Parameters.AddWithValue("@PRODUTO_MANU_ID", cmb_Produto);
+                            executacmdMySql_insert.Parameters.AddWithValue("@FUNCIONARIO_ID", cmb_Funcionario);
+                            executacmdMySql_insert.Parameters.AddWithValue("@VENDA_STATUS_ID", cmb_Venda_status);
 
-                    con.Open();
-                    executacmdMySql_insert.ExecuteNonQuery();
-                    ListarVendas();
-                    con.Close();
-                    MessageBox.Show("Cadastrado com Sucesso!");
+                            con.Open();
+                            executacmdMySql_insert.ExecuteNonQuery();
+                            ListarVendas();
+                            LimparDados();
+                            con.Close();    
+                            // notificação aqui
+                        }
+                    }
                 }
             }
             catch (Exception erro)
             {
-                MessageBox.Show("Aconteceu o Erro: " + erro);
+                MessageBox.Show("Aconteceu o Erro: " + erro.Message);
             }
         }
+
 
         private void Btn_atualizar_Click(object sender, EventArgs e)
         {
@@ -175,7 +164,7 @@ namespace Kos_Manager
             con.Open();
             executacmdMySql_update_venda.ExecuteNonQuery();
 
-            MessageBox.Show("Atualização realizada com sucesso");
+            //notificação aqui
 
             ListarVendas();
 
@@ -201,16 +190,11 @@ namespace Kos_Manager
 
             executarcmdMySql_delete_venda.ExecuteNonQuery();
 
-            MessageBox.Show("Registro deletado com sucesso");
+            //notificação aqui
             ListarVendas();
 
             // Fechando conexão
             con.Close();
-        }
-
-        private void Btn_voltar_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void Tela_vendas_Load(object sender, EventArgs e)

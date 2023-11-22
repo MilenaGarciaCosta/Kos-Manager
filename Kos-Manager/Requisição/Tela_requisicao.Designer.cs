@@ -43,6 +43,7 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Txt_id = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_requisita)).BeginInit();
             this.SuspendLayout();
             // 
@@ -162,7 +163,7 @@
             this.cmb_nome_produto.FocusedColor = System.Drawing.Color.Transparent;
             this.cmb_nome_produto.FocusedState.BorderColor = System.Drawing.Color.Transparent;
             this.cmb_nome_produto.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmb_nome_produto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.cmb_nome_produto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.cmb_nome_produto.ItemHeight = 30;
             this.cmb_nome_produto.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cmb_nome_produto.Location = new System.Drawing.Point(26, 171);
@@ -196,7 +197,7 @@
             this.cmb_status_requisicao.FocusedColor = System.Drawing.Color.Transparent;
             this.cmb_status_requisicao.FocusedState.BorderColor = System.Drawing.Color.Transparent;
             this.cmb_status_requisicao.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmb_status_requisicao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.cmb_status_requisicao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.cmb_status_requisicao.ItemHeight = 30;
             this.cmb_status_requisicao.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cmb_status_requisicao.Location = new System.Drawing.Point(625, 171);
@@ -298,12 +299,43 @@
             this.guna2HtmlLabel1.Text = "REQUISIÇÃO\r\n";
             this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // Txt_id
+            // 
+            this.Txt_id.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_id.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Txt_id.BorderColor = System.Drawing.Color.Empty;
+            this.Txt_id.BorderRadius = 6;
+            this.Txt_id.BorderThickness = 0;
+            this.Txt_id.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Txt_id.DefaultText = "";
+            this.Txt_id.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Txt_id.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Txt_id.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Txt_id.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Txt_id.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Txt_id.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_id.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Txt_id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Txt_id.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_id.IconRightOffset = new System.Drawing.Point(10, -5);
+            this.Txt_id.IconRightSize = new System.Drawing.Size(10, 10);
+            this.Txt_id.Location = new System.Drawing.Point(42, 354);
+            this.Txt_id.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_id.Name = "Txt_id";
+            this.Txt_id.PasswordChar = '\0';
+            this.Txt_id.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.Txt_id.PlaceholderText = "";
+            this.Txt_id.SelectedText = "";
+            this.Txt_id.Size = new System.Drawing.Size(89, 36);
+            this.Txt_id.TabIndex = 122;
+            // 
             // Tela_requisicao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1103, 679);
+            this.Controls.Add(this.Txt_id);
             this.Controls.Add(this.Dgv_requisita);
             this.Controls.Add(this.Btn_deletar);
             this.Controls.Add(this.guna2HtmlLabel1);
@@ -337,5 +369,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2TextBox Txt_id;
     }
 }

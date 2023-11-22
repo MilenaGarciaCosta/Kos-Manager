@@ -127,7 +127,17 @@ namespace Kos_Manager
             cmb_status_funcionario.SelectedItem = null;
         }
 
-       
+
+        private void LimparDados()
+        {
+            // Limpar TextBox
+            Txt_nome_funcionario.Clear();
+            Txt_email_funcionario.Clear();
+            Txt_senha_funcionario.Clear();
+
+            // Limpar ComboBox
+        }
+
         private void Btn_adicionar_Click_2(object sender, EventArgs e)
         {
             try
@@ -165,7 +175,8 @@ namespace Kos_Manager
                 executacmdMySql_insert.ExecuteNonQuery();
                 ListarFuncionario();
                 con.Close();
-                MessageBox.Show("Cadastrado com Sucesso!");
+                LimparDados();
+                //notificação aqui
             }
             catch (Exception erro)
             {
@@ -203,7 +214,7 @@ namespace Kos_Manager
             con.Open();
             executacmdMySql_update_venda.ExecuteNonQuery();
 
-            MessageBox.Show("Atualização realizada com sucesso");
+            //notificação aqui
 
             ListarFuncionario();
 
@@ -239,7 +250,7 @@ namespace Kos_Manager
             con.Open();
             executacmdMySql_update_venda.ExecuteNonQuery();
 
-            MessageBox.Show("Atualização realizada com sucesso");
+            //notificação aqui
 
             ListarFuncionario();
 

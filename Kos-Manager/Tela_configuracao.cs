@@ -103,7 +103,9 @@ namespace Kos_Manager
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
-            Close();
+            Tela_login tlgn = new Tela_login();
+            this.Close();
+            tlgn.Show();
         }
     }
 }

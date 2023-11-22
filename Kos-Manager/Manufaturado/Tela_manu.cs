@@ -76,8 +76,17 @@ namespace Kos_Manager
             
         }
 
-        
-        
+        private void LimparDados()
+        {
+            // Limpar TextBox
+            Txt_dt_fab.Clear();
+            Txt_dt_validade.Clear();
+            Txt_lote.Clear();
+            Txt_nome_produto_manu.Clear();
+            Txt_quantidade.Clear();
+
+            // Limpar ComboBox
+        }
 
         private void Btn_adicionar_Click_1(object sender, EventArgs e)
         {
@@ -120,7 +129,8 @@ namespace Kos_Manager
                 executacmdMySql_insert.ExecuteNonQuery();
                 ListarEstoquePm();
                 con.Close();
-                MessageBox.Show("Cadastrado com Sucesso!");
+                LimparDados();
+                //notificação aqui
             }
             catch (Exception erro)
             {
@@ -161,7 +171,7 @@ namespace Kos_Manager
 
             con.Open();
             executacmdMySql_update_manu.ExecuteNonQuery();
-            MessageBox.Show("Atualização realizada com sucesso");
+            //notificação aqui
             ListarEstoquePm();
             con.Close();
 
@@ -186,7 +196,7 @@ namespace Kos_Manager
 
             executarcmdMySql_delete_produto_manu.ExecuteNonQuery();
 
-            MessageBox.Show("Registro deletado com sucesso");
+            //notificação aqui
             ListarEstoquePm();
 
             // Fechando conexão
