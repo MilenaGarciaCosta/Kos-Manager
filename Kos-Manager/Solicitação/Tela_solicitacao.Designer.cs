@@ -121,7 +121,7 @@
             // 
             // Btn_deletar
             // 
-            this.Btn_deletar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Btn_deletar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Btn_deletar.Animated = true;
             this.Btn_deletar.BorderRadius = 10;
             this.Btn_deletar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -144,7 +144,7 @@
             // 
             // Btn_atualizar
             // 
-            this.Btn_atualizar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Btn_atualizar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Btn_atualizar.Animated = true;
             this.Btn_atualizar.BackColor = System.Drawing.Color.Transparent;
             this.Btn_atualizar.BorderRadius = 10;
@@ -256,7 +256,7 @@
             // 
             // Btn_adicionar
             // 
-            this.Btn_adicionar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Btn_adicionar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Btn_adicionar.Animated = true;
             this.Btn_adicionar.BackColor = System.Drawing.Color.Transparent;
             this.Btn_adicionar.BorderRadius = 10;

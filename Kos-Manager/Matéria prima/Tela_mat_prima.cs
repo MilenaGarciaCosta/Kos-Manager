@@ -239,10 +239,10 @@
             {
                 this.id = DgvEstoqueMp.CurrentRow.Cells[0].Value.ToString();
                 txt_produto.Text = DgvEstoqueMp.CurrentRow.Cells[1].Value.ToString();
-                Txt_dt_validade.Text = DgvEstoqueMp.CurrentRow.Cells[3].Value.ToString();
-                Txt_lote.Text = DgvEstoqueMp.CurrentRow.Cells[4].Value.ToString();
-                Txt_quantidade.Text = DgvEstoqueMp.CurrentRow.Cells[5].Value.ToString();
-                cmb_fornecedor.Text = DgvEstoqueMp.CurrentRow.Cells[6].Value.ToString();
+                Txt_dt_validade.Text = DgvEstoqueMp.CurrentRow.Cells[2].Value.ToString();
+                Txt_lote.Text = DgvEstoqueMp.CurrentRow.Cells[3].Value.ToString();
+                Txt_quantidade.Text = DgvEstoqueMp.CurrentRow.Cells[4].Value.ToString();
+                cmb_fornecedor.Text = DgvEstoqueMp.CurrentRow.Cells[5].Value.ToString();
             }
         }
         }

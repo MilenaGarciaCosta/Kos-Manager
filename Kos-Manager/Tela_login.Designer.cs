@@ -34,7 +34,6 @@
             this.Txt_email_login = new Guna.UI2.WinForms.Guna2TextBox();
             this.Link_nao_tem_cad = new System.Windows.Forms.LinkLabel();
             this.Btn_logar = new Guna.UI2.WinForms.Guna2Button();
-            this.Link_esqueceu_senha = new System.Windows.Forms.LinkLabel();
             this.Check_ver_senha = new Guna.UI2.WinForms.Guna2CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.Picture_box2)).BeginInit();
             this.SuspendLayout();
@@ -143,21 +142,6 @@
             this.Btn_logar.Text = "Logar";
             this.Btn_logar.Click += new System.EventHandler(this.Btn_logar_Click);
             // 
-            // Link_esqueceu_senha
-            // 
-            this.Link_esqueceu_senha.ActiveLinkColor = System.Drawing.SystemColors.ButtonFace;
-            this.Link_esqueceu_senha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Link_esqueceu_senha.AutoSize = true;
-            this.Link_esqueceu_senha.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Link_esqueceu_senha.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
-            this.Link_esqueceu_senha.Location = new System.Drawing.Point(544, 456);
-            this.Link_esqueceu_senha.Name = "Link_esqueceu_senha";
-            this.Link_esqueceu_senha.Size = new System.Drawing.Size(288, 17);
-            this.Link_esqueceu_senha.TabIndex = 10;
-            this.Link_esqueceu_senha.TabStop = true;
-            this.Link_esqueceu_senha.Text = "Esqueceu sua senha? Clique aqui para redefinir!";
-            this.Link_esqueceu_senha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Link_esqueceu_senha_LinkClicked);
-            // 
             // Check_ver_senha
             // 
             this.Check_ver_senha.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -191,7 +175,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.Check_ver_senha);
-            this.Controls.Add(this.Link_esqueceu_senha);
             this.Controls.Add(this.Link_nao_tem_cad);
             this.Controls.Add(this.Btn_logar);
             this.Controls.Add(this.Txt_senha_login);
@@ -214,7 +197,6 @@
         private Guna.UI2.WinForms.Guna2TextBox Txt_email_login;
         private System.Windows.Forms.LinkLabel Link_nao_tem_cad;
         private Guna.UI2.WinForms.Guna2Button Btn_logar;
-        private System.Windows.Forms.LinkLabel Link_esqueceu_senha;
         private Guna.UI2.WinForms.Guna2CheckBox Check_ver_senha;
     }
 }

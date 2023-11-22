@@ -50,34 +50,15 @@ namespace Kos_Manager
             MySqlCommand executacmdMySql_select_funcionario = new MySqlCommand(sql_select_funcionario, con);
             executacmdMySql_select_funcionario.ExecuteNonQuery();
 
-
-
             DataTable tabela_funcionario = new DataTable();
 
             MySqlDataAdapter da_funcionario = new MySqlDataAdapter(executacmdMySql_select_funcionario);
             da_funcionario.Fill(tabela_funcionario);
 
-
-
             Dgv_funcionario.DataSource = tabela_funcionario;
 
 
             con.Close();
-        }
-
-        private Form FormAtivo = null;
-        private void abrirChildForm(Form ChildForm)
-        {
-            if (FormAtivo != null)
-                FormAtivo.Close();
-            FormAtivo = ChildForm;
-            ChildForm.TopLevel = false;
-            ChildForm.FormBorderStyle = FormBorderStyle.None;
-            ChildForm.Dock = DockStyle.Fill;
-            //Child_panel.Controls.Add(ChildForm);
-            //Child_panel.Tag = ChildForm;
-            ChildForm.BringToFront();
-            ChildForm.Show();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -145,22 +126,6 @@ namespace Kos_Manager
             cmb_status_funcionario.ValueMember = "TB_STATUS_ID";  //Pega os dados            
             cmb_status_funcionario.SelectedItem = null;
         }
-
-        private void txt_buscar_func_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_adicionar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_atualizar_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
        
         private void Btn_adicionar_Click_2(object sender, EventArgs e)
@@ -283,7 +248,7 @@ namespace Kos_Manager
 
         private void Btn_deletar_Click_1(object sender, EventArgs e)
         {
-            //int codigo = int.Parse(txt_cod.Text);
+            int codigo = int.Parse(this.id);
 
             // Conectando ao banco de dados MySql
             MySqlConnection con = new MySqlConnection(conexao);
@@ -295,7 +260,7 @@ namespace Kos_Manager
 
             MySqlCommand executarcmdMySql_delete_funcionario = new MySqlCommand(sql_delete_funcionario, con);
 
-            executarcmdMySql_delete_funcionario.Parameters.AddWithValue("@id", id);
+            executarcmdMySql_delete_funcionario.Parameters.AddWithValue("@id", codigo);
 
             executarcmdMySql_delete_funcionario.ExecuteNonQuery();
 

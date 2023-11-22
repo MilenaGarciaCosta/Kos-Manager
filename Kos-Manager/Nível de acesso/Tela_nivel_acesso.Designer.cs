@@ -69,11 +69,11 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Dgv_nivel.DefaultCellStyle = dataGridViewCellStyle3;
             this.Dgv_nivel.GridColor = System.Drawing.Color.Silver;
-            this.Dgv_nivel.Location = new System.Drawing.Point(12, 351);
+            this.Dgv_nivel.Location = new System.Drawing.Point(12, 447);
             this.Dgv_nivel.Name = "Dgv_nivel";
             this.Dgv_nivel.RowHeadersVisible = false;
             this.Dgv_nivel.RowHeadersWidth = 51;
-            this.Dgv_nivel.Size = new System.Drawing.Size(1063, 220);
+            this.Dgv_nivel.Size = new System.Drawing.Size(1079, 220);
             this.Dgv_nivel.TabIndex = 77;
             this.Dgv_nivel.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.Dgv_nivel.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -112,7 +112,7 @@
             this.Btn_deletar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_deletar.Image")));
             this.Btn_deletar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_deletar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_deletar.Location = new System.Drawing.Point(931, 302);
+            this.Btn_deletar.Location = new System.Drawing.Point(939, 398);
             this.Btn_deletar.Name = "Btn_deletar";
             this.Btn_deletar.Size = new System.Drawing.Size(144, 39);
             this.Btn_deletar.TabIndex = 76;
@@ -136,7 +136,7 @@
             this.Btn_atualizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_atualizar.Image")));
             this.Btn_atualizar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_atualizar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_atualizar.Location = new System.Drawing.Point(781, 302);
+            this.Btn_atualizar.Location = new System.Drawing.Point(789, 398);
             this.Btn_atualizar.Name = "Btn_atualizar";
             this.Btn_atualizar.ShadowDecoration.Depth = 5;
             this.Btn_atualizar.ShadowDecoration.Enabled = true;
@@ -148,7 +148,7 @@
             // 
             // Btn_adicionar
             // 
-            this.Btn_adicionar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Btn_adicionar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Btn_adicionar.Animated = true;
             this.Btn_adicionar.BackColor = System.Drawing.Color.Transparent;
             this.Btn_adicionar.BorderRadius = 10;
@@ -162,7 +162,7 @@
             this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
             this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(631, 302);
+            this.Btn_adicionar.Location = new System.Drawing.Point(639, 398);
             this.Btn_adicionar.Name = "Btn_adicionar";
             this.Btn_adicionar.ShadowDecoration.Depth = 5;
             this.Btn_adicionar.ShadowDecoration.Enabled = true;
@@ -175,9 +175,9 @@
             // guna2Panel2
             // 
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 523);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 619);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1087, 60);
+            this.guna2Panel2.Size = new System.Drawing.Size(1103, 60);
             this.guna2Panel2.TabIndex = 72;
             // 
             // txt_nome
@@ -198,7 +198,7 @@
             this.txt_nome.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.txt_nome.IconRightOffset = new System.Drawing.Point(10, -5);
             this.txt_nome.IconRightSize = new System.Drawing.Size(10, 10);
-            this.txt_nome.Location = new System.Drawing.Point(12, 141);
+            this.txt_nome.Location = new System.Drawing.Point(20, 141);
             this.txt_nome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_nome.Name = "txt_nome";
             this.txt_nome.PasswordChar = '\0';
@@ -214,7 +214,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(19, 111);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(27, 111);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(192, 23);
             this.guna2HtmlLabel1.TabIndex = 70;
@@ -226,7 +226,7 @@
             this.Lbl_estoque.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_estoque.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.Lbl_estoque.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Lbl_estoque.Location = new System.Drawing.Point(454, 37);
+            this.Lbl_estoque.Location = new System.Drawing.Point(462, 37);
             this.Lbl_estoque.Name = "Lbl_estoque";
             this.Lbl_estoque.Size = new System.Drawing.Size(188, 32);
             this.Lbl_estoque.TabIndex = 68;
@@ -238,7 +238,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1087, 583);
+            this.ClientSize = new System.Drawing.Size(1103, 679);
             this.Controls.Add(this.Dgv_nivel);
             this.Controls.Add(this.Btn_deletar);
             this.Controls.Add(this.Btn_atualizar);

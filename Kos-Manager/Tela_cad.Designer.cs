@@ -111,6 +111,7 @@
             this.Picture_box.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.Picture_box.TabIndex = 0;
             this.Picture_box.TabStop = false;
+            this.Picture_box.Click += new System.EventHandler(this.Picture_box_Click);
             // 
             // Txt_senha_cad
             // 

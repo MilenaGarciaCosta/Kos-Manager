@@ -100,5 +100,10 @@ namespace Kos_Manager
 
             MessageBox.Show("Atualização realizada com sucesso");
         }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

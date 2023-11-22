@@ -26,7 +26,7 @@ namespace Kos_Manager
         {
             Tela_cad tcad = new Tela_cad();
             tcad.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void Btn_logar_Click(object sender, EventArgs e)

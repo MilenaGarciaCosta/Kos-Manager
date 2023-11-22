@@ -37,7 +37,7 @@ namespace Kos_Manager
         {
             Tela_login tlgn = new Tela_login();
             tlgn.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void Btn_cadastrar_Click(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace Kos_Manager
                 }
                 else
                 {
-                    MessageBox.Show("A senha precisa ter 8 caracteries e um deles precisa ser especial, ex: -/:;.,?!$&@“‘#");
+                    MessageBox.Show("A senha precisa conter 8 caracteres e um deles precisa ser especial, ex: -/:;.,?!$&@“‘#");
                 }
             }
 
@@ -132,6 +132,11 @@ namespace Kos_Manager
         }
 
         private void Txt_senha_cad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Picture_box_Click(object sender, EventArgs e)
         {
 
         }

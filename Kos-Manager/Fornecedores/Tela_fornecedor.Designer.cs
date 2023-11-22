@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_fornecedor));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Txt_nome_fornecedor = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Lbl_fornecedor = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -68,7 +68,7 @@
             this.Txt_nome_fornecedor.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_nome_fornecedor.IconRightOffset = new System.Drawing.Point(10, -5);
             this.Txt_nome_fornecedor.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_nome_fornecedor.Location = new System.Drawing.Point(21, 142);
+            this.Txt_nome_fornecedor.Location = new System.Drawing.Point(21, 144);
             this.Txt_nome_fornecedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_nome_fornecedor.Name = "Txt_nome_fornecedor";
             this.Txt_nome_fornecedor.PasswordChar = '\0';
@@ -85,7 +85,7 @@
             this.guna2HtmlLabel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(21, 110);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(21, 112);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(265, 25);
             this.guna2HtmlLabel1.TabIndex = 69;
@@ -100,7 +100,7 @@
             this.Lbl_fornecedor.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_fornecedor.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.Lbl_fornecedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Lbl_fornecedor.Location = new System.Drawing.Point(386, 32);
+            this.Lbl_fornecedor.Location = new System.Drawing.Point(439, 34);
             this.Lbl_fornecedor.MinimumSize = new System.Drawing.Size(156, 32);
             this.Lbl_fornecedor.Name = "Lbl_fornecedor";
             this.Lbl_fornecedor.Size = new System.Drawing.Size(234, 32);
@@ -123,7 +123,7 @@
             this.Btn_deletar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_deletar.Image")));
             this.Btn_deletar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_deletar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_deletar.Location = new System.Drawing.Point(833, 342);
+            this.Btn_deletar.Location = new System.Drawing.Point(940, 399);
             this.Btn_deletar.Name = "Btn_deletar";
             this.Btn_deletar.Size = new System.Drawing.Size(144, 39);
             this.Btn_deletar.TabIndex = 65;
@@ -147,7 +147,7 @@
             this.Btn_atualizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_atualizar.Image")));
             this.Btn_atualizar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_atualizar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_atualizar.Location = new System.Drawing.Point(683, 342);
+            this.Btn_atualizar.Location = new System.Drawing.Point(790, 399);
             this.Btn_atualizar.Name = "Btn_atualizar";
             this.Btn_atualizar.ShadowDecoration.Depth = 5;
             this.Btn_atualizar.ShadowDecoration.Enabled = true;
@@ -161,9 +161,9 @@
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 562);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 619);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(996, 60);
+            this.guna2Panel2.Size = new System.Drawing.Size(1103, 60);
             this.guna2Panel2.TabIndex = 63;
             this.guna2Panel2.UseTransparentBackground = true;
             // 
@@ -173,7 +173,7 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(525, 195);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(632, 197);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(179, 25);
             this.guna2HtmlLabel4.TabIndex = 62;
@@ -198,7 +198,7 @@
             this.Txt_outro_contato_fornecedor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Txt_outro_contato_fornecedor.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_outro_contato_fornecedor.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_outro_contato_fornecedor.Location = new System.Drawing.Point(525, 227);
+            this.Txt_outro_contato_fornecedor.Location = new System.Drawing.Point(632, 229);
             this.Txt_outro_contato_fornecedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_outro_contato_fornecedor.Name = "Txt_outro_contato_fornecedor";
             this.Txt_outro_contato_fornecedor.PasswordChar = '\0';
@@ -214,7 +214,7 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(525, 110);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(632, 112);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(69, 25);
             this.guna2HtmlLabel3.TabIndex = 60;
@@ -239,7 +239,7 @@
             this.Txt_tel_fornecedor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Txt_tel_fornecedor.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_tel_fornecedor.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_tel_fornecedor.Location = new System.Drawing.Point(525, 142);
+            this.Txt_tel_fornecedor.Location = new System.Drawing.Point(632, 144);
             this.Txt_tel_fornecedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_tel_fornecedor.Name = "Txt_tel_fornecedor";
             this.Txt_tel_fornecedor.PasswordChar = '\0';
@@ -255,7 +255,7 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(21, 195);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(21, 197);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(143, 25);
             this.guna2HtmlLabel2.TabIndex = 58;
@@ -280,7 +280,7 @@
             this.Txt_produto_fornecido.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Txt_produto_fornecido.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_produto_fornecido.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_produto_fornecido.Location = new System.Drawing.Point(19, 227);
+            this.Txt_produto_fornecido.Location = new System.Drawing.Point(19, 229);
             this.Txt_produto_fornecido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_produto_fornecido.Name = "Txt_produto_fornecido";
             this.Txt_produto_fornecido.PasswordChar = '\0';
@@ -292,7 +292,7 @@
             // 
             // Btn_adicionar
             // 
-            this.Btn_adicionar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Btn_adicionar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Btn_adicionar.Animated = true;
             this.Btn_adicionar.BackColor = System.Drawing.Color.Transparent;
             this.Btn_adicionar.BorderRadius = 10;
@@ -306,7 +306,7 @@
             this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
             this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(533, 342);
+            this.Btn_adicionar.Location = new System.Drawing.Point(640, 399);
             this.Btn_adicionar.Name = "Btn_adicionar";
             this.Btn_adicionar.ShadowDecoration.Depth = 5;
             this.Btn_adicionar.ShadowDecoration.Enabled = true;
@@ -318,37 +318,37 @@
             // 
             // DgvFornecedor
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.DgvFornecedor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.DgvFornecedor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DgvFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvFornecedor.BackgroundColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvFornecedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvFornecedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DgvFornecedor.ColumnHeadersHeight = 4;
             this.DgvFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvFornecedor.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvFornecedor.DefaultCellStyle = dataGridViewCellStyle6;
             this.DgvFornecedor.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DgvFornecedor.Location = new System.Drawing.Point(21, 390);
+            this.DgvFornecedor.Location = new System.Drawing.Point(21, 447);
             this.DgvFornecedor.Margin = new System.Windows.Forms.Padding(2);
             this.DgvFornecedor.Name = "DgvFornecedor";
             this.DgvFornecedor.RowHeadersVisible = false;
             this.DgvFornecedor.RowHeadersWidth = 51;
             this.DgvFornecedor.RowTemplate.Height = 24;
-            this.DgvFornecedor.Size = new System.Drawing.Size(956, 220);
+            this.DgvFornecedor.Size = new System.Drawing.Size(1063, 220);
             this.DgvFornecedor.TabIndex = 72;
             this.DgvFornecedor.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DgvFornecedor.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -378,7 +378,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(996, 622);
+            this.ClientSize = new System.Drawing.Size(1103, 679);
             this.Controls.Add(this.DgvFornecedor);
             this.Controls.Add(this.Btn_adicionar);
             this.Controls.Add(this.Txt_nome_fornecedor);

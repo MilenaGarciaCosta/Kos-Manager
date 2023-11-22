@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_funcionarios));
             this.Dgv_funcionario = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Btn_atualizar = new Guna.UI2.WinForms.Guna2Button();
@@ -39,7 +39,6 @@
             this.cmb_status_funcionario = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cmb_nivel_funcionario = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.Txt_senha_funcionario = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -54,31 +53,31 @@
             // 
             // Dgv_funcionario
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.Dgv_funcionario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.Dgv_funcionario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.Dgv_funcionario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Dgv_funcionario.BackgroundColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_funcionario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_funcionario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.Dgv_funcionario.ColumnHeadersHeight = 4;
             this.Dgv_funcionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dgv_funcionario.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgv_funcionario.DefaultCellStyle = dataGridViewCellStyle6;
             this.Dgv_funcionario.GridColor = System.Drawing.Color.Silver;
-            this.Dgv_funcionario.Location = new System.Drawing.Point(12, 390);
+            this.Dgv_funcionario.Location = new System.Drawing.Point(12, 447);
             this.Dgv_funcionario.Name = "Dgv_funcionario";
             this.Dgv_funcionario.RowHeadersVisible = false;
             this.Dgv_funcionario.RowHeadersWidth = 51;
@@ -108,7 +107,7 @@
             // 
             // Btn_atualizar
             // 
-            this.Btn_atualizar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Btn_atualizar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Btn_atualizar.Animated = true;
             this.Btn_atualizar.BackColor = System.Drawing.Color.Transparent;
             this.Btn_atualizar.BorderRadius = 10;
@@ -122,7 +121,7 @@
             this.Btn_atualizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_atualizar.Image")));
             this.Btn_atualizar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_atualizar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_atualizar.Location = new System.Drawing.Point(797, 341);
+            this.Btn_atualizar.Location = new System.Drawing.Point(797, 398);
             this.Btn_atualizar.Name = "Btn_atualizar";
             this.Btn_atualizar.ShadowDecoration.Depth = 5;
             this.Btn_atualizar.ShadowDecoration.Enabled = true;
@@ -134,7 +133,7 @@
             // 
             // Btn_deletar
             // 
-            this.Btn_deletar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Btn_deletar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Btn_deletar.Animated = true;
             this.Btn_deletar.BorderRadius = 10;
             this.Btn_deletar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -147,7 +146,7 @@
             this.Btn_deletar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_deletar.Image")));
             this.Btn_deletar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_deletar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_deletar.Location = new System.Drawing.Point(947, 341);
+            this.Btn_deletar.Location = new System.Drawing.Point(947, 398);
             this.Btn_deletar.Name = "Btn_deletar";
             this.Btn_deletar.Size = new System.Drawing.Size(144, 39);
             this.Btn_deletar.TabIndex = 90;
@@ -161,7 +160,7 @@
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(12, 255);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(12, 283);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(50, 25);
             this.guna2HtmlLabel7.TabIndex = 89;
@@ -183,7 +182,7 @@
             this.cmb_status_funcionario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.cmb_status_funcionario.ItemHeight = 30;
             this.cmb_status_funcionario.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmb_status_funcionario.Location = new System.Drawing.Point(12, 287);
+            this.cmb_status_funcionario.Location = new System.Drawing.Point(12, 315);
             this.cmb_status_funcionario.Name = "cmb_status_funcionario";
             this.cmb_status_funcionario.Size = new System.Drawing.Size(452, 36);
             this.cmb_status_funcionario.TabIndex = 88;
@@ -203,14 +202,14 @@
             this.cmb_nivel_funcionario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
             this.cmb_nivel_funcionario.ItemHeight = 30;
             this.cmb_nivel_funcionario.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmb_nivel_funcionario.Location = new System.Drawing.Point(12, 200);
+            this.cmb_nivel_funcionario.Location = new System.Drawing.Point(12, 228);
             this.cmb_nivel_funcionario.Name = "cmb_nivel_funcionario";
             this.cmb_nivel_funcionario.Size = new System.Drawing.Size(452, 36);
             this.cmb_nivel_funcionario.TabIndex = 87;
             // 
             // Btn_adicionar
             // 
-            this.Btn_adicionar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Btn_adicionar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Btn_adicionar.Animated = true;
             this.Btn_adicionar.BackColor = System.Drawing.Color.Transparent;
             this.Btn_adicionar.BorderRadius = 10;
@@ -224,7 +223,7 @@
             this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
             this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(647, 341);
+            this.Btn_adicionar.Location = new System.Drawing.Point(647, 398);
             this.Btn_adicionar.Name = "Btn_adicionar";
             this.Btn_adicionar.ShadowDecoration.Depth = 5;
             this.Btn_adicionar.ShadowDecoration.Enabled = true;
@@ -234,18 +233,10 @@
             this.Btn_adicionar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Btn_adicionar.Click += new System.EventHandler(this.Btn_adicionar_Click_2);
             // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1103, 18);
-            this.guna2Panel1.TabIndex = 84;
-            // 
             // guna2Panel2
             // 
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 562);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 619);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1103, 60);
             this.guna2Panel2.TabIndex = 83;
@@ -267,9 +258,9 @@
             this.Txt_senha_funcionario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.Txt_senha_funcionario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Txt_senha_funcionario.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
-            this.Txt_senha_funcionario.IconRightOffset = new System.Drawing.Point(10, -10);
+            this.Txt_senha_funcionario.IconRightOffset = new System.Drawing.Point(10, -5);
             this.Txt_senha_funcionario.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_senha_funcionario.Location = new System.Drawing.Point(639, 206);
+            this.Txt_senha_funcionario.Location = new System.Drawing.Point(639, 234);
             this.Txt_senha_funcionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_senha_funcionario.Name = "Txt_senha_funcionario";
             this.Txt_senha_funcionario.PasswordChar = '\0';
@@ -285,7 +276,7 @@
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(639, 173);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(639, 201);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(50, 25);
             this.guna2HtmlLabel6.TabIndex = 81;
@@ -309,9 +300,9 @@
             this.Txt_email_funcionario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.Txt_email_funcionario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Txt_email_funcionario.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
-            this.Txt_email_funcionario.IconRightOffset = new System.Drawing.Point(10, -10);
+            this.Txt_email_funcionario.IconRightOffset = new System.Drawing.Point(10, -5);
             this.Txt_email_funcionario.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_email_funcionario.Location = new System.Drawing.Point(639, 109);
+            this.Txt_email_funcionario.Location = new System.Drawing.Point(639, 137);
             this.Txt_email_funcionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_email_funcionario.Name = "Txt_email_funcionario";
             this.Txt_email_funcionario.PasswordChar = '\0';
@@ -327,7 +318,7 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(639, 78);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(639, 106);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(51, 25);
             this.guna2HtmlLabel5.TabIndex = 79;
@@ -340,7 +331,7 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(12, 167);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(12, 195);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(123, 25);
             this.guna2HtmlLabel4.TabIndex = 78;
@@ -366,7 +357,7 @@
             this.Txt_nome_funcionario.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_nome_funcionario.IconRightOffset = new System.Drawing.Point(10, -5);
             this.Txt_nome_funcionario.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_nome_funcionario.Location = new System.Drawing.Point(12, 109);
+            this.Txt_nome_funcionario.Location = new System.Drawing.Point(12, 137);
             this.Txt_nome_funcionario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_nome_funcionario.Name = "Txt_nome_funcionario";
             this.Txt_nome_funcionario.PasswordChar = '\0';
@@ -382,7 +373,7 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(12, 76);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(12, 104);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(167, 25);
             this.guna2HtmlLabel3.TabIndex = 76;
@@ -407,7 +398,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1103, 622);
+            this.ClientSize = new System.Drawing.Size(1103, 679);
             this.Controls.Add(this.Dgv_funcionario);
             this.Controls.Add(this.Btn_atualizar);
             this.Controls.Add(this.Btn_deletar);
@@ -415,7 +406,6 @@
             this.Controls.Add(this.cmb_status_funcionario);
             this.Controls.Add(this.cmb_nivel_funcionario);
             this.Controls.Add(this.Btn_adicionar);
-            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.Txt_senha_funcionario);
             this.Controls.Add(this.guna2HtmlLabel6);
@@ -444,7 +434,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cmb_status_funcionario;
         private Guna.UI2.WinForms.Guna2ComboBox cmb_nivel_funcionario;
         private Guna.UI2.WinForms.Guna2Button Btn_adicionar;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2TextBox Txt_senha_funcionario;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
