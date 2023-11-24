@@ -33,17 +33,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_requisicao));
             this.Dgv_requisita = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Btn_deletar = new Guna.UI2.WinForms.Guna2Button();
-            this.Btn_atualizar = new Guna.UI2.WinForms.Guna2Button();
             this.cmb_nome_produto = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmb_status_requisicao = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.Btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
-            this.Txt_quantidade = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Txt_id = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Btn_deletar = new Guna.UI2.WinForms.Guna2Button();
+            this.Btn_atualizar = new Guna.UI2.WinForms.Guna2Button();
+            this.Btn_adicionar = new Guna.UI2.WinForms.Guna2Button();
+            this.Txt_quantidade = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_requisita)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,55 +102,6 @@
             this.Dgv_requisita.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.Dgv_requisita.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_requisita_CellContentClick);
             // 
-            // Btn_deletar
-            // 
-            this.Btn_deletar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Btn_deletar.Animated = true;
-            this.Btn_deletar.BorderRadius = 10;
-            this.Btn_deletar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_deletar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_deletar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_deletar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_deletar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
-            this.Btn_deletar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.Btn_deletar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Btn_deletar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_deletar.Image")));
-            this.Btn_deletar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Btn_deletar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_deletar.Location = new System.Drawing.Point(933, 398);
-            this.Btn_deletar.Name = "Btn_deletar";
-            this.Btn_deletar.Size = new System.Drawing.Size(144, 39);
-            this.Btn_deletar.TabIndex = 107;
-            this.Btn_deletar.Text = "Deletar";
-            this.Btn_deletar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_deletar.Click += new System.EventHandler(this.Btn_deletar_Click);
-            // 
-            // Btn_atualizar
-            // 
-            this.Btn_atualizar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Btn_atualizar.Animated = true;
-            this.Btn_atualizar.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_atualizar.BorderRadius = 10;
-            this.Btn_atualizar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_atualizar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_atualizar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_atualizar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_atualizar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(96)))), ((int)(((byte)(132)))));
-            this.Btn_atualizar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.Btn_atualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Btn_atualizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_atualizar.Image")));
-            this.Btn_atualizar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Btn_atualizar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_atualizar.Location = new System.Drawing.Point(783, 398);
-            this.Btn_atualizar.Name = "Btn_atualizar";
-            this.Btn_atualizar.ShadowDecoration.Depth = 5;
-            this.Btn_atualizar.ShadowDecoration.Enabled = true;
-            this.Btn_atualizar.Size = new System.Drawing.Size(144, 39);
-            this.Btn_atualizar.TabIndex = 106;
-            this.Btn_atualizar.Text = "Atualizar";
-            this.Btn_atualizar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_atualizar.Click += new System.EventHandler(this.Btn_atualizar_Click);
-            // 
             // cmb_nome_produto
             // 
             this.cmb_nome_produto.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -204,61 +155,6 @@
             this.cmb_status_requisicao.Name = "cmb_status_requisicao";
             this.cmb_status_requisicao.Size = new System.Drawing.Size(452, 36);
             this.cmb_status_requisicao.TabIndex = 102;
-            // 
-            // Btn_adicionar
-            // 
-            this.Btn_adicionar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.Btn_adicionar.Animated = true;
-            this.Btn_adicionar.BackColor = System.Drawing.Color.Transparent;
-            this.Btn_adicionar.BorderRadius = 10;
-            this.Btn_adicionar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_adicionar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Btn_adicionar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Btn_adicionar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Btn_adicionar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(79)))), ((int)(((byte)(82)))));
-            this.Btn_adicionar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.Btn_adicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
-            this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(633, 398);
-            this.Btn_adicionar.Name = "Btn_adicionar";
-            this.Btn_adicionar.ShadowDecoration.Depth = 5;
-            this.Btn_adicionar.ShadowDecoration.Enabled = true;
-            this.Btn_adicionar.Size = new System.Drawing.Size(144, 39);
-            this.Btn_adicionar.TabIndex = 100;
-            this.Btn_adicionar.Text = "Adicionar";
-            this.Btn_adicionar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Btn_adicionar.Click += new System.EventHandler(this.Btn_adicionar_Click);
-            // 
-            // Txt_quantidade
-            // 
-            this.Txt_quantidade.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Txt_quantidade.BorderRadius = 6;
-            this.Txt_quantidade.BorderThickness = 0;
-            this.Txt_quantidade.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Txt_quantidade.DefaultText = "";
-            this.Txt_quantidade.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Txt_quantidade.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Txt_quantidade.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Txt_quantidade.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Txt_quantidade.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.Txt_quantidade.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_quantidade.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Txt_quantidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.Txt_quantidade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.Txt_quantidade.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
-            this.Txt_quantidade.IconRightOffset = new System.Drawing.Point(10, -5);
-            this.Txt_quantidade.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_quantidade.Location = new System.Drawing.Point(26, 264);
-            this.Txt_quantidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Txt_quantidade.Name = "Txt_quantidade";
-            this.Txt_quantidade.PasswordChar = '\0';
-            this.Txt_quantidade.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
-            this.Txt_quantidade.PlaceholderText = "Digite aqui";
-            this.Txt_quantidade.SelectedText = "";
-            this.Txt_quantidade.Size = new System.Drawing.Size(452, 36);
-            this.Txt_quantidade.TabIndex = 98;
             // 
             // guna2HtmlLabel3
             // 
@@ -329,10 +225,113 @@
             this.Txt_id.Size = new System.Drawing.Size(89, 36);
             this.Txt_id.TabIndex = 122;
             // 
+            // Btn_deletar
+            // 
+            this.Btn_deletar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Btn_deletar.Animated = true;
+            this.Btn_deletar.BorderRadius = 10;
+            this.Btn_deletar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_deletar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_deletar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_deletar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_deletar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(26)))), ((int)(((byte)(26)))));
+            this.Btn_deletar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.Btn_deletar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.Btn_deletar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_deletar.Image")));
+            this.Btn_deletar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Btn_deletar.ImageSize = new System.Drawing.Size(17, 17);
+            this.Btn_deletar.Location = new System.Drawing.Point(933, 398);
+            this.Btn_deletar.Name = "Btn_deletar";
+            this.Btn_deletar.Size = new System.Drawing.Size(144, 39);
+            this.Btn_deletar.TabIndex = 107;
+            this.Btn_deletar.Text = "Deletar";
+            this.Btn_deletar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_deletar.Click += new System.EventHandler(this.Btn_deletar_Click);
+            // 
+            // Btn_atualizar
+            // 
+            this.Btn_atualizar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Btn_atualizar.Animated = true;
+            this.Btn_atualizar.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_atualizar.BorderRadius = 10;
+            this.Btn_atualizar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_atualizar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_atualizar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_atualizar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_atualizar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(96)))), ((int)(((byte)(132)))));
+            this.Btn_atualizar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.Btn_atualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.Btn_atualizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_atualizar.Image")));
+            this.Btn_atualizar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Btn_atualizar.ImageSize = new System.Drawing.Size(17, 17);
+            this.Btn_atualizar.Location = new System.Drawing.Point(783, 398);
+            this.Btn_atualizar.Name = "Btn_atualizar";
+            this.Btn_atualizar.ShadowDecoration.Depth = 5;
+            this.Btn_atualizar.ShadowDecoration.Enabled = true;
+            this.Btn_atualizar.Size = new System.Drawing.Size(144, 39);
+            this.Btn_atualizar.TabIndex = 106;
+            this.Btn_atualizar.Text = "Atualizar";
+            this.Btn_atualizar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_atualizar.Click += new System.EventHandler(this.Btn_atualizar_Click);
+            // 
+            // Btn_adicionar
+            // 
+            this.Btn_adicionar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Btn_adicionar.Animated = true;
+            this.Btn_adicionar.BackColor = System.Drawing.Color.Transparent;
+            this.Btn_adicionar.BorderRadius = 10;
+            this.Btn_adicionar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_adicionar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Btn_adicionar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Btn_adicionar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Btn_adicionar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(79)))), ((int)(((byte)(82)))));
+            this.Btn_adicionar.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.Btn_adicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
+            this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
+            this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
+            this.Btn_adicionar.Location = new System.Drawing.Point(633, 398);
+            this.Btn_adicionar.Name = "Btn_adicionar";
+            this.Btn_adicionar.ShadowDecoration.Depth = 5;
+            this.Btn_adicionar.ShadowDecoration.Enabled = true;
+            this.Btn_adicionar.Size = new System.Drawing.Size(144, 39);
+            this.Btn_adicionar.TabIndex = 100;
+            this.Btn_adicionar.Text = "Adicionar";
+            this.Btn_adicionar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Btn_adicionar.Click += new System.EventHandler(this.Btn_adicionar_Click);
+            // 
+            // Txt_quantidade
+            // 
+            this.Txt_quantidade.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_quantidade.BorderRadius = 6;
+            this.Txt_quantidade.BorderThickness = 0;
+            this.Txt_quantidade.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Txt_quantidade.DefaultText = "";
+            this.Txt_quantidade.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Txt_quantidade.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Txt_quantidade.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Txt_quantidade.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Txt_quantidade.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.Txt_quantidade.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_quantidade.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.Txt_quantidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Txt_quantidade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Txt_quantidade.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
+            this.Txt_quantidade.IconRightOffset = new System.Drawing.Point(10, -5);
+            this.Txt_quantidade.IconRightSize = new System.Drawing.Size(10, 10);
+            this.Txt_quantidade.Location = new System.Drawing.Point(26, 264);
+            this.Txt_quantidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_quantidade.Name = "Txt_quantidade";
+            this.Txt_quantidade.PasswordChar = '\0';
+            this.Txt_quantidade.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.Txt_quantidade.PlaceholderText = "Digite aqui";
+            this.Txt_quantidade.SelectedText = "";
+            this.Txt_quantidade.Size = new System.Drawing.Size(452, 36);
+            this.Txt_quantidade.TabIndex = 98;
+            // 
             // Tela_requisicao
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(1103, 679);
             this.Controls.Add(this.Txt_id);

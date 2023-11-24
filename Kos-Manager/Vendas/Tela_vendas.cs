@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Configuration;
 using System.Globalization;
+using Kos_Manager.Notificação;
 
 namespace Kos_Manager
 {
@@ -68,7 +69,12 @@ namespace Kos_Manager
             Txt_valor_produto.Clear();
 
         }
-
+        //Public de notificação
+        public void Alert(string msg, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(msg, type);
+        }
         private void Btn_adicionar_Click_1(object sender, EventArgs e)
         {
             try
@@ -115,8 +121,9 @@ namespace Kos_Manager
                             executacmdMySql_insert.ExecuteNonQuery();
                             ListarVendas();
                             LimparDados();
-                            con.Close();    
-                            // notificação aqui
+                            con.Close();
+                            //notificação
+                            this.Alert("Adicionado com sucesso", Form_Alert.enmType.Sucess);
                         }
                     }
                 }
@@ -124,6 +131,7 @@ namespace Kos_Manager
             catch (Exception erro)
             {
                 MessageBox.Show("Aconteceu o Erro: " + erro.Message);
+                // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
             }
         }
 
@@ -164,12 +172,13 @@ namespace Kos_Manager
             con.Open();
             executacmdMySql_update_venda.ExecuteNonQuery();
 
-            //notificação aqui
+            //notificação
+            this.Alert("Atualizado com sucesso", Form_Alert.enmType.Update);
 
             ListarVendas();
 
             con.Close();
-
+            // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
 
         }
 
@@ -192,11 +201,14 @@ namespace Kos_Manager
 
             executarcmdMySql_delete_venda.ExecuteNonQuery();
 
-            //notificação aqui
+            //notificação
+            this.Alert("Deletado com sucesso", Form_Alert.enmType.Delete);
             ListarVendas();
 
             // Fechando conexão
             con.Close();
+
+            // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
         }
 
         private void Tela_vendas_Load(object sender, EventArgs e)

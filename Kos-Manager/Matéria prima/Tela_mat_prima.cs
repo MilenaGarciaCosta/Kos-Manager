@@ -11,6 +11,7 @@ using System.Configuration;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Globalization;
+using Kos_Manager.Notificação;
 
 namespace Kos_Manager
 {
@@ -27,7 +28,12 @@ namespace Kos_Manager
 
         string id;
 
-
+        //Public de notificação
+        public void Alert(string msg, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(msg, type);
+        }
         public void ListarEstoqueMp()
         {
             MySqlConnection con = new MySqlConnection(conexao);
@@ -55,6 +61,7 @@ namespace Kos_Manager
             DgvEstoqueMp.DataSource = tabela_estoqueMp;
 
             con.Close();
+
 
 
         }
@@ -154,14 +161,16 @@ namespace Kos_Manager
                 executacmdMySql_insert.ExecuteNonQuery();
                 ListarEstoqueMp();
                 con.Close();
-                MessageBox.Show("Cadastrado com Sucesso!");
+                //notificação
+                this.Alert("Adicionado com sucesso", Form_Alert.enmType.Sucess);
             }
             catch (Exception erro)
             {
                 MessageBox.Show("Aconteceu o Erro: " + erro);
+                // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
             }
         }
-
+        
         private void Btn_atualizar_Click(object sender, EventArgs e)
         {
             try
@@ -207,7 +216,9 @@ namespace Kos_Manager
                                 // Commit da transação se tudo ocorrer sem erros
                                 transaction.Commit();
 
-                                MessageBox.Show("Atualização realizada com sucesso");
+                                //notificação
+                                this.Alert("Atualizado com sucesso", Form_Alert.enmType.Update);
+                                con.Close();
                                 ListarEstoqueMp();
                             }
                             catch (Exception ex)
@@ -215,17 +226,22 @@ namespace Kos_Manager
                                 // Em caso de erro, faça o rollback da transação
                                 transaction.Rollback();
                                 MessageBox.Show("Erro durante a atualização: " + ex.Message);
+                                // this.Alert("Falha ao atualizar: " + erro, Form_Alert.enmType.Warning);
                             }
                         }
                     }
                 }
             }
             catch (Exception ex)
-            {
+            {  this.Alert("Deletado com sucesso", Form_Alert.enmType.Delete);
                 MessageBox.Show("Erro geral: " + ex.Message);
+
+                // this.Alert("Falha ao deletar: " + ex.Message, Form_Alert.enmType.Warning);
             }
 
         }
+
+
 
         private void Btn_deletar_Click(object sender, EventArgs e)
         {
@@ -246,7 +262,9 @@ namespace Kos_Manager
 
             executarcmdMySql_delete_materia_prima.ExecuteNonQuery();
 
-            MessageBox.Show("Registro deletado com sucesso");
+            //notificação
+            this.Alert("Deletado com sucesso", Form_Alert.enmType.Delete);
+            con.Close();
             ListarEstoqueMp();
 
             // Fechando conexão

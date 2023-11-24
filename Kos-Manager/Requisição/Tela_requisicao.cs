@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Configuration;
+using Kos_Manager.Notificação;
 
 namespace Kos_Manager
 {
@@ -63,6 +64,14 @@ namespace Kos_Manager
 
             // Limpar ComboBox
         }
+
+        //Public de notificação
+        public void Alert(string msg, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(msg, type);
+        }
+
         private void Btn_adicionar_Click(object sender, EventArgs e)
         {
             try
@@ -98,11 +107,14 @@ namespace Kos_Manager
                 ListarRequisicao();
                 con.Close();
                 LimparDados();
-                //notificação aqui
+                //notificação
+                this.Alert("Adicionado com sucesso", Form_Alert.enmType.Sucess);
             }
             catch (Exception erro)
             {
                 MessageBox.Show("Aconteceu o Erro: " + erro);
+
+                // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
             }
         }
 
@@ -135,7 +147,10 @@ namespace Kos_Manager
                 executacmdMySql_update_tb_requisicao.ExecuteNonQuery();
                 ListarRequisicao();
                 con.Close();
-                //notificação aqui
+                //notificação
+                this.Alert("Atualizado com sucesso", Form_Alert.enmType.Update);
+
+                // this.Alert("Falha ao atualizar: " + erro, Form_Alert.enmType.Warning);
             }
         }
 
@@ -158,7 +173,8 @@ namespace Kos_Manager
                 executacmdMySql_delete_tb_requisicao.ExecuteNonQuery();
                 con.Close();
 
-                //notificação aqui
+                //notificação
+                this.Alert("Deletado com sucesso", Form_Alert.enmType.Delete);
 
                 // Atualize a exibição da lista de solicitações
                 ListarRequisicao();
@@ -166,6 +182,8 @@ namespace Kos_Manager
             catch (Exception erro)
             {
                 MessageBox.Show("Aconteceu um erro: " + erro);
+
+                // this.Alert("Falha ao deletar: " + erro, Form_Alert.enmType.Warning);
             }
         }
 

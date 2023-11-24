@@ -11,6 +11,7 @@ using System.Configuration;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Globalization;
+using Kos_Manager.Notificação;
 
 namespace Kos_Manager
 {
@@ -87,7 +88,12 @@ namespace Kos_Manager
 
             // Limpar ComboBox
         }
-
+        //Public de notificação
+        public void Alert(string msg, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(msg, type);
+        }
         private void Btn_adicionar_Click_1(object sender, EventArgs e)
         {
             try
@@ -130,11 +136,13 @@ namespace Kos_Manager
                 ListarEstoquePm();
                 con.Close();
                 LimparDados();
-                //notificação aqui
+                //notificação
+                this.Alert("Adicionado com sucesso", Form_Alert.enmType.Sucess);
             }
             catch (Exception erro)
             {
                 MessageBox.Show("Aconteceu o Erro: " + erro);
+                // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
             }
         }
 
@@ -172,9 +180,12 @@ namespace Kos_Manager
 
             con.Open();
             executacmdMySql_update_manu.ExecuteNonQuery();
-            //notificação aqui
+            //notificação
+            this.Alert("Atualizado com sucesso", Form_Alert.enmType.Update);
             ListarEstoquePm();
             con.Close();
+
+            // this.Alert("Falha ao atualizar: " + erro, Form_Alert.enmType.Warning);
 
         }
 
@@ -199,9 +210,13 @@ namespace Kos_Manager
 
             //notificação aqui
             ListarEstoquePm();
-
+            //notificação
+            this.Alert("Deletado com sucesso", Form_Alert.enmType.Delete);
             // Fechando conexão
             con.Close();
+
+
+            // this.Alert("Falha ao deletar: " + erro, Form_Alert.enmType.Warning);
         }
 
         private void Btn_voltar_Click(object sender, EventArgs e)

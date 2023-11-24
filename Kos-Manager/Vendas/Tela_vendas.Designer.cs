@@ -167,7 +167,7 @@
             this.cmb_funcionario.FocusedColor = System.Drawing.Color.Transparent;
             this.cmb_funcionario.FocusedState.BorderColor = System.Drawing.Color.Transparent;
             this.cmb_funcionario.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmb_funcionario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.cmb_funcionario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.cmb_funcionario.ItemHeight = 30;
             this.cmb_funcionario.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cmb_funcionario.Location = new System.Drawing.Point(31, 208);
@@ -187,7 +187,7 @@
             this.cmb_status.FocusedColor = System.Drawing.Color.Transparent;
             this.cmb_status.FocusedState.BorderColor = System.Drawing.Color.Transparent;
             this.cmb_status.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmb_status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.cmb_status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.cmb_status.ItemHeight = 30;
             this.cmb_status.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cmb_status.Location = new System.Drawing.Point(621, 208);
@@ -259,7 +259,7 @@
             this.cmb_nome_produto.FocusedColor = System.Drawing.Color.Transparent;
             this.cmb_nome_produto.FocusedState.BorderColor = System.Drawing.Color.Transparent;
             this.cmb_nome_produto.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmb_nome_produto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(151)))), ((int)(((byte)(151)))));
+            this.cmb_nome_produto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.cmb_nome_produto.ItemHeight = 30;
             this.cmb_nome_produto.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.cmb_nome_produto.Location = new System.Drawing.Point(31, 121);
