@@ -143,6 +143,7 @@ namespace Kos_Manager
 
             MySqlConnection con = new MySqlConnection(conexao);
 
+            string id = this.id;
             string produto = Txt_nome_produto_manu.Text;
             string lote = Txt_lote.Text;
             string quantidade = Txt_quantidade.Text;
@@ -180,7 +181,7 @@ namespace Kos_Manager
         private void Btn_deletar_Click(object sender, EventArgs e)
         {
             // Declarando variável e inserindo conteúdo do textbox nela
-            int codigo = int.Parse(this.id);
+            string id = this.id;
 
             // Conectando ao banco de dados MySql
             MySqlConnection con = new MySqlConnection(conexao);
@@ -192,7 +193,7 @@ namespace Kos_Manager
 
             MySqlCommand executarcmdMySql_delete_produto_manu = new MySqlCommand(sql_delete_produto_manu, con);
 
-            executarcmdMySql_delete_produto_manu.Parameters.AddWithValue("@codigo", codigo);
+            executarcmdMySql_delete_produto_manu.Parameters.AddWithValue("@codigo", id);
 
             executarcmdMySql_delete_produto_manu.ExecuteNonQuery();
 

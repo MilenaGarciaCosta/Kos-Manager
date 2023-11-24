@@ -25,6 +25,7 @@ namespace Kos_Manager
 
         }
 
+        string id;
 
 
         public void ListarEstoqueMp()
@@ -165,7 +166,7 @@ namespace Kos_Manager
         {
             try
             {
-                string id = Txt_id.Text;
+                string id = this.id;
                 string nome = txt_produto.Text;
                 string lote = Txt_lote.Text;
                 string quantidade = Txt_quantidade.Text;
@@ -229,7 +230,7 @@ namespace Kos_Manager
         private void Btn_deletar_Click(object sender, EventArgs e)
         {
             // Declarando variável e inserindo conteúdo do textbox nela
-            string id = Txt_id.Text;
+            string id = this.id;
 
             // Conectando ao banco de dados MySql
             MySqlConnection con = new MySqlConnection(conexao);
@@ -259,7 +260,7 @@ namespace Kos_Manager
 
         private void DgvEstoqueMp_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Txt_id.Text = DgvEstoqueMp.CurrentRow.Cells[0].Value.ToString();
+            this.id = DgvEstoqueMp.CurrentRow.Cells[0].Value.ToString();
             txt_produto.Text = DgvEstoqueMp.CurrentRow.Cells[1].Value.ToString();
             Txt_lote.Text = DgvEstoqueMp.CurrentRow.Cells[2].Value.ToString();
             Txt_dt_validade.Text = DgvEstoqueMp.CurrentRow.Cells[3].Value.ToString();

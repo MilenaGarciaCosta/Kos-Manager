@@ -66,7 +66,7 @@ namespace Kos_Manager
             // Limpar TextBox
             Txt_quantidade.Clear();
             Txt_valor_produto.Clear();
-            // Limpar ComboBox
+
         }
 
         private void Btn_adicionar_Click_1(object sender, EventArgs e)
@@ -130,7 +130,7 @@ namespace Kos_Manager
 
         private void Btn_atualizar_Click(object sender, EventArgs e)
         {
-           // string id = txt_id.Text;
+            string id = this.id;
             string quantidade = Txt_quantidade.Text;
             decimal valor = decimal.Parse(Txt_valor_produto.Text, CultureInfo.GetCultureInfo("pt-BR")); // Converter para decimal
             int cmb_Funcionario = Convert.ToInt32(cmb_funcionario.SelectedValue);
@@ -169,12 +169,14 @@ namespace Kos_Manager
             ListarVendas();
 
             con.Close();
+
+
         }
 
         private void Btn_deletar_Click(object sender, EventArgs e)
         {
-            // Declarando variável e inserindo conteúdo do textbox nela
-            //int codigo = int.Parse(txt_id.Text);
+            // Declarando variável a
+            string id = this.id;
 
             // Conectando ao banco de dados MySql
             MySqlConnection con = new MySqlConnection(conexao);

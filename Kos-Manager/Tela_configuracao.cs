@@ -24,6 +24,9 @@ namespace Kos_Manager
             InitializeComponent();
         }
 
+        string nome;
+        string senha;
+        string id;
 
         private void Tela_configuracao_Load(object sender, EventArgs e)
         {
@@ -49,7 +52,7 @@ namespace Kos_Manager
             
                 txt_senha.PasswordChar = '\0';
 
-               //txt_senha.PasswordChar = '*';
+               txt_senha.PasswordChar = '*';
 
     
         }
@@ -84,16 +87,24 @@ namespace Kos_Manager
         {
             MySqlConnection con = new MySqlConnection(conexao);
 
+            string id = this.id;
             string email = txt_email.Text;
+            string nome = this.nome;
+            string senha = this.senha;
 
-            string sql_update_operador = @"update tb_operador_principal
-                                           set 
-                                            tb_operador_principal_email = @email
-                                           where
-                                            tb_operador_pricipal_id";
+            string sql_update_operador = @"UPDATE tb_operador_principal 
+                                           SET tb_operador_principal_nome = @nome,
+                                            tb_operador_principal_email = @email,
+                                            tb_operador_principal_senha = @senha
+                                           WHERE tb_operador_pricipal_id";
 
             MySqlCommand executacmdMySql_update_operador = new MySqlCommand(sql_update_operador, con);
-            executacmdMySql_update_operador.Parameters.AddWithValue("@senha", email);
+
+            executacmdMySql_update_operador.Parameters.AddWithValue("@id", id);
+            executacmdMySql_update_operador.Parameters.AddWithValue("@nome", nome);
+            executacmdMySql_update_operador.Parameters.AddWithValue("@email", email);
+            executacmdMySql_update_operador.Parameters.AddWithValue("@senha", senha);
+
 
             con.Open();
             executacmdMySql_update_operador.ExecuteNonQuery();

@@ -108,7 +108,7 @@ namespace Kos_Manager
 
         private void Btn_atualizar_Click(object sender, EventArgs e)
         {
-            string id = Txt_id.Text;
+            string id = this.id;
             int quantidade = Convert.ToInt32(Txt_quantidade.Text);
             int cmb_Produto = Convert.ToInt32(cmb_nome_produto.SelectedValue);
             int cmb_Status = Convert.ToInt32(cmb_status_requisicao.SelectedValue);
@@ -124,6 +124,8 @@ namespace Kos_Manager
             WHERE tb_requisicao_id = @id";
 
                 MySqlCommand executacmdMySql_update_tb_requisicao = new MySqlCommand(sql_update_tb_requisicao, con);
+
+                    
                 executacmdMySql_update_tb_requisicao.Parameters.AddWithValue("@id", id);
                 executacmdMySql_update_tb_requisicao.Parameters.AddWithValue("@quantidade", quantidade);
                 executacmdMySql_update_tb_requisicao.Parameters.AddWithValue("@status", cmb_Status);
@@ -142,7 +144,7 @@ namespace Kos_Manager
             try
             {
                 // Obtém o ID da solicitação que deseja excluir
-                string id = Txt_id.Text;
+                string id = this.id;
 
                 MySqlConnection con = new MySqlConnection(conexao);
 
