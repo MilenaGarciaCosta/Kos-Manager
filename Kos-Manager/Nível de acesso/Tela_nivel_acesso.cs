@@ -20,57 +20,36 @@ namespace Kos_Manager
         public Tela_nivel_acesso()
         {
             InitializeComponent();
-            listarNiveis();
+            ListarNiveis();
         }
 
-        string id;
 
-        public void listarNiveis()
+        public void ListarNiveis()
         {
             MySqlConnection con = new MySqlConnection(conexao);
-            string sql_select_nivel_acesso = "select * from tb_nivel_acesso";
 
+            string sql_select_nivel = @"SELECT 
+                    n.tb_nivel_acesso_id as Id,
+                    n.tb_nivel_acesso_nome as Nivel_de_Acesso
+                    from tb_nivel_acesso n";
 
-            MySqlCommand executacmdMySql_select = new MySqlCommand(sql_select_nivel_acesso, con);
 
             con.Open();
 
-            MySqlCommand executacmdMySql_select_nivel_acesso = new MySqlCommand(sql_select_nivel_acesso, con);
-            executacmdMySql_select_nivel_acesso.ExecuteNonQuery();
+            DataTable tabela_nivel = new DataTable();
 
-            DataTable tabela_nivel_acesso = new DataTable();
+            MySqlDataAdapter da_nivel = new MySqlDataAdapter(sql_select_nivel, con);
+            da_nivel.Fill(tabela_nivel);
 
-            MySqlDataAdapter da_nivel_acesso = new MySqlDataAdapter(executacmdMySql_select_nivel_acesso);
-            da_nivel_acesso.Fill(tabela_nivel_acesso);
-
-            Dgv_nivel.DataSource = tabela_nivel_acesso;
+            Dgv_nivel.DataSource = tabela_nivel;
 
             con.Close();
 
-        }
-
-
-        private Form FormAtivo = null;
-        private void abrirChildForm(Form ChildForm)
-        {
-            if (FormAtivo != null)
-                FormAtivo.Close();
-            FormAtivo = ChildForm;
-            ChildForm.TopLevel = false;
-            ChildForm.FormBorderStyle = FormBorderStyle.None;
-            ChildForm.Dock = DockStyle.Fill;
-            //Child_panel.Controls.Add(ChildForm);
-            //Child_panel.Tag = ChildForm;
-            ChildForm.BringToFront();
-            ChildForm.Show();
-        }
-
-        private void btn_adicionar_Click(object sender, EventArgs e)
-        {
 
         }
 
-     
+
+       
 
         private void Btn_adicionar_Click_2(object sender, EventArgs e)
         {
@@ -79,18 +58,12 @@ namespace Kos_Manager
                 MySqlConnection con = new MySqlConnection(conexao);
 
 
-                string nome;
-
-                nome = txt_nome.Text;
-
-
+                string nome = txt_nome.Text;
 
 
                 string sql_insert = @"insert into tb_nivel_acesso
                                     (
                                         tb_nivel_acesso_nome
-                                        
-                                    
     
                                     )
                                     values
@@ -105,7 +78,7 @@ namespace Kos_Manager
 
                 con.Open();
                 executacmdMySql_insert.ExecuteNonQuery();
-                listarNiveis();
+                ListarNiveis();
                 con.Close();
                 MessageBox.Show("Adicionado com Sucesso!");
 
@@ -121,17 +94,15 @@ namespace Kos_Manager
 
         private void Btn_atualizar_Click(object sender, EventArgs e)
         {
-           // string id = txt_cod.Text;
+            string id = Txt_id.Text;
             string nome = txt_nome.Text;
 
             MySqlConnection con = new MySqlConnection(conexao);
 
 
             string sql_update_fornecedor = @"update tb_nivel_acesso
-                                  set tb_nivel_acesso_nome = @nome,
+                                  set tb_nivel_acesso_nome = @nome
                                   where tb_nivel_acesso_id = @id";
-
-
 
 
             MySqlCommand executacmdMySql_update_fornecedor = new MySqlCommand(sql_update_fornecedor, con);
@@ -140,27 +111,17 @@ namespace Kos_Manager
 
             con.Open();
             executacmdMySql_update_fornecedor.ExecuteNonQuery();
-
-            MessageBox.Show("Atualização realizada com sucesso");
-
-            listarNiveis();
-
+            ListarNiveis();
             con.Close();
+            MessageBox.Show("Atualização realizada com sucesso");
         }
 
         private void Btn_deletar_Click(object sender, EventArgs e)
         {
-            //Declarando variavel e inserindo conteudo do textbox nela
-            //int codigo;
-
-            //codigo = int.Parse(txt_cod.Text);
-
-            //Conectanto banco de dados MySql
+        
+            string id = Txt_id.Text;
 
             MySqlConnection con = new MySqlConnection(conexao);
-
-            //Abrindo conexão
-            con.Open();
 
             string sql_delete_nivel_acesso = @"delete from tb_nivel_acesso where tb_nivel_acesso_id = @id";
 
@@ -168,18 +129,21 @@ namespace Kos_Manager
 
             executarcmdMySql_delete_nivel_acesso.Parameters.AddWithValue("@id", id);
 
+            con.Open();
             executarcmdMySql_delete_nivel_acesso.ExecuteNonQuery();
-
-            MessageBox.Show("Registrado deletado com sucesso");
-            listarNiveis();
-            //Fechando conexão
-
+            ListarNiveis();
             con.Close();
+            MessageBox.Show("Registrado deletado com sucesso");
         }
 
         private void Btn_voltar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Dgv_nivel_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_nome.Text = Dgv_nivel.CurrentRow.Cells[1].Value.ToString();
         }
     }
 }

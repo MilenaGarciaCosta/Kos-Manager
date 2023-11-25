@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Configuration;
+using Kos_Manager.Notificação;
 
 namespace Kos_Manager
 {
@@ -20,10 +21,10 @@ namespace Kos_Manager
         public Tela_solicitacao()
         {
             InitializeComponent();
+            LimparDados();
             ListarSolicitacao();
         }
 
-        string id; 
 
         public void ListarSolicitacao()
         {
@@ -32,16 +33,19 @@ namespace Kos_Manager
             string sql_select_solicitacao = @"
                    SELECT
                 s.tb_solicitacao_id AS Id,
+                m.TB_MATERIA_PRIMA_NOMENCLATURA AS Nome,
                 s.tb_solicitacao_quantidade as Quantidade,
                 s.tb_solicitacao_marca as Marca,
                 t.tb_solicitacao_status_nome as Status,
-                m.TB_MATERIA_PRIMA_NOMENCLATURA AS Nome,
                 f.tb_fornecedor_nome AS Fornecedor
             FROM
                 tb_solicitacao s
-                INNER JOIN TB_MATERIA_PRIMA m ON m.TB_MATERIA_PRIMA_id = s.TB_MATERIA_PRIMA_id
-                INNER JOIN tb_fornecedor f ON f.tb_fornecedor_id = s.tb_fornecedor_id    
-                INNER JOIN tb_solicitacao_status t ON t.tb_solicitacao_status_id = s.tb_solicitacao_status_id";
+                     INNER JOIN
+                TB_MATERIA_PRIMA m ON m.TB_MATERIA_PRIMA_id = s.TB_MATERIA_PRIMA_id
+                     INNER JOIN 
+                tb_fornecedor f ON f.tb_fornecedor_id = s.tb_fornecedor_id    
+                     INNER JOIN 
+                tb_solicitacao_status t ON t.tb_solicitacao_status_id = s.tb_solicitacao_status_id";
 
 
             con.Open();
@@ -58,33 +62,6 @@ namespace Kos_Manager
 
         }
 
-        private Form FormAtivo = null;
-    
-
-        private void Pnl_mat_prima_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Lbl_titulo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Child_panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Btn_solicitar_Click(object sender, EventArgs e)
-        {
-           // abrirChildForm(new Tela_add_solicitacao());
-        }
 
         private void LimparDados()
         {
@@ -102,10 +79,10 @@ namespace Kos_Manager
                 MySqlConnection con = new MySqlConnection(conexao);
 
                 string quantidade = Txt_quantidade.Text;
+                string marca = Txt_solicitacao_marca.Text;
                 int cmb_Status = Convert.ToInt32(cmb_status_solicitacao.SelectedValue);
                 int cmb_Fornecedor = Convert.ToInt32(cmb_fornecedor.SelectedValue);
                 int cmb_Produto = Convert.ToInt32(cmb_nome_produto.SelectedValue);
-                string marca = Txt_solicitacao_marca.Text;
 
                 string sql_insert = @"insert into TB_SOLICITACAO
                 (  
@@ -131,15 +108,16 @@ namespace Kos_Manager
                 executacmdMySql_insert.Parameters.AddWithValue("@FORNECEDOR_ID", cmb_Fornecedor);
 
 
+
                 con.Open();
                 executacmdMySql_insert.ExecuteNonQuery();
                 ListarSolicitacao();
                 con.Close();
                 LimparDados();
-                MessageBox.Show("Cadastrado com Sucesso!");
-                //notificação aqui
+                //notificação
+                //this.Alert("Adicionado com sucesso", Form_Alert.enmType.Sucess);
 
-                
+
             }
             catch (Exception erro)
             {
@@ -151,10 +129,10 @@ namespace Kos_Manager
         {
             string id = Txt_id.Text;
             string quantidade = Txt_quantidade.Text;
+            string marca = Txt_solicitacao_marca.Text;
             int cmb_Status = Convert.ToInt32(cmb_status_solicitacao.SelectedValue);
             int cmb_Fornecedor = Convert.ToInt32(cmb_fornecedor.SelectedValue);
             int cmb_Produto = Convert.ToInt32(cmb_nome_produto.SelectedValue);
-            string marca = Txt_solicitacao_marca.Text;
 
             using (MySqlConnection con = new MySqlConnection(conexao))
             {
@@ -173,7 +151,7 @@ namespace Kos_Manager
                 executacmdMySql_update_tb_requisicao.Parameters.AddWithValue("@id", id);
                 executacmdMySql_update_tb_requisicao.Parameters.AddWithValue("@quantidade", quantidade);
                 executacmdMySql_update_tb_requisicao.Parameters.AddWithValue("@status", cmb_Status);
-                executacmdMySql_update_tb_requisicao.Parameters.AddWithValue("@marca", marca);
+                executacmdMySql_update_tb_requisicao.Parameters.AddWithValue("@Marca", marca);
                 executacmdMySql_update_tb_requisicao.Parameters.AddWithValue("@produto", cmb_Produto);
                 executacmdMySql_update_tb_requisicao.Parameters.AddWithValue("@fornecedor", cmb_Fornecedor);
 
@@ -238,16 +216,19 @@ namespace Kos_Manager
 
             string sql_select_solicitacao = @"SELECT
                 s.tb_solicitacao_id AS Id,
+                m.TB_MATERIA_PRIMA_NOMENCLATURA AS Nome,
                 s.tb_solicitacao_quantidade as Quantidade,
                 s.tb_solicitacao_marca as Marca,
                 t.tb_solicitacao_status_nome as Status,
-                m.TB_MATERIA_PRIMA_NOMENCLATURA AS Nome,
                 f.tb_fornecedor_nome AS Fornecedor
             FROM
                 tb_solicitacao s
-                INNER JOIN TB_MATERIA_PRIMA m ON m.TB_MATERIA_PRIMA_id = s.TB_MATERIA_PRIMA_id
-                INNER JOIN tb_fornecedor f ON f.tb_fornecedor_id = s.tb_fornecedor_id    
-                INNER JOIN tb_solicitacao_status t ON t.tb_solicitacao_status_id = s.tb_solicitacao_status_id";
+                     INNER JOIN
+                TB_MATERIA_PRIMA m ON m.TB_MATERIA_PRIMA_id = s.TB_MATERIA_PRIMA_id
+                     INNER JOIN 
+                tb_fornecedor f ON f.tb_fornecedor_id = s.tb_fornecedor_id    
+                     INNER JOIN 
+                tb_solicitacao_status t ON t.tb_solicitacao_status_id = s.tb_solicitacao_status_id";
                     
 
             string sql_select_produto = "select * from tb_materia_prima";
@@ -308,6 +289,17 @@ namespace Kos_Manager
             cmb_status_solicitacao.ValueMember = "TB_SOLICITACAO_STATUS_ID";  //Pega os dados     
             cmb_status_solicitacao.SelectedItem = null;
 
+        }
+
+        private void Dgv_solicita_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            Txt_id.Text = Dgv_solicita.CurrentRow.Cells[0].Value.ToString();
+            cmb_nome_produto.Text = Dgv_solicita.CurrentRow.Cells[1].Value.ToString();
+            Txt_quantidade.Text = Dgv_solicita.CurrentRow.Cells[2].Value.ToString();
+            Txt_solicitacao_marca.Text = Dgv_solicita.CurrentRow.Cells[3].Value.ToString();
+            cmb_status_solicitacao.Text = Dgv_solicita.CurrentRow.Cells[4].Value.ToString();
+            cmb_fornecedor.Text = Dgv_solicita.CurrentRow.Cells[5].Value.ToString();
         }
     }
 }

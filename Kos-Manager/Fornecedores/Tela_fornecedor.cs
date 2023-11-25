@@ -200,10 +200,10 @@ namespace Kos_Manager
 
         private void DgvFornecedor_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Txt_nome_fornecedor.Text = DgvFornecedor.CurrentRow.Cells[0].Value.ToString();
-            Txt_produto_fornecido.Text = DgvFornecedor.CurrentRow.Cells[1].Value.ToString();
-            Txt_tel_fornecedor.Text = DgvFornecedor.CurrentRow.Cells[2].Value.ToString();
-            Txt_outro_contato_fornecedor.Text = DgvFornecedor.CurrentRow.Cells[3].Value.ToString();
+            Txt_nome_fornecedor.Text = DgvFornecedor.CurrentRow.Cells[1].Value.ToString();
+            Txt_produto_fornecido.Text = DgvFornecedor.CurrentRow.Cells[2].Value.ToString();
+            Txt_tel_fornecedor.Text = DgvFornecedor.CurrentRow.Cells[3].Value.ToString();
+            Txt_outro_contato_fornecedor.Text = DgvFornecedor.CurrentRow.Cells[4].Value.ToString();
         }
     }
 }
