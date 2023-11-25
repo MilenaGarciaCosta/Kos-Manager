@@ -87,13 +87,18 @@ namespace Kos_Manager
             Txt_quantidade.Clear();
 
             // Limpar ComboBox
+           
         }
+
+            
         //Public de notificação
         public void Alert(string msg, Form_Alert.enmType type)
         {
             Form_Alert frm = new Form_Alert();
             frm.showAlert(msg, type);
         }
+
+
         private void Btn_adicionar_Click_1(object sender, EventArgs e)
         {
             try
@@ -191,7 +196,7 @@ namespace Kos_Manager
 
         private void Btn_deletar_Click(object sender, EventArgs e)
         {
-            // Declarando variável e inserindo conteúdo do textbox nela
+           
             string id = this.id;
 
             // Conectando ao banco de dados MySql

@@ -136,6 +136,9 @@ namespace Kos_Manager
             Txt_senha_funcionario.Clear();
 
             // Limpar ComboBox
+
+            // cmb_nivel_funcionario.Items.Clear();
+           // cmb_status_funcionario.Items.Clear();
         }
 
         private void Btn_adicionar_Click_2(object sender, EventArgs e)
@@ -285,6 +288,16 @@ namespace Kos_Manager
         private void Btn_voltar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Dgv_funcionario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.id = Dgv_funcionario.CurrentRow.Cells[0].Value.ToString();
+            Txt_nome_funcionario.Text = Dgv_funcionario.CurrentRow.Cells[1].Value.ToString();
+            Txt_email_funcionario.Text = Dgv_funcionario.CurrentRow.Cells[2].Value.ToString();
+            Txt_senha_funcionario.Text = Dgv_funcionario.CurrentRow.Cells[3].Value.ToString();
+            cmb_status_funcionario.Text = Dgv_funcionario.CurrentRow.Cells[4].Value.ToString();
+            cmb_nivel_funcionario.Text = Dgv_funcionario.CurrentRow.Cells[5].Value.ToString();
         }
     }
 }

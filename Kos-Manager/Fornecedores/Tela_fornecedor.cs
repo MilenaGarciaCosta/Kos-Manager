@@ -127,6 +127,8 @@ namespace Kos_Manager
 
         private void Btn_atualizar_Click(object sender, EventArgs e)
         {
+
+            string id = this.id;
             string nome = Txt_nome_fornecedor.Text;
             string produto = Txt_produto_fornecido.Text;
             string contato = Txt_tel_fornecedor.Text;
@@ -168,7 +170,7 @@ namespace Kos_Manager
         private void Btn_deletar_Click(object sender, EventArgs e)
         {
             // Declarando variável e inserindo conteúdo do textbox nela
-            //int codigo = int.Parse(txt_id.Text);
+            string id = this.id;
 
             // Conectando ao banco de dados MySql
             MySqlConnection con = new MySqlConnection(conexao);

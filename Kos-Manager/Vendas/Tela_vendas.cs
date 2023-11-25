@@ -56,7 +56,7 @@ namespace Kos_Manager
             MySqlDataAdapter da_venda = new MySqlDataAdapter(sql_select_venda, con);
             da_venda.Fill(tabela_venda);
 
-            //Dgv_venda.DataSource = tabela_venda; datagridview
+            Dgv_venda.DataSource = tabela_venda; 
 
             con.Close();
         }
@@ -67,14 +67,21 @@ namespace Kos_Manager
             // Limpar TextBox
             Txt_quantidade.Clear();
             Txt_valor_produto.Clear();
-
+            
+            //limpar cmb
+           // cmb_funcionario.Items.Clear();
+           // cmb_nome_produto.Items.Clear();
+           // cmb_status.Items.Clear();
         }
+
         //Public de notificação
         public void Alert(string msg, Form_Alert.enmType type)
         {
             Form_Alert frm = new Form_Alert();
             frm.showAlert(msg, type);
         }
+
+
         private void Btn_adicionar_Click_1(object sender, EventArgs e)
         {
             try
@@ -120,8 +127,8 @@ namespace Kos_Manager
                             con.Open();
                             executacmdMySql_insert.ExecuteNonQuery();
                             ListarVendas();
-                            LimparDados();
                             con.Close();
+                            LimparDados();
                             //notificação
                             this.Alert("Adicionado com sucesso", Form_Alert.enmType.Sucess);
                         }
@@ -169,16 +176,17 @@ namespace Kos_Manager
             executacmdMySql_update_venda.Parameters.AddWithValue("@cmbfuncionario", cmb_Funcionario);
             executacmdMySql_update_venda.Parameters.AddWithValue("@cmbproduto", cmb_Produto);
             executacmdMySql_update_venda.Parameters.AddWithValue("@cmbstatus", cmb_Venda_status);
+
+
             con.Open();
             executacmdMySql_update_venda.ExecuteNonQuery();
-
-            //notificação
-            this.Alert("Atualizado com sucesso", Form_Alert.enmType.Update);
 
             ListarVendas();
 
             con.Close();
-            // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
+
+            LimparDados();
+            this.Alert("Atualizado com sucesso", Form_Alert.enmType.Update);
 
         }
 
@@ -208,6 +216,7 @@ namespace Kos_Manager
             // Fechando conexão
             con.Close();
 
+            LimparDados();
             // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
         }
 
