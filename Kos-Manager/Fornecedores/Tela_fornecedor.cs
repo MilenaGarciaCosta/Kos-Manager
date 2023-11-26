@@ -37,23 +37,23 @@ namespace Kos_Manager
         {
             MySqlConnection con = new MySqlConnection(conexao);
 
-            string sql_select_estoqueMp = @"
+            string sql_select_fornecedor = @"
                     SELECT 
                         TB_FORNECEDOR_ID  as id,
 						TB_FORNECEDOR_NOME as Nome,
 						TB_FORNECEDOR_PRODUTO as Produto,
-						TB_FORNECEDOR_CONTATO as Contato ,
+						TB_FORNECEDOR_CONTATO as Contato,
 						TB_FORNECEDOR_OUTRO_CONTATO as Outro
                         from tb_fornecedor";
 
             con.Open();
 
-            DataTable tabela_estoqueMp = new DataTable();
+            DataTable tabela_fornecedor = new DataTable();
 
-            MySqlDataAdapter da_estoqueMp = new MySqlDataAdapter(sql_select_estoqueMp, con);
-            da_estoqueMp.Fill(tabela_estoqueMp);
+            MySqlDataAdapter da_estoqueMp = new MySqlDataAdapter(sql_select_fornecedor, con);
+            da_estoqueMp.Fill(tabela_fornecedor);
 
-            DgvFornecedor.DataSource = tabela_estoqueMp;
+            DgvFornecedor.DataSource = tabela_fornecedor;
 
             con.Close();
 
@@ -128,17 +128,20 @@ namespace Kos_Manager
         private void Btn_atualizar_Click(object sender, EventArgs e)
         {
 
+            MySqlConnection con = new MySqlConnection(conexao); 
+
+
             string id = this.id;
             string nome = Txt_nome_fornecedor.Text;
             string produto = Txt_produto_fornecido.Text;
             string contato = Txt_tel_fornecedor.Text;
-            string outro_tel = Txt_outro_contato_fornecedor.Text;
+            string outro_ctt = Txt_outro_contato_fornecedor.Text;
 
 
-            MySqlConnection con = new MySqlConnection(conexao);
+            
 
 
-            string sql_update_fornecedor = @"update tb_materia_prima 
+            string sql_update_fornecedor = @"update tb_fornecedor 
                                   set 
                                       TB_FORNECEDOR_NOME = @nome,
                                       TB_FORNECEDOR_PRODUTO = @produto,
@@ -155,7 +158,7 @@ namespace Kos_Manager
             executacmdMySql_update_fornecedor.Parameters.AddWithValue("@nome", nome);
             executacmdMySql_update_fornecedor.Parameters.AddWithValue("@produto", produto);
             executacmdMySql_update_fornecedor.Parameters.AddWithValue("@contato", contato);
-            executacmdMySql_update_fornecedor.Parameters.AddWithValue("@quantidade", outro_tel);
+            executacmdMySql_update_fornecedor.Parameters.AddWithValue("@outro", outro_ctt);
 
             con.Open();
             executacmdMySql_update_fornecedor.ExecuteNonQuery();
@@ -170,7 +173,7 @@ namespace Kos_Manager
         private void Btn_deletar_Click(object sender, EventArgs e)
         {
             // Declarando variável e inserindo conteúdo do textbox nela
-            string id = this.id;
+            int codigo = int.Parse(this.id);
 
             // Conectando ao banco de dados MySql
             MySqlConnection con = new MySqlConnection(conexao);
@@ -178,11 +181,11 @@ namespace Kos_Manager
             // Abrindo conexão
             con.Open();
 
-            string sql_delete_fornecedor = @"DELETE FROM tb_fornecedor WHERE tb_fornecedor_id = @id";
+            string sql_delete_fornecedor = @"DELETE FROM tb_fornecedor WHERE tb_fornecedor_id = @codigo";
 
             MySqlCommand executarcmdMySql_delete_fornecedor = new MySqlCommand(sql_delete_fornecedor, con);
 
-            executarcmdMySql_delete_fornecedor.Parameters.AddWithValue("@id", id);
+            executarcmdMySql_delete_fornecedor.Parameters.AddWithValue("@codigo", codigo);
 
             executarcmdMySql_delete_fornecedor.ExecuteNonQuery();
 
@@ -200,6 +203,7 @@ namespace Kos_Manager
 
         private void DgvFornecedor_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            this.id = DgvFornecedor.CurrentRow.Cells[0].Value.ToString();
             Txt_nome_fornecedor.Text = DgvFornecedor.CurrentRow.Cells[1].Value.ToString();
             Txt_produto_fornecido.Text = DgvFornecedor.CurrentRow.Cells[2].Value.ToString();
             Txt_tel_fornecedor.Text = DgvFornecedor.CurrentRow.Cells[3].Value.ToString();

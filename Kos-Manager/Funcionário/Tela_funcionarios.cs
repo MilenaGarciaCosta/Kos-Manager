@@ -226,7 +226,7 @@ namespace Kos_Manager
 
         private void Btn_atualizar_Click_2(object sender, EventArgs e)
         {
-           // string id = txt_cod.Text;
+           string id = this.id;
             string nome = Txt_nome_funcionario.Text;
             string email = Txt_email_funcionario.Text;
             string senha = Txt_senha_funcionario.Text;

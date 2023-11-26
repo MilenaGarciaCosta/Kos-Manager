@@ -23,6 +23,7 @@ namespace Kos_Manager
             ListarNiveis();
         }
 
+        string id;
 
         public void ListarNiveis()
         {
@@ -94,7 +95,7 @@ namespace Kos_Manager
 
         private void Btn_atualizar_Click(object sender, EventArgs e)
         {
-            string id = Txt_id.Text;
+            string id = this.id;
             string nome = txt_nome.Text;
 
             MySqlConnection con = new MySqlConnection(conexao);
@@ -118,8 +119,8 @@ namespace Kos_Manager
 
         private void Btn_deletar_Click(object sender, EventArgs e)
         {
-        
-            string id = Txt_id.Text;
+
+            string id = this.id;
 
             MySqlConnection con = new MySqlConnection(conexao);
 
@@ -143,6 +144,7 @@ namespace Kos_Manager
 
         private void Dgv_nivel_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            this.id = Dgv_nivel.CurrentRow.Cells[0].Value.ToString();
             txt_nome.Text = Dgv_nivel.CurrentRow.Cells[1].Value.ToString();
         }
     }
