@@ -125,6 +125,7 @@ namespace Kos_Manager
 
         private void Btn_adicionar_Click_1(object sender, EventArgs e)
         {
+
             try
             {
                 MySqlConnection con = new MySqlConnection(conexao);
@@ -135,6 +136,8 @@ namespace Kos_Manager
                 DateTime dtVal = DateTime.ParseExact(Txt_dt_validade.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture); // Converter a data para DateTime
                 string formattedDate = dtVal.ToString("yyyy-MM-dd"); // Formatar a data no formato MySQL
                 int cmbFornecedor = Convert.ToInt32(cmb_fornecedor.SelectedValue);
+
+
 
                 string sql_insert = @"insert into tb_materia_prima
                     (  
@@ -161,9 +164,14 @@ namespace Kos_Manager
                 executacmdMySql_insert.ExecuteNonQuery();
                 ListarEstoqueMp();
                 con.Close();
+
+                // Limpar a seleção da ComboBox após adicionar os dados
+                cmb_fornecedor.SelectedItem = null;
+
                 //notificação
                 this.Alert("Adicionado com sucesso", Form_Alert.enmType.Sucess);
             }
+
             catch (Exception erro)
             {
                 MessageBox.Show("Aconteceu o Erro: " + erro);
@@ -215,6 +223,9 @@ namespace Kos_Manager
 
                                 // Commit da transação se tudo ocorrer sem erros
                                 transaction.Commit();
+
+                                // Limpar a seleção da ComboBox após adicionar os dados
+                                cmb_fornecedor.SelectedItem = null;
 
                                 //notificação
                                 this.Alert("Atualizado com sucesso", Form_Alert.enmType.Update);

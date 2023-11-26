@@ -69,7 +69,7 @@ namespace Kos_Manager
             Txt_quantidade.Clear();
             Txt_solicitacao_marca.Clear();
 
-            // Limpar ComboBox
+            
         }
 
         //Public de notificação
@@ -119,8 +119,15 @@ namespace Kos_Manager
                 con.Open();
                 executacmdMySql_insert.ExecuteNonQuery();
                 ListarSolicitacao();
+
                 con.Close();
                 LimparDados();
+
+                // Limpar a seleção da ComboBox após adicionar os dados
+                cmb_nome_produto.SelectedItem = null;
+                cmb_status_solicitacao.SelectedItem = null;
+                cmb_fornecedor.SelectedItem = null;
+
                 //notificação
                 this.Alert("Adicionado com sucesso", Form_Alert.enmType.Sucess);
 
@@ -169,6 +176,12 @@ namespace Kos_Manager
                 ListarSolicitacao();
                 con.Close();
                 LimparDados();
+                // Limpar a seleção da ComboBox após adicionar os dados
+                cmb_nome_produto.SelectedItem = null;
+                cmb_status_solicitacao.SelectedItem = null;
+                cmb_fornecedor.SelectedItem = null;
+
+
                 //notificação
                 this.Alert("Atualizado com sucesso", Form_Alert.enmType.Update);
                 // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);

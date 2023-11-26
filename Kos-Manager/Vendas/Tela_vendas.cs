@@ -129,6 +129,12 @@ namespace Kos_Manager
                             ListarVendas();
                             con.Close();
                             LimparDados();
+
+                            // Limpar a seleção da ComboBox após adicionar os dados
+                            cmb_nome_produto.SelectedItem = null;
+                            cmb_funcionario.SelectedItem = null;
+                            cmb_status.SelectedItem = null;
+
                             //notificação
                             this.Alert("Adicionado com sucesso", Form_Alert.enmType.Sucess);
                         }
@@ -186,6 +192,12 @@ namespace Kos_Manager
             con.Close();
 
             LimparDados();
+
+            // Limpar a seleção da ComboBox após adicionar os dados
+            cmb_nome_produto.SelectedItem = null;
+            cmb_funcionario.SelectedItem = null;
+            cmb_status.SelectedItem = null;
+
             this.Alert("Atualizado com sucesso", Form_Alert.enmType.Update);
 
         }

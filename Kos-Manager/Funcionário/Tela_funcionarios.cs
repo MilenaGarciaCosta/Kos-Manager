@@ -136,10 +136,7 @@ namespace Kos_Manager
             Txt_email_funcionario.Clear();
             Txt_senha_funcionario.Clear();
 
-            // Limpar ComboBox
-
-            // cmb_nivel_funcionario.Items.Clear();
-           // cmb_status_funcionario.Items.Clear();
+            
         }
 
         //Public de notificação
@@ -187,6 +184,10 @@ namespace Kos_Manager
                 ListarFuncionario();
                 con.Close();
                 LimparDados();
+                // Limpar a seleção da ComboBox após adicionar os dados
+                cmb_nivel_funcionario.SelectedItem = null;
+                cmb_status_funcionario.SelectedItem = null;
+
                 //notificação
                 this.Alert("Adicionado com sucesso", Form_Alert.enmType.Sucess);
             }
@@ -269,7 +270,9 @@ namespace Kos_Manager
             // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
 
             ListarFuncionario();
-
+            // Limpar a seleção da ComboBox após adicionar os dados
+            cmb_nivel_funcionario.SelectedItem = null;
+            cmb_status_funcionario.SelectedItem = null;
             con.Close();
         }
 

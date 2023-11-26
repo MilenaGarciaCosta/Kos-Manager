@@ -107,6 +107,10 @@ namespace Kos_Manager
                 ListarRequisicao();
                 con.Close();
                 LimparDados();
+                // Limpar a seleção da ComboBox após adicionar os dados
+                cmb_nome_produto.SelectedItem = null;
+                cmb_status_requisicao.SelectedItem = null;
+
                 //notificação
                 this.Alert("Adicionado com sucesso", Form_Alert.enmType.Sucess);
             }
@@ -147,6 +151,11 @@ namespace Kos_Manager
                 executacmdMySql_update_tb_requisicao.ExecuteNonQuery();
                 ListarRequisicao();
                 con.Close();
+
+                // Limpar a seleção da ComboBox após adicionar os dados
+                cmb_nome_produto.SelectedItem = null;
+                cmb_status_requisicao.SelectedItem = null;
+
                 //notificação
                 this.Alert("Atualizado com sucesso", Form_Alert.enmType.Update);
 

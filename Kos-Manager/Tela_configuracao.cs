@@ -11,6 +11,7 @@ using System.Configuration;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Globalization;
+using Kos_Manager.Notificação;
 
 namespace Kos_Manager
 {
@@ -51,9 +52,16 @@ namespace Kos_Manager
         {
             txt_senha.PasswordChar = txt_senha.PasswordChar == '*' ? '\0' : '*';
         }
+        //Public de notificação
+        public void Alert(string msg, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(msg, type);
+        }
 
         private void Btn_atualizar_Click(object sender, EventArgs e) //botão atualizar senha
         {
+            try { 
             MySqlConnection con = new MySqlConnection(conexao);
 
             string id = this.id;
@@ -81,12 +89,23 @@ namespace Kos_Manager
             Usuario.email = email;
             Usuario.senha = senha;
 
-            MessageBox.Show("Atualização realizada com sucesso");
+                //notificação
+                this.Alert("Atualizado com sucesso", Form_Alert.enmType.Update);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro durante a atualização: " + ex.Message);
+                // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
+            }
         }
 
 
         private void guna2Button1_Click(object sender, EventArgs e) //botão de atualiar email
         {
+            try
+            {
+
+            
             MySqlConnection con = new MySqlConnection(conexao);
 
             string id = this.id;
@@ -114,7 +133,14 @@ namespace Kos_Manager
              Usuario.email = email;
              Usuario.senha = senha;
 
-            MessageBox.Show("Atualização realizada com sucesso");
+                //notificação
+                this.Alert("Atualizado com sucesso", Form_Alert.enmType.Update);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro durante a atualização: " + ex.Message);
+                // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
+            }
         }
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
