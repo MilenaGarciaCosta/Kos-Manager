@@ -28,6 +28,7 @@ namespace Kos_Manager
         string senha;
         string id;
 
+
         private void Tela_configuracao_Load(object sender, EventArgs e)
         {
 
@@ -48,38 +49,39 @@ namespace Kos_Manager
 
         private void senha_visivel_Click(object sender, EventArgs e)
         {
-           
-            
-                txt_senha.PasswordChar = '\0';
-
-               txt_senha.PasswordChar = '*';
-
-    
+            txt_senha.PasswordChar = txt_senha.PasswordChar == '*' ? '\0' : '*';
         }
 
         private void Btn_atualizar_Click(object sender, EventArgs e) //botão atualizar senha
         {
             MySqlConnection con = new MySqlConnection(conexao);
 
+            string id = this.id;
+            string email = txt_email.Text;
+            string nome = this.nome;
             string senha = txt_senha.Text;
 
-            string sql_update_operador = @"update tb_operador_principal
-                                           set 
-                                            tb_operador_principal_senha = @senha
-                                           where
-                                            tb_operador_pricipal_id";
+            string sql_update_operador = @"UPDATE tb_operador_principal 
+                                           SET tb_operador_principal_nome = @nome,
+                                               tb_operador_principal_email = @email,
+                                               tb_operador_principal_senha = @senha
+                                           WHERE tb_operador_principal_id = @id";
 
             MySqlCommand executacmdMySql_update_operador = new MySqlCommand(sql_update_operador, con);
-            executacmdMySql_update_operador.Parameters.AddWithValue("@senha", senha );
 
-            con.Open();
-                executacmdMySql_update_operador.ExecuteNonQuery();
+            executacmdMySql_update_operador.Parameters.AddWithValue("@id", id);
+            executacmdMySql_update_operador.Parameters.AddWithValue("@nome", nome);
+            executacmdMySql_update_operador.Parameters.AddWithValue("@email", email);
+            executacmdMySql_update_operador.Parameters.AddWithValue("@senha", senha);
+
+
+            con.Open(); 
+            executacmdMySql_update_operador.ExecuteNonQuery();
+
+            Usuario.email = email;
+            Usuario.senha = senha;
 
             MessageBox.Show("Atualização realizada com sucesso");
-
-           
-
-            con.Close();
         }
 
 
@@ -90,13 +92,13 @@ namespace Kos_Manager
             string id = this.id;
             string email = txt_email.Text;
             string nome = this.nome;
-            string senha = this.senha;
+            string senha = txt_senha.Text;
 
             string sql_update_operador = @"UPDATE tb_operador_principal 
                                            SET tb_operador_principal_nome = @nome,
-                                            tb_operador_principal_email = @email,
-                                            tb_operador_principal_senha = @senha
-                                           WHERE tb_operador_pricipal_id";
+                                               tb_operador_principal_email = @email,
+                                               tb_operador_principal_senha = @senha
+                                           WHERE tb_operador_principal_id = @id";
 
             MySqlCommand executacmdMySql_update_operador = new MySqlCommand(sql_update_operador, con);
 
@@ -108,6 +110,9 @@ namespace Kos_Manager
 
             con.Open();
             executacmdMySql_update_operador.ExecuteNonQuery();
+
+             Usuario.email = email;
+             Usuario.senha = senha;
 
             MessageBox.Show("Atualização realizada com sucesso");
         }

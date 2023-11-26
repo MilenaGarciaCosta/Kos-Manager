@@ -196,32 +196,57 @@ namespace Kos_Manager
 
         private void Btn_deletar_Click(object sender, EventArgs e)
         {
-           
+
             string id = this.id;
 
             // Conectando ao banco de dados MySql
             MySqlConnection con = new MySqlConnection(conexao);
 
-            // Abrindo conexão
-            con.Open();
+            try
+            {
+                // Verificar se existem referências na tabela tb_venda
+                string sql_check_references = "SELECT COUNT(*) FROM tb_venda WHERE tb_produto_manu_id = @codigo";
 
-            string sql_delete_produto_manu = @"DELETE FROM tb_produto_manu WHERE tb_produto_manu_id = @codigo";
+                MySqlCommand cmdCheckReferences = new MySqlCommand(sql_check_references, con);
+                cmdCheckReferences.Parameters.AddWithValue("@codigo", id);
 
-            MySqlCommand executarcmdMySql_delete_produto_manu = new MySqlCommand(sql_delete_produto_manu, con);
+                con.Open();
+                int referencesCount = Convert.ToInt32(cmdCheckReferences.ExecuteScalar());
+                con.Close();
 
-            executarcmdMySql_delete_produto_manu.Parameters.AddWithValue("@codigo", id);
+                if (referencesCount > 0)
+                {
+                    // Existem referências na tabela tb_venda, exiba uma mensagem ou tome outra ação apropriada.
+                    MessageBox.Show("Não é possível excluir o produto porque há vendas associadas a ele.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    // Não há referências, pode excluir o produto da tabela tb_produto_manu
+                    con.Open();
 
-            executarcmdMySql_delete_produto_manu.ExecuteNonQuery();
+                    string sql_delete_produto_manu = "DELETE FROM tb_produto_manu WHERE tb_produto_manu_id = @codigo";
 
-            //notificação aqui
-            ListarEstoquePm();
-            //notificação
-            this.Alert("Deletado com sucesso", Form_Alert.enmType.Delete);
-            // Fechando conexão
-            con.Close();
+                    MySqlCommand executarcmdMySql_delete_produto_manu = new MySqlCommand(sql_delete_produto_manu, con);
+                    executarcmdMySql_delete_produto_manu.Parameters.AddWithValue("@codigo", id);
 
+                    executarcmdMySql_delete_produto_manu.ExecuteNonQuery();
 
-            // this.Alert("Falha ao deletar: " + erro, Form_Alert.enmType.Warning);
+                    //notificação aqui
+                    ListarEstoquePm();
+                    //notificação
+                    this.Alert("Deletado com sucesso", Form_Alert.enmType.Delete);
+                }
+            }
+            catch (Exception erro)
+            {
+                // Tratar exceções, exibir mensagem de erro, etc.
+                MessageBox.Show("Erro ao excluir o produto: " + erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Fechar conexão
+                con.Close();
+            }
         }
 
         private void Btn_voltar_Click(object sender, EventArgs e)
