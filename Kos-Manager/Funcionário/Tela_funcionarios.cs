@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Configuration;
+using Kos_Manager.Notificação;
 
 namespace Kos_Manager
 {
@@ -141,6 +142,13 @@ namespace Kos_Manager
            // cmb_status_funcionario.Items.Clear();
         }
 
+        //Public de notificação
+        public void Alert(string msg, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(msg, type);
+        }
+
         private void Btn_adicionar_Click_2(object sender, EventArgs e)
         {
             try
@@ -179,11 +187,14 @@ namespace Kos_Manager
                 ListarFuncionario();
                 con.Close();
                 LimparDados();
-                //notificação aqui
+                //notificação
+                this.Alert("Adicionado com sucesso", Form_Alert.enmType.Sucess);
             }
             catch (Exception erro)
             {
                 MessageBox.Show("Aconteceu o Erro:" + erro);
+
+                // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
             }
 
         }
@@ -217,7 +228,7 @@ namespace Kos_Manager
             con.Open();
             executacmdMySql_update_venda.ExecuteNonQuery();
 
-            //notificação aqui
+            
 
             ListarFuncionario();
 
@@ -226,7 +237,7 @@ namespace Kos_Manager
 
         private void Btn_atualizar_Click_2(object sender, EventArgs e)
         {
-           string id = this.id;
+            string id = this.id;
             string nome = Txt_nome_funcionario.Text;
             string email = Txt_email_funcionario.Text;
             string senha = Txt_senha_funcionario.Text;
@@ -253,7 +264,9 @@ namespace Kos_Manager
             con.Open();
             executacmdMySql_update_venda.ExecuteNonQuery();
 
-            //notificação aqui
+            //notificação
+            this.Alert("Atualizado com sucesso", Form_Alert.enmType.Update);
+            // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
 
             ListarFuncionario();
 
@@ -278,7 +291,9 @@ namespace Kos_Manager
 
             executarcmdMySql_delete_funcionario.ExecuteNonQuery();
 
-            MessageBox.Show("Registro deletado com sucesso");
+            //notificação
+            this.Alert("Deletado com sucesso", Form_Alert.enmType.Delete);
+
             ListarFuncionario();
 
             // Fechando conexão

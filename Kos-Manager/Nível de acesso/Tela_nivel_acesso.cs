@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Configuration;
+using Kos_Manager.Notificação;
 
 namespace Kos_Manager
 {
@@ -48,9 +49,14 @@ namespace Kos_Manager
 
 
         }
+        //Public de notificação
+        public void Alert(string msg, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(msg, type);
+        }
 
 
-       
 
         private void Btn_adicionar_Click_2(object sender, EventArgs e)
         {
@@ -81,15 +87,15 @@ namespace Kos_Manager
                 executacmdMySql_insert.ExecuteNonQuery();
                 ListarNiveis();
                 con.Close();
-                MessageBox.Show("Adicionado com Sucesso!");
-
-
-
+                //notificação
+                this.Alert("Adicionado com sucesso", Form_Alert.enmType.Sucess);
+               
 
             }
             catch (Exception erro)
             {
                 MessageBox.Show("Aconteceu o Erro:" + erro);
+                // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
             }
         }
 
@@ -114,7 +120,9 @@ namespace Kos_Manager
             executacmdMySql_update_fornecedor.ExecuteNonQuery();
             ListarNiveis();
             con.Close();
-            MessageBox.Show("Atualização realizada com sucesso");
+            //notificação
+            this.Alert("Atualizado com sucesso", Form_Alert.enmType.Update);
+            // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
         }
 
         private void Btn_deletar_Click(object sender, EventArgs e)
@@ -134,7 +142,9 @@ namespace Kos_Manager
             executarcmdMySql_delete_nivel_acesso.ExecuteNonQuery();
             ListarNiveis();
             con.Close();
-            MessageBox.Show("Registrado deletado com sucesso");
+            //notificação
+            this.Alert("Deletado com sucesso", Form_Alert.enmType.Delete);
+            // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
         }
 
         private void Btn_voltar_Click(object sender, EventArgs e)

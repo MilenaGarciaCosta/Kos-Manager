@@ -12,6 +12,7 @@ using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Drawing.Drawing2D;
 using System.Runtime.InteropServices;
+using Kos_Manager.Notificação;
 
 namespace Kos_Manager
 {
@@ -80,6 +81,12 @@ namespace Kos_Manager
             Txt_outro_contato_fornecedor.Clear();
         }
 
+        //Public de notificação
+        public void Alert(string msg, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(msg, type);
+        }
         private void Btn_adicionar_Click(object sender, EventArgs e)
         {
             try
@@ -116,12 +123,14 @@ namespace Kos_Manager
                 ListarFornecedores();
                 con.Close();
                 LimparDados();
-                //nnotificação aqui
-                
+                //notificação
+                this.Alert("Adicionado com sucesso", Form_Alert.enmType.Sucess);
+
             }
             catch (Exception erro)
             {
                 MessageBox.Show("Aconteceu o Erro: " + erro);
+                // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
             }
         }
 
@@ -163,7 +172,9 @@ namespace Kos_Manager
             con.Open();
             executacmdMySql_update_fornecedor.ExecuteNonQuery();
 
-            //notificação aqui
+            //notificação
+            this.Alert("Atualizado com sucesso", Form_Alert.enmType.Update);
+            // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
 
             ListarFornecedores();
 
@@ -189,7 +200,10 @@ namespace Kos_Manager
 
             executarcmdMySql_delete_fornecedor.ExecuteNonQuery();
 
-            //notificação aqui
+            //notificação
+            this.Alert("Deletado com sucesso", Form_Alert.enmType.Delete);
+            // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
+
             ListarFornecedores();
 
             // Fechando conexão

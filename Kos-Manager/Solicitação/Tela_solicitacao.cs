@@ -72,6 +72,13 @@ namespace Kos_Manager
             // Limpar ComboBox
         }
 
+        //Public de notificação
+        public void Alert(string msg, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(msg, type);
+        }
+
         private void Btn_adicionar_Click(object sender, EventArgs e)
         {
             try
@@ -115,13 +122,14 @@ namespace Kos_Manager
                 con.Close();
                 LimparDados();
                 //notificação
-                //this.Alert("Adicionado com sucesso", Form_Alert.enmType.Sucess);
+                this.Alert("Adicionado com sucesso", Form_Alert.enmType.Sucess);
 
 
             }
             catch (Exception erro)
             {
                 MessageBox.Show("Aconteceu o Erro: " + erro);
+                // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
             }
         }
 
@@ -161,10 +169,12 @@ namespace Kos_Manager
                 ListarSolicitacao();
                 con.Close();
                 LimparDados();
-                MessageBox.Show("Atualizado com Sucesso!");
+                //notificação
+                this.Alert("Atualizado com sucesso", Form_Alert.enmType.Update);
+                // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
             }
 
-           
+
 
 
         }
@@ -190,11 +200,13 @@ namespace Kos_Manager
                 ListarSolicitacao();
                 con.Close();
                 LimparDados();
-                MessageBox.Show("Deletado com Sucesso!");
+                //notificação
+                this.Alert("Deletado com sucesso", Form_Alert.enmType.Delete);
             }
             catch (Exception erro)
             {
                 MessageBox.Show("Aconteceu um erro: " + erro);
+                // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
             }
         }
 
