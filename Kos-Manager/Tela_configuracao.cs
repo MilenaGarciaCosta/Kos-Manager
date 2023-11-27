@@ -68,21 +68,22 @@ namespace Kos_Manager
             string email = txt_email.Text;
             string nome = this.nome;
             string senha = txt_senha.Text;
+            string emailantigo = Usuario.email;
 
             string sql_update_operador = @"UPDATE tb_operador_principal 
-                                           SET tb_operador_principal_nome = @nome,
-                                               tb_operador_principal_email = @email,
+                                           SET tb_operador_principal_email = @email,
                                                tb_operador_principal_senha = @senha
-                                           WHERE tb_operador_principal_id = @id";
+                                           WHERE tb_operador_principal_email = @emailantigo";
 
-            MySqlCommand executacmdMySql_update_operador = new MySqlCommand(sql_update_operador, con);
+   
 
-            executacmdMySql_update_operador.Parameters.AddWithValue("@id", id);
-            executacmdMySql_update_operador.Parameters.AddWithValue("@nome", nome);
-            executacmdMySql_update_operador.Parameters.AddWithValue("@email", email);
-            executacmdMySql_update_operador.Parameters.AddWithValue("@senha", senha);
+                MySqlCommand executacmdMySql_update_operador = new MySqlCommand(sql_update_operador, con);
 
+                executacmdMySql_update_operador.Parameters.AddWithValue("@email", email);
+                executacmdMySql_update_operador.Parameters.AddWithValue("@senha", senha);
+                executacmdMySql_update_operador.Parameters.AddWithValue("@emailantigo", emailantigo);
 
+                MessageBox.Show( sql_update_operador + "ID:" + id + "NOME: " + nome + "EMAIL: " + email + "SENHA: " + senha );
             con.Open(); 
             executacmdMySql_update_operador.ExecuteNonQuery();
 
@@ -95,53 +96,10 @@ namespace Kos_Manager
             catch (Exception ex)
             {
                 MessageBox.Show("Ocorreu um erro durante a atualização: " + ex.Message);
-                // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
+               
             }
         }
 
-
-        private void guna2Button1_Click(object sender, EventArgs e) //botão de atualiar email
-        {
-            try
-            {
-
-            
-            MySqlConnection con = new MySqlConnection(conexao);
-
-            string id = this.id;
-            string email = txt_email.Text;
-            string nome = this.nome;
-            string senha = txt_senha.Text;
-
-            string sql_update_operador = @"UPDATE tb_operador_principal 
-                                           SET tb_operador_principal_nome = @nome,
-                                               tb_operador_principal_email = @email,
-                                               tb_operador_principal_senha = @senha
-                                           WHERE tb_operador_principal_id = @id";
-
-            MySqlCommand executacmdMySql_update_operador = new MySqlCommand(sql_update_operador, con);
-
-            executacmdMySql_update_operador.Parameters.AddWithValue("@id", id);
-            executacmdMySql_update_operador.Parameters.AddWithValue("@nome", nome);
-            executacmdMySql_update_operador.Parameters.AddWithValue("@email", email);
-            executacmdMySql_update_operador.Parameters.AddWithValue("@senha", senha);
-
-
-            con.Open();
-            executacmdMySql_update_operador.ExecuteNonQuery();
-
-             Usuario.email = email;
-             Usuario.senha = senha;
-
-                //notificação
-                this.Alert("Atualizado com sucesso", Form_Alert.enmType.Update);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ocorreu um erro durante a atualização: " + ex.Message);
-                // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
-            }
-        }
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {

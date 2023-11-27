@@ -139,8 +139,9 @@ namespace Kos_Manager
                 con.Open();
                 executacmdMySql_insert.ExecuteNonQuery();
                 ListarEstoquePm();
-                con.Close();
                 LimparDados();
+                con.Close();
+               
                 //notificação
                 this.Alert("Adicionado com sucesso", Form_Alert.enmType.Sucess);
             }
@@ -188,6 +189,7 @@ namespace Kos_Manager
             //notificação
             this.Alert("Atualizado com sucesso", Form_Alert.enmType.Update);
             ListarEstoquePm();
+            LimparDados();
             con.Close();
 
             // this.Alert("Falha ao atualizar: " + erro, Form_Alert.enmType.Warning);
@@ -233,6 +235,7 @@ namespace Kos_Manager
 
                     //notificação aqui
                     ListarEstoquePm();
+                    LimparDados();
                     //notificação
                     this.Alert("Deletado com sucesso", Form_Alert.enmType.Delete);
                 }
@@ -258,8 +261,28 @@ namespace Kos_Manager
         {
             this.id = DgvEstoquePm.CurrentRow.Cells[0].Value.ToString();
             Txt_nome_produto_manu.Text = DgvEstoquePm.CurrentRow.Cells[1].Value.ToString();
-            Txt_dt_fab.Text = DgvEstoquePm.CurrentRow.Cells[2].Value.ToString();
-            Txt_dt_validade.Text = DgvEstoquePm.CurrentRow.Cells[3].Value.ToString();
+
+            // Formatação das datas e atribuição aos campos de texto
+            if (DgvEstoquePm.CurrentRow.Cells[2].Value is DateTime)
+            {
+                DateTime dtFab = (DateTime)DgvEstoquePm.CurrentRow.Cells[2].Value;
+                Txt_dt_fab.Text = dtFab.ToString("dd/MM/yyyy");
+            }
+            else
+            {
+                Txt_dt_fab.Text = DgvEstoquePm.CurrentRow.Cells[2].Value.ToString();
+            }
+
+            if (DgvEstoquePm.CurrentRow.Cells[3].Value is DateTime)
+            {
+                DateTime dtValidade = (DateTime)DgvEstoquePm.CurrentRow.Cells[3].Value;
+                Txt_dt_validade.Text = dtValidade.ToString("dd/MM/yyyy");
+            }
+            else
+            {
+                Txt_dt_validade.Text = DgvEstoquePm.CurrentRow.Cells[3].Value.ToString();
+            }
+
             Txt_lote.Text = DgvEstoquePm.CurrentRow.Cells[4].Value.ToString();
             Txt_quantidade.Text = DgvEstoquePm.CurrentRow.Cells[5].Value.ToString();
         }

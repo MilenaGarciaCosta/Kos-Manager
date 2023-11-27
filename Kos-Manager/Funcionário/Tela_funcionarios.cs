@@ -182,8 +182,9 @@ namespace Kos_Manager
                 con.Open();
                 executacmdMySql_insert.ExecuteNonQuery();
                 ListarFuncionario();
-                con.Close();
                 LimparDados();
+                con.Close();
+                
                 // Limpar a seleção da ComboBox após adicionar os dados
                 cmb_nivel_funcionario.SelectedItem = null;
                 cmb_status_funcionario.SelectedItem = null;
@@ -200,7 +201,7 @@ namespace Kos_Manager
 
         }
 
-        private void Btn_atualizar_Click_1(object sender, EventArgs e)
+       /* private void Btn_atualizar_Click_1(object sender, EventArgs e)
         {
            // string id = txt_cod.Text;
             string nome = Txt_nome_funcionario.Text;
@@ -234,7 +235,7 @@ namespace Kos_Manager
             ListarFuncionario();
 
             con.Close();
-        }
+        } */
 
         private void Btn_atualizar_Click_2(object sender, EventArgs e)
         {
@@ -270,6 +271,7 @@ namespace Kos_Manager
             // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
 
             ListarFuncionario();
+            LimparDados();
             // Limpar a seleção da ComboBox após adicionar os dados
             cmb_nivel_funcionario.SelectedItem = null;
             cmb_status_funcionario.SelectedItem = null;
@@ -298,9 +300,13 @@ namespace Kos_Manager
             this.Alert("Deletado com sucesso", Form_Alert.enmType.Delete);
 
             ListarFuncionario();
+            LimparDados();
+            
 
             // Fechando conexão
             con.Close();
+            cmb_nivel_funcionario.SelectedItem = null;
+            cmb_status_funcionario.SelectedItem = null;
         }
 
         private void Btn_voltar_Click(object sender, EventArgs e)

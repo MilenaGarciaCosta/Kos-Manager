@@ -34,6 +34,20 @@ namespace Kos_Manager
             Form_Alert frm = new Form_Alert();
             frm.showAlert(msg, type);
         }
+
+        private void LimparDados()
+        {
+            // Limpar TextBox
+            txt_produto.Clear();
+            Txt_dt_validade.Clear();
+            Txt_lote.Clear();
+            Txt_quantidade.Clear();
+
+            // Limpar ComboBox
+
+        }
+
+
         public void ListarEstoqueMp()
         {
             MySqlConnection con = new MySqlConnection(conexao);
@@ -163,6 +177,7 @@ namespace Kos_Manager
                 con.Open();
                 executacmdMySql_insert.ExecuteNonQuery();
                 ListarEstoqueMp();
+                LimparDados();
                 con.Close();
 
                 // Limpar a seleção da ComboBox após adicionar os dados
@@ -231,6 +246,7 @@ namespace Kos_Manager
                                 this.Alert("Atualizado com sucesso", Form_Alert.enmType.Update);
                                 con.Close();
                                 ListarEstoqueMp();
+                                LimparDados();
                             }
                             catch (Exception ex)
                             {
@@ -277,6 +293,7 @@ namespace Kos_Manager
             this.Alert("Deletado com sucesso", Form_Alert.enmType.Delete);
             con.Close();
             ListarEstoqueMp();
+            LimparDados();
 
             // Fechando conexão
             con.Close();
@@ -292,7 +309,18 @@ namespace Kos_Manager
             this.id = DgvEstoqueMp.CurrentRow.Cells[0].Value.ToString();
             txt_produto.Text = DgvEstoqueMp.CurrentRow.Cells[1].Value.ToString();
             Txt_lote.Text = DgvEstoqueMp.CurrentRow.Cells[2].Value.ToString();
-            Txt_dt_validade.Text = DgvEstoqueMp.CurrentRow.Cells[3].Value.ToString();
+
+            // Formatação da data de validade
+            if (DgvEstoqueMp.CurrentRow.Cells[3].Value is DateTime)
+            {
+                DateTime dtValidade = (DateTime)DgvEstoqueMp.CurrentRow.Cells[3].Value;
+                Txt_dt_validade.Text = dtValidade.ToString("dd/MM/yyyy");
+            }
+            else
+            {
+                Txt_dt_validade.Text = DgvEstoqueMp.CurrentRow.Cells[3].Value.ToString();
+            }
+
             Txt_quantidade.Text = DgvEstoqueMp.CurrentRow.Cells[4].Value.ToString();
             cmb_fornecedor.Text = DgvEstoqueMp.CurrentRow.Cells[5].Value.ToString();
         }

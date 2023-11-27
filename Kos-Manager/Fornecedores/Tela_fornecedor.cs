@@ -121,8 +121,9 @@ namespace Kos_Manager
                 con.Open();
                 executacmdMySql_insert.ExecuteNonQuery();
                 ListarFornecedores();
-                con.Close();
                 LimparDados();
+                con.Close();
+                
                 //notificação
                 this.Alert("Adicionado com sucesso", Form_Alert.enmType.Sucess);
 
@@ -177,6 +178,7 @@ namespace Kos_Manager
             // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
 
             ListarFornecedores();
+            LimparDados();
 
             con.Close();
         }
@@ -205,6 +207,7 @@ namespace Kos_Manager
             // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
 
             ListarFornecedores();
+            LimparDados();
 
             // Fechando conexão
             con.Close();

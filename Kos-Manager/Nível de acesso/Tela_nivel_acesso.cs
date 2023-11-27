@@ -26,6 +26,16 @@ namespace Kos_Manager
 
         string id;
 
+
+        private void LimparDados()
+        {
+            // Limpar TextBox
+            txt_nome.Clear();
+           
+
+        }
+
+
         public void ListarNiveis()
         {
             MySqlConnection con = new MySqlConnection(conexao);
@@ -86,6 +96,7 @@ namespace Kos_Manager
                 con.Open();
                 executacmdMySql_insert.ExecuteNonQuery();
                 ListarNiveis();
+                LimparDados();
                 con.Close();
                 //notificação
                 this.Alert("Adicionado com sucesso", Form_Alert.enmType.Sucess);
@@ -119,6 +130,7 @@ namespace Kos_Manager
             con.Open();
             executacmdMySql_update_fornecedor.ExecuteNonQuery();
             ListarNiveis();
+            LimparDados();
             con.Close();
             //notificação
             this.Alert("Atualizado com sucesso", Form_Alert.enmType.Update);
@@ -141,6 +153,7 @@ namespace Kos_Manager
             con.Open();
             executarcmdMySql_delete_nivel_acesso.ExecuteNonQuery();
             ListarNiveis();
+            LimparDados();
             con.Close();
             //notificação
             this.Alert("Deletado com sucesso", Form_Alert.enmType.Delete);
