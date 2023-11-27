@@ -13,31 +13,45 @@ namespace Kos_Manager
 {
     public partial class Tela_reg_autoria : Form
     {
-
+        private string caminhoDoArquivoDeLog = "C:/Users/Joao A/Documents/logs.txt";
         public void RegistrarLog(string message)
         {
-            string caminhoDoArquivoDeLog = "D:/home/aluno/Documents/logs.txt";
+            string caminhoDoArquivoDeLog = "C:/Users/Joao A//Documents//logs.txt";
             Logger logger = new Logger(caminhoDoArquivoDeLog);
             logger.Log(message);
         }
 
-        private int countTextBoxes = 0;
+        private void LerLog()
+        {
+            // Verifica se o arquivo de log existe
+            if (File.Exists(caminhoDoArquivoDeLog))
+            {
+                using (StreamReader streamReader = new StreamReader(caminhoDoArquivoDeLog))
+                {
+                    // Lê o conteúdo do arquivo de log
+                    string conteudoLog = streamReader.ReadToEnd();
+
+                    // Exibe os registros na caixa de texto como uma lista
+                    textBoxLogs.Text = conteudoLog.Replace(Environment.NewLine, "<br>");
+                }
+            }
+        }
         public Tela_reg_autoria()
         {
             InitializeComponent();
         }
 
-        
+
 
         //Public de registro de autoria
         public class Logger
         {
             private string filePath;
+
             public Logger(string logFilePath)
             {
                 filePath = logFilePath;
             }
-
             public void Log(string message)
             {
                 try
@@ -51,10 +65,12 @@ namespace Kos_Manager
                     throw new Exception("Erro ao registrar o log: " + ex.Message);
                 }
             }
+
         }
 
 
-        
+
+
 
         private void Tela_reg_autoria_Load(object sender, EventArgs e)
         {
@@ -69,10 +85,17 @@ namespace Kos_Manager
         {
             try
             {
-                string caminhoDoArquivoDeLog = "D:/home/aluno/Documents/logs.txt"; // Substitua pelo seu caminho
-                string conteudoDoArquivoDeLog = File.ReadAllText(caminhoDoArquivoDeLog);
-
-                textBoxLogs.Text = conteudoDoArquivoDeLog;
+                if (File.Exists(caminhoDoArquivoDeLog))
+                {
+                    using (StreamReader streamReader = new StreamReader(caminhoDoArquivoDeLog))
+                    {
+                        string line;
+                        while ((line = streamReader.ReadLine()) != null)
+                        {
+                            textBoxLogs.AppendText(line + Environment.NewLine);
+                        }
+                    }
+                }
             }
             catch (Exception ex)
             {

@@ -25,7 +25,8 @@ namespace Kos_Manager
 
 
         string conexao = ConfigurationManager.ConnectionStrings["bd_kosmanager"].ConnectionString;
-        private Tela_reg_autoria telaRegAutoria; // Referência para a Tela_reg_autoria
+        // Caminho do arquivo de log
+        private string caminhoArquivoLog = "C:/Users/Joao A/Documents/logs.txt";
 
 
 
@@ -34,7 +35,7 @@ namespace Kos_Manager
             InitializeComponent();
             ListarFornecedores();
 
-            telaRegAutoria = new Tela_reg_autoria(); // Inicializa a referência
+          
         }
 
         string id;
@@ -74,8 +75,31 @@ namespace Kos_Manager
 
         private void Tela_fornecedor_Load(object sender, EventArgs e)
         {
-            
+            // Verifica se o arquivo de log existe, se não, cria o arquivo
+            if (!File.Exists(caminhoArquivoLog))
+            {
+                File.Create(caminhoArquivoLog).Close();
+            }
+
+            // Inicia a leitura do log
+            LerLog();
         }
+
+        private void LerLog()
+        {
+            // Verifica se o arquivo de log existe
+            if (File.Exists(caminhoArquivoLog))
+            {
+                using (StreamReader streamReader = new StreamReader(caminhoArquivoLog))
+                {
+                    // Lê o conteúdo do arquivo de log
+                    string conteudoLog = streamReader.ReadToEnd();
+
+                    
+                }
+            }
+        
+    }
 
         private void LimparDados()
         {
@@ -99,8 +123,8 @@ namespace Kos_Manager
             {
                 try
                 {
-                    string logMessage = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss} - {message}";
-                    File.AppendAllText(filePath, logMessage + Environment.NewLine);
+                    
+                   
                 }
                 catch (Exception ex)
                 {
@@ -113,7 +137,7 @@ namespace Kos_Manager
 
                 private void RegistrarLog(string message)
         {
-            string caminhoDoArquivoDeLog = "D:/home/aluno/Documents/logs.txt";
+            string caminhoDoArquivoDeLog = "C:/Users/Joao A//Documents//logs.txt";
             Logger logger = new Logger(caminhoDoArquivoDeLog);
             logger.Log(message);
         }
@@ -165,9 +189,20 @@ namespace Kos_Manager
                 LimparDados();
                 con.Close();
 
-                // Registro de log após a adição do fornecedor
-                string mensagemLog = $"Fornecedor '{nome}' adicionado com sucesso!";
-                telaRegAutoria.RegistrarLog(mensagemLog); // Chamada do método de registro de log da Tela_reg_autoria
+                // Mensagem para registrar no log
+                string mensagemLog = $"[{DateTime.Now:dd/MM HH:mm}] - Fornecedor {nome} foi adicionado!";
+
+                // Chamada para registrar o log
+                RegistrarLog(mensagemLog);
+
+                // Adiciona a saída do console para o arquivo de log
+                using (StreamWriter streamWriter = File.AppendText(caminhoArquivoLog))
+            {
+                streamWriter.WriteLine(mensagemLog);
+            }
+           
+            // Atualiza a exibição do log na tela
+            LerLog();
 
 
 
