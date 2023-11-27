@@ -13,6 +13,7 @@ using MySql.Data.MySqlClient;
 using System.Drawing.Drawing2D;
 using System.Runtime.InteropServices;
 using Kos_Manager.Notificação;
+using System.IO; 
 
 namespace Kos_Manager
 {
@@ -24,12 +25,16 @@ namespace Kos_Manager
 
 
         string conexao = ConfigurationManager.ConnectionStrings["bd_kosmanager"].ConnectionString;
+        private Tela_reg_autoria telaRegAutoria; // Referência para a Tela_reg_autoria
+
 
 
         public Tela_fornecedor()
         {
             InitializeComponent();
             ListarFornecedores();
+
+            telaRegAutoria = new Tela_reg_autoria(); // Inicializa a referência
         }
 
         string id;
@@ -81,6 +86,42 @@ namespace Kos_Manager
             Txt_outro_contato_fornecedor.Clear();
         }
 
+        //Public de registro de autoria
+        public class Logger
+        {
+            private string filePath;
+            public Logger(string logFilePath)
+            {
+                filePath = logFilePath;
+            }
+
+            public void Log(string message)
+            {
+                try
+                {
+                    string logMessage = $"{DateTime.Now:yyyy-MM-dd HH:mm:ss} - {message}";
+                    File.AppendAllText(filePath, logMessage + Environment.NewLine);
+                }
+                catch (Exception ex)
+                {
+                    // Lida com possíveis erros ao registrar o log
+                    throw new Exception("Erro ao registrar o log: " + ex.Message);
+                }
+            }
+        }
+                
+
+                private void RegistrarLog(string message)
+        {
+            string caminhoDoArquivoDeLog = "D:/home/aluno/Documents/logs.txt";
+            Logger logger = new Logger(caminhoDoArquivoDeLog);
+            logger.Log(message);
+        }
+
+
+
+
+
         //Public de notificação
         public void Alert(string msg, Form_Alert.enmType type)
         {
@@ -123,7 +164,13 @@ namespace Kos_Manager
                 ListarFornecedores();
                 LimparDados();
                 con.Close();
-                
+
+                // Registro de log após a adição do fornecedor
+                string mensagemLog = $"Fornecedor '{nome}' adicionado com sucesso!";
+                telaRegAutoria.RegistrarLog(mensagemLog); // Chamada do método de registro de log da Tela_reg_autoria
+
+
+
                 //notificação
                 this.Alert("Adicionado com sucesso", Form_Alert.enmType.Sucess);
 
@@ -133,6 +180,8 @@ namespace Kos_Manager
                 MessageBox.Show("Aconteceu o Erro: " + erro);
                 // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
             }
+
+           
         }
 
         private void Btn_atualizar_Click(object sender, EventArgs e)
