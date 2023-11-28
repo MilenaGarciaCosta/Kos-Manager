@@ -27,15 +27,15 @@ namespace Kos_Manager
         string conexao = ConfigurationManager.ConnectionStrings["bd_kosmanager"].ConnectionString;
         // Caminho do arquivo de log
         private string caminhoArquivoLog = "C:/Users/Joao A/Documents/logs.txt";
+        private string caminhoLogUpdate = "C:/Users/Joao A/Documents/logs_update.txt";
+        private string caminhoArquivoLogDeletar = "C:/Users/Joao A/Documents/logs_delete.txt";
 
-
+        
 
         public Tela_fornecedor()
         {
             InitializeComponent();
             ListarFornecedores();
-
-          
         }
 
         string id;
@@ -80,6 +80,17 @@ namespace Kos_Manager
             {
                 File.Create(caminhoArquivoLog).Close();
             }
+            // Atualização
+            if (!File.Exists(caminhoLogUpdate))
+            {
+                File.Create(caminhoLogUpdate).Close();
+            }
+            //Deletar
+            if (!File.Exists(caminhoArquivoLogDeletar))
+            {
+                File.Create(caminhoArquivoLogDeletar).Close();
+            }
+
 
             // Inicia a leitura do log
             LerLog();
@@ -94,12 +105,30 @@ namespace Kos_Manager
                 {
                     // Lê o conteúdo do arquivo de log
                     string conteudoLog = streamReader.ReadToEnd();
-
                     
                 }
             }
-        
-    }
+            if (File.Exists(caminhoLogUpdate))
+            {
+                using (StreamReader streamReader = new StreamReader(caminhoLogUpdate))
+                {
+                    // Lê o conteúdo do arquivo de log
+                    string conteudoLog = streamReader.ReadToEnd();
+
+                }
+            }
+            if (File.Exists(caminhoArquivoLogDeletar))
+            {
+                using (StreamReader streamReader = new StreamReader(caminhoArquivoLogDeletar))
+                {
+                    // Lê o conteúdo do arquivo de log
+                    string conteudoLog = streamReader.ReadToEnd();
+
+                }
+            }
+
+
+        }
 
         private void LimparDados()
         {
@@ -134,11 +163,25 @@ namespace Kos_Manager
             }
         }
                 
-
-                private void RegistrarLog(string message)
+        //LogRegistros
+         private void RegistrarLog(string message)
         {
             string caminhoDoArquivoDeLog = "C:/Users/Joao A//Documents//logs.txt";
             Logger logger = new Logger(caminhoDoArquivoDeLog);
+            logger.Log(message);
+        }
+
+        private void RegistrarLogAtualizacao(string message)
+        {
+            string caminhoLogUpdate = "C:/Users/Joao A//Documents//logs_update.txt";
+            Logger logger = new Logger(caminhoLogUpdate);
+            logger.Log(message);
+        }
+
+        private void RegistrarLogDeletar(string message)
+        {
+            string caminhoArquivoLogDeletar = "C:/Users/Joao A//Documents//logs_delete.txt";
+            Logger logger = new Logger(caminhoArquivoLogDeletar);
             logger.Log(message);
         }
 
@@ -204,6 +247,7 @@ namespace Kos_Manager
             // Atualiza a exibição do log na tela
             LerLog();
 
+               
 
 
                 //notificação
@@ -257,6 +301,19 @@ namespace Kos_Manager
             con.Open();
             executacmdMySql_update_fornecedor.ExecuteNonQuery();
 
+
+            // Mensagem para registrar no log
+            string mensagemLog = $"[{DateTime.Now:dd/MM HH:mm}] - Fornecedor {nome} foi Atualizado!";
+
+            // Chamada para registrar o log
+            RegistrarLogAtualizacao(mensagemLog);
+
+            // Adiciona a saída do console para o arquivo de log
+            using (StreamWriter streamWriter = File.AppendText(caminhoLogUpdate))
+            {
+                streamWriter.WriteLine(mensagemLog);
+            }
+
             //notificação
             this.Alert("Atualizado com sucesso", Form_Alert.enmType.Update);
             // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
@@ -285,6 +342,21 @@ namespace Kos_Manager
             executarcmdMySql_delete_fornecedor.Parameters.AddWithValue("@codigo", codigo);
 
             executarcmdMySql_delete_fornecedor.ExecuteNonQuery();
+
+            // Mensagem para registrar no log
+            string mensagemLog = $"[{DateTime.Now:dd/MM HH:mm}] - Fornecedor {id} foi Deletado!";
+
+            // Chamada para registrar o log
+            RegistrarLog(mensagemLog);
+
+            // Adiciona a saída do console para o arquivo de log
+            using (StreamWriter streamWriter = File.AppendText(caminhoArquivoLogDeletar))
+            {
+                streamWriter.WriteLine(mensagemLog);
+            }
+
+            // Atualiza a exibição do log na tela
+            LerLog();
 
             //notificação
             this.Alert("Deletado com sucesso", Form_Alert.enmType.Delete);

@@ -173,6 +173,16 @@ namespace Kos_Manager.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap limpar {
+            get {
+                object obj = ResourceManager.GetObject("limpar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_branca {
             get {
                 object obj = ResourceManager.GetObject("logo_branca", resourceCulture);
