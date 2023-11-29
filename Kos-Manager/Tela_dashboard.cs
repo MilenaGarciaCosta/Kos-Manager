@@ -32,7 +32,8 @@ namespace Kos_Manager
         {
             ExibirNumeroTotalFuncionarios();
             ExibirSomaValoresVenda();
-            ExibirProdutosMaisVendidos();
+            CarregarProdutosComMenorQuantidadeMAT();
+            CarregarProdutosComMenorQuantidadePRIM();
         }
         private void ExibirNumeroTotalFuncionarios()
         {
@@ -99,101 +100,114 @@ namespace Kos_Manager
             }
         }
 
-        private string ObterNomeProdutoPorID(int produtoID)
+        private void CarregarProdutosComMenorQuantidadeMAT()
         {
+
+            using (MySqlConnection connection = new MySqlConnection(conexao))
             try
             {
-                using (MySqlConnection connection = new MySqlConnection(conexao))
+                // Abrir a conexão com o banco de dados
+                connection.Open();
+
+                // Consulta SQL para obter os três produtos com menores quantidades
+                string query = "SELECT TB_PRODUTO_MANU_NOME, TB_PRODUTO_MANU_QUANTIDADE " +
+                               "FROM tb_produto_manu " +
+                               "ORDER BY TB_PRODUTO_MANU_QUANTIDADE ASC " +
+                               "LIMIT 3";
+
+                // Criar um adaptador de dados
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conexao))
                 {
-                    connection.Open();
+                    // Preencher um DataTable com os resultados da consulta
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
 
-                    // Consulta SQL para obter o nome do produto com base no ID
-                    string query = "SELECT TB_PRODUTO_MANU_NOME FROM tb_produto_manu WHERE TB_PRODUTO_MANU_ID = @ProdutoID";
-
-                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    // Verificar se há pelo menos um produto retornado
+                    if (dataTable.Rows.Count > 0)
                     {
-                        command.Parameters.AddWithValue("@ProdutoID", produtoID);
-
-                        object resultado = command.ExecuteScalar();
-
-                        // Verifica se o resultado não é nulo antes de converter para evitar exceção
-                        if (resultado != DBNull.Value)
+                        // Preencher as labels com os nomes e quantidades dos produtos
+                        for (int i = 0; i < dataTable.Rows.Count; i++)
                         {
-                            return resultado.ToString();
-                        }
-                        else
-                        {
-                            return "Nome do Produto Desconhecido";
+                            string nomeProduto = dataTable.Rows[i]["TB_PRODUTO_MANU_NOME"].ToString();
+                            int quantidadeProduto = Convert.ToInt32(dataTable.Rows[i]["TB_PRODUTO_MANU_QUANTIDADE"]);
+
+                            // Exibir as informações nas labels correspondentes
+                            if (i == 0)
+                                Lbl_manu_top1.Text = $"{nomeProduto} ({quantidadeProduto})";
+                            else if (i == 1)
+                                Lbl_manu_top2.Text = $"{nomeProduto} ({quantidadeProduto})";
+                            else if (i == 2)
+                                Lbl_manu_top3.Text = $"{nomeProduto} ({quantidadeProduto})";
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Erro ao obter o nome do produto: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return "Nome do Produto Desconhecido";
+                // Tratar exceções, se necessário
+                MessageBox.Show($"Erro ao obter os produtos: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Fechar a conexão com o banco de dados, independentemente do resultado
+                connection.Close();
             }
         }
 
-        private void ExibirProdutosMaisVendidos()
+        private void CarregarProdutosComMenorQuantidadePRIM()
         {
-            try
-            {
-                using (MySqlConnection connection = new MySqlConnection(conexao))
+            // Lista para armazenar os nomes dos produtos com menor quantidade
+            using (MySqlConnection connection = new MySqlConnection(conexao))
+                try
                 {
+                    // Abrir a conexão com o banco de dados
                     connection.Open();
 
-                    // Consulta SQL para obter os quatro produtos mais vendidos
-                    string query = @"
-                SELECT 
-                    p.TB_PRODUTO_MANU_ID,
-                    COUNT(*) AS total_venda
-                FROM
-                    tb_venda v
-                INNER JOIN
-                    tb_produto_manu p ON v.TB_PRODUTO_MANU_ID = p.TB_PRODUTO_MANU_ID
-                GROUP BY
-                    p.TB_PRODUTO_MANU_ID
-                ORDER BY
-                    total_venda DESC
-                LIMIT 3;
-            ";
+                    // Consulta SQL para obter os três produtos com menores quantidades
+                    string query = "SELECT TB_MATERIA_PRIMA_NOMENCLATURA, TB_MATERIA_PRIMA_QUANTIDADE " +
+                                   "FROM tb_materia_prima " +
+                                   "ORDER BY TB_MATERIA_PRIMA_QUANTIDADE ASC " +
+                                   "LIMIT 3";
 
-                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    // Criar um adaptador de dados
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conexao))
                     {
-                        using (MySqlDataReader reader = command.ExecuteReader())
+                        // Preencher um DataTable com os resultados da consulta
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        // Verificar se há pelo menos um produto retornado
+                        if (dataTable.Rows.Count > 0)
                         {
-                            int labelIndex = 1;
-
-                            // Iterar pelos resultados e exibir nas labels correspondentes
-                            while (reader.Read() && labelIndex <= 3)
+                            // Preencher as labels com os nomes e quantidades dos produtos
+                            for (int i = 0; i < dataTable.Rows.Count; i++)
                             {
-                                string produtoNome = ObterNomeProdutoPorID(Convert.ToInt32(reader["TB_PRODUTO_MANU_ID"]));
+                                string nomeProduto = dataTable.Rows[i]["TB_MATERIA_PRIMA_NOMENCLATURA"].ToString();
+                                int quantidadeProduto = Convert.ToInt32(dataTable.Rows[i]["TB_MATERIA_PRIMA_QUANTIDADE"]);
 
-                                // Encontrar a label pelo nome
-                                Label label = Controls.Find($"Lbl_mais_{labelIndex}", true).FirstOrDefault() as Label;
-
-                                // Verificar se a label foi encontrada antes de tentar modificá-la
-                                if (label != null)
-                                {
-                                    label.Text = $"{produtoNome}: {reader["total_venda"]} vendas";
-                                }
-
-                                labelIndex++;
+                                // Exibir as informações nas labels correspondentes
+                                if (i == 0)
+                                    Lbl_mat1.Text = $"{nomeProduto} ({quantidadeProduto})";
+                                else if (i == 1)
+                                    Lbl_mat2.Text = $"{nomeProduto} ({quantidadeProduto})";
+                                else if (i == 2)
+                                    Lbl_mat3.Text = $"{nomeProduto} ({quantidadeProduto})";
                             }
                         }
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Erro ao obter os produtos mais vendidos: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                catch (Exception ex)
+                {
+                    // Tratar exceções, se necessário
+                    MessageBox.Show($"Erro ao obter os produtos: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    // Fechar a conexão com o banco de dados, independentemente do resultado
+                    connection.Close();
+                }
         }
 
-        private void guna2HtmlLabel10_Click(object sender, EventArgs e)
-        {
-
-        }
     }
-}
+
+    }
