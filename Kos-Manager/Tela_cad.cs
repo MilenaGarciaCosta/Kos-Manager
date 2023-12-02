@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Configuration;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using Kos_Manager.Notificação;
 
 namespace Kos_Manager
 {
@@ -40,6 +41,13 @@ namespace Kos_Manager
             this.Close();
         }
 
+        //Public de notificação
+        public void Alert(string msg, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(msg, type);
+        }
+
         private void Btn_cadastrar_Click(object sender, EventArgs e)
         {
 
@@ -68,7 +76,8 @@ namespace Kos_Manager
                     con.Open();
                     executacmdMysql_insert.ExecuteNonQuery();
                     con.Close();
-
+                    //notificação
+                    this.Alert("Cadastrado com sucesso", Form_Alert.enmType.Sucess);
 
                     Usuario.email = email;
                     Usuario.senha = senha;

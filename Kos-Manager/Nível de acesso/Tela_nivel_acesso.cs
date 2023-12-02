@@ -11,13 +11,16 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Configuration;
 using Kos_Manager.Notificação;
+using System.IO;
 
 namespace Kos_Manager
 {
     public partial class Tela_nivel_acesso : Form
     {
         string conexao = ConfigurationManager.ConnectionStrings["BD_KOSMANAGER"].ConnectionString;
-
+        private string caminhoArquivoLog = "C:/Users/Joao A/Documents/logs.txt";
+        private string caminhoLogUpdate = "C:/Users/Joao A/Documents/logs_update.txt";
+        private string caminhoArquivoLogDeletar = "C:/Users/Joao A/Documents/logs_delete.txt";
         public Tela_nivel_acesso()
         {
             InitializeComponent();
@@ -66,7 +69,85 @@ namespace Kos_Manager
             frm.showAlert(msg, type);
         }
 
+        private void LerLog()
+        {
+            // Verifica se o arquivo de log existe
+            if (File.Exists(caminhoArquivoLog))
+            {
+                using (StreamReader streamReader = new StreamReader(caminhoArquivoLog))
+                {
+                    // Lê o conteúdo do arquivo de log
+                    string conteudoLog = streamReader.ReadToEnd();
 
+                }
+            }
+            if (File.Exists(caminhoLogUpdate))
+            {
+                using (StreamReader streamReader = new StreamReader(caminhoLogUpdate))
+                {
+                    // Lê o conteúdo do arquivo de log
+                    string conteudoLog = streamReader.ReadToEnd();
+
+                }
+            }
+            if (File.Exists(caminhoArquivoLogDeletar))
+            {
+                using (StreamReader streamReader = new StreamReader(caminhoArquivoLogDeletar))
+                {
+                    // Lê o conteúdo do arquivo de log
+                    string conteudoLog = streamReader.ReadToEnd();
+
+                }
+            }
+
+
+        }
+
+        //Public de registro de autoria
+        public class Logger
+        {
+            private string filePath;
+            public Logger(string logFilePath)
+            {
+                filePath = logFilePath;
+            }
+
+            public void Log(string message)
+            {
+                try
+                {
+
+
+                }
+                catch (Exception ex)
+                {
+                    // Lida com possíveis erros ao registrar o log
+                    throw new Exception("Erro ao registrar o log: " + ex.Message);
+                }
+            }
+        }
+
+        //LogRegistros
+        private void RegistrarLog(string message)
+        {
+            string caminhoDoArquivoDeLog = "C:/Users/Joao A//Documents//logs.txt";
+            Logger logger = new Logger(caminhoDoArquivoDeLog);
+            logger.Log(message);
+        }
+
+        private void RegistrarLogAtualizacao(string message)
+        {
+            string caminhoLogUpdate = "C:/Users/Joao A//Documents//logs_update.txt";
+            Logger logger = new Logger(caminhoLogUpdate);
+            logger.Log(message);
+        }
+
+        private void RegistrarLogDeletar(string message)
+        {
+            string caminhoArquivoLogDeletar = "C:/Users/Joao A//Documents//logs_delete.txt";
+            Logger logger = new Logger(caminhoArquivoLogDeletar);
+            logger.Log(message);
+        }
 
         private void Btn_adicionar_Click_2(object sender, EventArgs e)
         {
@@ -98,6 +179,23 @@ namespace Kos_Manager
                 ListarNiveis();
                 LimparDados();
                 con.Close();
+
+                // Mensagem para registrar no log
+                string mensagemLog = $"[{DateTime.Now:dd/MM HH:mm}] - Nível de acesso {nome} foi adicionado!";
+
+                // Chamada para registrar o log
+                RegistrarLog(mensagemLog);
+
+                // Adiciona a saída do console para o arquivo de log
+                using (StreamWriter streamWriter = File.AppendText(caminhoArquivoLog))
+                {
+                    streamWriter.WriteLine(mensagemLog);
+                }
+
+                // Atualiza a exibição do log na tela
+                LerLog();
+
+
                 //notificação
                 this.Alert("Adicionado com sucesso", Form_Alert.enmType.Sucess);
                
@@ -132,6 +230,23 @@ namespace Kos_Manager
             ListarNiveis();
             LimparDados();
             con.Close();
+
+            // Mensagem para registrar no log
+            string mensagemLog = $"[{DateTime.Now:dd/MM HH:mm}] - Nível de acesso {nome} foi atualizado!";
+
+            // Chamada para registrar o log
+            RegistrarLog(mensagemLog);
+
+            // Adiciona a saída do console para o arquivo de log
+            using (StreamWriter streamWriter = File.AppendText(caminhoLogUpdate))
+            {
+                streamWriter.WriteLine(mensagemLog);
+            }
+
+            // Atualiza a exibição do log na tela
+            LerLog();
+
+
             //notificação
             this.Alert("Atualizado com sucesso", Form_Alert.enmType.Update);
             // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
@@ -155,6 +270,24 @@ namespace Kos_Manager
             ListarNiveis();
             LimparDados();
             con.Close();
+
+            // Mensagem para registrar no log
+            string mensagemLog = $"[{DateTime.Now:dd/MM HH:mm}] - Nível de acesso {id} foi deletado!";
+
+            // Chamada para registrar o log
+            RegistrarLog(mensagemLog);
+
+            // Adiciona a saída do console para o arquivo de log
+            using (StreamWriter streamWriter = File.AppendText(caminhoArquivoLogDeletar))
+            {
+                streamWriter.WriteLine(mensagemLog);
+            }
+
+            // Atualiza a exibição do log na tela
+            LerLog();
+
+
+
             //notificação
             this.Alert("Deletado com sucesso", Form_Alert.enmType.Delete);
             // this.Alert("Falha ao adicionar: " + erro, Form_Alert.enmType.Warning);
@@ -169,6 +302,28 @@ namespace Kos_Manager
         {
             this.id = Dgv_nivel.CurrentRow.Cells[0].Value.ToString();
             txt_nome.Text = Dgv_nivel.CurrentRow.Cells[1].Value.ToString();
+        }
+
+        private void Tela_nivel_acesso_Load(object sender, EventArgs e)
+        {
+            // Verifica se o arquivo de log existe, se não, cria o arquivo
+            if (!File.Exists(caminhoArquivoLog))
+            {
+                File.Create(caminhoArquivoLog).Close();
+            }
+            // Atualização
+            if (!File.Exists(caminhoLogUpdate))
+            {
+                File.Create(caminhoLogUpdate).Close();
+            }
+            //Deletar
+            if (!File.Exists(caminhoArquivoLogDeletar))
+            {
+                File.Create(caminhoArquivoLogDeletar).Close();
+                // Inicia a leitura do log
+                LerLog();
+
+            }
         }
     }
 }

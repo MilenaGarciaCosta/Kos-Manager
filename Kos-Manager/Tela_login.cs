@@ -9,6 +9,7 @@ using System.Configuration;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Kos_Manager.Notificação;
 
 namespace Kos_Manager
 {
@@ -29,6 +30,12 @@ namespace Kos_Manager
             this.Close();
         }
 
+        //Public de notificação
+        public void Alert(string msg, Form_Alert.enmType type)
+        {
+            Form_Alert frm = new Form_Alert();
+            frm.showAlert(msg, type);
+        }
         private void Btn_logar_Click(object sender, EventArgs e)
         {
             string email = Txt_email_login.Text;
@@ -53,6 +60,8 @@ namespace Kos_Manager
 
                         Usuario.email = email;
                         Usuario.senha = senha;
+                        //notificação
+                        this.Alert("Logado com sucesso", Form_Alert.enmType.Sucess);
 
                         Tela_inicial tinc = new Tela_inicial();
                         tinc.Show();

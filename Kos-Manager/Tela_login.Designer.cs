@@ -45,7 +45,7 @@
             this.Picture_box2.ImageRotate = 0F;
             this.Picture_box2.Location = new System.Drawing.Point(0, 0);
             this.Picture_box2.Name = "Picture_box2";
-            this.Picture_box2.Size = new System.Drawing.Size(1370, 249);
+            this.Picture_box2.Size = new System.Drawing.Size(1364, 249);
             this.Picture_box2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.Picture_box2.TabIndex = 1;
             this.Picture_box2.TabStop = false;
@@ -69,7 +69,7 @@
             this.Txt_senha_login.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_senha_login.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_senha_login.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_senha_login.Location = new System.Drawing.Point(436, 385);
+            this.Txt_senha_login.Location = new System.Drawing.Point(433, 385);
             this.Txt_senha_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_senha_login.Name = "Txt_senha_login";
             this.Txt_senha_login.PasswordChar = '*';
@@ -98,7 +98,7 @@
             this.Txt_email_login.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_email_login.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_email_login.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_email_login.Location = new System.Drawing.Point(436, 308);
+            this.Txt_email_login.Location = new System.Drawing.Point(433, 308);
             this.Txt_email_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_email_login.Name = "Txt_email_login";
             this.Txt_email_login.PasswordChar = '\0';
@@ -115,7 +115,7 @@
             this.Link_nao_tem_cad.AutoSize = true;
             this.Link_nao_tem_cad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Link_nao_tem_cad.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
-            this.Link_nao_tem_cad.Location = new System.Drawing.Point(557, 582);
+            this.Link_nao_tem_cad.Location = new System.Drawing.Point(554, 582);
             this.Link_nao_tem_cad.Name = "Link_nao_tem_cad";
             this.Link_nao_tem_cad.Size = new System.Drawing.Size(262, 17);
             this.Link_nao_tem_cad.TabIndex = 9;
@@ -134,7 +134,7 @@
             this.Btn_logar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(169)))), ((int)(((byte)(140)))));
             this.Btn_logar.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.Btn_logar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.Btn_logar.Location = new System.Drawing.Point(598, 525);
+            this.Btn_logar.Location = new System.Drawing.Point(595, 525);
             this.Btn_logar.MinimumSize = new System.Drawing.Size(180, 45);
             this.Btn_logar.Name = "Btn_logar";
             this.Btn_logar.Size = new System.Drawing.Size(180, 45);
@@ -155,7 +155,7 @@
             this.Check_ver_senha.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Check_ver_senha.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Check_ver_senha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Check_ver_senha.Location = new System.Drawing.Point(436, 435);
+            this.Check_ver_senha.Location = new System.Drawing.Point(433, 435);
             this.Check_ver_senha.Margin = new System.Windows.Forms.Padding(2);
             this.Check_ver_senha.Name = "Check_ver_senha";
             this.Check_ver_senha.Size = new System.Drawing.Size(118, 21);
@@ -173,7 +173,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1364, 749);
             this.Controls.Add(this.Check_ver_senha);
             this.Controls.Add(this.Link_nao_tem_cad);
             this.Controls.Add(this.Btn_logar);
