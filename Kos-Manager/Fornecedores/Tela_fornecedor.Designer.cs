@@ -32,6 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Txt_nome_fornecedor = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Lbl_fornecedor = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -123,7 +125,7 @@
             this.Btn_deletar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_deletar.Image")));
             this.Btn_deletar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_deletar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_deletar.Location = new System.Drawing.Point(939, 321);
+            this.Btn_deletar.Location = new System.Drawing.Point(939, 328);
             this.Btn_deletar.Name = "Btn_deletar";
             this.Btn_deletar.Size = new System.Drawing.Size(144, 39);
             this.Btn_deletar.TabIndex = 65;
@@ -147,7 +149,7 @@
             this.Btn_atualizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_atualizar.Image")));
             this.Btn_atualizar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_atualizar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_atualizar.Location = new System.Drawing.Point(789, 321);
+            this.Btn_atualizar.Location = new System.Drawing.Point(789, 328);
             this.Btn_atualizar.Name = "Btn_atualizar";
             this.Btn_atualizar.ShadowDecoration.Depth = 5;
             this.Btn_atualizar.ShadowDecoration.Enabled = true;
@@ -224,6 +226,7 @@
             // Txt_tel_fornecedor
             // 
             this.Txt_tel_fornecedor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Txt_tel_fornecedor.Animated = true;
             this.Txt_tel_fornecedor.BorderRadius = 6;
             this.Txt_tel_fornecedor.BorderThickness = 0;
             this.Txt_tel_fornecedor.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -306,7 +309,7 @@
             this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
             this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(639, 321);
+            this.Btn_adicionar.Location = new System.Drawing.Point(639, 328);
             this.Btn_adicionar.Name = "Btn_adicionar";
             this.Btn_adicionar.ShadowDecoration.Depth = 5;
             this.Btn_adicionar.ShadowDecoration.Enabled = true;
@@ -319,14 +322,10 @@
             // DgvFornecedor
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Empty;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Empty;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Empty;
             this.DgvFornecedor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvFornecedor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.DgvFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -350,8 +349,20 @@
             this.DgvFornecedor.Margin = new System.Windows.Forms.Padding(2);
             this.DgvFornecedor.Name = "DgvFornecedor";
             this.DgvFornecedor.ReadOnly = true;
+            this.DgvFornecedor.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(75)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvFornecedor.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DgvFornecedor.RowHeadersVisible = false;
             this.DgvFornecedor.RowHeadersWidth = 51;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DgvFornecedor.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.DgvFornecedor.RowTemplate.Height = 24;
             this.DgvFornecedor.Size = new System.Drawing.Size(1063, 249);
             this.DgvFornecedor.TabIndex = 72;
