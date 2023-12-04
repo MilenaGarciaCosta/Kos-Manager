@@ -478,12 +478,18 @@ namespace Kos_Manager
 
         private void Dgv_venda_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.id = Dgv_venda.CurrentRow.Cells[0].Value.ToString();
-            Txt_quantidade.Text = Dgv_venda.CurrentRow.Cells[1].Value.ToString();
-            Txt_valor_produto.Text = Dgv_venda.CurrentRow.Cells[2].Value.ToString();
-            cmb_nome_produto.Text = Dgv_venda.CurrentRow.Cells[3].Value.ToString();
-            cmb_funcionario.Text = Dgv_venda.CurrentRow.Cells[4].Value.ToString();
-            cmb_status.Text = Dgv_venda.CurrentRow.Cells[5].Value.ToString();
+
+                this.id = Dgv_venda.CurrentRow.Cells[0].Value.ToString();
+                Txt_quantidade.Text = Dgv_venda.CurrentRow.Cells[1].Value.ToString();
+
+                // Obter o valor da célula e formatá-lo para exibição
+                string valorFormatado = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", Dgv_venda.CurrentRow.Cells[2].Value);
+                Txt_valor_produto.Text = valorFormatado;
+
+                cmb_nome_produto.Text = Dgv_venda.CurrentRow.Cells[3].Value.ToString();
+                cmb_funcionario.Text = Dgv_venda.CurrentRow.Cells[4].Value.ToString();
+                cmb_status.Text = Dgv_venda.CurrentRow.Cells[5].Value.ToString();
+           
         }
     }
 }
