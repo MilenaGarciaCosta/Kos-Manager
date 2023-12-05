@@ -141,6 +141,7 @@
             this.Btn_logar.TabIndex = 8;
             this.Btn_logar.Text = "Logar";
             this.Btn_logar.Click += new System.EventHandler(this.Btn_logar_Click);
+            this.Btn_logar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Btn_logar_KeyPress);
             // 
             // Check_ver_senha
             // 

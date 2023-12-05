@@ -38,6 +38,8 @@
             // 
             // textBoxLogs
             // 
+            this.textBoxLogs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.textBoxLogs.Animated = true;
             this.textBoxLogs.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.textBoxLogs.BorderRadius = 10;
@@ -52,7 +54,7 @@
             this.textBoxLogs.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold);
             this.textBoxLogs.ForeColor = System.Drawing.Color.White;
             this.textBoxLogs.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(237)))), ((int)(((byte)(99)))));
-            this.textBoxLogs.Location = new System.Drawing.Point(55, 115);
+            this.textBoxLogs.Location = new System.Drawing.Point(122, 154);
             this.textBoxLogs.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxLogs.Multiline = true;
             this.textBoxLogs.Name = "textBoxLogs";
@@ -60,17 +62,18 @@
             this.textBoxLogs.PlaceholderText = "";
             this.textBoxLogs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxLogs.SelectedText = "";
-            this.textBoxLogs.Size = new System.Drawing.Size(292, 320);
-            this.textBoxLogs.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.textBoxLogs.Size = new System.Drawing.Size(369, 320);
             this.textBoxLogs.TabIndex = 0;
             this.textBoxLogs.TextChanged += new System.EventHandler(this.TextBoxLogs_TextChanged);
             // 
             // guna2HtmlLabel1
             // 
+            this.guna2HtmlLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(237)))), ((int)(((byte)(99)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(65, 66);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(169, 105);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(271, 32);
             this.guna2HtmlLabel1.TabIndex = 1;
@@ -78,10 +81,11 @@
             // 
             // guna2HtmlLabel2
             // 
+            this.guna2HtmlLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(145)))), ((int)(((byte)(237)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(414, 66);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(623, 105);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(264, 32);
             this.guna2HtmlLabel2.TabIndex = 2;
@@ -89,7 +93,9 @@
             // 
             // textBoxLogs_update
             // 
+            this.textBoxLogs_update.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.textBoxLogs_update.Animated = true;
+            this.textBoxLogs_update.AutoScroll = true;
             this.textBoxLogs_update.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.textBoxLogs_update.BorderRadius = 10;
             this.textBoxLogs_update.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -103,7 +109,7 @@
             this.textBoxLogs_update.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold);
             this.textBoxLogs_update.ForeColor = System.Drawing.Color.White;
             this.textBoxLogs_update.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(145)))), ((int)(((byte)(237)))));
-            this.textBoxLogs_update.Location = new System.Drawing.Point(405, 115);
+            this.textBoxLogs_update.Location = new System.Drawing.Point(572, 154);
             this.textBoxLogs_update.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxLogs_update.Multiline = true;
             this.textBoxLogs_update.Name = "textBoxLogs_update";
@@ -111,16 +117,17 @@
             this.textBoxLogs_update.PlaceholderText = "";
             this.textBoxLogs_update.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxLogs_update.SelectedText = "";
-            this.textBoxLogs_update.Size = new System.Drawing.Size(292, 320);
-            this.textBoxLogs_update.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.textBoxLogs_update.Size = new System.Drawing.Size(369, 320);
             this.textBoxLogs_update.TabIndex = 3;
             // 
             // guna2HtmlLabel3
             // 
+            this.guna2HtmlLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(769, 66);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(1087, 105);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(246, 32);
             this.guna2HtmlLabel3.TabIndex = 4;
@@ -128,7 +135,10 @@
             // 
             // textBoxLogs_delete
             // 
+            this.textBoxLogs_delete.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxLogs_delete.Animated = true;
+            this.textBoxLogs_delete.AutoScroll = true;
             this.textBoxLogs_delete.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.textBoxLogs_delete.BorderRadius = 10;
             this.textBoxLogs_delete.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -142,7 +152,7 @@
             this.textBoxLogs_delete.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold);
             this.textBoxLogs_delete.ForeColor = System.Drawing.Color.White;
             this.textBoxLogs_delete.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
-            this.textBoxLogs_delete.Location = new System.Drawing.Point(760, 115);
+            this.textBoxLogs_delete.Location = new System.Drawing.Point(1025, 154);
             this.textBoxLogs_delete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxLogs_delete.Multiline = true;
             this.textBoxLogs_delete.Name = "textBoxLogs_delete";
@@ -150,8 +160,7 @@
             this.textBoxLogs_delete.PlaceholderText = "";
             this.textBoxLogs_delete.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBoxLogs_delete.SelectedText = "";
-            this.textBoxLogs_delete.Size = new System.Drawing.Size(292, 320);
-            this.textBoxLogs_delete.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.textBoxLogs_delete.Size = new System.Drawing.Size(369, 320);
             this.textBoxLogs_delete.TabIndex = 5;
             // 
             // Tela_reg_autoria
@@ -159,7 +168,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1103, 622);
+            this.ClientSize = new System.Drawing.Size(1508, 622);
             this.Controls.Add(this.textBoxLogs_delete);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.textBoxLogs_update);

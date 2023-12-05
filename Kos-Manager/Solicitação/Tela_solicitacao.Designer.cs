@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_solicitacao));
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Dgv_solicita = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -59,7 +60,7 @@
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(43, 233);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(28, 263);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(50, 25);
             this.guna2HtmlLabel7.TabIndex = 119;
@@ -72,10 +73,10 @@
             this.Dgv_solicita.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv_solicita.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Dgv_solicita.BackgroundColor = System.Drawing.Color.DimGray;
+            this.Dgv_solicita.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -91,11 +92,14 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Dgv_solicita.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Dgv_solicita.GridColor = System.Drawing.Color.Silver;
+            this.Dgv_solicita.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.Dgv_solicita.Location = new System.Drawing.Point(24, 390);
             this.Dgv_solicita.Name = "Dgv_solicita";
+            this.Dgv_solicita.ReadOnly = true;
             this.Dgv_solicita.RowHeadersVisible = false;
             this.Dgv_solicita.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.Dgv_solicita.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.Dgv_solicita.Size = new System.Drawing.Size(1053, 220);
             this.Dgv_solicita.TabIndex = 118;
             this.Dgv_solicita.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -103,15 +107,15 @@
             this.Dgv_solicita.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.Dgv_solicita.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.Dgv_solicita.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.Dgv_solicita.ThemeStyle.BackColor = System.Drawing.Color.DimGray;
-            this.Dgv_solicita.ThemeStyle.GridColor = System.Drawing.Color.Silver;
-            this.Dgv_solicita.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.Dgv_solicita.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.Dgv_solicita.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.Dgv_solicita.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.Dgv_solicita.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.Dgv_solicita.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dgv_solicita.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.Dgv_solicita.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.Dgv_solicita.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.Dgv_solicita.ThemeStyle.HeaderStyle.Height = 4;
-            this.Dgv_solicita.ThemeStyle.ReadOnly = false;
+            this.Dgv_solicita.ThemeStyle.ReadOnly = true;
             this.Dgv_solicita.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.Dgv_solicita.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.Dgv_solicita.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -185,7 +189,7 @@
             this.cmb_fornecedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.cmb_fornecedor.ItemHeight = 30;
             this.cmb_fornecedor.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmb_fornecedor.Location = new System.Drawing.Point(625, 202);
+            this.cmb_fornecedor.Location = new System.Drawing.Point(625, 208);
             this.cmb_fornecedor.Name = "cmb_fornecedor";
             this.cmb_fornecedor.Size = new System.Drawing.Size(452, 36);
             this.cmb_fornecedor.TabIndex = 115;
@@ -205,7 +209,7 @@
             this.cmb_nome_produto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.cmb_nome_produto.ItemHeight = 30;
             this.cmb_nome_produto.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmb_nome_produto.Location = new System.Drawing.Point(39, 94);
+            this.cmb_nome_produto.Location = new System.Drawing.Point(24, 124);
             this.cmb_nome_produto.Name = "cmb_nome_produto";
             this.cmb_nome_produto.Size = new System.Drawing.Size(452, 36);
             this.cmb_nome_produto.TabIndex = 113;
@@ -225,7 +229,7 @@
             this.cmb_status_solicitacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.cmb_status_solicitacao.ItemHeight = 30;
             this.cmb_status_solicitacao.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmb_status_solicitacao.Location = new System.Drawing.Point(39, 264);
+            this.cmb_status_solicitacao.Location = new System.Drawing.Point(24, 294);
             this.cmb_status_solicitacao.Name = "cmb_status_solicitacao";
             this.cmb_status_solicitacao.Size = new System.Drawing.Size(452, 36);
             this.cmb_status_solicitacao.TabIndex = 112;
@@ -236,7 +240,7 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(625, 171);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(625, 177);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(90, 25);
             this.guna2HtmlLabel4.TabIndex = 111;
@@ -249,7 +253,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(625, 63);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(625, 92);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(143, 25);
             this.guna2HtmlLabel1.TabIndex = 110;
@@ -288,7 +292,7 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(43, 148);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(28, 176);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(93, 25);
             this.guna2HtmlLabel5.TabIndex = 108;
@@ -314,7 +318,7 @@
             this.Txt_quantidade.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_quantidade.IconRightOffset = new System.Drawing.Point(10, -5);
             this.Txt_quantidade.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_quantidade.Location = new System.Drawing.Point(39, 178);
+            this.Txt_quantidade.Location = new System.Drawing.Point(24, 208);
             this.Txt_quantidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_quantidade.Name = "Txt_quantidade";
             this.Txt_quantidade.PasswordChar = '\0';
@@ -330,7 +334,7 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(39, 63);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(24, 93);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(265, 25);
             this.guna2HtmlLabel3.TabIndex = 106;
@@ -398,7 +402,7 @@
             this.Txt_id.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Txt_id.IconRightOffset = new System.Drawing.Point(10, -5);
             this.Txt_id.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_id.Location = new System.Drawing.Point(74, 320);
+            this.Txt_id.Location = new System.Drawing.Point(67, 337);
             this.Txt_id.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_id.Name = "Txt_id";
             this.Txt_id.PasswordChar = '\0';
@@ -427,7 +431,7 @@
             this.Txt_solicitacao_marca.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_solicitacao_marca.IconRightOffset = new System.Drawing.Point(10, -5);
             this.Txt_solicitacao_marca.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_solicitacao_marca.Location = new System.Drawing.Point(625, 104);
+            this.Txt_solicitacao_marca.Location = new System.Drawing.Point(625, 124);
             this.Txt_solicitacao_marca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_solicitacao_marca.Name = "Txt_solicitacao_marca";
             this.Txt_solicitacao_marca.PasswordChar = '\0';

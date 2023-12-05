@@ -92,5 +92,10 @@ namespace Kos_Manager
         {
 
         }
+
+        private void Btn_logar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }

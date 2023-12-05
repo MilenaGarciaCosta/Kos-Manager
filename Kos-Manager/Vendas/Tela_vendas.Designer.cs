@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_vendas));
             this.Dgv_venda = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Btn_deletar = new Guna.UI2.WinForms.Guna2Button();
@@ -56,10 +57,10 @@
             this.Dgv_venda.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv_venda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Dgv_venda.BackgroundColor = System.Drawing.Color.DimGray;
+            this.Dgv_venda.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -76,11 +77,15 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Dgv_venda.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Dgv_venda.GridColor = System.Drawing.Color.Silver;
+            this.Dgv_venda.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.Dgv_venda.Location = new System.Drawing.Point(22, 450);
             this.Dgv_venda.Name = "Dgv_venda";
+            this.Dgv_venda.ReadOnly = true;
+            this.Dgv_venda.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Dgv_venda.RowHeadersVisible = false;
             this.Dgv_venda.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.Dgv_venda.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.Dgv_venda.Size = new System.Drawing.Size(1060, 220);
             this.Dgv_venda.TabIndex = 141;
             this.Dgv_venda.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -88,15 +93,15 @@
             this.Dgv_venda.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.Dgv_venda.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.Dgv_venda.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.Dgv_venda.ThemeStyle.BackColor = System.Drawing.Color.DimGray;
-            this.Dgv_venda.ThemeStyle.GridColor = System.Drawing.Color.Silver;
-            this.Dgv_venda.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.Dgv_venda.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.Dgv_venda.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.Dgv_venda.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.Dgv_venda.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.Dgv_venda.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dgv_venda.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.Dgv_venda.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.Dgv_venda.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.Dgv_venda.ThemeStyle.HeaderStyle.Height = 4;
-            this.Dgv_venda.ThemeStyle.ReadOnly = false;
+            this.Dgv_venda.ThemeStyle.ReadOnly = true;
             this.Dgv_venda.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.Dgv_venda.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.Dgv_venda.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -190,7 +195,7 @@
             this.cmb_status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.cmb_status.ItemHeight = 30;
             this.cmb_status.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmb_status.Location = new System.Drawing.Point(621, 208);
+            this.cmb_status.Location = new System.Drawing.Point(630, 208);
             this.cmb_status.Name = "cmb_status";
             this.cmb_status.Size = new System.Drawing.Size(452, 36);
             this.cmb_status.TabIndex = 137;
@@ -201,7 +206,7 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(621, 177);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(630, 177);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(126, 25);
             this.guna2HtmlLabel2.TabIndex = 136;
@@ -214,7 +219,7 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(621, 86);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(630, 86);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(135, 25);
             this.guna2HtmlLabel5.TabIndex = 135;
@@ -341,7 +346,7 @@
             this.Txt_valor_produto.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_valor_produto.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_valor_produto.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_valor_produto.Location = new System.Drawing.Point(621, 121);
+            this.Txt_valor_produto.Location = new System.Drawing.Point(630, 121);
             this.Txt_valor_produto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_valor_produto.Name = "Txt_valor_produto";
             this.Txt_valor_produto.PasswordChar = '\0';

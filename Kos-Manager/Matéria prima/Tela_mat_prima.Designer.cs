@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_mat_prima));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmb_fornecedor = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -56,7 +57,7 @@
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(742, 245);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(769, 245);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(90, 25);
             this.guna2HtmlLabel7.TabIndex = 84;
@@ -78,7 +79,7 @@
             this.cmb_fornecedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.cmb_fornecedor.ItemHeight = 30;
             this.cmb_fornecedor.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmb_fornecedor.Location = new System.Drawing.Point(742, 277);
+            this.cmb_fornecedor.Location = new System.Drawing.Point(764, 277);
             this.cmb_fornecedor.Name = "cmb_fornecedor";
             this.cmb_fornecedor.Size = new System.Drawing.Size(452, 36);
             this.cmb_fornecedor.TabIndex = 83;
@@ -89,7 +90,7 @@
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(742, 158);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(764, 158);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(205, 25);
             this.guna2HtmlLabel6.TabIndex = 82;
@@ -102,7 +103,7 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(742, 334);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(768, 334);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(36, 25);
             this.guna2HtmlLabel5.TabIndex = 81;
@@ -128,7 +129,7 @@
             this.Txt_dt_validade.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_dt_validade.IconRightOffset = new System.Drawing.Point(10, -5);
             this.Txt_dt_validade.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_dt_validade.Location = new System.Drawing.Point(116, 277);
+            this.Txt_dt_validade.Location = new System.Drawing.Point(11, 277);
             this.Txt_dt_validade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_dt_validade.Name = "Txt_dt_validade";
             this.Txt_dt_validade.PasswordChar = '\0';
@@ -144,7 +145,7 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(116, 245);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(11, 245);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(132, 25);
             this.guna2HtmlLabel3.TabIndex = 79;
@@ -170,7 +171,7 @@
             this.Txt_quantidade.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_quantidade.IconRightOffset = new System.Drawing.Point(10, -5);
             this.Txt_quantidade.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_quantidade.Location = new System.Drawing.Point(742, 190);
+            this.Txt_quantidade.Location = new System.Drawing.Point(764, 190);
             this.Txt_quantidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_quantidade.Name = "Txt_quantidade";
             this.Txt_quantidade.PasswordChar = '\0';
@@ -196,7 +197,7 @@
             this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
             this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(750, 536);
+            this.Btn_adicionar.Location = new System.Drawing.Point(774, 465);
             this.Btn_adicionar.Name = "Btn_adicionar";
             this.Btn_adicionar.ShadowDecoration.Depth = 5;
             this.Btn_adicionar.ShadowDecoration.Enabled = true;
@@ -225,7 +226,7 @@
             this.Txt_lote.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_lote.IconRightOffset = new System.Drawing.Point(10, -5);
             this.Txt_lote.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_lote.Location = new System.Drawing.Point(742, 366);
+            this.Txt_lote.Location = new System.Drawing.Point(764, 366);
             this.Txt_lote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_lote.Name = "Txt_lote";
             this.Txt_lote.PasswordChar = '\0';
@@ -241,7 +242,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(116, 159);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(11, 159);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(280, 25);
             this.guna2HtmlLabel1.TabIndex = 73;
@@ -267,7 +268,7 @@
             this.txt_produto.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.txt_produto.IconRightOffset = new System.Drawing.Point(10, -5);
             this.txt_produto.IconRightSize = new System.Drawing.Size(10, 10);
-            this.txt_produto.Location = new System.Drawing.Point(116, 190);
+            this.txt_produto.Location = new System.Drawing.Point(11, 190);
             this.txt_produto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_produto.Name = "txt_produto";
             this.txt_produto.PasswordChar = '\0';
@@ -283,7 +284,7 @@
             this.Lbl_estoque.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_estoque.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.Lbl_estoque.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Lbl_estoque.Location = new System.Drawing.Point(568, 28);
+            this.Lbl_estoque.Location = new System.Drawing.Point(568, 72);
             this.Lbl_estoque.Name = "Lbl_estoque";
             this.Lbl_estoque.Size = new System.Drawing.Size(172, 32);
             this.Lbl_estoque.TabIndex = 70;
@@ -305,7 +306,7 @@
             this.Btn_deletar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_deletar.Image")));
             this.Btn_deletar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_deletar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_deletar.Location = new System.Drawing.Point(1050, 536);
+            this.Btn_deletar.Location = new System.Drawing.Point(1074, 465);
             this.Btn_deletar.Name = "Btn_deletar";
             this.Btn_deletar.Size = new System.Drawing.Size(144, 39);
             this.Btn_deletar.TabIndex = 87;
@@ -329,7 +330,7 @@
             this.Btn_atualizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_atualizar.Image")));
             this.Btn_atualizar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_atualizar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_atualizar.Location = new System.Drawing.Point(900, 536);
+            this.Btn_atualizar.Location = new System.Drawing.Point(924, 465);
             this.Btn_atualizar.Name = "Btn_atualizar";
             this.Btn_atualizar.ShadowDecoration.Depth = 5;
             this.Btn_atualizar.ShadowDecoration.Enabled = true;
@@ -341,52 +342,55 @@
             // 
             // DgvEstoqueMp
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.DgvEstoqueMp.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.DgvEstoqueMp.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.DgvEstoqueMp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DgvEstoqueMp.BackgroundColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvEstoqueMp.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DgvEstoqueMp.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvEstoqueMp.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.DgvEstoqueMp.ColumnHeadersHeight = 4;
             this.DgvEstoqueMp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvEstoqueMp.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DgvEstoqueMp.GridColor = System.Drawing.Color.Silver;
-            this.DgvEstoqueMp.Location = new System.Drawing.Point(13, 588);
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvEstoqueMp.DefaultCellStyle = dataGridViewCellStyle7;
+            this.DgvEstoqueMp.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.DgvEstoqueMp.Location = new System.Drawing.Point(11, 518);
             this.DgvEstoqueMp.Margin = new System.Windows.Forms.Padding(2);
             this.DgvEstoqueMp.Name = "DgvEstoqueMp";
+            this.DgvEstoqueMp.ReadOnly = true;
             this.DgvEstoqueMp.RowHeadersVisible = false;
             this.DgvEstoqueMp.RowHeadersWidth = 51;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.DgvEstoqueMp.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.DgvEstoqueMp.RowTemplate.Height = 24;
-            this.DgvEstoqueMp.Size = new System.Drawing.Size(1284, 220);
+            this.DgvEstoqueMp.Size = new System.Drawing.Size(1207, 220);
             this.DgvEstoqueMp.TabIndex = 88;
             this.DgvEstoqueMp.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DgvEstoqueMp.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.DgvEstoqueMp.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.DgvEstoqueMp.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.DgvEstoqueMp.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.DgvEstoqueMp.ThemeStyle.BackColor = System.Drawing.Color.DimGray;
-            this.DgvEstoqueMp.ThemeStyle.GridColor = System.Drawing.Color.Silver;
-            this.DgvEstoqueMp.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.DgvEstoqueMp.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.DgvEstoqueMp.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.DgvEstoqueMp.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.DgvEstoqueMp.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DgvEstoqueMp.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DgvEstoqueMp.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.DgvEstoqueMp.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.DgvEstoqueMp.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.DgvEstoqueMp.ThemeStyle.HeaderStyle.Height = 4;
-            this.DgvEstoqueMp.ThemeStyle.ReadOnly = false;
+            this.DgvEstoqueMp.ThemeStyle.ReadOnly = true;
             this.DgvEstoqueMp.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.DgvEstoqueMp.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DgvEstoqueMp.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

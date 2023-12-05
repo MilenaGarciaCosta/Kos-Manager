@@ -20,9 +20,9 @@ namespace Kos_Manager
     {
 
         string conexao = ConfigurationManager.ConnectionStrings["bd_kosmanager"].ConnectionString;
-        private string caminhoArquivoLog = "C:/Users/Joao A/Documents/logs.txt";
-        private string caminhoLogUpdate = "C:/Users/Joao A/Documents/logs_update.txt";
-        private string caminhoArquivoLogDeletar = "C:/Users/Joao A/Documents/logs_delete.txt";
+        private string caminhoArquivoLog = "D:/home/aluno/Documents/logs.txt";
+        private string caminhoLogUpdate = "D:/home/aluno/Documents/logs_update.txt";
+        private string caminhoArquivoLogDeletar = "D:/home/aluno/Documents/logs_delete.txt";
 
         public Tela_manu()
         {

@@ -26,14 +26,14 @@
 
 
             string conexao = ConfigurationManager.ConnectionStrings["bd_kosmanager"].ConnectionString;
-            // Caminho do arquivo de log
-            private string caminhoArquivoLog = "C:/Users/Joao A/Documents/logs.txt";
-            private string caminhoLogUpdate = "C:/Users/Joao A/Documents/logs_update.txt";
-            private string caminhoArquivoLogDeletar = "C:/Users/Joao A/Documents/logs_delete.txt";
+        // Caminho do arquivo de log
+        private string caminhoArquivoLog = "D:/home/aluno/Documents/logs.txt";
+        private string caminhoLogUpdate = "D:/home/aluno/Documents/logs_update.txt";
+        private string caminhoArquivoLogDeletar = "D:/home/aluno/Documents/logs_delete.txt";
 
 
-      
-            public Tela_fornecedor()
+
+        public Tela_fornecedor()
             {
 
                 InitializeComponent();
@@ -233,22 +233,22 @@
             //LogRegistros
              private void RegistrarLog(string message)
             {
-                string caminhoDoArquivoDeLog = "C:/Users/Joao A//Documents//logs.txt";
-                Logger logger = new Logger(caminhoDoArquivoDeLog);
+                string caminhoDoArquivoDeLog = "D:/home/aluno/Documents/logs.txt";
+            Logger logger = new Logger(caminhoDoArquivoDeLog);
                 logger.Log(message);
             }
 
             private void RegistrarLogAtualizacao(string message)
             {
-                string caminhoLogUpdate = "C:/Users/Joao A//Documents//logs_update.txt";
-                Logger logger = new Logger(caminhoLogUpdate);
+                string caminhoLogUpdate = "D:/home/aluno/Documents/logs_update.txt";
+            Logger logger = new Logger(caminhoLogUpdate);
                 logger.Log(message);
             }
 
             private void RegistrarLogDeletar(string message)
             {
-                string caminhoArquivoLogDeletar = "C:/Users/Joao A//Documents//logs_delete.txt";
-                Logger logger = new Logger(caminhoArquivoLogDeletar);
+                string caminhoArquivoLogDeletar = "D:/home/aluno/Documents/logs_delete.txt";
+            Logger logger = new Logger(caminhoArquivoLogDeletar);
                 logger.Log(message);
             }
 
