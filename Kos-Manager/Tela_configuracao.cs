@@ -103,9 +103,44 @@ namespace Kos_Manager
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
-            Tela_login tlgn = new Tela_login();
-            this.Close();
-            tlgn.Show();
+            bool closeConfirmed = false;
+
+            // Exibe uma mensagem de confirmação para sair do sistema
+            DialogResult result = MessageBox.Show("Tem certeza que deseja sair do sistema?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            // Verifica a opção selecionada pelo cliente
+            if (result == DialogResult.Yes)
+            {
+                closeConfirmed = true;
+            }
+
+            if (closeConfirmed)
+            {
+                List<Form> formsToClose = new List<Form>();
+
+                // Adiciona as janelas a serem fechadas à lista
+                foreach (Form formAberta in Application.OpenForms)
+                {
+                    if (formAberta.Name != "Tela_Login")
+                    {
+                        formsToClose.Add(formAberta);
+                    }
+                }
+
+                // Fecha as janelas da lista
+                foreach (Form form in formsToClose)
+                {
+                    form.Close();
+                }
+
+                // Abre a tela de login
+                Tela_login telaLogin = new Tela_login();
+                telaLogin.Show();
+            }
+            else
+            {
+                // Permanece no sistema (não faz nada)
+            }
         }
     }
 }

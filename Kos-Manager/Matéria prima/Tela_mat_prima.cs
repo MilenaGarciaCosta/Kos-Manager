@@ -19,9 +19,9 @@ namespace Kos_Manager
     public partial class Tela_mat_prima : Form
     {
         string conexao = ConfigurationManager.ConnectionStrings["bd_kosmanager"].ConnectionString;
-        private string caminhoArquivoLog = "D:/home/aluno/Documents/logs.txt";
-        private string caminhoLogUpdate = "D:/home/aluno/Documents/logs_update.txt";
-        private string caminhoArquivoLogDeletar = "D:/home/aluno/Documents/logs_delete.txt";
+        private string caminhoArquivoLog = "C:/Users/paulo/Documents/logs.txt";
+        private string caminhoLogUpdate = "C:/Users/paulo/Documents/logs_update.txt";
+        private string caminhoArquivoLogDeletar = "C:/Users/paulo/Documents/logs_delete.txt";
 
         public Tela_mat_prima()
         {
@@ -217,25 +217,24 @@ namespace Kos_Manager
                 }
             }
         }
-
         //LogRegistros
         private void RegistrarLog(string message)
         {
-            string caminhoDoArquivoDeLog = "D:/home/aluno/Documents/logs.txt";
+            string caminhoDoArquivoDeLog = "C:/Users/paulo/Documents/logs.txt";
             Logger logger = new Logger(caminhoDoArquivoDeLog);
             logger.Log(message);
         }
 
         private void RegistrarLogAtualizacao(string message)
         {
-            string caminhoLogUpdate = "D:/home/aluno/Documents/logs_update.txt";
+            string caminhoLogUpdate = "C:/Users/paulo/Documents/logs_update.txt";
             Logger logger = new Logger(caminhoLogUpdate);
             logger.Log(message);
         }
 
         private void RegistrarLogDeletar(string message)
         {
-            string caminhoArquivoLogDeletar = "D:/home/aluno/Documents/logs_delete.txt";
+            string caminhoArquivoLogDeletar = "C:/Users/paulo/Documents/logs_delete.txt";
             Logger logger = new Logger(caminhoArquivoLogDeletar);
             logger.Log(message);
         }
