@@ -16,27 +16,28 @@ using System.IO;
 
 namespace Kos_Manager
 {
-    public partial class Tela_manu : Form
-    {
+	public partial class Tela_manu : Form
+	{
 
-        string conexao = ConfigurationManager.ConnectionStrings["bd_kosmanager"].ConnectionString;
-        private string caminhoArquivoLog = "C:/Users/paulo/Documents/logs.txt";
-        private string caminhoLogUpdate = "C:/Users/paulo/Documents/logs_update.txt";
-        private string caminhoArquivoLogDeletar = "C:/Users/paulo/Documents/logs_delete.txt";
+		string conexao = ConfigurationManager.ConnectionStrings["bd_kosmanager"].ConnectionString;
+		// Caminho do arquivo de log
+		private string caminhoArquivoLog = "D:/home/aluno/Documents/logs.txt";
+		private string caminhoLogUpdate = "D:/home/aluno/Documents/logs_update.txt";
+		private string caminhoArquivoLogDeletar = "D:/home/aluno/Documents/logs_delete.txt";
 
-        public Tela_manu()
-        {
-            InitializeComponent();
-            ListarEstoquePm();
-        }
+		public Tela_manu()
+		{
+			InitializeComponent();
+			ListarEstoquePm();
+		}
 
-        string id;
+		string id;
 
-        public void ListarEstoquePm()
-        {
-            MySqlConnection con = new MySqlConnection(conexao);
+		public void ListarEstoquePm()
+		{
+			MySqlConnection con = new MySqlConnection(conexao);
 
-            string sql_select_estoqueMp = @"
+			string sql_select_estoqueMp = @"
                select 
                     TB_PRODUTO_MANU_ID as id,
 					TB_PRODUTO_MANU_NOME as Produto,
@@ -46,138 +47,138 @@ namespace Kos_Manager
 					TB_PRODUTO_MANU_QUANTIDADE as Quantidade
                         from TB_PRODUTO_MANU";
 
-            con.Open();
+			con.Open();
 
-            DataTable tabela_estoqueMp = new DataTable();
+			DataTable tabela_estoqueMp = new DataTable();
 
-            MySqlDataAdapter da_estoqueMp = new MySqlDataAdapter(sql_select_estoqueMp, con);
-            da_estoqueMp.Fill(tabela_estoqueMp);
+			MySqlDataAdapter da_estoqueMp = new MySqlDataAdapter(sql_select_estoqueMp, con);
+			da_estoqueMp.Fill(tabela_estoqueMp);
 
-            DgvEstoquePm.DataSource = tabela_estoqueMp;
+			DgvEstoquePm.DataSource = tabela_estoqueMp;
 
-            con.Close();
-
-
-        }
+			con.Close();
 
 
-        private void Btn_adicionar_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void Btn_requisitar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Child_panel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Tela_manu_Load(object sender, EventArgs e)
-        {
-            // Verifica se o arquivo de log existe, se não, cria o arquivo
-            if (!File.Exists(caminhoArquivoLog))
-            {
-                File.Create(caminhoArquivoLog).Close();
-            }
-            // Atualização
-            if (!File.Exists(caminhoLogUpdate))
-            {
-                File.Create(caminhoLogUpdate).Close();
-            }
-            //Deletar
-            if (!File.Exists(caminhoArquivoLogDeletar))
-            {
-                File.Create(caminhoArquivoLogDeletar).Close();
-                // Inicia a leitura do log
-                LerLog();
-            }
-        }
-            private void LerLog()
-            {
-                // Verifica se o arquivo de log existe
-                if (File.Exists(caminhoArquivoLog))
-                {
-                    using (StreamReader streamReader = new StreamReader(caminhoArquivoLog))
-                    {
-                        // Lê o conteúdo do arquivo de log
-                        string conteudoLog = streamReader.ReadToEnd();
-
-                    }
-                }
-                if (File.Exists(caminhoLogUpdate))
-                {
-                    using (StreamReader streamReader = new StreamReader(caminhoLogUpdate))
-                    {
-                        // Lê o conteúdo do arquivo de log
-                        string conteudoLog = streamReader.ReadToEnd();
-
-                    }
-                }
-                if (File.Exists(caminhoArquivoLogDeletar))
-                {
-                    using (StreamReader streamReader = new StreamReader(caminhoArquivoLogDeletar))
-                    {
-                        // Lê o conteúdo do arquivo de log
-                        string conteudoLog = streamReader.ReadToEnd();
-
-                    }
-                }
+		}
 
 
-            }
+		private void Btn_adicionar_Click(object sender, EventArgs e)
+		{
+		}
 
- //Public de registro de autoria
-        public class Logger
-        {
-            private string filePath;
-            public Logger(string logFilePath)
-            {
-                filePath = logFilePath;
-            }
+		private void Btn_requisitar_Click(object sender, EventArgs e)
+		{
 
-            public void Log(string message)
-            {
-                try
-                {
+		}
+
+		private void Child_panel_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void Tela_manu_Load(object sender, EventArgs e)
+		{
+			// Verifica se o arquivo de log existe, se não, cria o arquivo
+			if (!File.Exists(caminhoArquivoLog))
+			{
+				File.Create(caminhoArquivoLog).Close();
+			}
+			// Atualização
+			if (!File.Exists(caminhoLogUpdate))
+			{
+				File.Create(caminhoLogUpdate).Close();
+			}
+			//Deletar
+			if (!File.Exists(caminhoArquivoLogDeletar))
+			{
+				File.Create(caminhoArquivoLogDeletar).Close();
+				// Inicia a leitura do log
+				LerLog();
+			}
+		}
+		private void LerLog()
+		{
+			// Verifica se o arquivo de log existe
+			if (File.Exists(caminhoArquivoLog))
+			{
+				using (StreamReader streamReader = new StreamReader(caminhoArquivoLog))
+				{
+					// Lê o conteúdo do arquivo de log
+					string conteudoLog = streamReader.ReadToEnd();
+
+				}
+			}
+			if (File.Exists(caminhoLogUpdate))
+			{
+				using (StreamReader streamReader = new StreamReader(caminhoLogUpdate))
+				{
+					// Lê o conteúdo do arquivo de log
+					string conteudoLog = streamReader.ReadToEnd();
+
+				}
+			}
+			if (File.Exists(caminhoArquivoLogDeletar))
+			{
+				using (StreamReader streamReader = new StreamReader(caminhoArquivoLogDeletar))
+				{
+					// Lê o conteúdo do arquivo de log
+					string conteudoLog = streamReader.ReadToEnd();
+
+				}
+			}
 
 
-                }
-                catch (Exception ex)
-                {
-                    // Lida com possíveis erros ao registrar o log
-                    throw new Exception("Erro ao registrar o log: " + ex.Message);
-                }
-            }
-        }
+		}
 
-        //LogRegistros
-        private void RegistrarLog(string message)
-        {
-            string caminhoDoArquivoDeLog = "C:/Users/paulo/Documents/logs.txt";
-            Logger logger = new Logger(caminhoDoArquivoDeLog);
-            logger.Log(message);
-        }
+		//Public de registro de autoria
+		public class Logger
+		{
+			private string filePath;
+			public Logger(string logFilePath)
+			{
+				filePath = logFilePath;
+			}
 
-        private void RegistrarLogAtualizacao(string message)
-        {
-            string caminhoLogUpdate = "C:/Users/paulo/Documents/logs_update.txt";
-            Logger logger = new Logger(caminhoLogUpdate);
-            logger.Log(message);
-        }
-
-        private void RegistrarLogDeletar(string message)
-        {
-            string caminhoArquivoLogDeletar = "C:/Users/paulo/Documents/logs_delete.txt";
-            Logger logger = new Logger(caminhoArquivoLogDeletar);
-            logger.Log(message);
-        }
+			public void Log(string message)
+			{
+				try
+				{
 
 
+				}
+				catch (Exception ex)
+				{
+					// Lida com possíveis erros ao registrar o log
+					throw new Exception("Erro ao registrar o log: " + ex.Message);
+				}
+			}
+		}
 
-        private void LimparDados()
+		//LogRegistros
+		private void RegistrarLog(string message)
+		{
+			string caminhoDoArquivoDeLog = "D:/home/aluno/Documents/logs.txt";
+			Logger logger = new Logger(caminhoDoArquivoDeLog);
+			logger.Log(message);
+		}
+
+		private void RegistrarLogAtualizacao(string message)
+		{
+			string caminhoLogUpdate = "D:/home/aluno/Documents/logs_update.txt";
+			Logger logger = new Logger(caminhoLogUpdate);
+			logger.Log(message);
+		}
+
+		private void RegistrarLogDeletar(string message)
+		{
+			string caminhoArquivoLogDeletar = "D:/home/aluno/Documents/logs_delete.txt";
+			Logger logger = new Logger(caminhoArquivoLogDeletar);
+			logger.Log(message);
+		}
+
+
+
+		private void LimparDados()
         {
             // Limpar TextBox
             Txt_dt_fab.Clear();

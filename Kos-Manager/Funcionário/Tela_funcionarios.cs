@@ -19,10 +19,11 @@ namespace Kos_Manager
     {
 
         string conexao = ConfigurationManager.ConnectionStrings["bd_kosmanager"].ConnectionString;
-        private string caminhoArquivoLog = "C:/Users/paulo/Documents/logs.txt";
-        private string caminhoLogUpdate = "C:/Users/paulo/Documents/logs_update.txt";
-        private string caminhoArquivoLogDeletar = "C:/Users/paulo/Documents/logs_delete.txt";
-        public Tela_funcionarios()
+		// Caminho do arquivo de log
+		private string caminhoArquivoLog = "D:/home/aluno/Documents/logs.txt";
+		private string caminhoLogUpdate = "D:/home/aluno/Documents/logs_update.txt";
+		private string caminhoArquivoLogDeletar = "D:/home/aluno/Documents/logs_delete.txt";
+		public Tela_funcionarios()
         {
             InitializeComponent();
             ListarFuncionario();
@@ -209,30 +210,30 @@ namespace Kos_Manager
                 }
             }
         }
+		//LogRegistros
+		private void RegistrarLog(string message)
+		{
+			string caminhoDoArquivoDeLog = "D:home/aluno/Documents/logs.txt";
 
-        //LogRegistros
-        private void RegistrarLog(string message)
-        {
-            string caminhoDoArquivoDeLog = "C:/Users/paulo/Documents/logs.txt";
-            Logger logger = new Logger(caminhoDoArquivoDeLog);
-            logger.Log(message);
-        }
+			Logger logger = new Logger(caminhoDoArquivoDeLog);
+			logger.Log(message);
+		}
 
-        private void RegistrarLogAtualizacao(string message)
-        {
-            string caminhoLogUpdate = "C:/Users/paulo/Documents/logs_update.txt";
-            Logger logger = new Logger(caminhoLogUpdate);
-            logger.Log(message);
-        }
+		private void RegistrarLogAtualizacao(string message)
+		{
+			string caminhoLogUpdate = "D:home/aluno/Documents/logs_update.txt";
+			Logger logger = new Logger(caminhoLogUpdate);
+			logger.Log(message);
+		}
 
-        private void RegistrarLogDeletar(string message)
-        {
-            string caminhoArquivoLogDeletar = "C:/Users/paulo/Documents/logs_delete.txt";
-            Logger logger = new Logger(caminhoArquivoLogDeletar);
-            logger.Log(message);
-        }
+		private void RegistrarLogDeletar(string message)
+		{
+			string caminhoArquivoLogDeletar = "D:home/aluno/Documents/logs_delete.txt";
+			Logger logger = new Logger(caminhoArquivoLogDeletar);
+			logger.Log(message);
+		}
 
-        private void LimparDados()
+		private void LimparDados()
         {
             // Limpar TextBox
             Txt_nome_funcionario.Clear();
