@@ -86,7 +86,7 @@
             this.Dgv_venda.RowHeadersWidth = 51;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.Dgv_venda.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.Dgv_venda.Size = new System.Drawing.Size(1060, 220);
+            this.Dgv_venda.Size = new System.Drawing.Size(1015, 220);
             this.Dgv_venda.TabIndex = 141;
             this.Dgv_venda.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.Dgv_venda.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -126,7 +126,7 @@
             this.Btn_deletar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_deletar.Image")));
             this.Btn_deletar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_deletar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_deletar.Location = new System.Drawing.Point(938, 401);
+            this.Btn_deletar.Location = new System.Drawing.Point(893, 398);
             this.Btn_deletar.Name = "Btn_deletar";
             this.Btn_deletar.Size = new System.Drawing.Size(144, 39);
             this.Btn_deletar.TabIndex = 140;
@@ -150,7 +150,7 @@
             this.Btn_atualizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_atualizar.Image")));
             this.Btn_atualizar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_atualizar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_atualizar.Location = new System.Drawing.Point(788, 401);
+            this.Btn_atualizar.Location = new System.Drawing.Point(743, 398);
             this.Btn_atualizar.Name = "Btn_atualizar";
             this.Btn_atualizar.ShadowDecoration.Depth = 5;
             this.Btn_atualizar.ShadowDecoration.Enabled = true;
@@ -175,7 +175,7 @@
             this.cmb_funcionario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.cmb_funcionario.ItemHeight = 30;
             this.cmb_funcionario.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmb_funcionario.Location = new System.Drawing.Point(31, 208);
+            this.cmb_funcionario.Location = new System.Drawing.Point(22, 244);
             this.cmb_funcionario.Name = "cmb_funcionario";
             this.cmb_funcionario.Size = new System.Drawing.Size(452, 36);
             this.cmb_funcionario.TabIndex = 138;
@@ -195,7 +195,7 @@
             this.cmb_status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.cmb_status.ItemHeight = 30;
             this.cmb_status.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmb_status.Location = new System.Drawing.Point(630, 208);
+            this.cmb_status.Location = new System.Drawing.Point(585, 244);
             this.cmb_status.Name = "cmb_status";
             this.cmb_status.Size = new System.Drawing.Size(452, 36);
             this.cmb_status.TabIndex = 137;
@@ -206,7 +206,7 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(630, 177);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(585, 213);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(126, 25);
             this.guna2HtmlLabel2.TabIndex = 136;
@@ -219,7 +219,7 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(630, 86);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(585, 122);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(135, 25);
             this.guna2HtmlLabel5.TabIndex = 135;
@@ -232,7 +232,7 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(31, 262);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(22, 298);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(205, 25);
             this.guna2HtmlLabel4.TabIndex = 134;
@@ -245,7 +245,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(31, 176);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(22, 212);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(187, 25);
             this.guna2HtmlLabel1.TabIndex = 133;
@@ -267,7 +267,7 @@
             this.cmb_nome_produto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.cmb_nome_produto.ItemHeight = 30;
             this.cmb_nome_produto.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmb_nome_produto.Location = new System.Drawing.Point(31, 121);
+            this.cmb_nome_produto.Location = new System.Drawing.Point(22, 157);
             this.cmb_nome_produto.Name = "cmb_nome_produto";
             this.cmb_nome_produto.Size = new System.Drawing.Size(452, 36);
             this.cmb_nome_produto.TabIndex = 131;
@@ -291,7 +291,7 @@
             this.Txt_quantidade.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_quantidade.IconRightOffset = new System.Drawing.Point(10, -5);
             this.Txt_quantidade.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_quantidade.Location = new System.Drawing.Point(33, 294);
+            this.Txt_quantidade.Location = new System.Drawing.Point(24, 330);
             this.Txt_quantidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_quantidade.Name = "Txt_quantidade";
             this.Txt_quantidade.PasswordChar = '\0';
@@ -317,7 +317,7 @@
             this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
             this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(638, 401);
+            this.Btn_adicionar.Location = new System.Drawing.Point(593, 398);
             this.Btn_adicionar.Name = "Btn_adicionar";
             this.Btn_adicionar.ShadowDecoration.Depth = 5;
             this.Btn_adicionar.ShadowDecoration.Enabled = true;
@@ -346,7 +346,7 @@
             this.Txt_valor_produto.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_valor_produto.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_valor_produto.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_valor_produto.Location = new System.Drawing.Point(630, 121);
+            this.Txt_valor_produto.Location = new System.Drawing.Point(585, 157);
             this.Txt_valor_produto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_valor_produto.Name = "Txt_valor_produto";
             this.Txt_valor_produto.PasswordChar = '\0';
@@ -362,7 +362,7 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(31, 90);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(22, 126);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(265, 25);
             this.guna2HtmlLabel3.TabIndex = 126;
@@ -375,7 +375,7 @@
             this.Lbl_adicionar.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_adicionar.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.Lbl_adicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Lbl_adicionar.Location = new System.Drawing.Point(491, 32);
+            this.Lbl_adicionar.Location = new System.Drawing.Point(469, 58);
             this.Lbl_adicionar.Name = "Lbl_adicionar";
             this.Lbl_adicionar.Size = new System.Drawing.Size(87, 32);
             this.Lbl_adicionar.TabIndex = 125;
@@ -387,7 +387,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1103, 679);
+            this.ClientSize = new System.Drawing.Size(1058, 679);
             this.Controls.Add(this.Dgv_venda);
             this.Controls.Add(this.Btn_deletar);
             this.Controls.Add(this.Btn_atualizar);

@@ -60,7 +60,7 @@
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(28, 263);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(16, 306);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(50, 25);
             this.guna2HtmlLabel7.TabIndex = 119;
@@ -93,14 +93,14 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Dgv_solicita.DefaultCellStyle = dataGridViewCellStyle3;
             this.Dgv_solicita.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.Dgv_solicita.Location = new System.Drawing.Point(24, 390);
+            this.Dgv_solicita.Location = new System.Drawing.Point(12, 444);
             this.Dgv_solicita.Name = "Dgv_solicita";
             this.Dgv_solicita.ReadOnly = true;
             this.Dgv_solicita.RowHeadersVisible = false;
             this.Dgv_solicita.RowHeadersWidth = 51;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.Dgv_solicita.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.Dgv_solicita.Size = new System.Drawing.Size(1053, 220);
+            this.Dgv_solicita.Size = new System.Drawing.Size(1079, 220);
             this.Dgv_solicita.TabIndex = 118;
             this.Dgv_solicita.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.Dgv_solicita.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -140,7 +140,7 @@
             this.Btn_deletar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_deletar.Image")));
             this.Btn_deletar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_deletar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_deletar.Location = new System.Drawing.Point(933, 341);
+            this.Btn_deletar.Location = new System.Drawing.Point(947, 399);
             this.Btn_deletar.Name = "Btn_deletar";
             this.Btn_deletar.Size = new System.Drawing.Size(144, 39);
             this.Btn_deletar.TabIndex = 117;
@@ -164,7 +164,7 @@
             this.Btn_atualizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_atualizar.Image")));
             this.Btn_atualizar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_atualizar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_atualizar.Location = new System.Drawing.Point(783, 341);
+            this.Btn_atualizar.Location = new System.Drawing.Point(797, 399);
             this.Btn_atualizar.Name = "Btn_atualizar";
             this.Btn_atualizar.ShadowDecoration.Depth = 5;
             this.Btn_atualizar.ShadowDecoration.Enabled = true;
@@ -189,7 +189,7 @@
             this.cmb_fornecedor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.cmb_fornecedor.ItemHeight = 30;
             this.cmb_fornecedor.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmb_fornecedor.Location = new System.Drawing.Point(625, 208);
+            this.cmb_fornecedor.Location = new System.Drawing.Point(639, 252);
             this.cmb_fornecedor.Name = "cmb_fornecedor";
             this.cmb_fornecedor.Size = new System.Drawing.Size(452, 36);
             this.cmb_fornecedor.TabIndex = 115;
@@ -209,7 +209,7 @@
             this.cmb_nome_produto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.cmb_nome_produto.ItemHeight = 30;
             this.cmb_nome_produto.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmb_nome_produto.Location = new System.Drawing.Point(24, 124);
+            this.cmb_nome_produto.Location = new System.Drawing.Point(12, 167);
             this.cmb_nome_produto.Name = "cmb_nome_produto";
             this.cmb_nome_produto.Size = new System.Drawing.Size(452, 36);
             this.cmb_nome_produto.TabIndex = 113;
@@ -229,7 +229,7 @@
             this.cmb_status_solicitacao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.cmb_status_solicitacao.ItemHeight = 30;
             this.cmb_status_solicitacao.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cmb_status_solicitacao.Location = new System.Drawing.Point(24, 294);
+            this.cmb_status_solicitacao.Location = new System.Drawing.Point(12, 337);
             this.cmb_status_solicitacao.Name = "cmb_status_solicitacao";
             this.cmb_status_solicitacao.Size = new System.Drawing.Size(452, 36);
             this.cmb_status_solicitacao.TabIndex = 112;
@@ -240,7 +240,7 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(625, 177);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(639, 221);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(90, 25);
             this.guna2HtmlLabel4.TabIndex = 111;
@@ -253,7 +253,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(625, 92);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(639, 136);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(143, 25);
             this.guna2HtmlLabel1.TabIndex = 110;
@@ -276,7 +276,7 @@
             this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
             this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(633, 341);
+            this.Btn_adicionar.Location = new System.Drawing.Point(647, 399);
             this.Btn_adicionar.Name = "Btn_adicionar";
             this.Btn_adicionar.ShadowDecoration.Depth = 5;
             this.Btn_adicionar.ShadowDecoration.Enabled = true;
@@ -292,7 +292,7 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(28, 176);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(16, 219);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(93, 25);
             this.guna2HtmlLabel5.TabIndex = 108;
@@ -318,7 +318,7 @@
             this.Txt_quantidade.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_quantidade.IconRightOffset = new System.Drawing.Point(10, -5);
             this.Txt_quantidade.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_quantidade.Location = new System.Drawing.Point(24, 208);
+            this.Txt_quantidade.Location = new System.Drawing.Point(12, 251);
             this.Txt_quantidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_quantidade.Name = "Txt_quantidade";
             this.Txt_quantidade.PasswordChar = '\0';
@@ -334,7 +334,7 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(24, 93);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(12, 136);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(265, 25);
             this.guna2HtmlLabel3.TabIndex = 106;
@@ -347,7 +347,7 @@
             this.Lbl_adicionar.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_adicionar.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.Lbl_adicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Lbl_adicionar.Location = new System.Drawing.Point(481, 19);
+            this.Lbl_adicionar.Location = new System.Drawing.Point(481, 58);
             this.Lbl_adicionar.Name = "Lbl_adicionar";
             this.Lbl_adicionar.Size = new System.Drawing.Size(140, 32);
             this.Lbl_adicionar.TabIndex = 104;
@@ -377,7 +377,7 @@
             this.Child_panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Child_panel.Location = new System.Drawing.Point(0, 0);
             this.Child_panel.Name = "Child_panel";
-            this.Child_panel.Size = new System.Drawing.Size(1103, 622);
+            this.Child_panel.Size = new System.Drawing.Size(1103, 676);
             this.Child_panel.TabIndex = 19;
             this.Child_panel.UseTransparentBackground = true;
             this.Child_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Child_panel_Paint_1);
@@ -402,7 +402,7 @@
             this.Txt_id.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Txt_id.IconRightOffset = new System.Drawing.Point(10, -5);
             this.Txt_id.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_id.Location = new System.Drawing.Point(67, 337);
+            this.Txt_id.Location = new System.Drawing.Point(67, 392);
             this.Txt_id.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_id.Name = "Txt_id";
             this.Txt_id.PasswordChar = '\0';
@@ -431,7 +431,7 @@
             this.Txt_solicitacao_marca.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_solicitacao_marca.IconRightOffset = new System.Drawing.Point(10, -5);
             this.Txt_solicitacao_marca.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_solicitacao_marca.Location = new System.Drawing.Point(625, 124);
+            this.Txt_solicitacao_marca.Location = new System.Drawing.Point(639, 168);
             this.Txt_solicitacao_marca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_solicitacao_marca.Name = "Txt_solicitacao_marca";
             this.Txt_solicitacao_marca.PasswordChar = '\0';
@@ -446,7 +446,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1103, 622);
+            this.ClientSize = new System.Drawing.Size(1103, 676);
             this.Controls.Add(this.Child_panel);
             this.Name = "Tela_solicitacao";
             this.Text = "Tela_solicitacao";

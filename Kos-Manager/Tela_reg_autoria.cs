@@ -13,17 +13,17 @@ namespace Kos_Manager
 {
     public partial class Tela_reg_autoria : Form
     {
-        private string caminhoDoArquivoDeLog = "D:/home/aluno/Documents/logs.txt";
-        private string caminhoLogUpdate = "D:/home/aluno/Documents/logs_update.txt";
-        private string caminhoArquivoLogDeletar = "D:/home/aluno/Documents/logs_delete.txt";
+        private string caminhoDoArquivoDeLog = "C:/Users/milen/Downloads/logs.txt";
+        private string caminhoLogUpdate = "C:/Users/milen/Downloads/logs_update.txt";
+        private string caminhoArquivoLogDeletar = "C:/Users/milen/Downloads/logs_delete.txt";
         private Logger logger;
         private Logger loggerUpdate;
         private Logger loggerDeletar;
         public void RegistrarLog(string message)
         {
-            string caminhoDoArquivoDeLog = "D:/home/aluno/Documents/logs.txt";
-            string caminhoLogUpdate = "D:/home/aluno/Documents/logs_update.txt";
-            string caminhoArquivoLogDeletar = "D:/home/aluno/Documents/logs_delete.txt";
+            string caminhoDoArquivoDeLog = "C:/Users/milen/Downloads/logs.txt";
+            string caminhoLogUpdate = "C:/Users/milen/Downloads/logs_update.txt";
+            string caminhoArquivoLogDeletar = "C:/Users/milen/Downloads/logs_delete.txt";
             Logger logger = new Logger(caminhoDoArquivoDeLog);
             Logger loggerUpdate = new Logger(caminhoLogUpdate);
             Logger loggerDelete = new Logger(caminhoArquivoLogDeletar);
@@ -183,5 +183,9 @@ namespace Kos_Manager
             }
         }
 
+        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

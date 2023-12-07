@@ -77,7 +77,7 @@
             this.Dgv_nivel.RowHeadersWidth = 51;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.Dgv_nivel.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.Dgv_nivel.Size = new System.Drawing.Size(1079, 220);
+            this.Dgv_nivel.Size = new System.Drawing.Size(1004, 220);
             this.Dgv_nivel.TabIndex = 77;
             this.Dgv_nivel.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.Dgv_nivel.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -117,7 +117,7 @@
             this.Btn_deletar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_deletar.Image")));
             this.Btn_deletar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_deletar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_deletar.Location = new System.Drawing.Point(947, 279);
+            this.Btn_deletar.Location = new System.Drawing.Point(872, 282);
             this.Btn_deletar.Name = "Btn_deletar";
             this.Btn_deletar.Size = new System.Drawing.Size(144, 39);
             this.Btn_deletar.TabIndex = 76;
@@ -141,7 +141,7 @@
             this.Btn_atualizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_atualizar.Image")));
             this.Btn_atualizar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_atualizar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_atualizar.Location = new System.Drawing.Point(797, 279);
+            this.Btn_atualizar.Location = new System.Drawing.Point(722, 282);
             this.Btn_atualizar.Name = "Btn_atualizar";
             this.Btn_atualizar.ShadowDecoration.Depth = 5;
             this.Btn_atualizar.ShadowDecoration.Enabled = true;
@@ -167,7 +167,7 @@
             this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
             this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(647, 279);
+            this.Btn_adicionar.Location = new System.Drawing.Point(572, 282);
             this.Btn_adicionar.Name = "Btn_adicionar";
             this.Btn_adicionar.ShadowDecoration.Depth = 5;
             this.Btn_adicionar.ShadowDecoration.Enabled = true;
@@ -195,7 +195,7 @@
             this.txt_nome.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.txt_nome.IconRightOffset = new System.Drawing.Point(10, -5);
             this.txt_nome.IconRightSize = new System.Drawing.Size(10, 10);
-            this.txt_nome.Location = new System.Drawing.Point(20, 141);
+            this.txt_nome.Location = new System.Drawing.Point(18, 141);
             this.txt_nome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_nome.Name = "txt_nome";
             this.txt_nome.PasswordChar = '\0';
@@ -211,7 +211,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(27, 111);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(25, 111);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(118, 23);
             this.guna2HtmlLabel1.TabIndex = 70;
@@ -223,7 +223,7 @@
             this.Lbl_estoque.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_estoque.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.Lbl_estoque.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.Lbl_estoque.Location = new System.Drawing.Point(501, 38);
+            this.Lbl_estoque.Location = new System.Drawing.Point(499, 58);
             this.Lbl_estoque.Name = "Lbl_estoque";
             this.Lbl_estoque.Size = new System.Drawing.Size(88, 32);
             this.Lbl_estoque.TabIndex = 68;
@@ -250,7 +250,7 @@
             this.Txt_id.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.Txt_id.IconRightOffset = new System.Drawing.Point(10, -5);
             this.Txt_id.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_id.Location = new System.Drawing.Point(500, 98);
+            this.Txt_id.Location = new System.Drawing.Point(463, 98);
             this.Txt_id.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_id.Name = "Txt_id";
             this.Txt_id.PasswordChar = '\0';
@@ -265,7 +265,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.ClientSize = new System.Drawing.Size(1103, 559);
+            this.ClientSize = new System.Drawing.Size(1028, 559);
             this.Controls.Add(this.Txt_id);
             this.Controls.Add(this.Dgv_nivel);
             this.Controls.Add(this.Btn_deletar);
