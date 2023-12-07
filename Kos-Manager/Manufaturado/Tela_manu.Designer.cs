@@ -70,7 +70,7 @@
             this.Txt_dt_fab.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_dt_fab.IconRightOffset = new System.Drawing.Point(10, -5);
             this.Txt_dt_fab.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_dt_fab.Location = new System.Drawing.Point(11, 233);
+            this.Txt_dt_fab.Location = new System.Drawing.Point(10, 257);
             this.Txt_dt_fab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_dt_fab.Name = "Txt_dt_fab";
             this.Txt_dt_fab.PasswordChar = '\0';
@@ -79,6 +79,8 @@
             this.Txt_dt_fab.SelectedText = "";
             this.Txt_dt_fab.Size = new System.Drawing.Size(452, 36);
             this.Txt_dt_fab.TabIndex = 81;
+            this.Txt_dt_fab.TextChanged += new System.EventHandler(this.Txt_dt_fab_TextChanged);
+            this.Txt_dt_fab.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_dt_fab_KeyPress);
             // 
             // guna2HtmlLabel6
             // 
@@ -86,7 +88,7 @@
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(11, 201);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(10, 225);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(147, 25);
             this.guna2HtmlLabel6.TabIndex = 80;
@@ -161,7 +163,7 @@
             this.Txt_quantidade.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_quantidade.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_quantidade.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_quantidade.Location = new System.Drawing.Point(640, 233);
+            this.Txt_quantidade.Location = new System.Drawing.Point(639, 257);
             this.Txt_quantidade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_quantidade.Name = "Txt_quantidade";
             this.Txt_quantidade.PasswordChar = '\0';
@@ -177,7 +179,7 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(640, 201);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(639, 225);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(180, 25);
             this.guna2HtmlLabel5.TabIndex = 78;
@@ -203,7 +205,7 @@
             this.Txt_lote.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_lote.IconRightOffset = new System.Drawing.Point(10, -10);
             this.Txt_lote.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_lote.Location = new System.Drawing.Point(640, 147);
+            this.Txt_lote.Location = new System.Drawing.Point(639, 171);
             this.Txt_lote.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_lote.Name = "Txt_lote";
             this.Txt_lote.PasswordChar = '\0';
@@ -219,7 +221,7 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(640, 115);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(639, 139);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(36, 25);
             this.guna2HtmlLabel4.TabIndex = 76;
@@ -245,7 +247,7 @@
             this.Txt_dt_validade.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_dt_validade.IconRightOffset = new System.Drawing.Point(10, -5);
             this.Txt_dt_validade.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_dt_validade.Location = new System.Drawing.Point(11, 322);
+            this.Txt_dt_validade.Location = new System.Drawing.Point(10, 346);
             this.Txt_dt_validade.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_dt_validade.Name = "Txt_dt_validade";
             this.Txt_dt_validade.PasswordChar = '\0';
@@ -254,6 +256,8 @@
             this.Txt_dt_validade.SelectedText = "";
             this.Txt_dt_validade.Size = new System.Drawing.Size(452, 36);
             this.Txt_dt_validade.TabIndex = 75;
+            this.Txt_dt_validade.TextChanged += new System.EventHandler(this.Txt_dt_validade_TextChanged);
+            this.Txt_dt_validade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_dt_validade_KeyPress);
             // 
             // guna2HtmlLabel1
             // 
@@ -261,7 +265,7 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(11, 290);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(10, 314);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(132, 25);
             this.guna2HtmlLabel1.TabIndex = 74;
@@ -287,7 +291,7 @@
             this.Txt_nome_produto_manu.IconRight = global::Kos_Manager.Properties.Resources.asterisco;
             this.Txt_nome_produto_manu.IconRightOffset = new System.Drawing.Point(10, -5);
             this.Txt_nome_produto_manu.IconRightSize = new System.Drawing.Size(10, 10);
-            this.Txt_nome_produto_manu.Location = new System.Drawing.Point(11, 147);
+            this.Txt_nome_produto_manu.Location = new System.Drawing.Point(10, 171);
             this.Txt_nome_produto_manu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Txt_nome_produto_manu.Name = "Txt_nome_produto_manu";
             this.Txt_nome_produto_manu.PasswordChar = '\0';
@@ -303,7 +307,7 @@
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(11, 115);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(10, 139);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(265, 25);
             this.guna2HtmlLabel3.TabIndex = 69;

@@ -138,6 +138,8 @@
             this.Txt_dt_validade.SelectedText = "";
             this.Txt_dt_validade.Size = new System.Drawing.Size(452, 36);
             this.Txt_dt_validade.TabIndex = 80;
+            this.Txt_dt_validade.TextChanged += new System.EventHandler(this.Txt_dt_validade_TextChanged);
+            this.Txt_dt_validade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_dt_validade_KeyPress);
             // 
             // guna2HtmlLabel3
             // 
@@ -197,7 +199,7 @@
             this.Btn_adicionar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_adicionar.Image")));
             this.Btn_adicionar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_adicionar.ImageSize = new System.Drawing.Size(19, 19);
-            this.Btn_adicionar.Location = new System.Drawing.Point(616, 417);
+            this.Btn_adicionar.Location = new System.Drawing.Point(616, 416);
             this.Btn_adicionar.Name = "Btn_adicionar";
             this.Btn_adicionar.ShadowDecoration.Depth = 5;
             this.Btn_adicionar.ShadowDecoration.Enabled = true;
@@ -306,7 +308,7 @@
             this.Btn_deletar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_deletar.Image")));
             this.Btn_deletar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_deletar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_deletar.Location = new System.Drawing.Point(916, 417);
+            this.Btn_deletar.Location = new System.Drawing.Point(916, 416);
             this.Btn_deletar.Name = "Btn_deletar";
             this.Btn_deletar.Size = new System.Drawing.Size(144, 39);
             this.Btn_deletar.TabIndex = 87;
@@ -330,7 +332,7 @@
             this.Btn_atualizar.Image = ((System.Drawing.Image)(resources.GetObject("Btn_atualizar.Image")));
             this.Btn_atualizar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Btn_atualizar.ImageSize = new System.Drawing.Size(17, 17);
-            this.Btn_atualizar.Location = new System.Drawing.Point(766, 417);
+            this.Btn_atualizar.Location = new System.Drawing.Point(766, 416);
             this.Btn_atualizar.Name = "Btn_atualizar";
             this.Btn_atualizar.ShadowDecoration.Depth = 5;
             this.Btn_atualizar.ShadowDecoration.Enabled = true;

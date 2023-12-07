@@ -228,6 +228,7 @@
             this.Txt_id.SelectedText = "";
             this.Txt_id.Size = new System.Drawing.Size(89, 36);
             this.Txt_id.TabIndex = 122;
+            this.Txt_id.Visible = false;
             // 
             // Btn_deletar
             // 

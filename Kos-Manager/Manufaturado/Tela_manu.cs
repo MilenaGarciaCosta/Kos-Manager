@@ -429,5 +429,94 @@ namespace Kos_Manager
             Txt_lote.Text = DgvEstoquePm.CurrentRow.Cells[4].Value.ToString();
             Txt_quantidade.Text = DgvEstoquePm.CurrentRow.Cells[5].Value.ToString();
         }
+
+        private void Txt_dt_fab_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            {
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '/')
+                {
+                    // Se o caractere digitado não é um número, uma tecla de controle ou uma barra (/), cancela a entrada do caractere na TextBox
+                    e.Handled = true;
+                    return;
+                }
+
+                if (char.IsDigit(e.KeyChar) && Txt_dt_fab.Text.Length < 10 && (Txt_dt_fab.Text.Length != 2 && Txt_dt_fab.Text.Length != 5))
+                {
+                    // Se o caractere digitado é um número e o comprimento atual é menor que 10 (sem contar as barras) e não estamos no segundo nem no quinto caractere (antes das barras), permite a entrada
+                    Txt_dt_fab.Text += e.KeyChar;
+                    Txt_dt_fab.SelectionStart = Txt_dt_fab.Text.Length; // Move o cursor para o final da TextBox
+                }
+                else if (e.KeyChar == '\b') // Verifica se o caractere digitado é um backspace
+                {
+                    // Permite apagar um caractere apenas se houver algum texto na TextBox
+                    if (Txt_dt_fab.Text.Length > 0)
+                    {
+                        Txt_dt_fab.Text = Txt_dt_fab.Text.Remove(Txt_dt_fab.Text.Length - 1);
+                        Txt_dt_fab.SelectionStart = Txt_dt_fab.Text.Length; // Move o cursor para o final da TextBox
+                    }
+                }
+                else if (e.KeyChar == '/' && (Txt_dt_fab.Text.Length == 2 || Txt_dt_fab.Text.Length == 5))
+                {
+                    // Permite a entrada da barra (/) apenas se estivermos no terceiro ou no sexto caractere (após os dois primeiros ou depois dos cinco caracteres)
+                    Txt_dt_fab.Text += e.KeyChar;
+                    Txt_dt_fab.SelectionStart = Txt_dt_fab.Text.Length; // Move o cursor para o final da TextBox
+                }
+
+                e.Handled = true; // Define o caractere como tratado para evitar que seja inserido novamente
+            }
+        }
+
+        private void Txt_dt_fab_TextChanged(object sender, EventArgs e)
+        {
+            if (Txt_dt_fab.TextLength == 2 || Txt_dt_fab.TextLength == 5)
+            {
+                Txt_dt_fab.Text += "/";
+                Txt_dt_fab.SelectionStart = Txt_dt_fab.Text.Length;
+            }
+        }
+
+        private void Txt_dt_validade_TextChanged(object sender, EventArgs e)
+        {
+            if (Txt_dt_validade.TextLength == 2 || Txt_dt_validade.TextLength == 5)
+            {
+                Txt_dt_validade.Text += "/";
+                Txt_dt_validade.SelectionStart = Txt_dt_validade.Text.Length;
+            }
+        }
+
+        private void Txt_dt_validade_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '/')
+            {
+                // Se o caractere digitado não é um número, uma tecla de controle ou uma barra (/), cancela a entrada do caractere na TextBox
+                e.Handled = true;
+                return;
+            }
+
+            if (char.IsDigit(e.KeyChar) && Txt_dt_validade.Text.Length < 10 && (Txt_dt_validade.Text.Length != 2 && Txt_dt_validade.Text.Length != 5))
+            {
+                // Se o caractere digitado é um número e o comprimento atual é menor que 10 (sem contar as barras) e não estamos no segundo nem no quinto caractere (antes das barras), permite a entrada
+                Txt_dt_validade.Text += e.KeyChar;
+                Txt_dt_validade.SelectionStart = Txt_dt_validade.Text.Length; // Move o cursor para o final da TextBox
+            }
+            else if (e.KeyChar == '\b') // Verifica se o caractere digitado é um backspace
+            {
+                // Permite apagar um caractere apenas se houver algum texto na TextBox
+                if (Txt_dt_validade.Text.Length > 0)
+                {
+                    Txt_dt_validade.Text = Txt_dt_validade.Text.Remove(Txt_dt_validade.Text.Length - 1);
+                    Txt_dt_validade.SelectionStart = Txt_dt_validade.Text.Length; // Move o cursor para o final da TextBox
+                }
+            }
+            else if (e.KeyChar == '/' && (Txt_dt_validade.Text.Length == 2 || Txt_dt_validade.Text.Length == 5))
+            {
+                // Permite a entrada da barra (/) apenas se estivermos no terceiro ou no sexto caractere (após os dois primeiros ou depois dos cinco caracteres)
+                Txt_dt_validade.Text += e.KeyChar;
+                Txt_dt_validade.SelectionStart = Txt_dt_validade.Text.Length; // Move o cursor para o final da TextBox
+            }
+
+            e.Handled = true; // Define o caractere como tratado para evitar que seja inserido novamente
+        }
     }
-}
+    }
+
