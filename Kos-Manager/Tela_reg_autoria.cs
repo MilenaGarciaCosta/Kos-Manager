@@ -82,7 +82,6 @@ namespace Kos_Manager
         }
 
 
-
         //Public de registro de autoria
         public class Logger
         {
@@ -130,10 +129,6 @@ namespace Kos_Manager
 
             }
         }
-
-
-
-
 
             private void Tela_reg_autoria_Load(object sender, EventArgs e)
         {
@@ -188,10 +183,5 @@ namespace Kos_Manager
             }
         }
 
-
-            private void Btn_limpar_Click(object sender, EventArgs e)
-        {
-            
-        }
     }
 }

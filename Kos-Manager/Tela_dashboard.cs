@@ -21,6 +21,8 @@ namespace Kos_Manager
         public Tela_dashboard()
         {
             InitializeComponent();
+            GerarGrafico();
+
         }
 
         private void guna2HtmlLabel9_Click(object sender, EventArgs e)
@@ -208,6 +210,26 @@ namespace Kos_Manager
                 }
         }
 
+        private void chart1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void GerarGrafico()
+        {
+            chart1.Series["Series1"].Points.AddXY("JAN", 150);
+            chart1.Series["Series1"].Points.AddXY("FEV", 140);
+            chart1.Series["Series1"].Points.AddXY("MAR", 110);
+            chart1.Series["Series1"].Points.AddXY("ABR", 70);
+            chart1.Series["Series1"].Points.AddXY("MAI", 30);
+            chart1.Series["Series1"].Points.AddXY("JUN", 93);
+            chart1.Series["Series1"].Points.AddXY("JUL", 105);
+            chart1.Series["Series1"].Points.AddXY("AGO", 80);
+            chart1.Series["Series1"].Points.AddXY("SET", 70);
+            chart1.Series["Series1"].Points.AddXY("OUT", 60);
+            chart1.Series["Series1"].Points.AddXY("NOV", 100);
+            chart1.Series["Series1"].Points.AddXY("DEZ", 170);
+        }
     }
 
     }
