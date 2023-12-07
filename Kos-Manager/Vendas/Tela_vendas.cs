@@ -485,9 +485,8 @@ namespace Kos_Manager
                 this.id = Dgv_venda.CurrentRow.Cells[0].Value.ToString();
                 Txt_quantidade.Text = Dgv_venda.CurrentRow.Cells[1].Value.ToString();
 
-                // Obter o valor da célula e formatá-lo para exibição
-                string valorFormatado = string.Format(CultureInfo.GetCultureInfo("pt-BR"), "{0:C}", Dgv_venda.CurrentRow.Cells[2].Value);
-                Txt_valor_produto.Text = valorFormatado;
+
+                Txt_valor_produto.Text = Dgv_venda.CurrentRow.Cells[2].Value.ToString();
 
                 cmb_nome_produto.Text = Dgv_venda.CurrentRow.Cells[3].Value.ToString();
                 cmb_funcionario.Text = Dgv_venda.CurrentRow.Cells[4].Value.ToString();
