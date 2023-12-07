@@ -371,7 +371,7 @@
             // 
             // Lbl_adicionar
             // 
-            this.Lbl_adicionar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Lbl_adicionar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Lbl_adicionar.BackColor = System.Drawing.Color.Transparent;
             this.Lbl_adicionar.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.Lbl_adicionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(210)))), ((int)(((byte)(197)))));

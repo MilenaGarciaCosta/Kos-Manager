@@ -96,7 +96,7 @@
             // 
             // Lbl_fornecedor
             // 
-            this.Lbl_fornecedor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Lbl_fornecedor.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Lbl_fornecedor.AutoSize = false;
             this.Lbl_fornecedor.AutoSizeHeightOnly = true;
             this.Lbl_fornecedor.BackColor = System.Drawing.Color.Transparent;
