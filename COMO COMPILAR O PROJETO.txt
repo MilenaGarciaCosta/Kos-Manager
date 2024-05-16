@@ -1,0 +1,7 @@
+Para que o projeto seja compilado com sucesso, siga os seguintes passos:
+Abra o arquivo 'BD_KOSMANAGER' no MySQLworkbench e execute-o;
+Abra a pasta Kos-Manager já descompactada e abra o arquivo 'Kos-Manager.sln';
+Certifique-se que a senha e nome de usuário do Workbench estão corretas dentro do arquivo 'App.config',
+Vá na aba 'Projeto' no menu superior, depois clique em 'Gerenciar Pacotes NuGet';
+Clique no botão 'restaurar';
+Caso algum erro persista, ainda no gerenciador de pacotes, vá em 'Instalado' e desinstale o Plug-in 'Guna.UI2.WinForms' e reinstale novamente (a causa desse problema é desconhecida pelos alunos e docentes que nos auxiliaram no desenvolvimento, esse foi o único meio de contorna-lo).
